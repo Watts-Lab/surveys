@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  setup: # for getting a container for setting things up in.
+    platform: linux/amd64  # needed when developing on apple silicon
+    image: node:16-bullseye
+    pull_policy: always
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+
+    volumes:
+      - ./tmp:/app/

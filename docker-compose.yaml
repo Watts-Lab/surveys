@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  surveys-storybook: 
+    platform: linux/amd64  # needed when developing on apple silicon, harmless otherwise
+    build: .
+    ports:
+      - 6006:6006  # storybook
+    entrypoint: 
+      - npm
+      - run
+      - storybook
+    volumes:
+      # need to be careful about overwriting `/node_modules` in container
+      # hack from https://burnedikt.com/dockerized-node-development-and-mounting-node-volumes/#exclude-node_modules-from-the-mount  
+      - ./src:/app/src
+      - ./.storybook:/app/.storybook
+      - ./surveys:/app/surveys
