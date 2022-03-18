@@ -15,3 +15,5 @@ services:
       - ./src:/app/src
       - ./.storybook:/app/.storybook
       - ./surveys:/app/surveys
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json

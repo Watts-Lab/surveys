@@ -1,3 +1,18 @@
+# 
+
+To view this survey library, run
+
+`npm install` 
+
+to install the dependencies, and then type:
+
+`npm run storybook`
+
+then you can view the storybook at:
+
+`http:localhost:6006`
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
