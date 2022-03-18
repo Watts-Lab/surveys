@@ -1,3 +1,7 @@
+[![storybook badge](https://raw.githubusercontent.com/storybookjs/brand/main/badge/badge-storybook.svg)](https://main--6234a36a932a74003a2e9141.chromatic.com)
+
+You can view [surveys](https://main--6234a36a932a74003a2e9141.chromatic.com) and [edit history](https://www.chromatic.com/builds?appId=6234a36a932a74003a2e9141&branch=main) using storybook and chromatic.
+
 # 
 
 To view this survey library, run
