@@ -15,19 +15,18 @@ const Template = (args) => <SurveyWrapper {...args} />;
 
 
 // Basic no-frills survey
-// const surveyJson = {
-//     elements: [{
-//       name: "FirstName",
-//       title: "Enter your first name:",
-//       type: "text"
-//     }, {
-//       name: "LastName",
-//       title: "Enter your last name:",
-//       type: "text"
-//     }]
-//   };
+const surveyJson = {
+    elements: [{
+      name: "FirstName",
+      title: "Enter your first name:",
+      type: "text"
+    }, {
+      name: "LastName",
+      title: "Enter your last name:",
+      type: "text"
+    }]
+  };
 
-const surveyJson = require("./surveys/example_survey.json");
 
 export const Basic = Template.bind({});
 Basic.args = {
