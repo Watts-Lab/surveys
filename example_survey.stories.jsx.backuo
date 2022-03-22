@@ -1,0 +1,22 @@
+import React from 'react';
+import SurveyWrapper from '../SurveyWrapper';
+//import surveyJson from "./example_survey.json"
+
+export default {
+  /* 👇 The title prop is optional.
+  * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
+  * to learn how to generate automatic titles
+  */
+  title: 'ExampleSurvey',
+  component: SurveyWrapper,
+};
+
+//👇 We create a “template” of how args map to rendering
+const Template = (args) => <SurveyWrapper {...args} />;
+
+const surveyJson = require("./example_survey.json")
+
+export const ExampleSurvey = Template.bind({});
+ExampleSurvey.args = {
+   surveyJson: surveyJson
+};

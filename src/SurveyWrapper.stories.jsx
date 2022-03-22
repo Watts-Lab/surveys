@@ -6,7 +6,7 @@ export default {
   * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
   * to learn how to generate automatic titles
   */
-  title: 'Wrapper Component',
+  title: 'Components/Wrapper Component',
   component: SurveyWrapper,
 };
 
@@ -29,8 +29,8 @@ const Template = (args) => <SurveyWrapper {...args} />;
 
 const surveyJson = require("./surveys/example_survey.json");
 
-export const TestStory = Template.bind({});
-TestStory.args = {
+export const Basic = Template.bind({});
+Basic.args = {
    surveyJson: surveyJson
 };
 
