@@ -8,16 +8,16 @@ StylesManager.applyTheme("modern");
 export default class SurveyWrapper extends React.PureComponent {
 
     render () {
-        const {player, surveyJson} = this.props;
-        const survey = new Model(surveyJson);
+        const {surveyJson} = this.props;
+        const surveyModel = new Model(surveyJson);
 
+        // TODO: empirica callbacks on survey completion
         return(
-            <Survey model={survey} />
-
+            <Survey model={surveyModel} />
         )
     }
 }
 
 SurveyWrapper.propTypes = {
-    player: PropTypes.object.isRequired,
+    surveyJson: PropTypes.object.isRequired,
 }
