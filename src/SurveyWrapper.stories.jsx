@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SurveyWrapper from './SurveyWrapper';
 
 export default {
@@ -7,20 +6,15 @@ export default {
   * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
   * to learn how to generate automatic titles
   */
-  title: 'Survey',
+  title: 'Components/Wrapper Component',
   component: SurveyWrapper,
 };
 
 //👇 We create a “template” of how args map to rendering
 const Template = (args) => <SurveyWrapper {...args} />;
 
-const player = {
-  data: {"name": "Ponder Stibbons"},
-  get (key) {
-    return this.data[key];
-  }
-}
 
+// Basic no-frills survey
 const surveyJson = {
     elements: [{
       name: "FirstName",
@@ -34,10 +28,9 @@ const surveyJson = {
   };
 
 
-//👇 Each story then reuses that template
-export const TestStory = Template.bind({});
-TestStory.args = {
-   player: player,
+export const Basic = Template.bind({});
+Basic.args = {
    surveyJson: surveyJson
 };
+
 
