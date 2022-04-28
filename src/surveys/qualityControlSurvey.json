@@ -1,0 +1,241 @@
+{
+ logoPosition: "right",
+ pages: [
+  {
+   name: "page1",
+   elements: [
+    {
+     type: "rating",
+     name: "question1",
+     title: "\"I enjoyed participating in this experiment.\"",
+     isRequired: true,
+     rateValues: [
+      {
+       value: 1,
+       text: "Strongly Disagree"
+      },
+      {
+       value: 2,
+       text: "Somewhat Disagree"
+      },
+      {
+       value: 3,
+       text: "Neither Agree/Disagree"
+      },
+      {
+       value: 4,
+       text: "Somewhat Agree"
+      },
+      {
+       value: 5,
+       text: "Strongly Agree"
+      }
+     ]
+    },
+    {
+     type: "rating",
+     name: "question11",
+     title: "\"Participating in this experiment was valuable to me.\"",
+     rateValues: [
+      {
+       value: 1,
+       text: "Strongly Disagree"
+      },
+      {
+       value: 2,
+       text: "Somewhat Disagree"
+      },
+      {
+       value: 3,
+       text: "Neither Agree/Disagree"
+      },
+      {
+       value: 4,
+       text: "Somewhat Agree"
+      },
+      {
+       value: 5,
+       text: "Strongly Agree"
+      }
+     ]
+    },
+    {
+     type: "rating",
+     name: "question2",
+     title: "\"I would participate in a similar experiment again.\"",
+     isRequired: true,
+     rateValues: [
+      {
+       value: 1,
+       text: "Strongly Disagree"
+      },
+      {
+       value: 2,
+       text: "Somewhat Disagree"
+      },
+      {
+       value: 3,
+       text: "Neither Agree/Disagree"
+      },
+      {
+       value: 4,
+       text: "Somewhat Agree"
+      },
+      {
+       value: 5,
+       text: "Strongly Agree"
+      }
+     ]
+    },
+    {
+     type: "rating",
+     name: "question3",
+     title: "\"I would recommend taking part in this discussion exercise to other MTurkers.\"",
+     isRequired: true,
+     rateValues: [
+      {
+       value: 1,
+       text: "Strongly Disagree"
+      },
+      {
+       value: 2,
+       text: "Somewhat Disagree"
+      },
+      {
+       value: 3,
+       text: "Neither Agree/Disagree"
+      },
+      {
+       value: 4,
+       text: "Somewhat Agree"
+      },
+      {
+       value: 5,
+       text: "Strongly Agree"
+      }
+     ]
+    },
+    {
+     type: "rating",
+     name: "question4",
+     title: "\"I felt forced to answer uncomfortable questions.\"",
+     isRequired: true,
+     rateValues: [
+      {
+       value: 1,
+       text: "Strongly Disagree"
+      },
+      {
+       value: 2,
+       text: "Somewhat Disagree"
+      },
+      {
+       value: 3,
+       text: "Neither Agree/Disagree"
+      },
+      {
+       value: 4,
+       text: "Somewhat Agree"
+      },
+      {
+       value: 5,
+       text: "Strongly Agree"
+      }
+     ]
+    },
+    {
+     type: "rating",
+     name: "question5",
+     title: "\"I felt comfortable speaking my mind throughout the discussions.\"",
+     isRequired: true,
+     rateValues: [
+      {
+       value: 1,
+       text: "Strongly Disagree"
+      },
+      {
+       value: 2,
+       text: "Somewhat Disagree"
+      },
+      {
+       value: 3,
+       text: "Neither Agree/Disagree"
+      },
+      {
+       value: 4,
+       text: "Somewhat Agree"
+      },
+      {
+       value: 5,
+       text: "Strongly Agree"
+      }
+     ]
+    },
+    {
+     type: "rating",
+     name: "question6",
+     title: "\"The discussion prompts were easy to understand and follow.\"",
+     isRequired: true,
+     rateValues: [
+      {
+       value: 1,
+       text: "Strongly Disagree"
+      },
+      {
+       value: 2,
+       text: "Somewhat Disagree"
+      },
+      {
+       value: 3,
+       text: "Neither Agree/Disagree"
+      },
+      {
+       value: 4,
+       text: "Somewhat Agree"
+      },
+      {
+       value: 5,
+       text: "Strongly Agree"
+      }
+     ]
+    },
+    {
+     type: "radiogroup",
+     name: "question7",
+     title: "Which statement best describes your feelings related to your compensation for today's discussion? \"I feel I was...",
+     isRequired: true,
+     choices: [
+      {
+       value: "item1",
+       text: "underpaid.\""
+      },
+      {
+       value: "item2",
+       text: "fairly paid.\""
+      },
+      {
+       value: "item3",
+       text: "overpaid.\""
+      }
+     ]
+    },
+    {
+     type: "text",
+     name: "question10",
+     title: "If you'd like to expand on any of your above responses, please do so here."
+    },
+    {
+     type: "text",
+     name: "question8",
+     title: "Were there any parts of the experiment you felt uncomfortable participating in?"
+    },
+    {
+     type: "text",
+     name: "question9",
+     title: "Did you find the platform easy to use, why or why not?"
+    }
+   ],
+   title: "Please select the option that most closely reflects how much you agree with the following statements."
+  }
+ ]
+}
