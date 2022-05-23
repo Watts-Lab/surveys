@@ -1,18 +1,24 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs';
-import SurveyWrapper from '../SurveyWrapper';
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import SurveyWrapper from "../SurveyWrapper";
 //edit the following two lines to include the survey and template data
-import qualityControlSurvey from "./qualityControlSurvey.json"
-export const templateData = {}
+import qualityControlSurvey from "./qualityControlSurvey.json";
+export const templateData = {};
 //newline required before meta tag (https://github.com/storybookjs/storybook/issues/17739)
 
 <Meta title="Surveys/qualityControlSurvey" component={SurveyWrapper} />
 
 # Survey Purpose
 
+We decided to implement a mix of eight Likert scale questions ("Please select the option that most closely reflects how much you agree with the following statements...") and two open-ended questions. We landed on the Likert scale questions because they were short, easy to answer, and gave us a solid range of quantifiable data to analyze (e.g., we can categorically place respondents into groups that enjoyed or did not enjoy the survey). We included the first open-ended question to make room for participants to share specific details or justifications for any of the views they expressed in the agree/disagree section. Similarly, the survey's last question asks participants to expand on any part of the experiment that made them feel uncomfortable. We hope to use the results from this survey to continually improve our experimental design and user experience.
+
 # Expected behavior
+
+Because the survey is short and optional, we expect to recieve responses from participants willing to offer thoughtful feedback on their survey experience.
 
 # Design Rationale
 
+We decided to implement a mix of eight Likert scale questions ("Please select the option that most closely reflects how much you agree with the following statements...") and two open-ended questions. We landed on the Likert scale questions because they were short, easy to answer, and gave us a solid range of quantifiable data to analyze (e.g., we can categorically place respondents into groups that enjoyed or did not enjoy the survey). We included the first open-ended question to make room for participants to share specific details or justifications for any of the views they expressed in the agree/disagree section. Similarly, the survey's last question asks participants to expand on any part of the experiment that made them feel uncomfortable. We hope to use the results from this survey to continually improve our experimental design and user experience.
+
 # Literature/Past Project Citations
 
-
+bib
