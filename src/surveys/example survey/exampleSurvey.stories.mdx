@@ -1,0 +1,74 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import SurveyWrapper from "../SurveyWrapper";
+//edit the following two lines to include the survey and template data
+import surveyJson from "./exampleSurvey.json";
+export const templateData = {};
+//newline required before meta tag (https://github.com/storybookjs/storybook/issues/17739)
+
+<Meta title="Surveys/Example" component={SurveyWrapper} />
+
+# Example Survey
+
+This survey is included as a reference for how to include and document new surveys.
+Surveys in the `/surveys` folder should be `.json` files containing the SurveyJS
+json representation of your survey.
+
+## Expected behavior
+
+This survey asks about whether the respondent would recommend a product to a friend.
+It then asks a follow-up question that is appropriate to their answer.
+
+## Design and modifications
+
+The survey was designed to demonstrate the use of SurveyJS, by the SurveyJS development team.
+No modifications were made to the survey to include it in this library.
+
+### Template data
+
+The survey has no template placeholders, and so the template data is empty.
+
+<code>templateData = {JSON.stringify(templateData)}</code>
+
+## Source
+
+This example was taken from the SurveyJS example library at:
+[https://surveyjs.io/Examples/Library?id=real-nps&platform=Reactjs&theme=defaultV2](https://surveyjs.io/Examples/Library?id=real-nps&platform=Reactjs&theme=defaultV2)
+
+## Other citations
+
+This survey was used by... to...
+
+- citation 1
+- citation 2
+
+## Example
+
+<Canvas>
+  <Story name="Example" args={{ surveyJson: surveyJson }}>
+    {(args) => <SurveyWrapper {...args} />}
+  </Story>
+</Canvas>
+
+# Notes on using this example as a template
+
+You can modify this example to create a new `(yourSurveyName).stories.mdx` file to document `(yourSurveyName).json`.
+In addition to the descriptive text, you will need to update the following code sections:
+
+```jsx
+import surveyJson from "./(yourSurveyName).json";
+export const templateData = { yourKey: "yourValue" };
+```
+
+and
+
+```jsx
+<Meta title="Surveys/(yourSurveyName)" component={SurveyWrapper} />
+```
+
+and
+
+```jsx
+<Story name="(yourSurveyName)" args={{surveyJson: surveyJson}}>
+```
+
+and of course in your own `(yourSurveyName).stories.mdx` you can remove this section.
