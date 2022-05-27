@@ -8,7 +8,6 @@ RUN npm install
 
 COPY /src ./src
 COPY .storybook ./.storybook
-COPY /surveys /surveys
 
 
 CMD ["npm", "start"]

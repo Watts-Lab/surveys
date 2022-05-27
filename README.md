@@ -38,4 +38,4 @@ to install the dependencies, and then type:
 
 then you can view the storybook at:
 
-`http:localhost:6006`
+`http:localhost:6007`

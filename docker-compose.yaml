@@ -4,7 +4,7 @@ services:
     platform: linux/amd64  # needed when developing on apple silicon, harmless otherwise
     build: .
     ports:
-      - 6006:6006  # storybook
+      - 6007:6006  # storybook
     entrypoint: 
       - npm
       - run
@@ -14,6 +14,5 @@ services:
       # hack from https://burnedikt.com/dockerized-node-development-and-mounting-node-volumes/#exclude-node_modules-from-the-mount  
       - ./src:/app/src
       - ./.storybook:/app/.storybook
-      - ./surveys:/app/surveys
       - ./package.json:/app/package.json
       - ./package-lock.json:/app/package-lock.json
