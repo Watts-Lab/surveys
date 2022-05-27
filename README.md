@@ -16,6 +16,8 @@ Surveys provided here should be documented with the source of the survey instrum
 
 The documentation should be written in language that can be used verbatim e.g. in the supplement to a paper using the survey, to describe its use. 
 
+We should use .bib files to document our citation. Within the readme for each survey, reference a unique .bib file that includes the list of sources you referenced in designing that particular survey. 
+
 ### Versioning
 Each commit to this github repository is maintained indefinitely, and so the precise version of each survey can be referenced by including with the stored survey responses a link to the file in a specific commit blob or raw file. This way, there is absolute traceability between survey responses and the version of the survey used.
 
