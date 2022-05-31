@@ -2,6 +2,7 @@ import 'survey-react/modern.min.css';
 import { Survey, StylesManager, Model } from 'survey-react';
 import PropTypes from "prop-types";
 import React from "react";
+import myCSS from "./Survey.css";
 
 StylesManager.applyTheme("modern");
 
@@ -13,7 +14,7 @@ export default class SurveyWrapper extends React.PureComponent {
 
         // TODO: empirica callbacks on survey completion
         return(
-            <Survey model={surveyModel} />
+            <Survey css={myCSS} model={surveyModel} />
         )
     }
 }
