@@ -2,7 +2,7 @@ import 'survey-react/modern.min.css';
 import { Survey, StylesManager, Model } from 'survey-react';
 import PropTypes from "prop-types";
 import React from "react";
-import myCSS from "./Survey.css";
+import myCSS from "./SurveyWrapper.css";
 
 StylesManager.applyTheme("modern");
 

@@ -1,6 +1,6 @@
 {
-  "title": "Feedback Survey",
-  "description": "Thank you for your participation. We would like to hear your thoughts on the experience so that we may continue to improve. We appreciate your feedback! ",
+  "title": "Quality Feedback Survey",
+  "description": "Thank you for your participation. We would like to hear your thoughts on the experience so that we may continue to improve. We appreciate your feedback!",
   "logoPosition": "right",
   "focusFirstQuestionAutomatic": false,
   "pages": [
@@ -40,6 +40,17 @@
           "hideNumber": true,
           "isRequired": true,
           "choices": ["underpaid", "fairly paid", "overpaid"]
+        },
+        {
+          "type": "rating",
+          "name": "video",
+          "title": "Please rate the quality of the videocall.",
+          "titleLocation": "top",
+          "hideNumber": true,
+          "isRequired": true,
+          "rateValues": ["1", "2", "3", "4", "5"],
+          "minRateDescription": "Very Poor",
+          "maxRateDescription": "Excellent"
         },
         {
           "type": "text",
