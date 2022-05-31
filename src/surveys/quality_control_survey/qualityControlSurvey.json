@@ -44,7 +44,7 @@
         {
           "type": "rating",
           "name": "video",
-          "title": "Please rate the quality of the videocall.",
+          "title": "Please rate the quality of the video call.",
           "titleLocation": "top",
           "hideNumber": true,
           "isRequired": true,
