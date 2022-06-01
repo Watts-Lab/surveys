@@ -1,0 +1,24 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import SurveyWrapper from "../../SurveyWrapper";
+//edit the following two lines to include the survey and template data
+import surveyJson from "./teamViability.json";
+export const templateData = {};
+//newline required before meta tag (https://github.com/storybookjs/storybook/issues/17739)
+
+<Meta title="Surveys/TeamViability" component={SurveyWrapper} />
+
+# Survey Purpose
+
+# Expected behavior
+
+# Design Rationale
+
+# Literature/Past Project Citations
+
+# Example
+
+<Canvas>
+  <Story name="TeamViability" args={{ surveyJson: surveyJson }}>
+    {(args) => <SurveyWrapper {...args} />}
+  </Story>
+</Canvas>
