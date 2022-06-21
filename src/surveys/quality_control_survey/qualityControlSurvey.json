@@ -42,6 +42,27 @@
           "choices": ["underpaid", "fairly paid", "overpaid"]
         },
         {
+          "type": "radiogroup",
+          "name": "question1",
+          "title": "Which statement best describes your feelings related to the amount of time given for today's discussion? \"I feel we were given...\"",
+          "hideNumber": true,
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "too_little",
+              "text": "too little time"
+            },
+            {
+              "value": "adequate",
+              "text": "an adequate amount of time"
+            },
+            {
+              "value": "too_much",
+              "text": "too much time"
+            }
+          ]
+        },
+        {
           "type": "rating",
           "name": "video",
           "title": "Please rate the quality of the video call.",
