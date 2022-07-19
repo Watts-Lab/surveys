@@ -24,19 +24,18 @@
             "Strongly Agree"
           ],
           "rows": [
-            "\"I enjoyed participating in this experiment.\"",
-            "\"Participating in this experiment was valuable to me.\"",
-            "\"I would participate in a similar experiment again.\"",
+            "\"I enjoyed participating in this study.\"",
+            "\"I learned something during this discussion.\"",
+            "\"I would participate in a similar study again.\"",
             "\"I would recommend taking part in this discussion exercise to other MTurkers.\"",
-            "\"I felt forced to answer uncomfortable questions.\"",
-            "\"I felt comfortable speaking my mind throughout the discussions.\"",
-            "\"The discussion prompts were easy to understand and follow.\""
+            "\"The discussion prompts were easy to understand and follow.\"",
+            "\"This platform was easy to use.\""
           ]
         },
         {
           "type": "radiogroup",
           "name": "compensation",
-          "title": "Which statement best describes your feelings related to your compensation for today's discussion? \"I feel I was...\"",
+          "title": "\"I feel I was...\"",
           "hideNumber": true,
           "isRequired": true,
           "choices": ["underpaid", "fairly paid", "overpaid"]
@@ -44,7 +43,7 @@
         {
           "type": "radiogroup",
           "name": "question1",
-          "title": "Which statement best describes your feelings related to the amount of time given for today's discussion? \"I feel we were given...\"",
+          "title": "\"I feel we were given...\"",
           "hideNumber": true,
           "isRequired": true,
           "choices": [
@@ -76,21 +75,8 @@
         {
           "type": "text",
           "name": "expansion",
-          "title": "If you'd like to expand on any of your above responses, please do so here.",
+          "title": "If you'd like to expand on any of your above responses or add any additional feedback, please do so here.",
           "titleLocation": "top",
-          "hideNumber": true
-        },
-        {
-          "type": "text",
-          "name": "comfort",
-          "title": "Were there any parts of the experiment you felt uncomfortable participating in? If so, which and why?",
-          "titleLocation": "top",
-          "hideNumber": true
-        },
-        {
-          "type": "text",
-          "name": "easeOfUse",
-          "title": "Did you find the platform easy to use? Why or why not?",
           "hideNumber": true
         }
       ],
