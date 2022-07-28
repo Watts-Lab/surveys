@@ -30,7 +30,8 @@
             "\"I would recommend taking part in this discussion exercise to other MTurkers.\"",
             "\"The discussion prompts were easy to understand and follow.\"",
             "\"This platform was easy to use.\""
-          ]
+          ],
+          "isAllRowRequired": true
         },
         {
           "type": "radiogroup",
