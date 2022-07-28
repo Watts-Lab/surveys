@@ -68,7 +68,8 @@
         {
           "type": "text",
           "name": "question1",
-          "title": "If you would like to explain your reasoning for any of your answers, please do so in the box below."
+          "title": "If you would like to explain your reasoning for any of your answers, please do so in the box below.",
+          "hideNumber": true
         }
       ],
       "questionTitleLocation": "top"
