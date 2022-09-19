@@ -1,0 +1,93 @@
+{
+  "title": "Psychological Safety Assessment",
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "matrix",
+          "name": "psych-safety",
+          "minWidth": "500px",
+          "maxWidth": "Initial",
+          "title": "Please select the option that most closely reflects how much you agree with the following statements. \n\n\"During this conversation I felt...\"",
+          "titleLocation": "top",
+          "hideNumber": true,
+          "isRequired": true,
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Somewhat Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neither Agree nor Disagree"
+            },
+            {
+              "value": "5",
+              "text": "Somewhat Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "mistake",
+              "text": "If I made a mistake, the other people in the group would hold it against me."
+            },
+            {
+              "value": "discuss problems",
+              "text": "The other people in the group were able to bring up problems and tough issues."
+            },
+            {
+              "value": "reject different",
+              "text": "The other people in the group sometimes rejected others for being different."
+            },
+            {
+              "value": "take risks",
+              "text": "It was safe to take a risk with the other people in the group."
+            },
+            {
+              "value": "asking help",
+              "text": "It was difficult to ask the other participants for help. "
+            },
+            {
+              "value": "undermining",
+              "text": "No one would deliberately act in a way that undermined me and my efforts."
+            },
+            {
+              "value": "skills valued",
+              "text": "My unique skills and talents were valued and utilized while working with the other people in the group."
+            }
+          ],
+          "isAllRowRequired": true
+        },
+        {
+          "type": "text",
+          "name": "additional-comments",
+          "title": "If you would like to explain your reasoning for any of your answers, please do so in the box below.",
+          "hideNumber": true
+        }
+      ],
+      "questionTitleLocation": "top"
+    }
+  ],
+  "showPageTitles": false,
+  "questionsOnPageMode": "singlePage",
+  "widthMode": "responsive"
+}
