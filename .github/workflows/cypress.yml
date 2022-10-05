@@ -1,7 +1,7 @@
 name: Cypress Component Tests
 
 on:
-  [push]
+  push:
 
 jobs:
   cypress-run:
@@ -15,6 +15,6 @@ jobs:
       with:
         install: false
         component: true
-       env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
