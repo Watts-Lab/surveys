@@ -6,7 +6,8 @@ StylesManager.applyTheme("modern");
 
 export default async function SurveyFactory(surveyName) {
     const surveyJson = await import(`../surveys/${surveyName}/${surveyName}.json`);
-    const scoreFunc = await import(`../surveys/${surveyName}/${surveyName}.score.js`); 
+    const scoreModule = await import(`../surveys/${surveyName}/${surveyName}.score.js`); 
+    const scoreFunc = scoreModule.default;
 
     function Survey ({ onComplete }) {
         const scoreResponses = (sender) => {

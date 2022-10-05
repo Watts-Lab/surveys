@@ -41,3 +41,10 @@ to install the dependencies, and then type:
 then you can view the storybook at:
 
 `http:localhost:6007`
+
+
+
+# 
+Vite is for running the dev server that cypress uses for component testing
+to test, `run npx cypress open`
+to build, `npx rollup --config`

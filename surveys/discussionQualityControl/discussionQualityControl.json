@@ -1,6 +1,6 @@
 {
   "title": "Quality Feedback Survey",
-  "description": "Thank you for your participation. We would like to hear your thoughts on the experience so that we may continue to improve. We appreciate your feedback!",
+  "description": "Optional - for helping us improve.",
   "logoPosition": "right",
   "focusFirstQuestionAutomatic": false,
   "pages": [
@@ -15,7 +15,7 @@
           "title": "Please select the option that most closely reflects how much you agree with the following statements.",
           "titleLocation": "top",
           "hideNumber": true,
-          "isRequired": true,
+          "isRequired": false,
           "columns": [
             "Strongly Disagree",
             "Disagree",
@@ -31,22 +31,35 @@
             "\"The discussion prompts were easy to understand and follow.\"",
             "\"This platform was easy to use.\""
           ],
-          "isAllRowRequired": true
+          "isAllRowRequired": false
         },
         {
           "type": "radiogroup",
-          "name": "compensation",
+          "name": "adequateCompensation",
           "title": "\"I feel I was...\"",
           "hideNumber": true,
-          "isRequired": true,
-          "choices": ["underpaid", "fairly paid", "overpaid"]
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "underpaid", 
+              "text": "underpaid"
+            },
+            {
+              "value": "fairly_paid",
+              "text": "fairly paid"
+            },
+            {
+              "value": "overpaid",
+              "text": "overpaid"
+            }
+          ]
         },
         {
           "type": "radiogroup",
-          "name": "question1",
+          "name": "adequateTime",
           "title": "\"I feel we were given...\"",
           "hideNumber": true,
-          "isRequired": true,
+          "isRequired": false,
           "choices": [
             {
               "value": "too_little",
@@ -64,18 +77,18 @@
         },
         {
           "type": "rating",
-          "name": "video",
+          "name": "videoQuality",
           "title": "Please rate the quality of the video call.",
           "titleLocation": "top",
           "hideNumber": true,
-          "isRequired": true,
+          "isRequired": false,
           "rateValues": ["1", "2", "3", "4", "5"],
           "minRateDescription": "Very Poor",
           "maxRateDescription": "Excellent"
         },
         {
           "type": "text",
-          "name": "expansion",
+          "name": "textExpansion",
           "title": "If you'd like to expand on any of your above responses or add any additional feedback, please do so here.",
           "titleLocation": "top",
           "hideNumber": true
