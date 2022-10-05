@@ -1,11 +1,3 @@
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import SurveyWrapper from "../../SurveyWrapper";
-//edit the following two lines to include the survey and template data
-import surveyJson from "./qualityControlSurvey.json";
-export const templateData = {};
-//newline required before meta tag (https://github.com/storybookjs/storybook/issues/17739)
-
-<Meta title="Surveys/QualityControlSurvey" component={SurveyWrapper} />
 
 # Survey Purpose
 
@@ -27,10 +19,3 @@ Zanutto, E. (2020b). Questionnaire Design Part 2. https://github.com/Watts-Lab/s
 
 Select PICES Item Catalog Questions. (n.d.). https://www.buffalo.edu/content/dam/www/course-evaluation/tutorials/PICES-catalogue-of-Likert-scale-items.pdf
 
-# Example
-
-<Canvas>
-  <Story name="QualityControlSurvey" args={{ surveyJson: surveyJson }}>
-    {(args) => <SurveyWrapper {...args} />}
-  </Story>
-</Canvas>

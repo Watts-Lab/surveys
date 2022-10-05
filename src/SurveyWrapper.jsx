@@ -1,24 +1,34 @@
 import 'survey-react/modern.min.css';
 import { Survey, StylesManager, Model } from 'survey-react';
-import PropTypes from "prop-types";
-import React from "react";
-import SurveyCSS from "./SurveyWrapper.css";
+import React, { useCallback, useEffect } from "react";
 
 StylesManager.applyTheme("modern");
 
-export default class SurveyWrapper extends React.PureComponent {
+export async function SurveyWrapper({surveyName, onComplete})  {
+    // surveyName examples: "exampleSurvey", "teamViability"
+    // onComplete callback should expect the "record"
 
-    render () {
-        const {surveyJson} = this.props;
-        const surveyModel = new Model(surveyJson);
+    surveyPath = `/surveys/${surveyName}/${surveyName}.json`;
+    scoreFuncPath = `/surveys/${surveyName}/${surveyName}.score.js`;
 
-        // TODO: empirica callbacks on survey completion
-        return(
-            <Survey css={SurveyCSS} model={surveyModel} />
-        )
+    try {
+        const surveyJson = await import(surveyPath);
+        const scoreFunc = await import(scoreFuncPath); 
+    } catch (error) {
+        throw `Could not load survey with name: ${surveyName}`
     }
+    
+    const scoreResponses = useCallback( (sender) => {
+        const { data: responses } = sender;
+        const result = scoreFunc(responses)
+        const record = { responses, result }
+        onComplete(record)
+    })
+
+    const surveyModel = new Model(surveyJson);
+    surveyModel.onComplete.add(scoreResponses);
+
+    return <Survey style={surveyStyle} model={surveyModel} />
+    
 }
 
-SurveyWrapper.propTypes = {
-    surveyJson: PropTypes.object.isRequired,
-}

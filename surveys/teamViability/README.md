@@ -1,12 +1,3 @@
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import SurveyWrapper from "../../SurveyWrapper";
-//edit the following two lines to include the survey and template data
-import surveyJson from "./teamViability.json";
-export const templateData = {};
-//newline required before meta tag (https://github.com/storybookjs/storybook/issues/17739)
-
-<Meta title="Surveys/TeamViability" component={SurveyWrapper} />
-
 # Survey Purpose
 
 This particular survey allows us to take a measure of a participant's subjective experience of working with the other perticipants throughout a given experiment. This will be a key factor in our analysis of various deliberation treatments.
@@ -23,10 +14,3 @@ We used survey items developed by Jessica Nicole Cooperstein in her paper on dev
 
 Cooperstein, J. (2017). Initial Development of a Team Viability Measure. College of Science and Health Theses and Dissertations. https://via.library.depaul.edu/csh_etd/202
 
-# Example
-
-<Canvas>
-  <Story name="TeamViability" args={{ surveyJson: surveyJson }}>
-    {(args) => <SurveyWrapper {...args} />}
-  </Story>
-</Canvas>
