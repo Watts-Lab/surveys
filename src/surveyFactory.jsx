@@ -1,13 +1,14 @@
 import 'survey-react/modern.min.css';
 import { Survey as SurveyJS, StylesManager, Model } from 'survey-react';
+import React from 'react'
 
 StylesManager.applyTheme("modern");
 
-export function SurveyFactory({surveyName}) {
-    const surveyJson = import(`../surveys/${surveyName}/${surveyName}.json`);
-    const scoreFunc = import(`../surveys/${surveyName}/${surveyName}.score.js`); 
+export default async function SurveyFactory(surveyName) {
+    const surveyJson = await import(`../surveys/${surveyName}/${surveyName}.json`);
+    const scoreFunc = await import(`../surveys/${surveyName}/${surveyName}.score.js`); 
 
-    Survey = (onComplete) => {
+    function Survey ({ onComplete }) {
         const scoreResponses = (sender) => {
             const { data: responses } = sender;
             const result = scoreFunc(responses)
@@ -18,7 +19,7 @@ export function SurveyFactory({surveyName}) {
         const surveyModel = new Model(surveyJson);
         surveyModel.onComplete.add(scoreResponses);
     
-        return SurveyJS(style={surveyStyle}, model={surveyModel})
+        return <SurveyJS model={surveyModel}/>
     }
 
     return Survey

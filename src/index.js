@@ -1,6 +1,6 @@
-import { SurveyFactory } from "./surveyFactory"
+import SurveyFactory from "./surveyFactory.jsx"
 
-const teamViability = SurveyFactory('teamViability');
-const discussionQualityControl = SurveyFactory('discussionQualityControl');
+const TeamViability = await SurveyFactory('teamViability');
+const DiscussionQualityControl = await SurveyFactory('discussionQualityControl');
 
-export { teamViability }
+export { TeamViability, DiscussionQualityControl }
