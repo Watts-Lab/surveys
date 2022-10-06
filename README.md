@@ -1,5 +1,7 @@
 # Standardized Survey Library
 
+[![Surveys](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/z7p66s/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/z7p66s/runs)
+
 ## Installation
 `npm i @wattslab/surveys`
 
