@@ -11,10 +11,11 @@ const packageJson = require('./package.json')
 export default {
     input: "src/index.js",
     output: {
-        dir: 'build',
+        dir: 'dist',
         format: 'es',
         sourcemap: true,
     },
+    external: ["react", "react-dom"],
     plugins: [
         nodeResolve(),
         babel({

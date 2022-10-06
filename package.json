@@ -1,14 +1,19 @@
 {
-  "name": "surveys",
+  "name": "@wattslab/surveys",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
-    "test": "npx cypress open"
+    "test": "npx cypress open",
+    "build": "npx rollup --config"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Watts-Lab/surveys.git"
+  },
+  "publishConfig": {
+    "registry":"https://registry.npmjs.org"
   },
   "author": "",
   "license": "MIT",
@@ -16,6 +21,9 @@
     "url": "https://github.com/Watts-Lab/surveys/issues"
   },
   "homepage": "https://github.com/Watts-Lab/surveys#readme",
+  "files": [ 
+    "dist" 
+  ],
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
