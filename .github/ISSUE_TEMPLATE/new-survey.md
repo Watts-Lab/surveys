@@ -14,10 +14,10 @@ assignees: ''
 ## Survey Overview 
 
 # Tasks
-- [ ] Create a new folder in surveys/src/surveys w/ descriptive, easy-to-read name `superSpecialSurvey/`
+- [ ] Create a new folder in surveys w/ descriptive, easy-to-read name `superSpecialSurvey/`
 - [ ] Create SurveyJS .json file (*e.g.* `superSpecialSurvey/superSpecialSurvey.json`)
-- [ ] Create a .bib file citing your references for the survey (*always:* `references.bib`)
-- [ ] Create a storybook markdown file to document (*e.g.* `superSpecialSurvey.stories.mdx`) 
+- [ ] Create a .bib file citing your references for the survey (*always:* `superSpecialSurvey/references.bib`)
+- [ ] Create a readme markdown file to document (*always:* `superSpecialSurvey/README.md`) 
   - [ ] Survey purpose
   - [ ] Expected behavior
   - [ ] Design rationale
