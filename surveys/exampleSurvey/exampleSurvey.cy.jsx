@@ -13,8 +13,13 @@ describe('ExampleSurvey', () => {
       cy.spy(dummy, 'set').as('callback')
       cy.mount(<ExampleSurvey onComplete={dummy.set} />)
   
-      cy.get('[data-name="nps_score"] input[value="2"]')
-      .click({ force: true });
+      cy.get(`[data-name="nps_score"] input[value="1"]`)
+        .next()
+        .click({ force: true });
+    
+      cy.get(`[data-name="nps_score"] input[value="2"]`)
+        .next()
+        .click({ force: true });
 
       cy.get('[data-name="disappointed_experience"] textarea')
       .click()
