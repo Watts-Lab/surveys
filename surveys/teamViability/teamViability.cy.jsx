@@ -6,7 +6,7 @@ const dummy = {
 }
 
 describe('TeamViability', () => {
-  it('playground', () => {
+  it('completes', () => {
     cy.spy(dummy, 'set').as('callback')
     cy.mount(<TeamViability onComplete={dummy.set} />)
 
