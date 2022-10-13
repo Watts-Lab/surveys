@@ -29,7 +29,6 @@ and processes/stores the survey response appropriately:
 ```js
 const onCompleteCallback = (record) => {
   console.log(record);
-  next();
 }
 ```
 
