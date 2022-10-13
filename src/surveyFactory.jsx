@@ -1,6 +1,7 @@
 import 'survey-react/modern.min.css';
 import { Survey as SurveyJS, StylesManager, Model } from 'survey-react';
 import React from 'react'
+import packageJson from '../package.json';
 
 StylesManager.applyTheme("modern");
 
@@ -13,7 +14,14 @@ export default async function SurveyFactory(surveyName) {
         const scoreResponses = (sender) => {
             const { data: responses } = sender;
             const result = scoreFunc(responses)
-            const record = { responses, result }
+            const record = { 
+                surveySource: packageJson["name"],
+                surveyVersion: packageJson["version"],
+                surveyName, 
+                responses, 
+                result,
+                submitTime: Date.now()
+            }
             onComplete(record)
         }
     
