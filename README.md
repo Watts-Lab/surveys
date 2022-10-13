@@ -134,7 +134,7 @@ const dummy = {
 }
 
 describe('SuperSpecialSurvey', () => {
-  it('playground', () => {
+  it('completes', () => {
     cy.spy(dummy, 'set').as('callback')
     cy.mount(<SuperSpecialSurvey onComplete={dummy.set} />)
 
