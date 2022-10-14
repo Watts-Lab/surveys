@@ -14,6 +14,8 @@ Add a new survey to the repository according to the instructions in [the package
 
 ## Survey Overview 
 
+## Aggregation/scoring function
+
 # Tasks
 - [ ] Create a new folder in surveys w/ descriptive, easy-to-read name `superSpecialSurvey/`
 - [ ] Create SurveyJS .json file (*e.g.* `superSpecialSurvey/superSpecialSurvey.json`)

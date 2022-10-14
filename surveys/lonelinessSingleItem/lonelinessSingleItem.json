@@ -1,0 +1,37 @@
+{
+    "title": "Loneliness",
+    "logoPosition": "right",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "loneliness",
+        "title": "I felt lonely during our conversation...",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "0",
+          "text": "0 not at all"
+         },
+         "1",
+         "2",
+         "3",
+         "4",
+         "5",
+         "6",
+         "7",
+         "8",
+         "9",
+         {
+          "value": "10",
+          "text": "10 intensely"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "showTitle": false
+   }
