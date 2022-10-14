@@ -1,5 +1,5 @@
 import React from 'react'
-import { ListeningQualityPartner, listeningQualityPartner } from "../../src/index.js"
+import { ListeningQualityPartner } from "../../src/index.js"
 
 const dummy = {
   set (response) {} ,
