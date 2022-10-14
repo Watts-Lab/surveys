@@ -8,7 +8,7 @@
       "elements": [
         {
           "type": "matrix",
-          "name": "team-viability",
+          "name": "teamViability",
           "minWidth": "500px",
           "maxWidth": "Initial",
           "title": "Please select the option that most closely reflects how much you agree with the following statements.",
