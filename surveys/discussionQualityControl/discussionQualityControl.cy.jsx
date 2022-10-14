@@ -7,7 +7,7 @@ const dummy = {
 
 const loremIpsum = "lorem ipsum dolor sit amet"
 
-describe('TeamViability', () => {
+describe('Demographics', () => {
 
   it('completes', () => {
     cy.spy(dummy, 'set').as('callback')
