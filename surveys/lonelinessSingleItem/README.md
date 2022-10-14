@@ -1,0 +1,3 @@
+# Loneliness single item survey
+
+Taken from...
