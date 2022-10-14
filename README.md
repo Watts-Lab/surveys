@@ -29,7 +29,6 @@ and processes/stores the survey response appropriately:
 ```js
 const onCompleteCallback = (record) => {
   console.log(record);
-  next();
 }
 ```
 
@@ -135,7 +134,7 @@ const dummy = {
 }
 
 describe('SuperSpecialSurvey', () => {
-  it('playground', () => {
+  it('completes', () => {
     cy.spy(dummy, 'set').as('callback')
     cy.mount(<SuperSpecialSurvey onComplete={dummy.set} />)
 
