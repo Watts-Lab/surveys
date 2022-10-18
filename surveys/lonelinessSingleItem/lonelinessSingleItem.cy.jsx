@@ -25,7 +25,7 @@ describe('Demographics', () => {
       const spyCall = spy.getCall(-1).args[0]
       console.log(spyCall)
       expect(spyCall.result.normScore).to.eq(0.2)
-      expect(spyCall.responses.loneliness).to.have.string("2")
+      expect(spyCall.responses.loneliness).to.eq(2)
     })
 
 

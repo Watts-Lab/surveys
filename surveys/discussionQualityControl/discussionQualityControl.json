@@ -84,7 +84,8 @@
           "isRequired": false,
           "rateValues": ["1", "2", "3", "4", "5"],
           "minRateDescription": "Very Poor",
-          "maxRateDescription": "Excellent"
+          "maxRateDescription": "Excellent",
+          "displayMode": "buttons"
         },
         {
           "type": "text",

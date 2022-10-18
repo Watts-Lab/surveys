@@ -5,16 +5,16 @@ export default function scoreFunc(responses) {
   const maxScore = 9 * 10;
 
   const rawScore =
-    parseInt(responses["listeningQualityPartner"]["tried to understand"]) +
-    parseInt(responses["listeningQualityPartner"]["asked questions"]) +
-    parseInt(responses["listeningQualityPartner"]["encouraged clarification"]) +
-    parseInt(responses["listeningQualityPartner"]["expressed interest"]) +
-    parseInt(responses["listeningQualityPartner"]["listened attentively"]) +
-    parseInt(responses["listeningQualityPartner"]["paid attention"]) +
-    parseInt(responses["listeningQualityPartner"]["time and space"]) +
-    parseInt(responses["listeningQualityPartner"]["undivided attention"]) +
-    parseInt(responses["listeningQualityPartner"]["positive atmosphere"]) +
-    parseInt(responses["listeningQualityPartner"]["full expression"]);
+    parseInt(responses["tryToUnderstand"]) +
+    parseInt(responses["askedQuestions"]) +
+    parseInt(responses["encouragedClarification"]) +
+    parseInt(responses["expressedInterest"]) +
+    parseInt(responses["listenedAttentively"]) +
+    parseInt(responses["paidAttention"]) +
+    parseInt(responses["gaveSpace"]) +
+    parseInt(responses["undividedAttention"]) +
+    parseInt(responses["positiveAtmosphere"]) +
+    parseInt(responses["allowedExpression"]);
 
   const result = {
     rawScore: rawScore,
