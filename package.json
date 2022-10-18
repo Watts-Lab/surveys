@@ -1,10 +1,12 @@
 {
   "name": "@watts-lab/surveys",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
+    "prebuild": "node builder.js",
+    "pretest": "node builder.js",
     "test": "npx cypress open",
     "build": "npx rollup --config"
   },
@@ -13,7 +15,7 @@
     "url": "git+https://github.com/Watts-Lab/surveys.git"
   },
   "publishConfig": {
-    "registry":"https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org"
   },
   "author": "",
   "license": "MIT",
@@ -21,8 +23,8 @@
     "url": "https://github.com/Watts-Lab/surveys/issues"
   },
   "homepage": "https://github.com/Watts-Lab/surveys#readme",
-  "files": [ 
-    "dist" 
+  "files": [
+    "dist"
   ],
   "dependencies": {
     "react": "^18.2.0",
@@ -38,6 +40,7 @@
     "@rollup/plugin-node-resolve": "^14.1.0",
     "cypress": "^10.9.0",
     "cypress-rollup-preprocessor": "^1.2.0",
+    "glob": "^8.0.3",
     "rollup": "^2.79.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
