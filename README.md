@@ -45,6 +45,8 @@ Create a SurveyJS `.json` file with the same name as the directory (*e.g.* `supe
 
 You can use the online SurveyJS visual editor if you would like: https://surveyjs.io/create-free-survey
 
+Question names should be a one-word camelCase descriptor of the question that can be included directly in a json file.
+
 ### Scoring function
 To replicate a survey, we need to include not only the questions and scales, but also the function that aggregates the survey into a particular score.
 

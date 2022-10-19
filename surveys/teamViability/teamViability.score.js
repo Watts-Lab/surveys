@@ -5,13 +5,13 @@ export default function scoreFunc(responses) {
   const maxScore = 5 * 6;
 
   const rawScore =
-    parseInt(responses["team-viability"]["capable unit"]) +
-    parseInt(responses["team-viability"]["future success"]) +
+    parseInt(responses["teamViability"]["capable unit"]) +
+    parseInt(responses["teamViability"]["future success"]) +
     6 -
-    parseInt(responses["team-viability"]["falling apart"]) +
-    parseInt(responses["team-viability"]["welcome reunion"]) +
-    parseInt(responses["team-viability"]["persist despite obstacles"]) +
-    parseInt(responses["team-viability"]["succeed dispite dislike"]);
+    parseInt(responses["teamViability"]["falling apart"]) +
+    parseInt(responses["teamViability"]["welcome reunion"]) +
+    parseInt(responses["teamViability"]["persist despite obstacles"]) +
+    parseInt(responses["teamViability"]["succeed dispite dislike"]);
 
   const result = {
     rawScore: rawScore,

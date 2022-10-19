@@ -6,32 +6,22 @@
       "name": "page1",
       "elements": [
        {
-        "type": "radiogroup",
+        "type": "rating",
         "name": "loneliness",
+        "state": "expanded",
+        "useDisplayValuesInTitle": false,
+        "minWidth": "600px",
         "title": "I felt lonely during our conversation...",
         "isRequired": true,
-        "choices": [
-         {
-          "value": "0",
-          "text": "0 not at all"
-         },
-         "1",
-         "2",
-         "3",
-         "4",
-         "5",
-         "6",
-         "7",
-         "8",
-         "9",
-         {
-          "value": "10",
-          "text": "10 intensely"
-         }
-        ]
+        "rateMin": 0,
+        "rateMax": 10,
+        "minRateDescription": "Not at all",
+        "maxRateDescription": "Intensely",
+        "displayMode": "buttons"
        }
       ]
      }
     ],
-    "showTitle": false
+    "showTitle": false,
+    "showPageTitles": false
    }
