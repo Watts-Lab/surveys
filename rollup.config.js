@@ -11,7 +11,7 @@ const packageJson = require('./package.json')
 export default {
     input: "src/index.js",
     output: {
-        dir: 'dist/bundle.js',
+        file: 'dist/bundle.js',
         format: 'umd',
         sourcemap: true,
         name: "@watts-lab/surveys"
