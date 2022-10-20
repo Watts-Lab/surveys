@@ -32,11 +32,19 @@ describe("Demographics", () => {
       `[data-name="english_spoken"] input[value="Very Comfortable"]`
     ).click({ force: true });
 
-    cy.get(`[data-name="usual_time"] input[value="Yes"]`).click({
+    // cy.get(`[data-name="usual_time"] input[value="Yes"]`).click({
+    //   force: true,
+    // });
+
+    cy.get(`[data-name="employment_status"] input[value="Retired"]`).click({
       force: true,
     });
 
-    cy.get(`[data-name="employment_status"] input[value="Retired"]`).click({
+    cy.get(`[data-name="political_social"] input[value="Moderate"]`).click({
+      force: true,
+    });
+
+    cy.get(`[data-name="political_fiscal"] input[value="Moderate"]`).click({
       force: true,
     });
 
@@ -57,14 +65,6 @@ describe("Demographics", () => {
       .click({ force: true });
 
     cy.get(`[data-name="income_US"] input[value="$50,000-$74,999"]`).click({
-      force: true,
-    });
-
-    cy.get(`[data-name="political_social_US"] input[value="Moderate"]`).click({
-      force: true,
-    });
-
-    cy.get(`[data-name="political_fiscal_US"] input[value="Moderate"]`).click({
       force: true,
     });
 
