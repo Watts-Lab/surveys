@@ -1,13 +1,14 @@
 {
   "name": "@watts-lab/surveys",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
     "prebuild": "node builder.js",
-    "pretest": "node builder.js",
-    "test": "npx cypress open",
-    "build": "npx rollup --config"
+    "build": "npx rollup --config",
+    "postbuild": "npm link && npm link @watts-lab/surveys",
+    "test": "npx cypress open"
   },
   "repository": {
     "type": "git",

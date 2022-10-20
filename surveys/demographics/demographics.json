@@ -1,319 +1,313 @@
 {
-    "title": "Demographics",
-    "logoPosition": "right",
-    "pages": [
-     {
+  "title": "Demographics",
+  "logoPosition": "right",
+  "pages": [
+    {
       "name": "page1",
       "elements": [
-       {
-        "type": "text",
-        "name": "birth_year",
-        "title": "In which year were you born?",
-        "description": "Please enter the four-digit year",
-        "valueName": "birth_year",
-        "isRequired": true,
-        "validators": [
-         {
-          "type": "numeric",
-          "minValue": 1900,
-          "maxValue": 2022
-         }
-        ]
-       },
-       {
-        "type": "radiogroup",
-        "name": "gender",
-        "title": "What is your gender?",
-        "isRequired": true,
-        "choices": [
-         {
-          "value": "female",
-          "text": "Female"
-         },
-         {
-          "value": "male",
-          "text": "Male"
-         },
-         {
-          "value": "other",
-          "text": "Other"
-         }
-        ]
-       },
-       {
-        "type": "dropdown",
-        "name": "marital_status",
-        "title": "What is your marital status?",
-        "isRequired": true,
-        "choices": [
-         "Single Never Married",
-         "Married or Domestic Partnership",
-         "Widowed",
-         "Divorced",
-         "Separated",
-         "Other"
-        ],
-        "autoComplete": "country"
-       },
-       {
-        "type": "checkbox",
-        "name": "impairment",
-        "title": "Do you have any health conditions or illnesses which affect you in any of the following areas?",
-        "description": "In answering this question, you should consider whether you are affected in any of these areas while receiving any treatment or medication or using devices to help you. (For example, a hearing aid.)",
-        "isRequired": true,
-        "choices": [
-         {
-          "value": "vision",
-          "text": "Vision (e.g. blindness or partial sight)"
-         },
-         {
-          "value": "hearing",
-          "text": "Hearing (e.g. deafness or partial hearing)"
-         },
-         {
-          "value": "mobility",
-          "text": "Mobility (e.g. walking short distances or climbing stairs)"
-         },
-         {
-          "value": "dexterity",
-          "text": "Dexterity (e.g. lifting and carrying objects, using a keyboard)"
-         },
-         {
-          "value": "understanding",
-          "text": "Learning or understanding or concentrating"
-         },
-         {
-          "value": "memory",
-          "text": "Memory"
-         },
-         {
-          "value": "mental_health",
-          "text": "Mental health"
-         },
-         {
-          "value": "stamina",
-          "text": "Stamina or breathing or fatigue"
-         },
-         {
-          "value": "sociobehavioral",
-          "text": "Social or behavioral (e.g. autism spectrum disorder (ASD) which includes Asperger’s, or attention deficit hyperactivity disorder (ADHD))"
-         }
-        ],
-        "separateSpecialChoices": true,
-        "noneText": "None of the above",
-        "maxSelectedChoices": 12
-       },
-       {
-        "type": "dropdown",
-        "name": "language_primary",
-        "title": "What is your primary language?",
-        "description": "This is the language you use most naturally, for example, the language you use at home.",
-        "isRequired": true,
-        "choices": [
-         "Arabic",
-         "Armenian",
-         "Cambodian",
-         "Chinese",
-         "Czech",
-         "Dutch",
-         "English",
-         "French",
-         "French Creole",
-         "German",
-         "Greek",
-         "Gujarathi",
-         "Hebrew",
-         "Hindi",
-         "Hungarian",
-         "Italian",
-         "Japanese",
-         "Korean",
-         "Navaho",
-         "Persian",
-         "Polish",
-         "Portuguese",
-         "Russian",
-         "Spanish",
-         "Tagalog",
-         "Thai",
-         "Ukrainian",
-         "Vietnamese",
-         "Yiddish",
-         {
-          "value": "item1",
-          "text": "Other"
-         }
-        ]
-       },
-       {
-        "type": "radiogroup",
-        "name": "english_written",
-        "title": "How comfortable are you reading and writing in English?",
-        "isRequired": true,
-        "choices": [
-         "Very Uncomfortable",
-         "Somewhat Uncomfortable",
-         "Neither Comfortable nor Uncomfortable",
-         "Somewhat Comfortable",
-         "Very Comfortable"
-        ]
-       },
-       {
-        "type": "radiogroup",
-        "name": "english_spoken",
-        "title": "How comfortable are you speaking in English?",
-        "isRequired": true,
-        "choices": [
-         "Very Uncomfortable",
-         "Somewhat Uncomfortable",
-         "Neither Comfortable nor Uncomfortable",
-         "Somewhat Comfortable",
-         "Very Comfortable"
-        ]
-       },
-       {
-        "type": "radiogroup",
-        "name": "usual_time",
-        "title": "Do you usually work on crowd-work tasks (HITs, studies, etc.) at this time of day?",
-        "isRequired": true,
-        "choices": [
-         "Yes",
-         "No"
-        ]
-       },
-       {
-        "type": "radiogroup",
-        "name": "employment_status",
-        "title": "Are you currently...",
-        "isRequired": true,
-        "choices": [
-         "Employed for wages",
-         "Self-employed",
-         "Out of work and looking for work",
-         "Out of work but not currently looking for work",
-         "A homemaker",
-         "A student",
-         "Military",
-         "Retired",
-         "Unable to work"
-        ]
-       },
-       {
-        "type": "dropdown",
-        "name": "country_reside",
-        "title": "In which country do you reside?",
-        "isRequired": true,
-        "choices": [
-         "Canada",
-         "United States",
-         "United Kingdom",
-         {
-          "value": "item1",
-          "text": "Other"
-         }
-        ]
-       }
+        {
+          "type": "text",
+          "name": "birth_year",
+          "title": "In which year were you born?",
+          "description": "Please enter the four-digit year",
+          "valueName": "birth_year",
+          "isRequired": true,
+          "validators": [
+            {
+              "type": "numeric",
+              "minValue": 1900,
+              "maxValue": 2022
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "gender",
+          "title": "What is your gender?",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "female",
+              "text": "Female"
+            },
+            {
+              "value": "male",
+              "text": "Male"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "marital_status",
+          "title": "What is your marital status?",
+          "isRequired": false,
+          "choices": [
+            "Single Never Married",
+            "Married or Domestic Partnership",
+            "Widowed",
+            "Divorced",
+            "Separated",
+            "Other"
+          ],
+          "autoComplete": "country"
+        },
+        {
+          "type": "checkbox",
+          "name": "impairment",
+          "title": "Do you have any health conditions or illnesses which affect you in any of the following areas?",
+          "description": "In answering this question, you should consider whether you are affected in any of these areas while receiving any treatment or medication or using devices to help you. (For example, a hearing aid.)",
+          "isRequired": false,
+          "choices": [
+            {
+              "value": "vision",
+              "text": "Vision (e.g. blindness or partial sight)"
+            },
+            {
+              "value": "hearing",
+              "text": "Hearing (e.g. deafness or partial hearing)"
+            },
+            {
+              "value": "mobility",
+              "text": "Mobility (e.g. walking short distances or climbing stairs)"
+            },
+            {
+              "value": "dexterity",
+              "text": "Dexterity (e.g. lifting and carrying objects, using a keyboard)"
+            },
+            {
+              "value": "understanding",
+              "text": "Learning or understanding or concentrating"
+            },
+            {
+              "value": "memory",
+              "text": "Memory"
+            },
+            {
+              "value": "mental_health",
+              "text": "Mental health"
+            },
+            {
+              "value": "stamina",
+              "text": "Stamina or breathing or fatigue"
+            },
+            {
+              "value": "sociobehavioral",
+              "text": "Social or behavioral (e.g. autism spectrum disorder (ASD) which includes Asperger’s, or attention deficit hyperactivity disorder (ADHD))"
+            },
+            {
+              "value": "none",
+              "text": "None of the above / Prefer not to say"
+            }
+          ],
+          "separateSpecialChoices": true,
+          "noneText": "None of the above",
+          "maxSelectedChoices": 12
+        },
+        {
+          "type": "dropdown",
+          "name": "language_primary",
+          "title": "What is your primary language?",
+          "description": "This is the language you use most naturally, for example, the language you use at home.",
+          "isRequired": true,
+          "choices": [
+            "Arabic",
+            "Armenian",
+            "Cambodian",
+            "Chinese",
+            "Czech",
+            "Dutch",
+            "English",
+            "French",
+            "French Creole",
+            "German",
+            "Greek",
+            "Gujarathi",
+            "Hebrew",
+            "Hindi",
+            "Hungarian",
+            "Italian",
+            "Japanese",
+            "Korean",
+            "Navaho",
+            "Persian",
+            "Polish",
+            "Portuguese",
+            "Russian",
+            "Spanish",
+            "Tagalog",
+            "Thai",
+            "Ukrainian",
+            "Vietnamese",
+            "Yiddish",
+            {
+              "value": "item1",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "english_written",
+          "title": "How comfortable are you reading and writing in English?",
+          "isRequired": true,
+          "choices": [
+            "Very Uncomfortable",
+            "Somewhat Uncomfortable",
+            "Neither Comfortable nor Uncomfortable",
+            "Somewhat Comfortable",
+            "Very Comfortable"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "english_spoken",
+          "title": "How comfortable are you speaking in English?",
+          "isRequired": true,
+          "choices": [
+            "Very Uncomfortable",
+            "Somewhat Uncomfortable",
+            "Neither Comfortable nor Uncomfortable",
+            "Somewhat Comfortable",
+            "Very Comfortable"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "usual_time",
+          "title": "Do you usually work on studies/surveys at this time of day?",
+          "isRequired": false,
+          "choices": ["Yes", "No"]
+        },
+        {
+          "type": "radiogroup",
+          "name": "employment_status",
+          "title": "Are you currently...",
+          "isRequired": false,
+          "choices": [
+            "Employed for wages",
+            "Self-employed",
+            "Out of work and looking for work",
+            "Out of work but not currently looking for work",
+            "A homemaker",
+            "A student",
+            "Military",
+            "Retired",
+            "Unable to work"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "political_social",
+          "title": "Thinking about social issues, which of the following best describes your views?\t",
+          "isRequired": false,
+          "choices": [
+            "Strongly Liberal",
+            "Somewhat Liberal",
+            "Moderate",
+            "Somewhat Conservative",
+            "Strongly Conservative"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "political_fiscal",
+          "title": "Thinking about economic issues, which of the following best describes your views?\t",
+          "isRequired": false,
+          "choices": [
+            "Strongly Liberal",
+            "Somewhat Liberal",
+            "Moderate",
+            "Somewhat Conservative",
+            "Strongly Conservative"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "country_reside",
+          "title": "In which country do you reside?",
+          "isRequired": true,
+          "choices": [
+            "Canada",
+            "United States",
+            "United Kingdom",
+            {
+              "value": "item1",
+              "text": "Other"
+            }
+          ]
+        }
       ]
-     },
-     {
+    },
+    {
       "name": "page2",
       "elements": [
-       {
-        "type": "radiogroup",
-        "name": "education_US",
-        "visibleIf": "{country_reside} = 'United States'",
-        "title": "What is the highest level of education you have completed?",
-        "isRequired": true,
-        "choices": [
-         "Less than a high school diploma",
-         "High school diploma",
-         "Some college or vocational training",
-         "2-year college degree",
-         "4-year college degree",
-         "Post-college degree",
-         {
-          "value": "5-year college degree",
-          "text": "Other"
-         }
-        ]
-       },
-       {
-        "type": "checkbox",
-        "name": "race_US",
-        "visibleIf": "{country_reside} = 'United States'",
-        "title": "Please choose one or more races that you consider yourself to be.",
-        "isRequired": true,
-        "choices": [
-         "White",
-         "Black or African-American",
-         "American Indian or Alaska Native",
-         "Asian",
-         "Native Hawaiian or other Pacific Islander",
-         "Other"
-        ]
-       },
-       {
-        "type": "radiogroup",
-        "name": "income_US",
-        "visibleIf": "{country_reside} = 'United States'",
-        "title": "Thinking back over the past year, what was your family's annual income?",
-        "isRequired": true,
-        "choices": [
-         "Less than $10,000",
-         "$10,000-$19,999",
-         "$20,000-$29,999",
-         "$30,000-$39,999",
-         "$40,000-$49,999",
-         "$50,000-$74,999",
-         "$75,000-$99,999",
-         "$100,000-$149,999",
-         "$150,000 or more"
-        ]
-       },
-       {
-        "type": "radiogroup",
-        "name": "political_social_US",
-        "visibleIf": "{country_reside} = 'United States'",
-        "title": "Thinking about social issues, which of the following best describes your views?\t",
-        "isRequired": true,
-        "choices": [
-         "Strongly Liberal",
-         "Somewhat Liberal",
-         "Moderate",
-         "Somewhat Conservative",
-         "Strongly Conservative"
-        ]
-       },
-       {
-        "type": "radiogroup",
-        "name": "political_fiscal_US",
-        "visibleIf": "{country_reside} = 'United States'",
-        "title": "Thinking about economic issues, which of the following best describes your views?\t",
-        "isRequired": true,
-        "choices": [
-         "Strongly Liberal",
-         "Somewhat Liberal",
-         "Moderate",
-         "Somewhat Conservative",
-         "Strongly Conservative"
-        ]
-       },
-       {
-        "type": "radiogroup",
-        "name": "political_party_US",
-        "visibleIf": "{country_reside} = 'United States'",
-        "title": "Generally speaking, do you consider yourself a...\t",
-        "isRequired": true,
-        "choices": [
-         "Democrat",
-         "Republican",
-         "Independent",
-         "Other Party"
-        ]
-       }
+        {
+          "type": "radiogroup",
+          "name": "education_US",
+          "visibleIf": "{country_reside} = 'United States'",
+          "title": "What is the highest level of education you have completed?",
+          "isRequired": false,
+          "choices": [
+            "Less than a high school diploma",
+            "High school diploma",
+            "Some college or vocational training",
+            "2-year college degree",
+            "4-year college degree",
+            "Post-college degree",
+            {
+              "value": "5-year college degree",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "race_US",
+          "visibleIf": "{country_reside} = 'United States'",
+          "title": "Please choose one or more races that you consider yourself to be.",
+          "isRequired": false,
+          "choices": [
+            "White",
+            "Black or African-American",
+            "American Indian or Alaska Native",
+            "Asian",
+            "Native Hawaiian or other Pacific Islander",
+            "Other"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "income_US",
+          "visibleIf": "{country_reside} = 'United States'",
+          "title": "Thinking back over the past year, what was your family's annual income?",
+          "isRequired": false,
+          "choices": [
+            "Less than $10,000",
+            "$10,000-$19,999",
+            "$20,000-$29,999",
+            "$30,000-$39,999",
+            "$40,000-$49,999",
+            "$50,000-$74,999",
+            "$75,000-$99,999",
+            "$100,000-$149,999",
+            "$150,000 or more"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "political_party_US",
+          "visibleIf": "{country_reside} = 'United States'",
+          "title": "Generally speaking, do you consider yourself a...\t",
+          "isRequired": true,
+          "choices": ["Democrat", "Republican", "Independent", "Other Party"]
+        }
       ]
-     }
-    ],
-    "showPrevButton": false,
-    "showTitle": false
-   }
+    }
+  ],
+  "showPrevButton": false,
+  "showTitle": false
+}
