@@ -13,10 +13,4 @@ module.exports = defineConfig({
     specPattern: "./surveys/**/*.cy.{js,jsx,ts,tsx}",
     supportFile: "./cypress/support/component.js",
   },
-
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
-  },
 });
