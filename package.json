@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "node builder.js",
     "build": "npx rollup --config",
-    "pretest": "npm link && npm link @watts-lab/surveys",
+    "postbuild": "npm link && npm link @watts-lab/surveys",
     "test": "npx cypress open"
   },
   "repository": {
