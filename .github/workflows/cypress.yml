@@ -16,6 +16,7 @@ jobs:
           build: npm run build
           component: true
           record: true
+          command: npm run test
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
