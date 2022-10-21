@@ -36,7 +36,7 @@ describe("AutonomyNeedSatisfaction", () => {
 
     cy.get('[data-name="voiceOpinion"] input[value="2"]').click({ force: true });
 
-    cy.get('[data-name="undividedAttention2"] input[value="8"]').click({
+    cy.get('[data-name="controlledPressured"] input[value="8"]').click({
       force: true,
     });
 
