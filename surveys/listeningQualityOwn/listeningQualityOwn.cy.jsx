@@ -59,7 +59,7 @@ describe("ListeningQualityOwn", () => {
       console.log(spyCall);
       expect(spyCall["result"]["rawScore"]).to.eq(20);
       expect(spyCall["result"]["normScore"]).to.eq(0.125);
-      expect(spyCall["responses"]["allowedExpression"]).to.eq(2);
+      expect(spyCall["responses"]["allowedExpression2"]).to.eq(2);
     });
   });
 });
