@@ -1,27 +1,27 @@
 {
-    "title": "Loneliness",
-    "logoPosition": "right",
-    "pages": [
-     {
+  "title": "Loneliness",
+  "logoPosition": "right",
+  "pages": [
+    {
       "name": "page1",
       "elements": [
-       {
-        "type": "rating",
-        "name": "loneliness",
-        "state": "expanded",
-        "useDisplayValuesInTitle": false,
-        "minWidth": "600px",
-        "title": "I felt lonely during our conversation...",
-        "isRequired": true,
-        "rateMin": 0,
-        "rateMax": 10,
-        "minRateDescription": "Not at all",
-        "maxRateDescription": "Intensely",
-        "displayMode": "buttons"
-       }
+        {
+          "type": "rating",
+          "name": "loneliness",
+          "state": "expanded",
+          "useDisplayValuesInTitle": false,
+          "minWidth": "600px",
+          "title": "I felt lonely during the conversation...",
+          "isRequired": true,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not at all",
+          "maxRateDescription": "Intensely",
+          "displayMode": "buttons"
+        }
       ]
-     }
-    ],
-    "showTitle": false,
-    "showPageTitles": false
-   }
+    }
+  ],
+  "showTitle": false,
+  "showPageTitles": false
+}

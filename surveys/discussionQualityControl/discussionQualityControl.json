@@ -72,19 +72,33 @@
           "type": "rating",
           "name": "joiningProblems",
           "title": "Did you have any problems joining the study?",
+          "description": "e.g. recruitment, scheduling, communication, etc.",
           "hideNumber": true,
-          "description": "If so, please describe them below.",
           "rateValues": ["no", "yes"],
           "displayMode": "buttons"
+        },
+        {
+          "type": "text",
+          "name": "joiningDetail",
+          "visibleIf": "{joiningProblems} = 'yes'",
+          "title": "Can you tell us more about the trouble you had joining the study?",
+          "hideNumber": true
         },
         {
           "type": "rating",
           "name": "technicalProblems",
           "title": "Did you have any technical problems with the study?",
-          "hideNumber": true,
           "description": "If so, please describe them below.",
+          "hideNumber": true,
           "rateValues": ["no", "yes"],
           "displayMode": "buttons"
+        },
+        {
+          "type": "text",
+          "name": "technicalDetail",
+          "visibleIf": "{technicalProblems} = 'yes'",
+          "title": "Can you tell us more about your technical problems?",
+          "hideNumber": true
         },
         {
           "type": "text",

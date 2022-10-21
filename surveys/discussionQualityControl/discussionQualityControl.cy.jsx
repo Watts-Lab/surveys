@@ -1,7 +1,6 @@
 import React from "react";
 import { DiscussionQualityControl } from "@watts-lab/surveys";
 
-
 const dummy = {
   set(response) {},
 };
@@ -33,7 +32,21 @@ describe("Demographics", () => {
       force: true,
     });
 
+    cy.get('[data-name="joiningProblems"] input[value="no"]').click({
+      force: true,
+    });
+
+    cy.get('[data-name="technicalProblems"] input[value="yes"]').click({
+      force: true,
+    });
+
+    cy.get('[data-name="technicalDetail"] input').click().type(loremIpsum);
+
     cy.get('[data-name="textExpansion"] input').click().type(loremIpsum);
+
+    cy.contains(
+      "tell us more about the trouble you had joining the study"
+    ).should("not.exist");
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {
