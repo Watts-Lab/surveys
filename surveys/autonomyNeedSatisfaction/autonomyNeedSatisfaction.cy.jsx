@@ -49,7 +49,7 @@ describe("AutonomyNeedSatisfaction", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["rawScore"]).to.eq(20);
+      expect(spyCall["result"]["rawScore"]).to.eq(16);
       expect(spyCall["result"]["normScore"]).to.eq(0.125);
       expect(spyCall["responses"]["chooseDirection"]).to.eq(2);
     });
