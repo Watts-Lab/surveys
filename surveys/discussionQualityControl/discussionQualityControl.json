@@ -1,6 +1,5 @@
 {
-  "title": "Quality Feedback Survey",
-  "description": "Optional - for helping us improve.",
+  "title": "Optional Feedback Survey",
   "logoPosition": "right",
   "focusFirstQuestionAutomatic": false,
   "pages": [
@@ -8,90 +7,89 @@
       "name": "page1",
       "elements": [
         {
-          "type": "matrix",
-          "name": "likert",
-          "minWidth": "500px",
-          "maxWidth": "Initial",
-          "title": "Please select the option that most closely reflects how much you agree with the following statements.",
-          "titleLocation": "top",
+          "type": "rating",
+          "name": "participateAgain",
+          "title": "Would you participate in this study again?",
           "hideNumber": true,
-          "isRequired": false,
-          "columns": [
-            "Strongly Disagree",
-            "Disagree",
-            "Neutral",
-            "Agree",
-            "Strongly Agree"
-          ],
-          "rows": [
-            "\"I enjoyed participating in this study.\"",
-            "\"I learned something during this discussion.\"",
-            "\"I would participate in a similar study again.\"",
-            "\"I would recommend taking part in this discussion exercise to other MTurkers.\"",
-            "\"The discussion prompts were easy to understand and follow.\"",
-            "\"This platform was easy to use.\""
-          ],
-          "isAllRowRequired": false
+          "rateValues": ["no", "maybe", "yes"],
+          "displayMode": "buttons"
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "adequateCompensation",
           "title": "\"I feel I was...\"",
           "hideNumber": true,
-          "isRequired": false,
-          "choices": [
-            {
-              "value": "underpaid", 
-              "text": "underpaid"
-            },
+          "rateValues": [
+            "underpaid",
             {
               "value": "fairly_paid",
               "text": "fairly paid"
             },
-            {
-              "value": "overpaid",
-              "text": "overpaid"
-            }
-          ]
+            "overpaid"
+          ],
+          "displayMode": "buttons"
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "adequateTime",
           "title": "\"I feel we were given...\"",
           "hideNumber": true,
-          "isRequired": false,
-          "choices": [
+          "rateValues": [
             {
               "value": "too_little",
               "text": "too little time"
             },
             {
               "value": "adequate",
-              "text": "an adequate amount of time"
+              "text": "the right amount of time"
             },
             {
               "value": "too_much",
               "text": "too much time"
             }
-          ]
+          ],
+          "displayMode": "buttons"
+        },
+        {
+          "type": "rating",
+          "name": "clearInstructions",
+          "title": "Were the instructions easy to understand?",
+          "hideNumber": true,
+          "minRateDescription": "Not at all easy",
+          "maxRateDescription": "Very easy",
+          "displayMode": "buttons"
         },
         {
           "type": "rating",
           "name": "videoQuality",
           "title": "Please rate the quality of the video call.",
-          "titleLocation": "top",
           "hideNumber": true,
-          "isRequired": false,
-          "rateValues": ["1", "2", "3", "4", "5"],
           "minRateDescription": "Very Poor",
           "maxRateDescription": "Excellent",
           "displayMode": "buttons"
         },
         {
+          "type": "rating",
+          "name": "joiningProblems",
+          "title": "Did you have any problems joining the study?",
+          "hideNumber": true,
+          "description": "If so, please describe them below.",
+          "rateValues": ["no", "yes"],
+          "displayMode": "buttons"
+        },
+        {
+          "type": "rating",
+          "name": "technicalProblems",
+          "title": "Did you have any technical problems with the study?",
+          "hideNumber": true,
+          "description": "If so, please describe them below.",
+          "rateValues": ["no", "yes"],
+          "displayMode": "buttons"
+        },
+        {
           "type": "text",
           "name": "textExpansion",
-          "title": "If you'd like to expand on any of your above responses or add any additional feedback, please do so here.",
-          "titleLocation": "top",
+          "title": "Is there anything else we should know?",
           "hideNumber": true
         }
       ],
