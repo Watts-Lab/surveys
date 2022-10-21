@@ -8,7 +8,7 @@ const dummy = {
 describe("ListeningQualityOwn", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
-    cy.mount(<ListeningQualityPartner onComplete={dummy.set} />);
+    cy.mount(<ListeningQualityOwn onComplete={dummy.set} />);
 
     cy.get('[data-name="tryToUnderstand2"] input[value="2"]').click({
       force: true,
