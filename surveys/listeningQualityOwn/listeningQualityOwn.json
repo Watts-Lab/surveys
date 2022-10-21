@@ -1,0 +1,131 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<br/>\n<h3> During the conversation, I felt I… </h3>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "tryToUnderstand2",
+              "title": "...tried hard to understand what my partner was saying.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "askedQuestions2",
+              "title": "...asked questions that show my understanding of my partner’s opinions.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "encouragedClarification2",
+              "title": "...encouraged my partner to clarify a problem.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "expressedInterest2",
+              "title": "...expressed interest in my partner’s stories.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "listenedAttentively2",
+              "title": "...listened to my partner attentively.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "paidAttention2",
+              "title": "...paid close attention to what my partner has said.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "gaveSpace2",
+              "title": "...gave my partner time and space to talk.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "undividedAttention2",
+              "title": "...gave my partner my undivided attention.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "positiveAtmosphere2",
+              "title": "...created a positive atmosphere for my partner to talk.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "allowedExpression2",
+              "title": "...allowed my partner to express themselves fully.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            }
+          ],
+          "questionsOrder": "random",
+          "state": "expanded",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "questionsOnPageMode": "singlePage",
+  "widthMode": "responsive"
+}
