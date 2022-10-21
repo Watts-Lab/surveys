@@ -16,6 +16,10 @@ import exampleSurveyJson from "../surveys/exampleSurvey/exampleSurvey.json";
 import { default as exampleSurveyScoreFunc } from "../surveys/exampleSurvey/exampleSurvey.score.js";
 export const ExampleSurvey = SurveyFactory("exampleSurvey", exampleSurveyJson, exampleSurveyScoreFunc);
 
+import listeningQualityOwnJson from "../surveys/listeningQualityOwn/listeningQualityOwn.json";
+import { default as listeningQualityOwnScoreFunc } from "../surveys/listeningQualityOwn/listeningQualityOwn.score.js";
+export const ListeningQualityOwn = SurveyFactory("listeningQualityOwn", listeningQualityOwnJson, listeningQualityOwnScoreFunc);
+
 import listeningQualityPartnerJson from "../surveys/listeningQualityPartner/listeningQualityPartner.json";
 import { default as listeningQualityPartnerScoreFunc } from "../surveys/listeningQualityPartner/listeningQualityPartner.score.js";
 export const ListeningQualityPartner = SurveyFactory("listeningQualityPartner", listeningQualityPartnerJson, listeningQualityPartnerScoreFunc);
