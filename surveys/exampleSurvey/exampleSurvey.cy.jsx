@@ -1,5 +1,5 @@
 import React from "react";
-import { ExampleSurvey } from "@watts-lab/surveys";
+import { ExampleSurvey } from "../../src/index";
 
 const dummy = {
   set(response) {},
@@ -23,7 +23,7 @@ describe("ExampleSurvey", () => {
     cy.get('[data-name="disappointed_experience"] textarea')
       .click()
       .type(loremIpsum);
-
+    cy.wait(5000);
     cy.get("form") // submit surveyJS form
       .then(($form) => {
         cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
@@ -38,6 +38,8 @@ describe("ExampleSurvey", () => {
       expect(spyCall.responses.disappointed_experience).to.have.string(
         loremIpsum
       );
+      console.log(spyCall);
+      expect(spyCall.completionTime).to.be.within(5000,6100);
     });
   });
 });

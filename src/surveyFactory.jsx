@@ -1,6 +1,7 @@
 import 'survey-react/modern.min.css';
 import { Survey as SurveyJS, StylesManager, Model } from 'survey-react';
-import React from 'react'
+import React,{useEffect} from 'react';
+
 import packageJson from '../package.json';
 import dayjs from "dayjs";
 StylesManager.applyTheme("modern");
@@ -8,13 +9,15 @@ StylesManager.applyTheme("modern");
 export default function SurveyFactory(surveyName, surveyJson, scoreFunc) {
     console.log(scoreFunc)
 
-    useEffect(() => {
-        startTime = dayjs(); // put in useEffect
-        console.log(`timer begin`);
-      }, []);
+    
     function Survey ({ onComplete }) {
+        let startTime;
+        useEffect(() => {
+            startTime = dayjs(); // put in useEffect
+            console.log(`timer begin`);
+          }, []);
         const scoreResponses = (sender) => {
-            stopTime = dayjs();
+            let stopTime = dayjs();
             const { data: responses } = sender;
             const result = scoreFunc(responses)
             const record = { 
