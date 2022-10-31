@@ -1,5 +1,5 @@
 import React from "react";
-import { ExampleSurvey } from "../../src/index";
+import { ExampleSurvey } from "@watts-lab/surveys";
 
 const dummy = {
   set(response) {},
