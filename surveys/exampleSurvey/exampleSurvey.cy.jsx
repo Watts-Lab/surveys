@@ -39,7 +39,7 @@ describe("ExampleSurvey", () => {
         loremIpsum
       );
       console.log(spyCall);
-      expect(spyCall.completionTime).to.be.within(5000,6100);
+      expect(spyCall.secondsElapsed).to.be.within(5, 7);
     });
   });
 });
