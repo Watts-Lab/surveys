@@ -9,7 +9,7 @@
           "type": "html",
           "name": "Prompt",
           "hideNumber": true,
-          "html": "<br/>\n<h3> During the conversation, I felt I… </h3>"
+          "html": "<br/><h1> During the conversation,</h1><h1>I felt that I… </h1>"
         },
         {
           "type": "panel",

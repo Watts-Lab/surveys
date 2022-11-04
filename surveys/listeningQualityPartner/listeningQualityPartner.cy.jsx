@@ -1,5 +1,6 @@
 import React from "react";
-import { ListeningQualityPartner } from "@watts-lab/surveys";
+//import { ListeningQualityPartner } from "@watts-lab/surveys";
+import { ListeningQualityPartner } from "../../src/index";
 
 const dummy = {
   set(response) {},

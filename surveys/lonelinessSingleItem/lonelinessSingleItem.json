@@ -1,5 +1,4 @@
 {
-  "title": "Loneliness",
   "logoPosition": "right",
   "pages": [
     {
@@ -8,7 +7,6 @@
         {
           "type": "rating",
           "name": "loneliness",
-          "state": "expanded",
           "useDisplayValuesInTitle": false,
           "minWidth": "600px",
           "title": "I felt lonely during the conversation...",
@@ -19,9 +17,12 @@
           "maxRateDescription": "Intensely",
           "displayMode": "buttons"
         }
-      ]
+      ],
+      "showQuestionNumbers": "off"
     }
   ],
   "showTitle": false,
-  "showPageTitles": false
+  "showPageTitles": false,
+  "questionsOnPageMode": "singlePage",
+  "widthMode": "responsive"
 }
