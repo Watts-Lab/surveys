@@ -1,6 +1,6 @@
 import React from "react";
-import { ListeningQualityOwn } from "@watts-lab/surveys";
-
+// import { ListeningQualityOwn } from "@watts-lab/surveys";
+import { ListeningQualityOwn } from "../../src/index";
 const dummy = {
   set(response) {},
 };

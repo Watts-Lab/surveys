@@ -6,8 +6,6 @@ import packageJson from "../package.json";
 StylesManager.applyTheme("modern");
 
 export default function SurveyFactory(surveyName, surveyJson, scoreFunc) {
-  console.log(scoreFunc);
-
   function Survey({ onComplete }) {
     let startTime;
     useEffect(() => {

@@ -1,5 +1,6 @@
 import React from "react";
-import { AutonomyNeedSatisfaction } from "@watts-lab/surveys";
+//import { AutonomyNeedSatisfaction } from "@watts-lab/surveys";
+import { AutonomyNeedSatisfaction } from "../../src/index";
 
 const dummy = {
   set(response) {},
@@ -34,7 +35,9 @@ describe("AutonomyNeedSatisfaction", () => {
       force: true,
     });
 
-    cy.get('[data-name="voiceOpinion"] input[value="2"]').click({ force: true });
+    cy.get('[data-name="voiceOpinion"] input[value="2"]').click({
+      force: true,
+    });
 
     cy.get('[data-name="controlledPressured"] input[value="8"]').click({
       force: true,

@@ -6,13 +6,19 @@
       "name": "page1",
       "elements": [
         {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<br/><h1> During the conversation,</h1><h1>I felt that I… </h1>"
+        },
+        {
           "type": "panel",
           "name": "randomizationPanel",
           "elements": [
             {
               "type": "rating",
               "name": "chooseDirection",
-              "title": "I felt I could choose the direction of the conversation.",
+              "title": "...could choose the direction of the conversation.",
               "hideNumber": true,
               "rateMax": 9,
               "minRateDescription": "Not at all",
@@ -22,7 +28,7 @@
             {
               "type": "rating",
               "name": "chooseContent",
-              "title": "I felt I could not choose the content.",
+              "title": "...could not choose the content.",
               "hideNumber": true,
               "rateMax": 9,
               "minRateDescription": "Not at all",
@@ -32,7 +38,7 @@
             {
               "type": "rating",
               "name": "sharingChoice",
-              "title": "I felt I had a choice about what to share.",
+              "title": "...had a choice about what to share.",
               "hideNumber": true,
               "rateMax": 9,
               "minRateDescription": "Not at all",
@@ -42,7 +48,7 @@
             {
               "type": "rating",
               "name": "importantDiscussion",
-              "title": "I felt I could take the discussion to important places.",
+              "title": "...could take the discussion to important places.",
               "hideNumber": true,
               "rateMax": 9,
               "minRateDescription": "Not at all",
@@ -52,7 +58,7 @@
             {
               "type": "rating",
               "name": "sensitiveTopics",
-              "title": "I felt I could share sensitive topics.",
+              "title": "...could share sensitive topics.",
               "hideNumber": true,
               "rateMax": 9,
               "minRateDescription": "Not at all",
@@ -62,7 +68,7 @@
             {
               "type": "rating",
               "name": "feelingFree",
-              "title": "I felt free to be who I am.",
+              "title": "...felt free to be who I am.",
               "hideNumber": true,
               "rateMax": 9,
               "minRateDescription": "Not at all",
@@ -72,7 +78,7 @@
             {
               "type": "rating",
               "name": "voiceOpinion",
-              "title": "I had a say in what happened, and I could voice my opinion.",
+              "title": "...had a say in what happened, and I could voice my opinion.",
               "hideNumber": true,
               "rateMax": 9,
               "minRateDescription": "Not at all",
@@ -82,7 +88,7 @@
             {
               "type": "rating",
               "name": "controlledPressured",
-              "title": "I felt controlled and pressured to be certain ways.",
+              "title": "...was controlled and pressured to be certain ways.",
               "hideNumber": true,
               "rateMax": 9,
               "minRateDescription": "Not at all",
@@ -91,7 +97,6 @@
             }
           ],
           "questionsOrder": "random",
-          "state": "expanded",
           "showQuestionNumbers": "off"
         }
       ],

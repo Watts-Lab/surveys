@@ -32,6 +32,10 @@ import lonelinessSingleItemJson from "../surveys/lonelinessSingleItem/loneliness
 import { default as lonelinessSingleItemScoreFunc } from "../surveys/lonelinessSingleItem/lonelinessSingleItem.score.js";
 export const LonelinessSingleItem = SurveyFactory("lonelinessSingleItem", lonelinessSingleItemJson, lonelinessSingleItemScoreFunc);
 
+import relatednessNeedSatisfactionJson from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.json";
+import { default as relatednessNeedSatisfactionScoreFunc } from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.score.js";
+export const RelatednessNeedSatisfaction = SurveyFactory("relatednessNeedSatisfaction", relatednessNeedSatisfactionJson, relatednessNeedSatisfactionScoreFunc);
+
 import teamViabilityJson from "../surveys/teamViability/teamViability.json";
 import { default as teamViabilityScoreFunc } from "../surveys/teamViability/teamViability.score.js";
 export const TeamViability = SurveyFactory("teamViability", teamViabilityJson, teamViabilityScoreFunc);
