@@ -1,0 +1,110 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<br/><h1> During the conversation,</h1><h1>I felt that I… </h1>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "chooseDirection",
+              "title": "...could choose the direction of the conversation.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "chooseContent",
+              "title": "...could not choose the content.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "sharingChoice",
+              "title": "...had a choice about what to share.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "importantDiscussion",
+              "title": "...could take the discussion to important places.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "sensitiveTopics",
+              "title": "...could share sensitive topics.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "feelingFree",
+              "title": "...felt free to be who I am.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "voiceOpinion",
+              "title": "...had a say in what happened, and I could voice my opinion.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "controlledPressured",
+              "title": "...was controlled and pressured to be certain ways.",
+              "hideNumber": true,
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            }
+          ],
+          "questionsOrder": "random",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "questionsOnPageMode": "singlePage",
+  "widthMode": "responsive"
+}

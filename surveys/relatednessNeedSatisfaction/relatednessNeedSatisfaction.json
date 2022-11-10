@@ -1,0 +1,57 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<br/><h1> During the conversation,</h1><h1>I felt... </h1>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "closeness",
+              "title": "...closeness and intimacy.",
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "distance",
+              "title": "...distance from my conversation partner.",
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "caredAbout",
+              "title": "...cared about.",
+              "rateMax": 9,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very much",
+              "displayMode": "buttons"
+            }
+          ],
+          "questionsOrder": "random",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "questionsOnPageMode": "singlePage",
+  "widthMode": "responsive"
+}

@@ -1,0 +1,117 @@
+{
+  "title": "Optional Feedback Survey",
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "participateAgain",
+          "title": "Would you participate in this study again?",
+          "hideNumber": true,
+          "rateValues": ["no", "maybe", "yes"],
+          "displayMode": "buttons"
+        },
+        {
+          "type": "rating",
+          "name": "adequateCompensation",
+          "title": "\"I feel I was...\"",
+          "hideNumber": true,
+          "rateValues": [
+            "underpaid",
+            {
+              "value": "fairly_paid",
+              "text": "fairly paid"
+            },
+            "overpaid"
+          ],
+          "displayMode": "buttons"
+        },
+        {
+          "type": "rating",
+          "name": "adequateTime",
+          "title": "\"I feel we were given...\"",
+          "hideNumber": true,
+          "rateValues": [
+            {
+              "value": "too_little",
+              "text": "too little time"
+            },
+            {
+              "value": "adequate",
+              "text": "the right amount of time"
+            },
+            {
+              "value": "too_much",
+              "text": "too much time"
+            }
+          ],
+          "displayMode": "buttons"
+        },
+        {
+          "type": "rating",
+          "name": "clearInstructions",
+          "title": "Were the instructions easy to understand?",
+          "hideNumber": true,
+          "minRateDescription": "Not at all easy",
+          "maxRateDescription": "Very easy",
+          "displayMode": "buttons"
+        },
+        {
+          "type": "rating",
+          "name": "videoQuality",
+          "title": "Please rate the quality of the video call.",
+          "hideNumber": true,
+          "minRateDescription": "Very Poor",
+          "maxRateDescription": "Excellent",
+          "displayMode": "buttons"
+        },
+        {
+          "type": "rating",
+          "name": "joiningProblems",
+          "title": "Did you have any problems joining the study?",
+          "description": "e.g. recruitment, scheduling, communication, etc.",
+          "hideNumber": true,
+          "rateValues": ["no", "yes"],
+          "displayMode": "buttons"
+        },
+        {
+          "type": "text",
+          "name": "joiningDetail",
+          "visibleIf": "{joiningProblems} = 'yes'",
+          "title": "Can you tell us more about the trouble you had joining the study?",
+          "hideNumber": true
+        },
+        {
+          "type": "rating",
+          "name": "technicalProblems",
+          "title": "Did you have any technical problems with the study?",
+          "description": "If so, please describe them below.",
+          "hideNumber": true,
+          "rateValues": ["no", "yes"],
+          "displayMode": "buttons"
+        },
+        {
+          "type": "text",
+          "name": "technicalDetail",
+          "visibleIf": "{technicalProblems} = 'yes'",
+          "title": "Can you tell us more about your technical problems?",
+          "hideNumber": true
+        },
+        {
+          "type": "text",
+          "name": "textExpansion",
+          "title": "Is there anything else we should know?",
+          "hideNumber": true
+        }
+      ],
+      "questionTitleLocation": "top"
+    }
+  ],
+  "showPageTitles": false,
+  "autoGrowComment": true,
+  "questionsOnPageMode": "singlePage",
+  "widthMode": "responsive"
+}

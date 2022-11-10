@@ -1,0 +1,373 @@
+{
+  "title": "Demographics",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "universal",
+      "elements": [
+        {
+          "type": "text",
+          "name": "birth_year",
+          "title": "What year were you born?",
+          "valueName": "birth_year",
+          "isRequired": true,
+          "validators": [
+            {
+              "type": "numeric",
+              "minValue": 1900,
+              "maxValue": 2022
+            }
+          ],
+          "placeholder": "4-digit year (e.g. 1839)"
+        },
+        {
+          "type": "radiogroup",
+          "name": "gender",
+          "title": "What is your gender?",
+          "choices": [
+            {
+              "value": "female",
+              "text": "Female"
+            },
+            {
+              "value": "male",
+              "text": "Male"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "gender_other",
+          "visibleIf": "{gender} = 'other'",
+          "title": "Please enter your gender below:"
+        },
+        {
+          "type": "dropdown",
+          "name": "marital_status",
+          "title": "What is your marital status?",
+          "choices": [
+            "Single Never Married",
+            "Married or Domestic Partnership",
+            "Widowed",
+            "Divorced",
+            "Separated",
+            "Other"
+          ],
+          "autocomplete": "country"
+        },
+        {
+          "type": "checkbox",
+          "name": "impairment",
+          "title": "Do you have any health conditions or illnesses which affect you in any of the following areas?",
+          "description": "In answering this question, you should consider whether you are affected in any of these areas while receiving any treatment or medication or using devices to help you. (For example, a hearing aid.)",
+          "choices": [
+            {
+              "value": "vision",
+              "text": "Vision (e.g. blindness or partial sight)"
+            },
+            {
+              "value": "hearing",
+              "text": "Hearing (e.g. deafness or partial hearing)"
+            },
+            {
+              "value": "mobility",
+              "text": "Mobility (e.g. walking short distances or climbing stairs)"
+            },
+            {
+              "value": "dexterity",
+              "text": "Dexterity (e.g. lifting and carrying objects, using a keyboard)"
+            },
+            {
+              "value": "understanding",
+              "text": "Learning or understanding or concentrating"
+            },
+            {
+              "value": "memory",
+              "text": "Memory"
+            },
+            {
+              "value": "mental_health",
+              "text": "Mental health"
+            },
+            {
+              "value": "stamina",
+              "text": "Stamina or breathing or fatigue"
+            },
+            {
+              "value": "sociobehavioral",
+              "text": "Social or behavioral (e.g. autism spectrum disorder (ASD) which includes Asperger’s, or attention deficit hyperactivity disorder (ADHD))"
+            },
+            {
+              "value": "none",
+              "text": "None of the above / Prefer not to say"
+            }
+          ],
+          "separateSpecialChoices": true,
+          "noneText": "None of the above",
+          "maxSelectedChoices": 12
+        },
+        {
+          "type": "dropdown",
+          "name": "language_primary",
+          "title": "What is your primary language?",
+          "description": "This is the language you use most naturally, for example, the language you use at home.",
+          "isRequired": true,
+          "choices": [
+            "Arabic",
+            "Armenian",
+            "Cambodian",
+            "Chinese",
+            "Czech",
+            "Dutch",
+            "English",
+            "French",
+            "French Creole",
+            "German",
+            "Greek",
+            "Gujarathi",
+            "Hebrew",
+            "Hindi",
+            "Hungarian",
+            "Italian",
+            "Japanese",
+            "Korean",
+            "Navaho",
+            "Persian",
+            "Polish",
+            "Portuguese",
+            "Russian",
+            "Spanish",
+            "Tagalog",
+            "Thai",
+            "Ukrainian",
+            "Vietnamese",
+            "Yiddish",
+            {
+              "value": "item1",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "question1",
+          "visibleIf": "{language_primary} = 'item1'",
+          "title": "Please enter your primary language below:"
+        },
+        {
+          "type": "rating",
+          "name": "english_written",
+          "title": "How comfortable are you reading and writing in English?",
+          "isRequired": true,
+          "minRateDescription": "Not at all comfortable",
+          "maxRateDescription": "Very comfortable"
+        },
+        {
+          "type": "rating",
+          "name": "english_spoken",
+          "title": "How comfortable are you speaking in English?",
+          "isRequired": true,
+          "minRateDescription": "Not at all comfortable",
+          "maxRateDescription": "Very comfortable"
+        },
+        {
+          "type": "radiogroup",
+          "name": "employment_status",
+          "title": "Are you currently...",
+          "choices": [
+            "Employed for wages",
+            "Self-employed",
+            "Out of work and looking for work",
+            "Out of work but not currently looking for work",
+            "A homemaker",
+            "A student",
+            "Military",
+            "Retired",
+            "Unable to work"
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "country_reside",
+          "title": "In which country do you reside?",
+          "isRequired": true,
+          "choices": [
+            "Canada",
+            "United States",
+            "United Kingdom",
+            {
+              "value": "item1",
+              "text": "Other"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "united states residents",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "education_US",
+          "title": "What is the highest level of education you have completed?",
+          "choices": [
+            {
+              "value": "2",
+              "text": "Less than a high school diploma"
+            },
+            {
+              "value": "3",
+              "text": "High school diploma or GED"
+            },
+            {
+              "value": "4",
+              "text": "Some college, but no degree"
+            },
+            {
+              "value": "5",
+              "text": "Associate's degree (for example: AA, AS)"
+            },
+            {
+              "value": "6",
+              "text": "Bachelor's degree (for example: BA, BS)"
+            },
+            {
+              "value": "7",
+              "text": "Master's degree (for example: MA, MS, MEng, MBA)"
+            },
+            {
+              "value": "8",
+              "text": "Doctorate (for example: PhD, EdD)"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "latin_US",
+          "title": "Are you of Hispanic, Latino, or Spanish origin?",
+          "choices": ["Yes", "No"]
+        },
+        {
+          "type": "checkbox",
+          "name": "race_US",
+          "title": "Please choose one or more races that you consider yourself to be.",
+          "choices": [
+            "White",
+            "Black or African-American",
+            "American Indian or Alaska Native",
+            "Asian",
+            "Native Hawaiian or other Pacific Islander",
+            "Other"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "income_US",
+          "title": "Thinking back over the past year, what was your family's annual income?",
+          "choices": [
+            "Less than $10,000",
+            "$10,000-$19,999",
+            "$20,000-$29,999",
+            "$30,000-$39,999",
+            "$40,000-$49,999",
+            "$50,000-$74,999",
+            "$75,000-$99,999",
+            "$100,000-$149,999",
+            "$150,000 or more"
+          ]
+        }
+      ],
+      "visibleIf": "{country_reside} = 'United States'",
+      "title": "United States Residents"
+    },
+    {
+      "name": "united kingdom residents",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "education_UK",
+          "title": "What is the highest level of education you have completed?",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Primary school"
+            },
+            {
+              "value": "2",
+              "text": "Secondary school up to 16 years"
+            },
+            {
+              "value": "3",
+              "text": "Higher or secondary or further education (A-levels, BTEC, etc.)"
+            },
+            {
+              "value": "5",
+              "text": "NVQ levels 4-5, HNC, HND, etc."
+            },
+            {
+              "value": "6",
+              "text": "Bachelor's degree (BA, BSc, etc.)"
+            },
+            {
+              "value": "7",
+              "text": "Master's degree (MA, MS, MEng, MBA, etc.)"
+            },
+            {
+              "value": "8",
+              "text": "Doctorate (PhD, EdD, etc.)"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "ethnicity_UK",
+          "title": "What is your ethnic group?",
+          "description": " It’s up to you how you answer this question. Your ethnic group could be your cultural or family background.",
+          "choices": [
+            "English / Welsh / Scottish / Northern Irish / British",
+            "Irish",
+            "Gypsy or Irish Traveller",
+            "Other White Background",
+            "White and Black Caribbean",
+            "White and Black African",
+            "White and Asian",
+            "Other mixed/multiple ethnic background",
+            "Indian",
+            "Pakistani",
+            "Bangladeshi",
+            "Chinese",
+            "African",
+            "Caribbean",
+            "Other Black/African Caribbean background",
+            "Arab",
+            "Other ethnic group"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question4",
+          "title": "Thinking back over the past year, what was your family's annual income?",
+          "choices": [
+            "Less than £10,000",
+            "£10,000-£19,999",
+            "£20,000-£29,999",
+            "£30,000-£39,999",
+            "£40,000-£49,999",
+            "£50,000-£74,999",
+            "£75,000-£99,999",
+            "£100,000-£149,999",
+            "£150,000 or more"
+          ]
+        }
+      ],
+      "visibleIf": "{country_reside} = 'United Kingdom'",
+      "title": "United Kingdom Residents"
+    }
+  ],
+  "showPrevButton": false,
+  "showQuestionNumbers": "off"
+}
