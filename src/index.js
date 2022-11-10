@@ -32,6 +32,10 @@ import lonelinessSingleItemJson from "../surveys/lonelinessSingleItem/loneliness
 import { default as lonelinessSingleItemScoreFunc } from "../surveys/lonelinessSingleItem/lonelinessSingleItem.score.js";
 export const LonelinessSingleItem = SurveyFactory("lonelinessSingleItem", lonelinessSingleItemJson, lonelinessSingleItemScoreFunc);
 
+import psychologicalSafetyJson from "../surveys/psychologicalSafety/psychologicalSafety.json";
+import { default as psychologicalSafetyScoreFunc } from "../surveys/psychologicalSafety/psychologicalSafety.score.js";
+export const PsychologicalSafety = SurveyFactory("psychologicalSafety", psychologicalSafetyJson, psychologicalSafetyScoreFunc);
+
 import relatednessNeedSatisfactionJson from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.json";
 import { default as relatednessNeedSatisfactionScoreFunc } from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.score.js";
 export const RelatednessNeedSatisfaction = SurveyFactory("relatednessNeedSatisfaction", relatednessNeedSatisfactionJson, relatednessNeedSatisfactionScoreFunc);

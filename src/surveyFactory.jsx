@@ -22,6 +22,7 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc) {
         surveyName,
         responses,
         result,
+        startTime,
         submitTime,
         secondsElapsed: Math.floor((submitTime - startTime) / 1000),
       };
