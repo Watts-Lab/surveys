@@ -1,0 +1,93 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<br/><h1> During my interactions with other participants in this study...</h1>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "holdMistake",
+              "title": "If you made a mistake in this group, it was often held against you.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "othersProblems",
+              "title": "People in the group were able to bring up problems and tough issues.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "rejectedDifferent",
+              "title": "People in the group sometimes rejected others for being different.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "safeToTakeRisks",
+              "title": "It was safe to take a risk with people in the group.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "difficultToAskHelp",
+              "title": "It was difficult to ask other people in the group for help.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "notUndermine",
+              "title": "No one in the group would deliberately act in a way that undermines my efforts.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "skillsValued",
+              "title": "My unique skills and talents were valued and utilized while working with the other people in the group.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons"
+            }
+          ],
+          "questionsOrder": "random",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "questionsOnPageMode": "singlePage",
+  "widthMode": "responsive"
+}
