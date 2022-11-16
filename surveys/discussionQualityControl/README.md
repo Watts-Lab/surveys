@@ -18,3 +18,7 @@ would participate again, which we expect to serve as a general barometer.
 
 Originally written Summer 2022 by Isaac Gateno, Kimberly Epstein and Skylar Rearik.
 Updated October 2022 by James Houghton.
+
+### Screenshot
+
+![Screenshot](screenshot.png)

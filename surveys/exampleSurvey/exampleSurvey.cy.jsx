@@ -24,6 +24,9 @@ describe("ExampleSurvey", () => {
     cy.get('[data-name="disappointed_experience"] textarea')
       .click()
       .type(loremIpsum);
+
+    cy.screenshot("exampleSurvey/screenshot", { overwrite: true });
+
     cy.wait(5000);
     cy.get("form") // submit surveyJS form
       .then(($form) => {

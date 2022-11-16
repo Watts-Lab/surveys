@@ -57,3 +57,7 @@ This isn't without risk, as it is possible that the adjustments that adapt the s
 5. "It was difficult to ask other people in the group for help." _(reverse-coded)_
 6. "No one in the group would deliberately act in a way that undermines my efforts."
 7. "My unique skills and talents were valued and utilized while working with the other people in the group."
+
+### Screenshot
+
+![Screenshot](screenshot.png)

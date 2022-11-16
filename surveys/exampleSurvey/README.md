@@ -17,3 +17,7 @@ No modifications were made to the survey to include it in this library.
 ### Template data
 
 The survey has no template placeholders, and so the template data is empty.
+
+### Screenshot
+
+![Screenshot](screenshot.png)

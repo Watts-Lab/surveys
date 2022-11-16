@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const fs = require("fs");
 
 module.exports = defineConfig({
   viewportWidth: 1280,
@@ -12,5 +13,22 @@ module.exports = defineConfig({
     },
     specPattern: "./surveys/**/*.cy.{js,jsx,ts,tsx}",
     supportFile: "./cypress/support/component.js",
+    setupNodeEvents(on, config) {
+      on("after:screenshot", (details) => {
+        const oldPath = details.path;
+        const newPath = oldPath.replace("cypress/screenshots", "surveys");
+
+        return new Promise((resolve, reject) => {
+          // fs.rename moves the file to the new path
+          fs.rename(details.path, newPath, (err) => {
+            if (err) return reject(err);
+
+            // because we renamed and moved the image, resolve with the new path
+            // so it is accurate in the test results
+            resolve({ path: newPath });
+          });
+        });
+      });
+    },
   },
 });
