@@ -16,6 +16,10 @@ describe("TeamViability", () => {
       force: true,
     });
 
+    cy.screenshot("teamViability/screenshot", {
+      overwrite: true,
+    });
+
     cy.get("form") // submit surveyJS form
       .then(($form) => {
         cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
