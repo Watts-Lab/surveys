@@ -14,3 +14,6 @@ We used survey items developed by Jessica Nicole Cooperstein in her paper on dev
 
 Cooperstein, J. (2017). Initial Development of a Team Viability Measure. College of Science and Health Theses and Dissertations. https://via.library.depaul.edu/csh_etd/202
 
+### Screenshot
+
+![Screenshot](screenshot.png)

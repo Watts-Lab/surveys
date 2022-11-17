@@ -13,3 +13,7 @@ We used survey items developed by Netta Weinstein and Tia Moin in their work on 
 # Literature/Past Project Citations
 
 Bouskila‐Yam, O., & Kluger, A. N. (2011, December). The Facilitating Listening Scale (FLS). In A. N. Kluger (Chair), Listening, a symposium presented at the 1st Israel Organizational Behavior Conference, Tel Aviv, Israel.
+
+### Screenshot
+
+![Screenshot](screenshot.png)

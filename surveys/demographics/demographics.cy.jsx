@@ -43,6 +43,8 @@ describe("Demographics", () => {
     cy.get(`[data-name="country_reside"] input`).click({ force: true });
     cy.contains("United States").click({ force: true });
 
+    cy.screenshot("demographics/screenshotGeneral", { overwrite: true });
+
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
     cy.get(`[data-name="education_US"] input[value="2"]`).click({
@@ -59,6 +61,8 @@ describe("Demographics", () => {
     cy.get(`[data-name="income_US"] input[value="$50,000-$74,999"]`).click({
       force: true,
     });
+
+    cy.screenshot("demographics/screenshotUSA", { overwrite: true });
 
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 

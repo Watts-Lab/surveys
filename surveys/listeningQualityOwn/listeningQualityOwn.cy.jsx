@@ -48,6 +48,8 @@ describe("ListeningQualityOwn", () => {
       force: true,
     });
 
+    cy.screenshot("listeningQualityOwn/screenshot", { overwrite: true });
+
     cy.get("form") // submit surveyJS form
       .then(($form) => {
         cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
