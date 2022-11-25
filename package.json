@@ -1,6 +1,6 @@
 {
   "name": "@watts-lab/surveys",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -39,6 +39,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "cypress": "^11.1.0",
+    "cypress-localstorage-commands": "^2.2.1",
     "cypress-rollup-preprocessor": "^1.2.0",
     "glob": "^8.0.3",
     "rollup": "^2.79.1",
