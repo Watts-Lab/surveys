@@ -1,6 +1,6 @@
 import "survey-react/modern.min.css";
 import { Survey as SurveyJS, StylesManager, Model } from "survey-react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import packageJson from "../package.json";
 
 StylesManager.applyTheme("modern");
