@@ -20,10 +20,18 @@ const surveyJson = {
       type: "radiogroup",
       name: "color",
       title: "What is your favorite color?",
-      isRequired: true,
-      showNoneItem: true,
-      colCount: 4,
       choices: ["red", "blue", "green", "yellow", "purple"],
+    },
+    {
+      type: "comment",
+      name: "openResponse",
+      title: "Why is it your favorite color?",
+    },
+    {
+      type: "radiogroup",
+      name: "name",
+      title: "What is your favorite name?",
+      choices: ["fred", "george", "ron", "percy", "bill", "ginny"],
     },
   ],
 };
@@ -39,12 +47,21 @@ const dummy = {
 const Survey = SurveyFactory("testSurvey", surveyJson, scoreFunc);
 const storageName = "testLocalStorageKey";
 
-const stored = { currentPageNo: 0, data: { color: "blue" } };
+const stored = {
+  currentPageNo: 0,
+  data: { color: "blue", openResponse: "because it is", name: "ron" },
+};
 
 describe("SurveyFactory", () => {
   it("stores intermediate results", () => {
     cy.mount(<Survey onComplete={dummy.set} storageName={storageName} />);
     cy.get('[data-name="color"] input[value="blue"]').click({
+      force: true,
+    });
+
+    cy.get('[data-name="openResponse"] textarea').type("because it is");
+
+    cy.get('[data-name="name"] input[value="ron"]').click({
       force: true,
     });
 

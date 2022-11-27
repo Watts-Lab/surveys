@@ -7,11 +7,10 @@ StylesManager.applyTheme("modern");
 
 export default function SurveyFactory(surveyName, surveyJson, scoreFunc) {
   function Survey({ onComplete, storageName }) {
-    let startTime;
     const surveyModel = new Model(surveyJson);
 
     useEffect(() => {
-      startTime = Date.now();
+      surveyModel.startTimer();
     }, []);
 
     function saveState(survey) {
@@ -36,8 +35,8 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc) {
     }
 
     const scoreResponses = (sender) => {
-      let submitTime = Date.now();
       const { data: responses } = sender;
+      sender.stopTimer();
       const result = scoreFunc(responses);
       const record = {
         surveySource: packageJson["name"],
@@ -45,9 +44,7 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc) {
         surveyName,
         responses,
         result,
-        startTime,
-        submitTime,
-        secondsElapsed: Math.floor((submitTime - startTime) / 1000),
+        secondsElapsed: sender.timeSpent,
       };
       onComplete(record);
       clearStorage();
