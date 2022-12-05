@@ -10,41 +10,41 @@ describe("ListeningQualityOwn", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<ListeningQualityOwn onComplete={dummy.set} />);
 
-    cy.get('[data-name="tryToUnderstand2"] input[value="2"]').click({
+    cy.get('[data-name="tryToUnderstand"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="askedQuestions2"] input[value="2"]').click({
+    cy.get('[data-name="askedQuestions"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="encouragedClarification2"] input[value="2"]').click({
+    cy.get('[data-name="encouragedClarification"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="expressedInterest2"] input[value="2"]').click({
+    cy.get('[data-name="expressedInterest"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="listenedAttentively2"] input[value="2"]').click({
+    cy.get('[data-name="listenedAttentively"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="paidAttention2"] input[value="2"]').click({
+    cy.get('[data-name="paidAttention"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="gaveSpace2"] input[value="2"]').click({ force: true });
+    cy.get('[data-name="gaveSpace"] input[value="2"]').click({ force: true });
 
-    cy.get('[data-name="undividedAttention2"] input[value="2"]').click({
+    cy.get('[data-name="undividedAttention"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="positiveAtmosphere2"] input[value="2"]').click({
+    cy.get('[data-name="positiveAtmosphere"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="allowedExpression2"] input[value="2"]').click({
+    cy.get('[data-name="allowedExpression"] input[value="2"]').click({
       force: true,
     });
 
@@ -61,7 +61,7 @@ describe("ListeningQualityOwn", () => {
       console.log(spyCall);
       expect(spyCall["result"]["rawScore"]).to.eq(20);
       expect(spyCall["result"]["normScore"]).to.eq(0.125);
-      expect(spyCall["responses"]["allowedExpression2"]).to.eq(2);
+      expect(spyCall["responses"]["allowedExpression"]).to.eq(2);
     });
   });
 });

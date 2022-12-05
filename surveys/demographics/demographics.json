@@ -154,7 +154,7 @@
         },
         {
           "type": "text",
-          "name": "question1",
+          "name": "language_primary_expansion",
           "visibleIf": "{language_primary} = 'item1'",
           "title": "Please enter your primary language below:"
         },
@@ -349,7 +349,7 @@
         },
         {
           "type": "radiogroup",
-          "name": "question4",
+          "name": "income_UK",
           "title": "Thinking back over the past year, what was your family's annual income?",
           "choices": [
             "Less than £10,000",
