@@ -36,6 +36,11 @@ const surveyJson = {
   ],
 };
 
+const sha = {
+  survey: "00fa3f25c5ad64eec5f82cb1fa87124c36e02e7c",
+  score: "ba0f44e4945160b5327df9edc7bd5f840443f951",
+};
+
 function scoreFunc(responses) {
   return {};
 }
@@ -44,7 +49,7 @@ const dummy = {
   set(response) {},
 };
 
-const Survey = SurveyFactory("testSurvey", surveyJson, scoreFunc);
+const Survey = SurveyFactory("testSurvey", surveyJson, scoreFunc, sha);
 const storageName = "testLocalStorageKey";
 
 const stored = {
@@ -82,6 +87,27 @@ describe("SurveyFactory", () => {
     cy.mount(<Survey onComplete={dummy.set} storageName={storageName} />);
     cy.get(`input[type="radio"][value="blue"]`).should("not.be.checked");
     cy.get(`input[type="radio"][value="green"]`).should("not.be.checked");
+  });
+
+  it("stores the SHA", () => {
+    cy.spy(dummy, "set").as("callback");
+    cy.mount(<Survey onComplete={dummy.set} storageName={storageName} />);
+
+    cy.get('[data-name="color"] input[value="blue"]').click({
+      force: true,
+    });
+
+    cy.get("form") // submit surveyJS form
+      .then(($form) => {
+        cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
+      });
+
+    cy.get("@callback").then((spy) => {
+      const spyCall = spy.getCall(-1).args[0];
+      console.log(spyCall);
+      expect(spyCall.surveySha).to.equal(sha.survey);
+      expect(spyCall.scoreSha).to.equal(sha.score);
+    });
   });
 
   it("times survey completion", () => {

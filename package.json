@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
-    "prebuild": "node builder.js",
+    "prebuild": "node computeSha.js && node builder.js",
     "build": "npx rollup --config",
     "postbuild": "npm link && npm link @watts-lab/surveys",
     "test": "npx cypress open"
