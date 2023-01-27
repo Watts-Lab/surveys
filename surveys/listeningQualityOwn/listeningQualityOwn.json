@@ -17,7 +17,7 @@
           "elements": [
             {
               "type": "rating",
-              "name": "tryToUnderstand2",
+              "name": "tryToUnderstand",
               "title": "...tried hard to understand what my partner was saying.",
               "hideNumber": true,
               "rateMax": 9,
@@ -27,7 +27,7 @@
             },
             {
               "type": "rating",
-              "name": "askedQuestions2",
+              "name": "askedQuestions",
               "title": "...asked questions that show my understanding of my partner’s opinions.",
               "hideNumber": true,
               "rateMax": 9,
@@ -37,7 +37,7 @@
             },
             {
               "type": "rating",
-              "name": "encouragedClarification2",
+              "name": "encouragedClarification",
               "title": "...encouraged my partner to clarify a problem.",
               "hideNumber": true,
               "rateMax": 9,
@@ -47,7 +47,7 @@
             },
             {
               "type": "rating",
-              "name": "expressedInterest2",
+              "name": "expressedInterest",
               "title": "...expressed interest in my partner’s stories.",
               "hideNumber": true,
               "rateMax": 9,
@@ -57,7 +57,7 @@
             },
             {
               "type": "rating",
-              "name": "listenedAttentively2",
+              "name": "listenedAttentively",
               "title": "...listened to my partner attentively.",
               "hideNumber": true,
               "rateMax": 9,
@@ -67,7 +67,7 @@
             },
             {
               "type": "rating",
-              "name": "paidAttention2",
+              "name": "paidAttention",
               "title": "...paid close attention to what my partner has said.",
               "hideNumber": true,
               "rateMax": 9,
@@ -77,7 +77,7 @@
             },
             {
               "type": "rating",
-              "name": "gaveSpace2",
+              "name": "gaveSpace",
               "title": "...gave my partner time and space to talk.",
               "hideNumber": true,
               "rateMax": 9,
@@ -87,7 +87,7 @@
             },
             {
               "type": "rating",
-              "name": "undividedAttention2",
+              "name": "undividedAttention",
               "title": "...gave my partner my undivided attention.",
               "hideNumber": true,
               "rateMax": 9,
@@ -97,7 +97,7 @@
             },
             {
               "type": "rating",
-              "name": "positiveAtmosphere2",
+              "name": "positiveAtmosphere",
               "title": "...created a positive atmosphere for my partner to talk.",
               "hideNumber": true,
               "rateMax": 9,
@@ -107,7 +107,7 @@
             },
             {
               "type": "rating",
-              "name": "allowedExpression2",
+              "name": "allowedExpression",
               "title": "...allowed my partner to express themselves fully.",
               "hideNumber": true,
               "rateMax": 9,

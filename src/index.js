@@ -5,41 +5,51 @@
 import SurveyFactory from "./surveyFactory.jsx"
 
 import autonomyNeedSatisfactionJson from "../surveys/autonomyNeedSatisfaction/autonomyNeedSatisfaction.json";
+import autonomyNeedSatisfactionSha from "../surveys/autonomyNeedSatisfaction/sha.json";
 import { default as autonomyNeedSatisfactionScoreFunc } from "../surveys/autonomyNeedSatisfaction/autonomyNeedSatisfaction.score.js";
-export const AutonomyNeedSatisfaction = SurveyFactory("autonomyNeedSatisfaction", autonomyNeedSatisfactionJson, autonomyNeedSatisfactionScoreFunc);
+export const AutonomyNeedSatisfaction = SurveyFactory("autonomyNeedSatisfaction", autonomyNeedSatisfactionJson, autonomyNeedSatisfactionScoreFunc, autonomyNeedSatisfactionSha);
 
 import demographicsJson from "../surveys/demographics/demographics.json";
+import demographicsSha from "../surveys/demographics/sha.json";
 import { default as demographicsScoreFunc } from "../surveys/demographics/demographics.score.js";
-export const Demographics = SurveyFactory("demographics", demographicsJson, demographicsScoreFunc);
+export const Demographics = SurveyFactory("demographics", demographicsJson, demographicsScoreFunc, demographicsSha);
 
 import discussionQualityControlJson from "../surveys/discussionQualityControl/discussionQualityControl.json";
+import discussionQualityControlSha from "../surveys/discussionQualityControl/sha.json";
 import { default as discussionQualityControlScoreFunc } from "../surveys/discussionQualityControl/discussionQualityControl.score.js";
-export const DiscussionQualityControl = SurveyFactory("discussionQualityControl", discussionQualityControlJson, discussionQualityControlScoreFunc);
+export const DiscussionQualityControl = SurveyFactory("discussionQualityControl", discussionQualityControlJson, discussionQualityControlScoreFunc, discussionQualityControlSha);
 
 import exampleSurveyJson from "../surveys/exampleSurvey/exampleSurvey.json";
+import exampleSurveySha from "../surveys/exampleSurvey/sha.json";
 import { default as exampleSurveyScoreFunc } from "../surveys/exampleSurvey/exampleSurvey.score.js";
-export const ExampleSurvey = SurveyFactory("exampleSurvey", exampleSurveyJson, exampleSurveyScoreFunc);
+export const ExampleSurvey = SurveyFactory("exampleSurvey", exampleSurveyJson, exampleSurveyScoreFunc, exampleSurveySha);
 
 import listeningQualityOwnJson from "../surveys/listeningQualityOwn/listeningQualityOwn.json";
+import listeningQualityOwnSha from "../surveys/listeningQualityOwn/sha.json";
 import { default as listeningQualityOwnScoreFunc } from "../surveys/listeningQualityOwn/listeningQualityOwn.score.js";
-export const ListeningQualityOwn = SurveyFactory("listeningQualityOwn", listeningQualityOwnJson, listeningQualityOwnScoreFunc);
+export const ListeningQualityOwn = SurveyFactory("listeningQualityOwn", listeningQualityOwnJson, listeningQualityOwnScoreFunc, listeningQualityOwnSha);
 
 import listeningQualityPartnerJson from "../surveys/listeningQualityPartner/listeningQualityPartner.json";
+import listeningQualityPartnerSha from "../surveys/listeningQualityPartner/sha.json";
 import { default as listeningQualityPartnerScoreFunc } from "../surveys/listeningQualityPartner/listeningQualityPartner.score.js";
-export const ListeningQualityPartner = SurveyFactory("listeningQualityPartner", listeningQualityPartnerJson, listeningQualityPartnerScoreFunc);
+export const ListeningQualityPartner = SurveyFactory("listeningQualityPartner", listeningQualityPartnerJson, listeningQualityPartnerScoreFunc, listeningQualityPartnerSha);
 
 import lonelinessSingleItemJson from "../surveys/lonelinessSingleItem/lonelinessSingleItem.json";
+import lonelinessSingleItemSha from "../surveys/lonelinessSingleItem/sha.json";
 import { default as lonelinessSingleItemScoreFunc } from "../surveys/lonelinessSingleItem/lonelinessSingleItem.score.js";
-export const LonelinessSingleItem = SurveyFactory("lonelinessSingleItem", lonelinessSingleItemJson, lonelinessSingleItemScoreFunc);
+export const LonelinessSingleItem = SurveyFactory("lonelinessSingleItem", lonelinessSingleItemJson, lonelinessSingleItemScoreFunc, lonelinessSingleItemSha);
 
 import psychologicalSafetyJson from "../surveys/psychologicalSafety/psychologicalSafety.json";
+import psychologicalSafetySha from "../surveys/psychologicalSafety/sha.json";
 import { default as psychologicalSafetyScoreFunc } from "../surveys/psychologicalSafety/psychologicalSafety.score.js";
-export const PsychologicalSafety = SurveyFactory("psychologicalSafety", psychologicalSafetyJson, psychologicalSafetyScoreFunc);
+export const PsychologicalSafety = SurveyFactory("psychologicalSafety", psychologicalSafetyJson, psychologicalSafetyScoreFunc, psychologicalSafetySha);
 
 import relatednessNeedSatisfactionJson from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.json";
+import relatednessNeedSatisfactionSha from "../surveys/relatednessNeedSatisfaction/sha.json";
 import { default as relatednessNeedSatisfactionScoreFunc } from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.score.js";
-export const RelatednessNeedSatisfaction = SurveyFactory("relatednessNeedSatisfaction", relatednessNeedSatisfactionJson, relatednessNeedSatisfactionScoreFunc);
+export const RelatednessNeedSatisfaction = SurveyFactory("relatednessNeedSatisfaction", relatednessNeedSatisfactionJson, relatednessNeedSatisfactionScoreFunc, relatednessNeedSatisfactionSha);
 
 import teamViabilityJson from "../surveys/teamViability/teamViability.json";
+import teamViabilitySha from "../surveys/teamViability/sha.json";
 import { default as teamViabilityScoreFunc } from "../surveys/teamViability/teamViability.score.js";
-export const TeamViability = SurveyFactory("teamViability", teamViabilityJson, teamViabilityScoreFunc);
+export const TeamViability = SurveyFactory("teamViability", teamViabilityJson, teamViabilityScoreFunc, teamViabilitySha);

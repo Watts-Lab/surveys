@@ -1,6 +1,7 @@
 import React from "react";
 // import { ExampleSurvey } from "@watts-lab/surveys";
 import { ExampleSurvey } from "../../src/index";
+import sha from "../../surveys/exampleSurvey/sha.json";
 
 const dummy = {
   set(response) {},
@@ -41,6 +42,8 @@ describe("ExampleSurvey", () => {
       expect(spyCall.responses.disappointed_experience).to.have.string(
         loremIpsum
       );
+      expect(spyCall.surveySha).to.eq(sha.survey);
+      expect(spyCall.scoreSha).to.eq(sha.score);
     });
   });
 });

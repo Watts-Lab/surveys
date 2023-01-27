@@ -5,7 +5,8 @@ import packageJson from "../package.json";
 
 StylesManager.applyTheme("modern");
 
-export default function SurveyFactory(surveyName, surveyJson, scoreFunc) {
+export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
+  console.log("sha", sha);
   function Survey({ onComplete, storageName }) {
     const surveyModel = new Model(surveyJson);
 
@@ -41,6 +42,8 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc) {
       const record = {
         surveySource: packageJson["name"],
         surveyVersion: packageJson["version"],
+        surveySha: sha.survey,
+        scoreSha: sha.score,
         surveyName,
         responses,
         result,

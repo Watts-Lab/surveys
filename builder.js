@@ -1,7 +1,5 @@
 var glob = require("glob");
 const fs = require("fs");
-//import glob from "glob";
-//import fs from "fs";
 
 const capitalize = (string) => {
   return string ? string.charAt(0).toUpperCase() + string.slice(1) : "";
@@ -11,10 +9,12 @@ function writeLines(surveyName) {
   const uppercaseName = capitalize(surveyName);
   return `
 import ${surveyName}Json from "../surveys/${surveyName}/${surveyName}.json";
+import ${surveyName}Sha from "../surveys/${surveyName}/sha.json";
 import { default as ${surveyName}ScoreFunc } from "../surveys/${surveyName}/${surveyName}.score.js";
-export const ${uppercaseName} = SurveyFactory("${surveyName}", ${surveyName}Json, ${surveyName}ScoreFunc);
+export const ${uppercaseName} = SurveyFactory("${surveyName}", ${surveyName}Json, ${surveyName}ScoreFunc, ${surveyName}Sha);
 `;
 }
+
 glob("surveys/*/", function (er, dirs) {
   const surveyNames = dirs.map((dir) => dir.split("/")[1]);
 
