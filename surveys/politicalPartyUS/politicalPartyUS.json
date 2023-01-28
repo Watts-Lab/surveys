@@ -1,0 +1,128 @@
+{
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "party",
+          "title": "Generally speaking, do you usually think of yourself as a Republican, a Democrat, an Independent, or what?",
+          "rateValues": ["Republican", "Democrat", "Independent", "Other"],
+          "displayMode": "buttons"
+        },
+        {
+          "type": "text",
+          "name": "partyOther",
+          "visibleIf": "{party} = 'Other'",
+          "title": "Which political party do you identify with?"
+        },
+        {
+          "type": "rating",
+          "name": "republicanStrength",
+          "visibleIf": "{party} = 'Republican'",
+          "title": "Would you call yourself a strong Republican or a not very strong Republican",
+          "rateValues": ["Strong Republican", "Not very strong Republican"],
+          "displayMode": "buttons"
+        },
+        {
+          "type": "rating",
+          "name": "democratStrength",
+          "visibleIf": "{party} = 'Democrat'",
+          "title": "Would you call yourself a strong Democrat or a not very strong Democrat",
+          "rateValues": ["Strong Democrat", "Not very strong Democrat"],
+          "displayMode": "buttons"
+        },
+        {
+          "type": "rating",
+          "name": "independentLean",
+          "visibleIf": "{party} = 'Independent'",
+          "title": "Do you think of yourself as closer to the Republican Party or the Democratic Party?",
+          "rateValues": [
+            "Closer to Republican Party",
+            "Neither",
+            "Closer to Democratic Party"
+          ],
+          "displayMode": "buttons"
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "elements": [
+        {
+          "type": "text",
+          "inputType": "range",
+          "name": "republicanImportance",
+          "title": "How important is being a Republican to you?",
+          "description": "Below is a range from 0 to 100 indicating how important this is to you. Click on any space within this range and a bar will appear. Feel free to move that bar around to the number that best represents your answer.",
+          "visibleIf": "{party} = 'Republican'",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "valueLabels": [
+            { "value": 0, "text": "Not important at all" },
+            { "value": 25, "text": "" },
+            { "value": 50, "text": "Moderately Important" },
+            { "value": 75, "text": "" },
+            { "value": 100, "text": "Extremely Important" }
+          ]
+        },
+        {
+          "type": "text",
+          "inputType": "range",
+          "name": "democratImportance",
+          "title": "How important is being a Democrat to you?",
+          "description": "Below is a range from 0 to 100 indicating how important this is to you. Click on any space within this range and a bar will appear. Feel free to move that bar around to the number that best represents your answer.",
+          "visibleIf": "{party} = 'Democrat'",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "valueLabels": [
+            { "value": 0, "text": "Not important at all" },
+            { "value": 25, "text": "" },
+            { "value": 50, "text": "Moderately Important" },
+            { "value": 75, "text": "" },
+            { "value": 100, "text": "Extremely Important" }
+          ]
+        },
+        {
+          "type": "text",
+          "inputType": "range",
+          "name": "independentImportance",
+          "title": "How important is being an Independent to you?",
+          "description": "Below is a range from 0 to 100 indicating how important this is to you. Click on any space within this range and a bar will appear. Feel free to move that bar around to the number that best represents your answer.",
+          "visibleIf": "{party} = 'Independent'",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "valueLabels": [
+            { "value": 0, "text": "Not important at all" },
+            { "value": 25, "text": "" },
+            { "value": 50, "text": "Moderately Important" },
+            { "value": 75, "text": "" },
+            { "value": 100, "text": "Extremely Important" }
+          ]
+        },
+        {
+          "type": "text",
+          "inputType": "range",
+          "name": "otherImportance",
+          "title": "How important is being a member of your political party to you?",
+          "description": "Below is a range from 0 to 100 indicating how important this is to you. Click on any space within this range and a bar will appear. Feel free to move that bar around to the number that best represents your answer.",
+          "visibleIf": "{party} = 'Other'",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "valueLabels": [
+            { "value": 0, "text": "Not important at all" },
+            { "value": 25, "text": "" },
+            { "value": 50, "text": "Moderately Important" },
+            { "value": 75, "text": "" },
+            { "value": 100, "text": "Extremely Important" }
+          ]
+        }
+      ]
+    }
+  ]
+}
