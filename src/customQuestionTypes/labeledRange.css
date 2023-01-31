@@ -1,0 +1,25 @@
+.slider {
+  cursor: pointer;
+}
+.slider::-webkit-slider-runnable-track {
+}
+
+.slider.sliderSelected::-webkit-slider-thumb {
+  /* show thumb */
+}
+
+.slider.progressBar::-webkit-slider-runnable-track {
+  /* sometimes we want to show the area to the left of the thumb highlighted */
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+  /* Show thumb on hover, have thumb track with cursor?*/
+}
+
+/* 
+Todo
+- add styling for mozilla, edge, ie, as these take different pseudo-elements from webkit
+
+*/

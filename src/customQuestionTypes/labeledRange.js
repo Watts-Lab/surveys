@@ -26,6 +26,8 @@ Modifies the existing range component to add track labels.
 
 */
 
+import { CssClassBuilder } from "survey-react";
+
 export function labeledRange(SurveyJS) {
   var widget = {
     name: "labeledRange",
@@ -47,13 +49,24 @@ export function labeledRange(SurveyJS) {
           { value: 100, text: "Strongly Agree" },
         ],
       });
+      SurveyJS.Serializer.addProperty("text", {
+        name: "progressBar",
+        type: "boolean",
+        category: "slider",
+        default: false,
+      });
     },
     afterRender: (question, el) => {
+      console.log(question);
       const dl = document.createElement("datalist");
       dl.id = `${question.name}_slider_vals`;
       question.valueLabels.forEach((label) => {
+        // TODO: labels will be spaced evenly, so need to "fill in the gaps" in the passed in values.
+        // This means we'll need to add ticks in some places, but not others, or stop spacing labels evenly.
+        //
         var option = document.createElement("option");
         option.value = label.value;
+        console.log(label);
         if (label.text) option.label = label.text;
         dl.appendChild(option);
       });
@@ -62,8 +75,10 @@ export function labeledRange(SurveyJS) {
 
       const slider = el.getElementsByTagName("input")[0];
       slider.setAttribute("list", dl.id);
+      slider.classList.add("slider");
 
-      // slider.onInput = (e) => {}
+      if (question.value !== undefined) slider.classList.add("sliderClicked");
+      if (question.showProgressBar) slider.classList.add("progressBar");
 
       //Todo:
       // - style ticks

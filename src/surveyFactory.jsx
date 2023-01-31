@@ -7,6 +7,8 @@ import { labeledRange } from "./customQuestionTypes/labeledRange";
 labeledRange(SurveyJS);
 SurveyJS.StylesManager.applyTheme("modern");
 
+import "./customQuestionTypes/labeledRange.css";
+
 export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
   // console.log("sha", sha);
 
