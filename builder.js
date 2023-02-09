@@ -1,3 +1,5 @@
+// This is not the most elegant way to import surveys from this module
+// but we have trouble packaging dynamic imports
 var glob = require("glob");
 const fs = require("fs");
 

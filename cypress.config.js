@@ -11,7 +11,11 @@ module.exports = defineConfig({
       framework: "react",
       bundler: "vite",
     },
-    specPattern: ["./surveys/**/*.cy.{js,jsx,ts,tsx}", "./src/*.cy.jsx"],
+    specPattern: [
+      "./surveys/**/*.cy.{js,jsx,ts,tsx}",
+      "./src/*.cy.jsx",
+      "./test/**/*cy.{js,jsx,ts,tsx}",
+    ],
     supportFile: "./cypress/support/component.js",
     setupNodeEvents(on, config) {
       on("after:screenshot", (details) => {

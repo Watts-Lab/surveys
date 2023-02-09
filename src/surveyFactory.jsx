@@ -1,14 +1,19 @@
 import "survey-react/modern.min.css";
-import { Survey as SurveyJS, StylesManager, Model } from "survey-react";
+import * as SurveyJS from "survey-react";
 import React, { useEffect } from "react";
 import packageJson from "../package.json";
+import { labeledRange } from "./customQuestionTypes/labeledRange";
 
-StylesManager.applyTheme("modern");
+labeledRange(SurveyJS);
+SurveyJS.StylesManager.applyTheme("modern");
+
+import "./customQuestionTypes/labeledRange.css";
 
 export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
-  console.log("sha", sha);
+  // console.log("sha", sha);
+
   function Survey({ onComplete, storageName }) {
-    const surveyModel = new Model(surveyJson);
+    const surveyModel = new SurveyJS.Model(surveyJson);
 
     useEffect(() => {
       surveyModel.startTimer();
@@ -16,7 +21,7 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
 
     function saveState(survey) {
       var res = { currentPageNo: survey.currentPageNo, data: survey.data };
-      console.log("Saving state to localStorage", res);
+      //console.log("Saving state to localStorage", res);
       window.localStorage.setItem(storageName, JSON.stringify(res));
     }
 
@@ -27,7 +32,7 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
       if (res.currentPageNo) survey.currentPageNo = res.currentPageNo;
       if (res.data) {
         survey.data = res.data;
-        console.log("Loading state from localStorage", res);
+        //console.log("Loading state from localStorage", res);
       }
     }
 
@@ -41,7 +46,7 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
       const result = scoreFunc(responses);
       const record = {
         surveySource: packageJson["name"],
-        surveyVersion: packageJson["version"],
+        version: packageJson["version"],
         surveySha: sha.survey,
         scoreSha: sha.score,
         surveyName,
@@ -49,6 +54,7 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
         result,
         secondsElapsed: sender.timeSpent,
       };
+      // console.log(record);
       onComplete(record);
       clearStorage();
     };
@@ -62,7 +68,7 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
     });
     loadState(surveyModel);
 
-    return <SurveyJS model={surveyModel} />;
+    return <SurveyJS.Survey model={surveyModel} />;
   }
 
   return Survey;
