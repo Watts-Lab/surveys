@@ -38,7 +38,8 @@ export function labeledRange(SurveyJS) {
 
     init() {
       SurveyJS.JsonObject.metaData.addProperty("text", {
-        name: "valueLabels:itemvalues",
+        name: "valueLabels",
+        type: "itemvalues",
         category: "slider",
         default: [
           { value: 0, text: "Strongly Disagree" },
@@ -73,7 +74,6 @@ export function labeledRange(SurveyJS) {
         if (label.text) option.label = label.text;
         dl.appendChild(option);
       });
-      //dl.style = "display: flex; justify-content: space-between;";
       dl.classList.add("sliderLabels");
       el.appendChild(dl);
 
@@ -86,12 +86,6 @@ export function labeledRange(SurveyJS) {
       slider.addEventListener("mousedown", () =>
         slider.classList.add("sliderClicked")
       );
-
-      //Todo:
-      // - style ticks
-      // - remove leading bar in track
-      // - set thumb visibility to false until onClick/onInput/onHover
-      // - move labels closer to bar
     },
   };
 

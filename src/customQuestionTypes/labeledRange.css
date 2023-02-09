@@ -13,15 +13,17 @@
 }
 
 .sliderLabels {
-  /* display: ; */
-  width: 90%;
+  display: flex;
+  width: 95%;
   justify-content: space-between;
   padding-left: 2%;
   padding-right: 2%;
 }
 
 .sliderLabel {
-  display: table-cell;
+  inline-size: 8rem;
+  word-break: break-all;
+  /* overflow-wrap: break-word; */
 }
 
 .slider::-webkit-slider-runnable-track {
@@ -54,96 +56,3 @@
 .slider:focus::-webkit-slider-runnable-track {
   background: #ccc;
 }
-
-/* .slider {
-  margin: 10; 
-  box-sizing: border-box;
-} */
-
-/* 
-.sv-root-modern ::-webkit-scrollbar {
-  background-color: transparent !important;
-}
-
-.sv-root-modern ::-webkit-scrollbar-thumb {
-  background-color: transparent !important;
-}
-
-.sv-root-modern ::-moz-scrollbar {
-  background-color: transparent !important;
-}
-
-.sv-root-modern ::-moz-scrollbar-thumb {
-  background-color: transparent !important;
-}
-​.sv-root-modern ::-ms-scrollbar {
-  background-color: transparent !important;
-}
-​.sv-root-modern ::-ms-scrollbar-thumb {
-  background-color: transparent !important;
-}
-
-.slider::-webkit-slider-thumb {
-  display: none;
-}
-
-.slider.sliderClicked::-webkit-slider-thumb {
-  display: block !important;
-}
-
-.slider::-webkit-slider-runnable-track {
-  height: 0.5rem;
-}
-
-.slider::-moz-range-track {
-  height: 0.5rem;
-}
-​.slider::-moz-range-thumb {
-  display: none;
-}
-​.slider.sliderClicked::-moz-range-thumb {
-  display: block !important;
-}
-​.slider::-ms-thumb {
-  display: none;
-}
-​.slider.sliderClicked::-ms-thumb {
-  display: block !important;
-}
-​.slider::-ms-track {
-  height: 0.5rem;
-}
-
-*/
-
-/*
-​ option[title="long-label"] {
-  width: 2ex;
-  display: flex;
-  justify-content: center;
-  height: 42px;
-  align-items: end;
-  height: 4ex;
-  background-position-y: -15px;
-  background-position-x: center;
-  z-index: -1;
-  font-size: 12px;
-  max-width: 80px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-​ option[title="short-label"] {
-  width: 2ex;
-  display: flex;
-  justify-content: center;
-  height: 42px;
-  align-items: end;
-  height: 4ex;
-  background-position-y: -15px;
-  background-position-x: center;
-  z-index: -1;
-  font-size: 12px;
-  max-width: 80px;
-  margin-left: 15px;
-  margin-right: 5px;
-} */
