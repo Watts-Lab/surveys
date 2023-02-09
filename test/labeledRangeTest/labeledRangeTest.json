@@ -32,7 +32,7 @@
           "progressBar": true,
           "valueLabels": [
             { "value": 0, "text": "0" },
-            { "value": 10, "text": "10" },
+            { "value": 10, "text": "enough" },
             { "value": 12, "text": "12" }
           ]
         }

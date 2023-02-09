@@ -54,7 +54,7 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
         result,
         secondsElapsed: sender.timeSpent,
       };
-      console.log(record);
+      // console.log(record);
       onComplete(record);
       clearStorage();
     };

@@ -26,8 +26,6 @@ Modifies the existing range component to add track labels.
 
 */
 
-import { CssClassBuilder } from "survey-react";
-
 export function labeledRange(SurveyJS) {
   var widget = {
     name: "labeledRange",
@@ -35,11 +33,12 @@ export function labeledRange(SurveyJS) {
     isFit: (question) => {
       return question.getType() === "text" && question.inputType === "range";
     },
+
     isDefaultRender: true,
+
     init() {
-      SurveyJS.Serializer.addProperty("text", {
-        name: "valueLabels",
-        type: "itemValues",
+      SurveyJS.JsonObject.metaData.addProperty("text", {
+        name: "valueLabels:itemvalues",
         category: "slider",
         default: [
           { value: 0, text: "Strongly Disagree" },
@@ -49,15 +48,18 @@ export function labeledRange(SurveyJS) {
           { value: 100, text: "Strongly Agree" },
         ],
       });
-      SurveyJS.Serializer.addProperty("text", {
+
+      SurveyJS.JsonObject.metaData.addProperty("text", {
         name: "progressBar",
         type: "boolean",
         category: "slider",
         default: false,
       });
     },
+
     afterRender: (question, el) => {
-      console.log(question);
+      console.log("question", question);
+      el.classList.add("sliderContainer");
       const dl = document.createElement("datalist");
       dl.id = `${question.name}_slider_vals`;
       question.valueLabels.forEach((label) => {
@@ -66,19 +68,24 @@ export function labeledRange(SurveyJS) {
         //
         var option = document.createElement("option");
         option.value = label.value;
+        option.classList.add("sliderLabel");
         console.log(label);
         if (label.text) option.label = label.text;
         dl.appendChild(option);
       });
-      dl.style = "display: flex; justify-content: space-between;";
+      //dl.style = "display: flex; justify-content: space-between;";
+      dl.classList.add("sliderLabels");
       el.appendChild(dl);
 
       const slider = el.getElementsByTagName("input")[0];
       slider.setAttribute("list", dl.id);
       slider.classList.add("slider");
 
-      if (question.value !== undefined) slider.classList.add("sliderClicked");
       if (question.showProgressBar) slider.classList.add("progressBar");
+
+      slider.addEventListener("mousedown", () =>
+        slider.classList.add("sliderClicked")
+      );
 
       //Todo:
       // - style ticks
