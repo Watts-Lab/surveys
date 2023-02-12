@@ -13,11 +13,12 @@
           "min": 0,
           "max": 100,
           "step": 1,
+          "showTicks" : true,
           "valueLabels": [
             { "value": 0, "text": "Not important at all" },
-            { "value": 25, "text": "" },
+            { "value": 25, "text": " " },
             { "value": 50, "text": "Moderately Important" },
-            { "value": 75, "text": "" },
+            { "value": 75, "text": " " },
             { "value": 100, "text": "Extremely Important" }
           ]
         },
@@ -28,10 +29,14 @@
           "title": "How many hours did you sleep last night?",
           "min": 0,
           "max": 12,
-          "step": 1,
+          "step": 2,
           "progressBar": true,
           "valueLabels": [
             { "value": 0, "text": "0" },
+            { "value": 0, "text": " " },
+            { "value": 0, "text": " " },
+            { "value": 0, "text": " " },
+            { "value": 0, "text": " " },
             { "value": 10, "text": "10" },
             { "value": 12, "text": "12" }
           ]

@@ -1,58 +1,116 @@
 .sliderContainer {
-  width: 99%; /* stop from overflowing sides and triggering horizontal scrollbar */
+    width: 99%;
+    /* stop from overflowing sides and triggering horizontal scrollbar */
 }
-.slider {
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
-  cursor: pointer;
 
-  padding-left: 2%;
-  padding-right: 2%;
-  border: 0; /* remove bottom border line */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+
+    padding-left: 2%;
+    padding-right: 2%;
+    border: 0;
+    /* remove bottom border line */
 }
 
 .sliderLabels {
-  display: flex;
-  width: 95%;
-  justify-content: space-between;
-  padding-left: 2%;
-  padding-right: 2%;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .sliderLabel {
-  inline-size: 8rem;
-  word-break: break-all;
-  /* overflow-wrap: break-word; */
+    inline-size: 8rem;
+    word-break: break-all;
+    /* overflow-wrap: break-word; */
 }
 
 .slider::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 5px;
-  background: #ddd;
-  border: none;
-  border-radius: 3px;
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
 }
 
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: none;
-  height: 20px;
-  width: 16px;
-  border-radius: 40%;
-  background: rgb(26, 179, 148);
-  margin-top: -8px;
-  visibility: hidden;
+    -webkit-appearance: none;
+    border: none;
+    height: 20px;
+    width: 16px;
+    border-radius: 40%;
+    background: rgb(26, 179, 148);
+    margin-top: -8px;
+    visibility: hidden;
 }
 
 .slider.sliderClicked::-webkit-slider-thumb {
-  visibility: visible;
+    visibility: visible;
 }
 
 .slider:focus {
-  outline: none;
+    outline: none;
 }
 
 .slider:focus::-webkit-slider-runnable-track {
-  background: #ccc;
+    background: #ccc;
+}
+
+/* ----------------added styles to make required changes by Amir Rahman from upwork---------------- */
+
+/* to resolve the issue : https://github.com/Watts-Lab/surveys/issues/110 */
+
+.sliderLabel {
+    width: 0px;
+    left: 0px;
+    position: relative;
+}
+
+.sliderLabel .tick {
+    height: 20px;
+    width: 2px;
+    background: rgb(194 194 194);
+    top: -20px;
+    left: 0px;
+    z-index: -1;
+    position: relative;
+    border-radius: 25px;
+}
+
+.sliderLabel .label_value {
+    top: -18px;
+    text-align: center;
+    max-width: 100px;
+    width: max-content;
+    word-break: break-word;
+    font-size: 14px;
+    position: relative;
+}
+
+datalist.sliderLabels {
+    position: relative;
+    width: 94.5%;
+    left: 10px;
+}
+
+.sliderLabel .each_label {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sv-row__question {
+    overflow: visible;
+}
+
+.sliderContainer input {
+    width: 100%;
+}
+
+.active {
+    font-weight: bold;
 }
