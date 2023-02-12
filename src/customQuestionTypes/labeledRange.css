@@ -56,3 +56,58 @@
 .slider:focus::-webkit-slider-runnable-track {
   background: #ccc;
 }
+
+/* ----------------added styles to make required changes by Amir Rahman from upwork---------------- */
+
+/* to resolve the issue : https://github.com/Watts-Lab/surveys/issues/110 */
+
+.sliderLabel {
+    width: 0px;
+    left: 0px;
+    position: relative;
+}
+
+.sliderLabel .tick {
+    height: 20px;
+    width: 2px;
+    background: rgb(194 194 194);
+    top: -20px;
+    left: 0px;
+    z-index: -1;
+    position: relative;
+    border-radius: 25px;
+}
+
+.sliderLabel .label_value {
+    top: -18px;
+    text-align: center;
+    max-width: 100px;
+    width: max-content;
+    word-break: break-word;
+    font-size: 14px;
+    position: relative;
+}
+
+datalist.sliderLabels {
+    position: relative;
+    width: 94.5%;
+    left: 10px;
+}
+
+.sliderLabel .each_label {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sv-row__question {
+    overflow: visible;
+}
+
+.sliderContainer input {
+    width: 100%;
+}
+
+.active {
+    font-weight: bold;
+}
