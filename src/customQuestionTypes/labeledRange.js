@@ -59,33 +59,51 @@ export function labeledRange(SurveyJS) {
     },
 
     afterRender: (question, el) => {
-      console.log("question", question);
-      el.classList.add("sliderContainer");
-      const dl = document.createElement("datalist");
-      dl.id = `${question.name}_slider_vals`;
-      question.valueLabels.forEach((label) => {
-        // TODO: labels will be spaced evenly, so need to "fill in the gaps" in the passed in values.
-        // This means we'll need to add ticks in some places, but not others, or stop spacing labels evenly.
-        //
-        var option = document.createElement("option");
-        option.value = label.value;
-        option.classList.add("sliderLabel");
-        console.log(label);
-        if (label.text) option.label = label.text;
-        dl.appendChild(option);
-      });
-      dl.classList.add("sliderLabels");
-      el.appendChild(dl);
+        console.log("question", question);
+        el.classList.add("sliderContainer");
+        const dl = document.createElement("datalist");
+        dl.id = `${question.name}_slider_vals`;
+        question.valueLabels.forEach((label) => {
+            // TODO: labels will be spaced evenly, so need to "fill in the gaps" in the passed in values.
+            // This means we'll need to add ticks in some places, but not others, or stop spacing labels evenly.
+            //
+            // changes added for issue https://github.com/Watts-Lab/surveys/issues/110
+            var option = document.createElement("div");
+            option.classList.add("sliderLabel");
+            if (label.text) {
+                option.innerHTML = `
+                    <div class="each_label">
+                        <div class="tick"></div>
+                        <div class="label_value">${label.text}</div>
+                    </div>
+                `
+                option.setAttribute("value" , label.value)
+                dl.appendChild(option);
+            }
+        });
+            // changes added for issue https://github.com/Watts-Lab/surveys/issues/110            
+        dl.classList.add("sliderLabels");
+        el.appendChild(dl);
 
-      const slider = el.getElementsByTagName("input")[0];
-      slider.setAttribute("list", dl.id);
-      slider.classList.add("slider");
+        const slider = el.getElementsByTagName("input")[0];
+        slider.setAttribute("list", dl.id);
+        slider.classList.add("slider");
 
-      if (question.showProgressBar) slider.classList.add("progressBar");
+        if (question.showProgressBar) slider.classList.add("progressBar");
 
-      slider.addEventListener("mousedown", () =>
-        slider.classList.add("sliderClicked")
-      );
+        slider.addEventListener("mousedown", () =>
+            slider.classList.add("sliderClicked")
+        );
+
+        // added additionally for highlighting label
+        let last = null
+        slider.addEventListener("input", e => {
+            let val = e.target.value
+            last?.classList.remove("active")
+            const activeEl = dl.querySelector(`[value='${val}']`)
+            activeEl?.classList.add("active")
+            last = activeEl
+        })
     },
   };
 
