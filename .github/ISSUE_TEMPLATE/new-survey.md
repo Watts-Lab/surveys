@@ -26,4 +26,6 @@ Add a new survey to the repository according to the instructions in [the package
   - [ ] Include a line to take a screenshot at the end of every page
 - [ ] Create a readme markdown file to document (_always:_ `superSpecialSurvey/README.md`)
   - [ ] Include relevant screenshots
+- [ ] Update the package minor version
+- [ ] Rebuild the package using `npm run build` to update SHAs
 - [ ] Create PR and link to this issue

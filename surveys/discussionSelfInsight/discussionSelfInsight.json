@@ -1,0 +1,80 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<br/><h1> How much do you feel this conversation helped you to… </h1>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "understandSelf",
+              "title": "...understand yourself better.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "thinkDeeply",
+              "title": "...think more deeply about the topic.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "newInsights",
+              "title": "...discover new or different insights about yourself.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "reflectOnAttitudes",
+              "title": "...reflect on your attitudes.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            },
+            {
+              "type": "rating",
+              "name": "thinkDifferently",
+              "title": "...think about things in a different way.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Not at all",
+              "maxRateDescription": "Very Much",
+              "displayMode": "buttons"
+            }
+          ],
+          "questionsOrder": "random",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "questionsOnPageMode": "singlePage",
+  "widthMode": "responsive"
+}

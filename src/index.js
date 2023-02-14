@@ -19,6 +19,11 @@ import discussionQualityControlSha from "../surveys/discussionQualityControl/sha
 import { default as discussionQualityControlScoreFunc } from "../surveys/discussionQualityControl/discussionQualityControl.score.js";
 export const DiscussionQualityControl = SurveyFactory("discussionQualityControl", discussionQualityControlJson, discussionQualityControlScoreFunc, discussionQualityControlSha);
 
+import discussionSelfInsightJson from "../surveys/discussionSelfInsight/discussionSelfInsight.json";
+import discussionSelfInsightSha from "../surveys/discussionSelfInsight/sha.json";
+import { default as discussionSelfInsightScoreFunc } from "../surveys/discussionSelfInsight/discussionSelfInsight.score.js";
+export const DiscussionSelfInsight = SurveyFactory("discussionSelfInsight", discussionSelfInsightJson, discussionSelfInsightScoreFunc, discussionSelfInsightSha);
+
 import exampleSurveyJson from "../surveys/exampleSurvey/exampleSurvey.json";
 import exampleSurveySha from "../surveys/exampleSurvey/sha.json";
 import { default as exampleSurveyScoreFunc } from "../surveys/exampleSurvey/exampleSurvey.score.js";
