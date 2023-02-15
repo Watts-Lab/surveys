@@ -9,6 +9,16 @@ import autonomyNeedSatisfactionSha from "../surveys/autonomyNeedSatisfaction/sha
 import { default as autonomyNeedSatisfactionScoreFunc } from "../surveys/autonomyNeedSatisfaction/autonomyNeedSatisfaction.score.js";
 export const AutonomyNeedSatisfaction = SurveyFactory("autonomyNeedSatisfaction", autonomyNeedSatisfactionJson, autonomyNeedSatisfactionScoreFunc, autonomyNeedSatisfactionSha);
 
+import constructiveListeningBehaviorsJson from "../surveys/constructiveListeningBehaviors/constructiveListeningBehaviors.json";
+import constructiveListeningBehaviorsSha from "../surveys/constructiveListeningBehaviors/sha.json";
+import { default as constructiveListeningBehaviorsScoreFunc } from "../surveys/constructiveListeningBehaviors/constructiveListeningBehaviors.score.js";
+export const ConstructiveListeningBehaviors = SurveyFactory("constructiveListeningBehaviors", constructiveListeningBehaviorsJson, constructiveListeningBehaviorsScoreFunc, constructiveListeningBehaviorsSha);
+
+import constructiveListeningBehaviorsSelfJson from "../surveys/constructiveListeningBehaviorsSelf/constructiveListeningBehaviorsSelf.json";
+import constructiveListeningBehaviorsSelfSha from "../surveys/constructiveListeningBehaviorsSelf/sha.json";
+import { default as constructiveListeningBehaviorsSelfScoreFunc } from "../surveys/constructiveListeningBehaviorsSelf/constructiveListeningBehaviorsSelf.score.js";
+export const ConstructiveListeningBehaviorsSelf = SurveyFactory("constructiveListeningBehaviorsSelf", constructiveListeningBehaviorsSelfJson, constructiveListeningBehaviorsSelfScoreFunc, constructiveListeningBehaviorsSelfSha);
+
 import demographicsJson from "../surveys/demographics/demographics.json";
 import demographicsSha from "../surveys/demographics/sha.json";
 import { default as demographicsScoreFunc } from "../surveys/demographics/demographics.score.js";
