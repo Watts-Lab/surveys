@@ -1,5 +1,7 @@
 # Survey Purpose
 
+This survey implements the "Constructive Listening Behaviors" portion of the Facilitating Listening Scale.
+
 > The Facilitating Listening Scale (FLS) assesses speaker perceptions of the listening behaviors of their interlocutors and the consequences of these behaviors for the speakers.
 
 (All text quotations from Kluger and Bouskila-Yam, 2017, unless noted otherwise)
@@ -94,7 +96,7 @@ The original survey reported in the Sourcebook contains 38 listening behavior it
 
 # Design and modifications
 
-We used survey items developed by Netta Weinstein and Tia Moin in their work on listening training.
+This survey implements the original scale portion as described.
 
 ### Scoring
 

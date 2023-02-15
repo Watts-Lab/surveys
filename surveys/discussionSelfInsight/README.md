@@ -12,7 +12,7 @@ and
 
 # Design and modifications
 
-This implementation uses the survey almost verbatim from the source, pushing slightly more text to the topline, and adusting word usage from "reflect about your attitudes" to "reflect on your attitudes"
+This implementation uses the survey almost verbatim from the source, pushing slightly more text to the topline. The survey was written in the participant's first person tense to conform with other surveys in this library. Slight word usage adjustments were made for ease of reading.
 
 # Source literature
 

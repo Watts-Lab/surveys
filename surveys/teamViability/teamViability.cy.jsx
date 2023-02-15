@@ -1,5 +1,5 @@
 import React from "react";
-import { TeamViability } from "@watts-lab/surveys";
+import { TeamViability } from "../../src/index";
 
 const dummy = {
   set(response) {},

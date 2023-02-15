@@ -1,7 +1,7 @@
 // No postprocessing needed for this survey
 
 function normalize(array, minVal, maxVal) {
-  return array.map((val) => (val - minVal) / (maxVal - 1));
+  return array.map((val) => (val - minVal) / (maxVal - minVal));
 }
 
 function mean(array) {

@@ -9,111 +9,191 @@
           "type": "html",
           "name": "Prompt",
           "hideNumber": true,
-          "html": "<br/><h1> During the conversation,</h1><h1>I felt that I… </h1>"
+          "html": "<br/><h1> During the conversation, I felt that I… </h1>"
         },
         {
           "type": "panel",
           "name": "randomizationPanel",
           "elements": [
             {
-              "type": "rating",
+              "type": "text",
+              "inputType": "range",
               "name": "tryToUnderstand",
-              "title": "...tried hard to understand what my partner was saying.",
+              "title": "...tried hard to understand what others were saying.",
               "hideNumber": true,
-              "rateMax": 9,
-              "minRateDescription": "Not at all",
-              "maxRateDescription": "Very Much",
-              "displayMode": "buttons"
+              "min": 0,
+              "max": 100,
+              "step": "any",
+              "progressBar": true,
+              "valueLabels": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 25 },
+                { "value": 50, "text": "Adequately" },
+                { "value": 75 },
+                { "value": 100, "text": "Perfectly" }
+              ]
             },
             {
-              "type": "rating",
+              "type": "text",
+              "inputType": "range",
               "name": "askedQuestions",
-              "title": "...asked questions that show my understanding of my partner’s opinions.",
+              "title": "...asked questions that showed that I understood others opinions.",
               "hideNumber": true,
-              "rateMax": 9,
-              "minRateDescription": "Not at all",
-              "maxRateDescription": "Very Much",
-              "displayMode": "buttons"
+              "min": 0,
+              "max": 100,
+              "step": "any",
+              "progressBar": true,
+              "valueLabels": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 25 },
+                { "value": 50, "text": "Adequately" },
+                { "value": 75 },
+                { "value": 100, "text": "Perfectly" }
+              ]
             },
             {
-              "type": "rating",
+              "type": "text",
+              "inputType": "range",
               "name": "encouragedClarification",
-              "title": "...encouraged my partner to clarify a problem.",
+              "title": "...encouraged others to clarify a problem.",
               "hideNumber": true,
-              "rateMax": 9,
-              "minRateDescription": "Not at all",
-              "maxRateDescription": "Very Much",
-              "displayMode": "buttons"
+              "min": 0,
+              "max": 100,
+              "step": "any",
+              "progressBar": true,
+              "valueLabels": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 25 },
+                { "value": 50, "text": "Adequately" },
+                { "value": 75 },
+                { "value": 100, "text": "Perfectly" }
+              ]
             },
             {
-              "type": "rating",
+              "type": "text",
+              "inputType": "range",
               "name": "expressedInterest",
-              "title": "...expressed interest in my partner’s stories.",
+              "title": "...expressed interest in others' stories.",
               "hideNumber": true,
-              "rateMax": 9,
-              "minRateDescription": "Not at all",
-              "maxRateDescription": "Very Much",
-              "displayMode": "buttons"
+              "min": 0,
+              "max": 100,
+              "step": "any",
+              "progressBar": true,
+              "valueLabels": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 25 },
+                { "value": 50, "text": "Adequately" },
+                { "value": 75 },
+                { "value": 100, "text": "Perfectly" }
+              ]
             },
             {
-              "type": "rating",
+              "type": "text",
+              "inputType": "range",
               "name": "listenedAttentively",
-              "title": "...listened to my partner attentively.",
+              "title": "...listened to others attentively.",
               "hideNumber": true,
-              "rateMax": 9,
-              "minRateDescription": "Not at all",
-              "maxRateDescription": "Very Much",
-              "displayMode": "buttons"
+              "min": 0,
+              "max": 100,
+              "step": "any",
+              "progressBar": true,
+              "valueLabels": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 25 },
+                { "value": 50, "text": "Adequately" },
+                { "value": 75 },
+                { "value": 100, "text": "Perfectly" }
+              ]
             },
             {
-              "type": "rating",
+              "type": "text",
+              "inputType": "range",
               "name": "paidAttention",
-              "title": "...paid close attention to what my partner has said.",
+              "title": "...paid close attention to what others said.",
               "hideNumber": true,
-              "rateMax": 9,
-              "minRateDescription": "Not at all",
-              "maxRateDescription": "Very Much",
-              "displayMode": "buttons"
+              "min": 0,
+              "max": 100,
+              "step": "any",
+              "progressBar": true,
+              "valueLabels": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 25 },
+                { "value": 50, "text": "Adequately" },
+                { "value": 75 },
+                { "value": 100, "text": "Perfectly" }
+              ]
             },
             {
-              "type": "rating",
+              "type": "text",
+              "inputType": "range",
               "name": "gaveSpace",
-              "title": "...gave my partner time and space to talk.",
+              "title": "...gave others time and space to talk.",
               "hideNumber": true,
-              "rateMax": 9,
-              "minRateDescription": "Not at all",
-              "maxRateDescription": "Very Much",
-              "displayMode": "buttons"
+              "min": 0,
+              "max": 100,
+              "step": "any",
+              "progressBar": true,
+              "valueLabels": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 25 },
+                { "value": 50, "text": "Adequately" },
+                { "value": 75 },
+                { "value": 100, "text": "Perfectly" }
+              ]
             },
             {
-              "type": "rating",
+              "type": "text",
+              "inputType": "range",
               "name": "undividedAttention",
-              "title": "...gave my partner my undivided attention.",
+              "title": "...gave others my undivided attention.",
               "hideNumber": true,
-              "rateMax": 9,
-              "minRateDescription": "Not at all",
-              "maxRateDescription": "Very Much",
-              "displayMode": "buttons"
+              "min": 0,
+              "max": 100,
+              "step": "any",
+              "progressBar": true,
+              "valueLabels": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 25 },
+                { "value": 50, "text": "Adequately" },
+                { "value": 75 },
+                { "value": 100, "text": "Perfectly" }
+              ]
             },
             {
-              "type": "rating",
+              "type": "text",
+              "inputType": "range",
               "name": "positiveAtmosphere",
-              "title": "...created a positive atmosphere for my partner to talk.",
+              "title": "..created a positive atmosphere for othersu to talk.",
               "hideNumber": true,
-              "rateMax": 9,
-              "minRateDescription": "Not at all",
-              "maxRateDescription": "Very Much",
-              "displayMode": "buttons"
+              "min": 0,
+              "max": 100,
+              "step": "any",
+              "progressBar": true,
+              "valueLabels": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 25 },
+                { "value": 50, "text": "Adequately" },
+                { "value": 75 },
+                { "value": 100, "text": "Perfectly" }
+              ]
             },
             {
-              "type": "rating",
+              "type": "text",
+              "inputType": "range",
               "name": "allowedExpression",
-              "title": "...allowed my partner to express themselves fully.",
+              "title": "...allowed others to express themselves fully.",
               "hideNumber": true,
-              "rateMax": 9,
-              "minRateDescription": "Not at all",
-              "maxRateDescription": "Very Much",
-              "displayMode": "buttons"
+              "min": 0,
+              "max": 100,
+              "step": "any",
+              "progressBar": true,
+              "valueLabels": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 25 },
+                { "value": 50, "text": "Adequately" },
+                { "value": 75 },
+                { "value": 100, "text": "Perfectly" }
+              ]
             }
           ],
           "questionsOrder": "random",

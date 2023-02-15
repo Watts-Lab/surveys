@@ -1,0 +1,171 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<h2>Please reflect on your experience of being listened to by others in your discussion.</h2><h1> Others in my discussion... </h1>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "tryToUnderstand",
+              "title": "...tried hard to understand what I was saying.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "askedQuestions",
+              "title": "...asked questions that showed that they understood my opinion.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "encouragedClarification",
+              "title": "...encouraged me to clarify a problem.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "expressedInterest",
+              "title": "...expressed interest in my stories.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "listenedAttentively",
+              "title": "...listened to me attentively.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "paidAttention",
+              "title": "...paid close attention to what I said.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "gaveSpace",
+              "title": "...gave me time and space to talk.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "undividedAttention",
+              "title": "...gave me their undivided attention.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "positiveAtmosphere",
+              "title": "..created a positive atmosphere for me to talk.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "allowedExpression",
+              "title": "...allowed me to express myself fully.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
+            }
+          ],
+          "questionsOrder": "random",
+          "state": "expanded",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "questionsOnPageMode": "singlePage",
+  "widthMode": "responsive"
+}

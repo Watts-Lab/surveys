@@ -59,7 +59,7 @@ export function labeledRange(SurveyJS) {
     },
 
     afterRender: (question, el) => {
-      console.log("question", question);
+      // console.log("question", question);
       el.classList.add("sliderContainer");
       const dl = document.createElement("datalist");
       dl.id = `${question.name}_slider_vals`;
@@ -76,10 +76,10 @@ export function labeledRange(SurveyJS) {
         //   option.setAttribute("value", label.value);
         //   dl.appendChild(option);
         // }
-        console.log(
-          `label ${label.text}, label isempty ${label.locTextValue.isEmpty}`,
-          label
-        );
+        // console.log(
+        //   `label ${label.text}, label isempty ${label.locTextValue.isEmpty}`,
+        //   label
+        // );
         option.innerHTML = `
           <div class="each_label">
               <div class="tick"></div>

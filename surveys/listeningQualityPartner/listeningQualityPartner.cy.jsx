@@ -11,43 +11,45 @@ describe("ListeningQualityPartner", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<ListeningQualityPartner onComplete={dummy.set} />);
 
-    cy.get('[data-name="tryToUnderstand"] input[value="2"]').click({
-      force: true,
-    });
+    cy.get('[data-name="tryToUnderstand"] input[type=range]')
+      .trigger("mousedown", "center")
+      .trigger("mouseup");
 
-    cy.get('[data-name="askedQuestions"] input[value="2"]').click({
-      force: true,
-    });
+    cy.get('[data-name="askedQuestions"] input[type=range]')
+      .trigger("mousedown", "center")
+      .trigger("mouseup");
 
-    cy.get('[data-name="encouragedClarification"] input[value="2"]').click({
-      force: true,
-    });
+    cy.get('[data-name="encouragedClarification"] input[type=range]')
+      .trigger("mousedown", "center")
+      .trigger("mouseup");
 
-    cy.get('[data-name="expressedInterest"] input[value="2"]').click({
-      force: true,
-    });
+    cy.get('[data-name="expressedInterest"] input[type=range]')
+      .trigger("mousedown", "center")
+      .trigger("mouseup");
 
-    cy.get('[data-name="listenedAttentively"] input[value="2"]').click({
-      force: true,
-    });
+    cy.get('[data-name="listenedAttentively"] input[type=range]')
+      .trigger("mousedown", "center")
+      .trigger("mouseup");
 
-    cy.get('[data-name="paidAttention"] input[value="2"]').click({
-      force: true,
-    });
+    cy.get('[data-name="paidAttention"] input[type=range]')
+      .trigger("mousedown", "center")
+      .trigger("mouseup");
 
-    cy.get('[data-name="gaveSpace"] input[value="2"]').click({ force: true });
+    cy.get('[data-name="gaveSpace"] input[type=range]')
+      .trigger("mousedown", "center")
+      .trigger("mouseup");
 
-    cy.get('[data-name="undividedAttention"] input[value="2"]').click({
-      force: true,
-    });
+    cy.get('[data-name="undividedAttention"] input[type=range]')
+      .trigger("mousedown", "center")
+      .trigger("mouseup");
 
-    cy.get('[data-name="positiveAtmosphere"] input[value="2"]').click({
-      force: true,
-    });
+    cy.get('[data-name="positiveAtmosphere"] input[type=range]')
+      .trigger("mousedown", "center")
+      .trigger("mouseup");
 
-    cy.get('[data-name="allowedExpression"] input[value="2"]').click({
-      force: true,
-    });
+    cy.get('[data-name="allowedExpression"] input[type=range]')
+      .trigger("mousedown", "center")
+      .trigger("mouseup");
 
     cy.screenshot("listeningQualityPartner/screenshot", { overwrite: true });
 
@@ -60,8 +62,8 @@ describe("ListeningQualityPartner", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["rawScore"]).to.eq(20);
-      expect(spyCall["result"]["normScore"]).to.eq(0.125);
+      expect(spyCall["result"]["rawScore"]).to.eq(25);
+      expect(spyCall["result"]["normScore"]).to.eq(0.25);
       expect(spyCall["responses"]["allowedExpression"]).to.eq(2);
     });
   });

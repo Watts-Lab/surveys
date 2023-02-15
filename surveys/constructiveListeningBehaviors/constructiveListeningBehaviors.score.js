@@ -13,22 +13,21 @@ function mean(array) {
 }
 
 export default function scoreFunc(responses) {
-  const minVal = 0;
-  const maxVal = 100;
+  const minVal = -3;
+  const maxVal = 3;
 
   const rawValues = [
-    responses["tryToUnderstand"],
-    responses["askedQuestions"],
-    responses["encouragedClarification"],
-    responses["expressedInterest"],
-    responses["listenedAttentively"],
-    responses["paidAttention"],
-    responses["gaveSpace"],
-    responses["undividedAttention"],
-    responses["positiveAtmosphere"],
-    responses["allowedExpression"],
+    parseInt(responses["tryToUnderstand"]) +
+      parseInt(responses["askedQuestions"]) +
+      parseInt(responses["encouragedClarification"]) +
+      parseInt(responses["expressedInterest"]) +
+      parseInt(responses["listenedAttentively"]) +
+      parseInt(responses["paidAttention"]) +
+      parseInt(responses["gaveSpace"]) +
+      parseInt(responses["undividedAttention"]) +
+      parseInt(responses["positiveAtmosphere"]) +
+      parseInt(responses["allowedExpression"]),
   ];
-  console.log("rawValues", rawValues);
 
   const normedValues = normalize(rawValues, minVal, maxVal);
 

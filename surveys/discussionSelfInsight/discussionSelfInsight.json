@@ -9,7 +9,7 @@
           "type": "html",
           "name": "Prompt",
           "hideNumber": true,
-          "html": "<br/><h1> How much do you feel this conversation helped you to… </h1>"
+          "html": "<br/><h1> I feel this conversation helped me to… </h1>"
         },
         {
           "type": "panel",
@@ -18,7 +18,7 @@
             {
               "type": "rating",
               "name": "understandSelf",
-              "title": "...understand yourself better.",
+              "title": "...understand myself better.",
               "hideNumber": true,
               "rateMax": 7,
               "minRateDescription": "Not at all",
@@ -38,7 +38,7 @@
             {
               "type": "rating",
               "name": "newInsights",
-              "title": "...discover new or different insights about yourself.",
+              "title": "...discover new or different insights about myself.",
               "hideNumber": true,
               "rateMax": 7,
               "minRateDescription": "Not at all",
@@ -48,7 +48,7 @@
             {
               "type": "rating",
               "name": "reflectOnAttitudes",
-              "title": "...reflect on your attitudes.",
+              "title": "...reflect on my attitudes.",
               "hideNumber": true,
               "rateMax": 7,
               "minRateDescription": "Not at all",
