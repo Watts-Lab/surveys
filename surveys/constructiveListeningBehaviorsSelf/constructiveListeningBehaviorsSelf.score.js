@@ -1,24 +1,39 @@
-// No postprocessing needed for this survey
+function normalize(array, minVal, maxVal) {
+  return array.map((val) => (val - minVal) / (maxVal - minVal));
+}
+
+function sum(array) {
+  return array.reduce((acc, val) => acc + val, 0);
+}
+
+function mean(array) {
+  return sum(array) / array.length;
+}
 
 export default function scoreFunc(responses) {
-  const minScore = -3;
-  const maxScore = 3;
+  const minVal = -3;
+  const maxVal = 3;
 
-  const rawScore =
-    parseInt(responses["tryToUnderstand"]) +
-    parseInt(responses["askedQuestions"]) +
-    parseInt(responses["encouragedClarification"]) +
-    parseInt(responses["expressedInterest"]) +
-    parseInt(responses["listenedAttentively"]) +
-    parseInt(responses["paidAttention"]) +
-    parseInt(responses["gaveSpace"]) +
-    parseInt(responses["undividedAttention"]) +
-    parseInt(responses["positiveAtmosphere"]) +
-    parseInt(responses["allowedExpression"]);
+  const rawValues = [
+    responses["tryToUnderstand"],
+    responses["askedQuestions"],
+    responses["encouragedClarification"],
+    responses["expressedInterest"],
+    responses["listenedAttentively"],
+    responses["paidAttention"],
+    responses["gaveSpace"],
+    responses["undividedAttention"],
+    responses["positiveAtmosphere"],
+    responses["allowedExpression"],
+  ]
+    .map(parseFloat)
+    .filter((v) => !Number.isNaN(v)); // don't include empty values in response
+
+  const normedValues = normalize(rawValues, minVal, maxVal);
 
   const result = {
-    rawScore: rawScore,
-    normScore: (rawScore - minScore) / (maxScore - minScore),
+    rawScore: mean(rawValues),
+    normScore: mean(normedValues),
   };
   return result;
 }
