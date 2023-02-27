@@ -1,70 +1,112 @@
 {
+  "logoPosition": "right",
   "focusFirstQuestionAutomatic": false,
   "pages": [
     {
       "name": "page1",
       "elements": [
         {
-          "type": "matrix",
-          "name": "teamViability",
-          "minWidth": "500px",
-          "maxWidth": "Initial",
-          "title": "Please select the option that most closely reflects how much you agree with the following statements.",
-          "titleLocation": "top",
+          "type": "html",
+          "name": "Prompt",
           "hideNumber": true,
-          "isRequired": true,
-          "columns": [
+          "html": "<h1>Please select the option that most closely reflects how much you agree with the following statements.</h1>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
             {
-              "value": "1",
-              "text": "Strongly Disagree"
+              "type": "radiogroup",
+              "name": "capableUnit",
+              "title": "This group is capable of working together as a unit.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
             },
             {
-              "value": "2",
-              "text": "Disagree"
+              "type": "radiogroup",
+              "name": "futureSuccess",
+              "title": "This group would work well together in the future.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
             },
             {
-              "value": "3",
-              "text": "Neither Agree nor Disagree"
+              "type": "radiogroup",
+              "name": "fallingApart",
+              "title": "This group shows signs of falling apart.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
             },
             {
-              "value": "4",
-              "text": "Agree"
+              "type": "radiogroup",
+              "name": "welcomeReuinion",
+              "title": "Most members of this group would welcome the opportunity to work together in the future.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
             },
             {
-              "value": "5",
-              "text": "Strongly Agree"
+              "type": "radiogroup",
+              "name": "persistDespiteObstacles",
+              "title": "This group has what it takes to persist in the face of obstacles.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "succeedDespiteDislike",
+              "title": "This group will still be successful even if the members do not like one another.",
+              "choices": [
+                { "value": -3, "text": "Strongly Disagree" },
+                { "value": -2, "text": "Disagree" },
+                { "value": -1, "text": "Somewhat Disagree" },
+                { "value": 0, "text": "Neither Agree nor Disagree" },
+                { "value": 1, "text": "Somewhat Agree" },
+                { "value": 2, "text": "Agree" },
+                { "value": 3, "text": "Strongly Agree" }
+              ]
             }
           ],
-          "rows": [
-            {
-              "value": "capable unit",
-              "text": "This team is capable of working together as a unit."
-            },
-            {
-              "value": "future success",
-              "text": "This team would work well together in the future."
-            },
-            {
-              "value": "falling apart",
-              "text": "As a team, this work group shows signs of falling apart."
-            },
-            {
-              "value": "welcome reunion",
-              "text": "Most of the members of this team would welcome the opportunity to work as a group again in the future."
-            },
-            {
-              "value": "persist despite obstacles",
-              "text": "This team has what it takes to persist in the face of obstacles."
-            },
-            {
-              "value": "succeed dispite dislike",
-              "text": "This team will still be successful even if the members do not like one another."
-            }
-          ],
-          "isAllRowRequired": true
+          "questionsOrder": "random",
+          "state": "expanded",
+          "showQuestionNumbers": "off"
         }
       ],
-      "questionTitleLocation": "top"
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
     }
   ],
   "showPageTitles": false,

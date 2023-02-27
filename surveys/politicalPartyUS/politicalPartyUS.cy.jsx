@@ -33,6 +33,7 @@ describe("PoliticaPartyUS", () => {
       expect(spyCall["result"]["party"]).to.eq("Republican");
       expect(spyCall["result"]["normPosition"]).to.eq(1);
       expect(spyCall["result"]["normImportance"]).to.eq(0.5);
+      expect(spyCall["result"]["position"]).to.eq(3);
     });
   });
 
@@ -58,6 +59,7 @@ describe("PoliticaPartyUS", () => {
       console.log(spyCall);
       expect(spyCall["result"]["party"]).to.eq("Other");
       expect(spyCall["result"]["normPosition"]).to.be.undefined;
+      expect(spyCall["result"]["position"]).to.be.undefined;
       expect(spyCall["result"]["normImportance"]).to.eq(0.5);
     });
   });

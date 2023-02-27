@@ -8,9 +8,9 @@ We expect that perticipants will thoughtfully complete this survey, selecting th
 
 # Design Rationale
 
-We used survey items developed by Jessica Nicole Cooperstein in her paper on developing a measure for team viability. These items have been reviewed by field experts.
+We used survey items developed by Jessica Nicole Cooperstein in her paper on developing a measure for team viability.
 
-# Literature/Past Project Citations
+Scores range from -3 (strongly disagree) to +3 (strongly agree)
 
 Cooperstein, J. (2017). Initial Development of a Team Viability Measure. College of Science and Health Theses and Dissertations. https://via.library.depaul.edu/csh_etd/202
 

@@ -1,5 +1,4 @@
 import React from "react";
-//import { RelatednessNeedSatisfaction } from "@watts-lab/surveys";
 import { RelatednessNeedSatisfaction } from "../../src/index";
 
 const dummy = {
@@ -11,17 +10,18 @@ describe("RelatenessNeedSatisfaction", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<RelatednessNeedSatisfaction onComplete={dummy.set} />);
 
-    cy.get('[data-name="closeness"] input[value="7"]').click({
+    cy.get('[data-name="closeness"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="distance"] input[value="3"]').click({
+    cy.get('[data-name="distance"] input[value="8"]').click({
       force: true,
     });
 
-    cy.get('[data-name="caredAbout"] input[value="7"]').click({
-      force: true,
-    });
+    // Hide to make sure we can handle missing values
+    // cy.get('[data-name="caredAbout"] input[value="7"]').click({
+    //   force: true,
+    // });
 
     cy.screenshot("relatednessNeedSatisfaction/screenshot", {
       overwrite: true,
@@ -36,9 +36,10 @@ describe("RelatenessNeedSatisfaction", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["rawScore"]).to.eq(21);
-      expect(spyCall["result"]["normScore"]).to.eq(0.75);
-      expect(spyCall["responses"]["distance"]).to.eq(3);
+      expect(spyCall["result"]["rawScore"]).to.eq(2);
+      expect(spyCall["result"]["normScore"]).to.eq(0.125);
+      expect(spyCall["responses"]["distance"]).to.eq(8);
+      expect(spyCall["responses"]["caredAbout"]).to.be.undefined;
     });
   });
 });

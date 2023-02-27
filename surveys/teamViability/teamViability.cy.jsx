@@ -1,5 +1,5 @@
 import React from "react";
-import { TeamViability } from "@watts-lab/surveys";
+import { TeamViability } from "../../src/index";
 
 const dummy = {
   set(response) {},
@@ -10,9 +10,36 @@ describe("TeamViability", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<TeamViability onComplete={dummy.set} />);
 
-    cy.get('[data-responsive-title="Disagree"] input').click({
-      multiple: true,
-      timeout: 6000,
+    cy.get('[data-name="capableUnit"] input[value="2"]').click({
+      force: true,
+    });
+
+    cy.get('[data-name="futureSuccess"] input[value="2"]').click({
+      force: true,
+    });
+
+    cy.get('[data-name="fallingApart"] input[value="-2"]').click({
+      force: true,
+    });
+
+    // Leave out to test that we can handle missing data
+    // cy.get('[data-name="welcomeReuinion"] input[value="2"]').click({
+    //   force: true,
+    // });
+
+    // cy.get('[data-name="persistDespiteObstacles"] input[value="2"]').click({
+    //   force: true,
+    // });
+
+    cy.get('[data-name="succeedDespiteDislike"] input[value="2"]').click({
+      force: true,
+    });
+
+    cy.get('[data-name="futureSuccess"] input[value="2"]').click({
+      force: true,
+    });
+
+    cy.get('[data-name="futureSuccess"] input[value="2"]').click({
       force: true,
     });
 
@@ -29,7 +56,10 @@ describe("TeamViability", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["rawScore"]).to.eq(14);
+      expect(spyCall["result"]["rawScore"]).to.eq(2);
+      expect(spyCall["result"]["normScore"]).to.be.closeTo(0.83333, 0.0001);
+      expect(spyCall["responses"]["persistDespiteObstacles"]).to.be.undefined;
+      expect(spyCall["responses"]["futureSuccess"]).to.eq(2);
     });
   });
 });
