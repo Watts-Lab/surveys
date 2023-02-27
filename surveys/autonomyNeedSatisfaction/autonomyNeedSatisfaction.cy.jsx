@@ -19,13 +19,13 @@ describe("AutonomyNeedSatisfaction", () => {
       force: true,
     });
 
-    cy.get('[data-name="sharingChoice"] input[value="2"]').click({
-      force: true,
-    });
+    // cy.get('[data-name="sharingChoice"] input[value="2"]').click({
+    //   force: true,
+    // });
 
-    cy.get('[data-name="importantDiscussion"] input[value="2"]').click({
-      force: true,
-    });
+    // cy.get('[data-name="importantDiscussion"] input[value="2"]').click({
+    //   force: true,
+    // });
 
     cy.get('[data-name="sensitiveTopics"] input[value="2"]').click({
       force: true,
@@ -39,9 +39,9 @@ describe("AutonomyNeedSatisfaction", () => {
       force: true,
     });
 
-    cy.get('[data-name="controlledPressured"] input[value="8"]').click({
-      force: true,
-    });
+    // cy.get('[data-name="controlledPressured"] input[value="8"]').click({
+    //   force: true,
+    // });
 
     cy.screenshot("autonomyNeedSatisfaction/screenshot", { overwrite: true });
 
@@ -54,9 +54,10 @@ describe("AutonomyNeedSatisfaction", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["rawScore"]).to.eq(16);
+      expect(spyCall["result"]["rawScore"]).to.eq(2);
       expect(spyCall["result"]["normScore"]).to.eq(0.125);
       expect(spyCall["responses"]["chooseDirection"]).to.eq(2);
+      expect(spyCall["responses"]["controlledPressured"]).to.be.undefined;
     });
   });
 });

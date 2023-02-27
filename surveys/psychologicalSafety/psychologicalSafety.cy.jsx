@@ -1,5 +1,4 @@
 import React from "react";
-//import { PsychologicalSafety } from "@watts-lab/surveys";
 import { PsychologicalSafety } from "../../src/index";
 
 const dummy = {
@@ -11,31 +10,32 @@ describe("PsychologicalSafety", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<PsychologicalSafety onComplete={dummy.set} />);
 
-    cy.get('[data-name="holdMistake"] input[value="4"]').click({
+    cy.get('[data-name="holdMistake"] input[value="6"]').click({
       force: true,
     });
 
-    cy.get('[data-name="othersProblems"] input[value="4"]').click({
+    cy.get('[data-name="othersProblems"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="rejectedDifferent"] input[value="4"]').click({
+    // Omit to test dealing with missing data
+    // cy.get('[data-name="rejectedDifferent"] input[value="6"]').click({
+    //   force: true,
+    // });
+
+    // cy.get('[data-name="safeToTakeRisks"] input[value="2"]').click({
+    //   force: true,
+    // });
+
+    // cy.get('[data-name="difficultToAskHelp"] input[value="6"]').click({
+    //   force: true,
+    // });
+
+    cy.get('[data-name="notUndermine"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="safeToTakeRisks"] input[value="4"]').click({
-      force: true,
-    });
-
-    cy.get('[data-name="difficultToAskHelp"] input[value="4"]').click({
-      force: true,
-    });
-
-    cy.get('[data-name="notUndermine"] input[value="4"]').click({
-      force: true,
-    });
-
-    cy.get('[data-name="skillsValued"] input[value="4"]').click({
+    cy.get('[data-name="skillsValued"] input[value="2"]').click({
       force: true,
     });
 
@@ -50,9 +50,10 @@ describe("PsychologicalSafety", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["rawScore"]).to.eq(28);
-      expect(spyCall["result"]["normScore"]).to.eq(0.5);
-      expect(spyCall["responses"]["skillsValued"]).to.eq(4);
+      expect(spyCall["result"]["rawScore"]).to.eq(2);
+      expect(spyCall["result"]["normScore"]).to.be.closeTo(0.16666, 0.0001);
+      expect(spyCall["responses"]["skillsValued"]).to.eq(2);
+      expect(spyCall["responses"]["safeToTakeRisks"]).to.be.undefined;
     });
   });
 });

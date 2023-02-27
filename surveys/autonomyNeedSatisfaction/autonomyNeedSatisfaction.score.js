@@ -1,24 +1,45 @@
 // No postprocessing needed for this survey
 
-export default function scoreFunc(responses) {
-  const minScore = 1 * 8;
-  const maxScore = 9 * 8;
+function normalize(array, minVal, maxVal) {
+  return array.map((val) => (val - minVal) / (maxVal - minVal));
+}
 
-  const rawScore =
-    parseInt(responses["chooseDirection"]) +
-    10 -
-    parseInt(responses["chooseContent"]) +
-    parseInt(responses["sharingChoice"]) +
-    parseInt(responses["importantDiscussion"]) +
-    parseInt(responses["sensitiveTopics"]) +
-    parseInt(responses["feelingFree"]) +
-    parseInt(responses["voiceOpinion"]) +
-    10 -
-    parseInt(responses["controlledPressured"]);
+function sum(array) {
+  return array.reduce((acc, val) => acc + val, 0);
+}
+
+function mean(array) {
+  return sum(array) / array.length;
+}
+
+function reverseCode(value, minVal, maxVal) {
+  const floatVal = parseFloat(value);
+  if (Number.isNaN(floatVal)) return undefined;
+  return maxVal - (value - minVal);
+}
+
+export default function scoreFunc(responses) {
+  const minVal = 1;
+  const maxVal = 9;
+
+  const rawValues = [
+    responses["chooseDirection"],
+    reverseCode(responses["chooseContent"], minVal, maxVal),
+    responses["sharingChoice"],
+    responses["importantDiscussion"],
+    responses["sensitiveTopics"],
+    responses["feelingFree"],
+    responses["voiceOpinion"],
+    reverseCode(responses["controlledPressured"], minVal, maxVal),
+  ]
+    .map(parseFloat)
+    .filter((v) => !Number.isNaN(v)); // don't include empty values in response
+
+  const normedValues = normalize(rawValues, minVal, maxVal);
 
   const result = {
-    rawScore: rawScore,
-    normScore: (rawScore - minScore) / (maxScore - minScore),
+    rawScore: mean(rawValues),
+    normScore: mean(normedValues),
   };
   return result;
 }

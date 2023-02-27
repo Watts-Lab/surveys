@@ -39,16 +39,6 @@ import exampleSurveySha from "../surveys/exampleSurvey/sha.json";
 import { default as exampleSurveyScoreFunc } from "../surveys/exampleSurvey/exampleSurvey.score.js";
 export const ExampleSurvey = SurveyFactory("exampleSurvey", exampleSurveyJson, exampleSurveyScoreFunc, exampleSurveySha);
 
-import listeningQualityOwnJson from "../surveys/listeningQualityOwn/listeningQualityOwn.json";
-import listeningQualityOwnSha from "../surveys/listeningQualityOwn/sha.json";
-import { default as listeningQualityOwnScoreFunc } from "../surveys/listeningQualityOwn/listeningQualityOwn.score.js";
-export const ListeningQualityOwn = SurveyFactory("listeningQualityOwn", listeningQualityOwnJson, listeningQualityOwnScoreFunc, listeningQualityOwnSha);
-
-import listeningQualityPartnerJson from "../surveys/listeningQualityPartner/listeningQualityPartner.json";
-import listeningQualityPartnerSha from "../surveys/listeningQualityPartner/sha.json";
-import { default as listeningQualityPartnerScoreFunc } from "../surveys/listeningQualityPartner/listeningQualityPartner.score.js";
-export const ListeningQualityPartner = SurveyFactory("listeningQualityPartner", listeningQualityPartnerJson, listeningQualityPartnerScoreFunc, listeningQualityPartnerSha);
-
 import lonelinessSingleItemJson from "../surveys/lonelinessSingleItem/lonelinessSingleItem.json";
 import lonelinessSingleItemSha from "../surveys/lonelinessSingleItem/sha.json";
 import { default as lonelinessSingleItemScoreFunc } from "../surveys/lonelinessSingleItem/lonelinessSingleItem.score.js";
