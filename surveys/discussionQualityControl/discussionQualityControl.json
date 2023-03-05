@@ -82,13 +82,14 @@
           "name": "joiningDetail",
           "visibleIf": "{joiningProblems} = 'yes'",
           "title": "Can you tell us more about the trouble you had joining the study?",
+          "description": "Please don't include any identifying information.",
           "hideNumber": true
         },
         {
           "type": "rating",
           "name": "technicalProblems",
           "title": "Did you have any technical problems with the study?",
-          "description": "If so, please describe them below.",
+          "description": "e.g. video connection errors, website glitches, etc.",
           "hideNumber": true,
           "rateValues": ["no", "yes"],
           "displayMode": "buttons"
@@ -98,12 +99,14 @@
           "name": "technicalDetail",
           "visibleIf": "{technicalProblems} = 'yes'",
           "title": "Can you tell us more about your technical problems?",
+          "description": "Please don't include any identifying information.",
           "hideNumber": true
         },
         {
           "type": "text",
           "name": "textExpansion",
           "title": "Is there anything else we should know?",
+          "description": "Please don't include any identifying information.",
           "hideNumber": true
         }
       ],

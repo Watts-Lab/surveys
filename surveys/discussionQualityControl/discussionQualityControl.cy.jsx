@@ -1,5 +1,5 @@
 import React from "react";
-import { DiscussionQualityControl } from "@watts-lab/surveys";
+import { DiscussionQualityControl } from "../../src/index";
 
 const dummy = {
   set(response) {},
