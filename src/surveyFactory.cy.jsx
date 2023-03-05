@@ -127,7 +127,7 @@ describe("SurveyFactory", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall.secondsElapsed).to.be.within(5, 7);
+      expect(spyCall.secondsElapsed).to.be.closeTo(5, 1);
     });
   });
 });
