@@ -35,14 +35,6 @@ describe("TeamViability", () => {
       force: true,
     });
 
-    cy.get('[data-name="futureSuccess"] input[value="2"]').click({
-      force: true,
-    });
-
-    cy.get('[data-name="futureSuccess"] input[value="2"]').click({
-      force: true,
-    });
-
     cy.screenshot("teamViability/screenshot", {
       overwrite: true,
     });
@@ -58,6 +50,7 @@ describe("TeamViability", () => {
       console.log(spyCall);
       expect(spyCall["result"]["rawScore"]).to.eq(2);
       expect(spyCall["result"]["normScore"]).to.be.closeTo(0.83333, 0.0001);
+      expect(spyCall["result"]["completion"]).to.be.closeTo(0.66, 0.01);
       expect(spyCall["responses"]["persistDespiteObstacles"]).to.be.undefined;
       expect(spyCall["responses"]["futureSuccess"]).to.eq(2);
     });

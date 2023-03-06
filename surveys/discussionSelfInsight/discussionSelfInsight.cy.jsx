@@ -22,9 +22,10 @@ describe("DiscussionSelfInsight", () => {
       force: true,
     });
 
-    cy.get('[data-name="reflectOnAttitudes"] input[value="1"]').click({
-      force: true,
-    });
+    // Omit to test ability to handle incomplete surveys
+    // cy.get('[data-name="reflectOnAttitudes"] input[value="1"]').click({
+    //   force: true,
+    // });
 
     cy.get('[data-name="thinkDifferently"] input[value="1"]').click({
       force: true,
@@ -41,8 +42,9 @@ describe("DiscussionSelfInsight", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["normMean"]).to.eq(0.3);
-      expect(spyCall["result"]["normStd"]).to.be.closeTo(0.2449, 0.0001);
+      expect(spyCall["result"]["rawScore"]).to.eq(3.25);
+      expect(spyCall["result"]["normScore"]).to.eq(0.375);
+      expect(spyCall["result"]["completion"]).to.eq(0.8);
       expect(spyCall["responses"]["thinkDeeply"]).to.eq(4);
     });
   });

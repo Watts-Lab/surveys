@@ -8,12 +8,12 @@ function mean(array) {
   return array.reduce((acc, val) => acc + val, 0) / array.length;
 }
 
-function std(array) {
-  const m = mean(array);
-  return Math.sqrt(
-    array.reduce((acc, val) => acc + Math.pow(val - m, 2), 0) / array.length
-  );
-}
+// function std(array) {
+//   const m = mean(array);
+//   return Math.sqrt(
+//     array.reduce((acc, val) => acc + Math.pow(val - m, 2), 0) / array.length
+//   );
+// }
 
 export default function scoreFunc(responses) {
   const minVal = 1;
@@ -25,15 +25,15 @@ export default function scoreFunc(responses) {
     responses["newInsights"],
     responses["reflectOnAttitudes"],
     responses["thinkDifferently"],
-  ];
+  ].map(parseFloat);
 
-  const normedValues = normalize(rawValues, minVal, maxVal);
+  const completedValues = rawValues.filter((v) => !Number.isNaN(v)); // don't include empty values in response
+  const normedValues = normalize(completedValues, minVal, maxVal);
 
   const result = {
-    rawMean: mean(rawValues),
-    rawStd: std(rawValues),
-    normMean: mean(normedValues),
-    normStd: std(normedValues),
+    rawScore: mean(completedValues),
+    normScore: mean(normedValues),
+    completion: completedValues.length / rawValues.length,
   };
   return result;
 }
