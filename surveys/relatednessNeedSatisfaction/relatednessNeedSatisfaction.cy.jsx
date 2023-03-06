@@ -38,6 +38,7 @@ describe("RelatenessNeedSatisfaction", () => {
       console.log(spyCall);
       expect(spyCall["result"]["rawScore"]).to.eq(2);
       expect(spyCall["result"]["normScore"]).to.eq(0.125);
+      expect(spyCall["result"]["completion"]).to.be.closeTo(0.66, 0.01);
       expect(spyCall["responses"]["distance"]).to.eq(8);
       expect(spyCall["responses"]["caredAbout"]).to.be.undefined;
     });

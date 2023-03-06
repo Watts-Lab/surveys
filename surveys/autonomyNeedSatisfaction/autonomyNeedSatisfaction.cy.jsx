@@ -56,6 +56,7 @@ describe("AutonomyNeedSatisfaction", () => {
       console.log(spyCall);
       expect(spyCall["result"]["rawScore"]).to.eq(2);
       expect(spyCall["result"]["normScore"]).to.eq(0.125);
+      expect(spyCall["result"]["completion"]).to.eq(0.625);
       expect(spyCall["responses"]["chooseDirection"]).to.eq(2);
       expect(spyCall["responses"]["controlledPressured"]).to.be.undefined;
     });

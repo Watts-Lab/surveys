@@ -30,15 +30,15 @@ export default function scoreFunc(responses) {
     reverseCode(responses["difficultToAskHelp"], minVal, maxVal),
     responses["notUndermine"],
     responses["skillsValued"],
-  ]
-    .map(parseFloat)
-    .filter((v) => !Number.isNaN(v)); // don't include empty values in response
+  ].map(parseFloat);
+  const completedValues = rawValues.filter((v) => !Number.isNaN(v)); // don't include empty values in response
 
-  const normedValues = normalize(rawValues, minVal, maxVal);
+  const normedValues = normalize(completedValues, minVal, maxVal);
 
   const result = {
-    rawScore: mean(rawValues),
+    rawScore: mean(completedValues),
     normScore: mean(normedValues),
+    completion: completedValues.length / rawValues.length,
   };
   return result;
 }
