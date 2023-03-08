@@ -9,7 +9,7 @@
           "type": "html",
           "name": "Prompt",
           "hideNumber": true,
-          "html": "<h2>Please reflect on your experience of listening to others in your discussion.</h2><h1> During the discussion, I... </h1>"
+          "html": "<h1>Please reflect on your experience of listening to others in your discussion.</h1>"
         },
         {
           "type": "panel",
@@ -18,7 +18,7 @@
             {
               "type": "radiogroup",
               "name": "tryToUnderstand",
-              "title": "...tried hard to understand what others were saying.",
+              "title": "During the discussion, I tried hard to understand what others were saying.",
               "choices": [
                 { "value": -3, "text": "Strongly Disagree" },
                 { "value": -2, "text": "Disagree" },
@@ -32,7 +32,7 @@
             {
               "type": "radiogroup",
               "name": "askedQuestions",
-              "title": "...asked questions that showed that I understood others opinions.",
+              "title": "During the discussion, I asked questions that showed that I understood others' opinions.",
               "choices": [
                 { "value": -3, "text": "Strongly Disagree" },
                 { "value": -2, "text": "Disagree" },
@@ -46,7 +46,7 @@
             {
               "type": "radiogroup",
               "name": "encouragedClarification",
-              "title": "...encouraged others to clarify a problem.",
+              "title": "During the discussion, I encouraged others to clarify a problem.",
               "choices": [
                 { "value": -3, "text": "Strongly Disagree" },
                 { "value": -2, "text": "Disagree" },
@@ -60,7 +60,7 @@
             {
               "type": "radiogroup",
               "name": "expressedInterest",
-              "title": "...expressed interest in others stories.",
+              "title": "During the discussion, I expressed interest in others' stories.",
               "choices": [
                 { "value": -3, "text": "Strongly Disagree" },
                 { "value": -2, "text": "Disagree" },
@@ -74,7 +74,7 @@
             {
               "type": "radiogroup",
               "name": "listenedAttentively",
-              "title": "...listened to others attentively.",
+              "title": "During the discussion, I listened to others attentively.",
               "choices": [
                 { "value": -3, "text": "Strongly Disagree" },
                 { "value": -2, "text": "Disagree" },
@@ -88,7 +88,7 @@
             {
               "type": "radiogroup",
               "name": "paidAttention",
-              "title": "...paid close attention to what others said.",
+              "title": "During the discussion, I paid close attention to what others said.",
               "choices": [
                 { "value": -3, "text": "Strongly Disagree" },
                 { "value": -2, "text": "Disagree" },
@@ -102,7 +102,7 @@
             {
               "type": "radiogroup",
               "name": "gaveSpace",
-              "title": "...gave others time and space to talk.",
+              "title": "During the discussion, I gave others time and space to talk.",
               "choices": [
                 { "value": -3, "text": "Strongly Disagree" },
                 { "value": -2, "text": "Disagree" },
@@ -116,7 +116,7 @@
             {
               "type": "radiogroup",
               "name": "undividedAttention",
-              "title": "...gave others my undivided attention.",
+              "title": "During the discussion, I gave others my undivided attention.",
               "choices": [
                 { "value": -3, "text": "Strongly Disagree" },
                 { "value": -2, "text": "Disagree" },
@@ -130,7 +130,7 @@
             {
               "type": "radiogroup",
               "name": "positiveAtmosphere",
-              "title": "..created a positive atmosphere for others to talk.",
+              "title": "During the discussion, I created a positive atmosphere for others to talk.",
               "choices": [
                 { "value": -3, "text": "Strongly Disagree" },
                 { "value": -2, "text": "Disagree" },
@@ -144,7 +144,7 @@
             {
               "type": "radiogroup",
               "name": "allowedExpression",
-              "title": "...allowed others to express themselves fully.",
+              "title": "During the discussion, I allowed others to express themselves fully.",
               "choices": [
                 { "value": -3, "text": "Strongly Disagree" },
                 { "value": -2, "text": "Disagree" },
