@@ -44,6 +44,11 @@ import lonelinessSingleItemSha from "../surveys/lonelinessSingleItem/sha.json";
 import { default as lonelinessSingleItemScoreFunc } from "../surveys/lonelinessSingleItem/lonelinessSingleItem.score.js";
 export const LonelinessSingleItem = SurveyFactory("lonelinessSingleItem", lonelinessSingleItemJson, lonelinessSingleItemScoreFunc, lonelinessSingleItemSha);
 
+import partisanFeelingThermometerUSJson from "../surveys/partisanFeelingThermometerUS/partisanFeelingThermometerUS.json";
+import partisanFeelingThermometerUSSha from "../surveys/partisanFeelingThermometerUS/sha.json";
+import { default as partisanFeelingThermometerUSScoreFunc } from "../surveys/partisanFeelingThermometerUS/partisanFeelingThermometerUS.score.js";
+export const PartisanFeelingThermometerUS = SurveyFactory("partisanFeelingThermometerUS", partisanFeelingThermometerUSJson, partisanFeelingThermometerUSScoreFunc, partisanFeelingThermometerUSSha);
+
 import politicalPartyUSJson from "../surveys/politicalPartyUS/politicalPartyUS.json";
 import politicalPartyUSSha from "../surveys/politicalPartyUS/sha.json";
 import { default as politicalPartyUSScoreFunc } from "../surveys/politicalPartyUS/politicalPartyUS.score.js";

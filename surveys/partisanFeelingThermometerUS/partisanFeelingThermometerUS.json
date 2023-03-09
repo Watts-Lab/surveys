@@ -1,0 +1,50 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "text",
+          "inputType": "range",
+          "name": "republicanTemp",
+          "title": "How would you rate Republicans?",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "valueLabels": [
+            { "value": 0, "text": "0 (very cold)" },
+            { "value": 25, "text": "" },
+            { "value": 50, "text": "50 (neutral)" },
+            { "value": 75, "text": "" },
+            { "value": 100, "text": "100 (very warm)" }
+          ]
+        },
+        {
+          "type": "text",
+          "inputType": "range",
+          "name": "democratTemp",
+          "title": "How would you rate Democrats?",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "valueLabels": [
+            { "value": 0, "text": "0 (Very cold)" },
+            { "value": 25, "text": "" },
+            { "value": 50, "text": "50 (Neutral)" },
+            { "value": 75, "text": "" },
+            { "value": 100, "text": "100 (Very warm)" }
+          ]
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "random",
+      "title": "We would like to get your feelings toward both Democrats and Republicans.",
+      "description": "We would like you to rate them using something we call the feeling thermometer.\n Ratings between 50 degrees and 100 degrees mean that you feel favorable and warm toward them. Ratings between 0 degrees and 50 degrees mean that you don't feel favorable toward them and that you don't care too much for them. You would rate them at the 50 degree mark if you don't feel particularly warm or cold toward them."
+    }
+  ],
+  "showPageTitles": true,
+  "questionsOnPageMode": "questionPerPage",
+  "widthMode": "responsive"
+}
