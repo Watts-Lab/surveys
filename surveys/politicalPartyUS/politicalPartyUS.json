@@ -6,6 +6,7 @@
       "elements": [
         {
           "type": "rating",
+          "isRequired": true,
           "name": "party",
           "title": "Generally speaking, do you usually think of yourself as a Republican, a Democrat, an Independent, or what?",
           "rateValues": ["Republican", "Democrat", "Independent", "Other"],
@@ -15,12 +16,14 @@
           "type": "text",
           "name": "partyOther",
           "visibleIf": "{party} = 'Other'",
+          "requiredIf": "{party} = 'Other'",
           "title": "Which political party do you identify with?"
         },
         {
           "type": "rating",
           "name": "republicanStrength",
           "visibleIf": "{party} = 'Republican'",
+          "requiredIf": "{party} = 'Republican'",
           "title": "Would you call yourself a strong Republican or a not very strong Republican",
           "rateValues": ["Strong Republican", "Not very strong Republican"],
           "displayMode": "buttons"
@@ -29,6 +32,7 @@
           "type": "rating",
           "name": "democratStrength",
           "visibleIf": "{party} = 'Democrat'",
+          "requiredIf": "{party} = 'Democrat'",
           "title": "Would you call yourself a strong Democrat or a not very strong Democrat",
           "rateValues": ["Strong Democrat", "Not very strong Democrat"],
           "displayMode": "buttons"
@@ -37,6 +41,7 @@
           "type": "rating",
           "name": "independentLean",
           "visibleIf": "{party} = 'Independent'",
+          "requiredIf": "{party} = 'Independent'",
           "title": "Do you think of yourself as closer to the Republican Party or the Democratic Party?",
           "rateValues": [
             "Closer to Republican Party",
