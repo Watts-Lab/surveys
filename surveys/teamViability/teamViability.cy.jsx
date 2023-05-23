@@ -48,8 +48,8 @@ describe("TeamViability", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["rawScore"]).to.eq(2);
-      expect(spyCall["result"]["normScore"]).to.be.closeTo(0.83333, 0.0001);
+      expect(spyCall["result"]["rawScore"]).to.eq((2).toFixed(3));
+      expect(spyCall["result"]["normScore"]).to.eq((0.833).toFixed(3));
       expect(spyCall["result"]["completion"]).to.be.closeTo(0.66, 0.01);
       expect(spyCall["responses"]["persistDespiteObstacles"]).to.be.undefined;
       expect(spyCall["responses"]["futureSuccess"]).to.eq(2);
