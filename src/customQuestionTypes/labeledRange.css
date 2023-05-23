@@ -120,9 +120,8 @@
 }
 
 datalist.sliderLabels {
-  position: relative;
-  width: 94.5%;
-  left: 10px;
+  position: absolute;
+  width: 84.5%;
 }
 
 .sliderLabel .each_label {

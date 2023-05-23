@@ -21,6 +21,31 @@ describe("LabeledRangeTest", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<LabeledRangeTest onComplete={dummy.set} />);
 
+    /* test if thumb invisible before click moz */
+    it("test thumb visibility before click moz", { browser: "chrome" }), () => {
+      cy.get(".slider", { log: false }).within(($el) => {
+        cy.window().then((win) => {
+          cy.get(win.getComputedStyle($el[0], "::-moz-range-thumb")).
+          should("not.be.visible", { log: false })
+        })
+      });
+    }
+
+    /* test if thumb invisible before click webkit */
+//    it("test thumb visibility before click webkit", { browser: "firefox" }), () => {
+      cy.get(".slider", { log: false }).within(($el) => {
+        cy.window().then((win) => {
+          cy.get(win.getComputedStyle($el[0], "::-webkit-slider-thumb")).
+          should("not.be.visible", { log: false })
+        })
+      });
+//    }
+
+
+
+    
+
+
     // cy.get('[data-name="party"] input[value="Republican"]').click({
     //   force: true,
     // });
