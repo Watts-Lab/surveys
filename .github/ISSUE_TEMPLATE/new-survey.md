@@ -20,6 +20,7 @@ Add a new survey to the repository according to the instructions in [the package
 
 - [ ] Create a new folder in surveys w/ descriptive, easy-to-read name `superSpecialSurvey/`
 - [ ] Create SurveyJS .json file (_e.g._ `superSpecialSurvey/superSpecialSurvey.json`)
+  - [ ] Change the default completion page to a blank page (```"showCompletedPage": false```)
 - [ ] Create a .bib file citing your references for the survey (_always:_ `superSpecialSurvey/references.bib`)
 - [ ] Create file with function to aggregate survey data (_e.g._ `superSpecialSurvey.score.js`)
 - [ ] Create a cypress test of the survey (e.g. `superSpecialSurvey.cy.jsx`)
