@@ -53,5 +53,6 @@
   ],
   "showPageTitles": false,
   "questionsOnPageMode": "singlePage",
-  "widthMode": "responsive"
+  "widthMode": "responsive",
+  "showCompletedPage": false
 }

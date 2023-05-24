@@ -33,6 +33,8 @@ describe("ExampleSurvey", () => {
         cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
       });
 
+    cy.get(".sv-body").should("not.exist");
+
     cy.get("@callback").should("have.been.called");
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];

@@ -1,5 +1,5 @@
 import React from "react";
-import { LonelinessSingleItem } from "@watts-lab/surveys";
+import { LonelinessSingleItem } from "../../src/index";
 
 const dummy = {
   set(response) {},
@@ -16,6 +16,8 @@ describe("Demographics", () => {
 
     // submit
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
+
+    cy.get(".sv-body").should("not.exist");
 
     cy.get("@callback").should("have.been.called");
     cy.get("@callback").then((spy) => {
