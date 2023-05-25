@@ -31,7 +31,7 @@ describe("DiscussionSelfInsight", () => {
       force: true,
     });
 
-    cy.screenshot("discussionSelfInsight/screenshot", { overwrite: true });
+    cy.screenshot("./screenshot", { overwrite: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {
