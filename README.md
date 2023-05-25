@@ -44,6 +44,11 @@ You can then use the survey as a react component:
 
 New surveys can be added in the `surveys/` folder. Each survey has its own subfolder with a descriptive, easy-to-read (lower camelCase) name (e.g. `surveys/superSpecialSurvey/`)
 
+To run this in development, first type `npm install` in the root folder, to install the project dependencies, and then run `npm run build` to build the project.
+
+
+
+
 ### Survey file
 
 Create a SurveyJS `.json` file with the same name as the directory (_e.g._ `superSpecialSurvey/superSpecialSurvey.json`) following the surveyJS format.
