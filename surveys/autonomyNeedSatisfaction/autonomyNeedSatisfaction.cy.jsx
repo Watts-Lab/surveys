@@ -43,7 +43,7 @@ describe("AutonomyNeedSatisfaction", () => {
     //   force: true,
     // });
 
-    cy.screenshot("./screenshot", { overwrite: true });
+    cy.screenshot("autonomyNeedSatisfaction/screenshot", { overwrite: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {

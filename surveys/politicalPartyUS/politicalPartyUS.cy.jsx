@@ -18,11 +18,11 @@ describe("PoliticaPartyUS", () => {
       '[data-name="republicanStrength"] input[value="Strong Republican"]'
     ).click({ force: true });
 
-    cy.screenshot("./page1", { overwrite: true });
+    cy.screenshot("politicalPartyUS/page1", { overwrite: true });
 
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
-    cy.screenshot("./page2", { overwrite: true });
+    cy.screenshot("politicalPartyUS/page2", { overwrite: true });
 
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
@@ -49,7 +49,7 @@ describe("PoliticaPartyUS", () => {
 
     cy.get('[data-name="partyOther"] input').click().type("Fancy dress party");
 
-    cy.screenshot("./page1_other", { overwrite: true });
+    cy.screenshot("politicalPartyUS/page1_other", { overwrite: true });
 
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 

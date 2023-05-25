@@ -35,7 +35,7 @@ describe("TeamViability", () => {
       force: true,
     });
 
-    cy.screenshot("./screenshot", {
+    cy.screenshot("teamViability/screenshot", {
       overwrite: true,
     });
 

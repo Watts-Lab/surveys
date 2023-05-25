@@ -26,7 +26,7 @@ describe("ExampleSurvey", () => {
       .click()
       .type(loremIpsum);
 
-    cy.screenshot("./screenshot", { overwrite: true });
+    cy.screenshot("exampleSurvey/screenshot", { overwrite: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {

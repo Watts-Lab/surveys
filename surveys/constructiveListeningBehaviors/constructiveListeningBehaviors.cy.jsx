@@ -49,7 +49,7 @@ describe("ConstructiveListeningBehaviors", () => {
       force: true,
     });
 
-    cy.screenshot("./screenshot", {
+    cy.screenshot("constructiveListeningBehaviors/screenshot", {
       overwrite: true,
     });
 

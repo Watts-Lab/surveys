@@ -12,7 +12,7 @@ describe("Demographics", () => {
 
     cy.get(`[data-name="loneliness"] input[value="2"]`).click({ force: true });
 
-    cy.screenshot("./screenshot", { overwrite: true });
+    cy.screenshot("lonelinessSingleItem/screenshot", { overwrite: true });
 
     // submit
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
