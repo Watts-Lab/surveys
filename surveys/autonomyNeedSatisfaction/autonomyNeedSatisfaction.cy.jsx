@@ -54,10 +54,10 @@ describe("AutonomyNeedSatisfaction", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["rawScore"]).to.eq(2);
-      expect(spyCall["result"]["normScore"]).to.eq(0.125);
+      expect(spyCall["result"]["rawScore"]).to.eq((2).toFixed(3));
+      expect(spyCall["result"]["normScore"]).to.eq((0.125).toFixed(3));
       expect(spyCall["result"]["completion"]).to.eq(0.625);
-      expect(spyCall["responses"]["chooseDirection"]).to.eq(2);
+      expect(spyCall["responses"]["chooseDirection"]).to.eq(2.000);
       expect(spyCall["responses"]["controlledPressured"]).to.be.undefined;
     });
   });
