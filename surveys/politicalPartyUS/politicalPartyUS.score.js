@@ -30,7 +30,7 @@ export default function scoreFunc(responses) {
   const result = {
     party: responses["party"],
     position,
-    normPosition: position !== undefined ? (position + 3) / 6 : undefined,
+    normPosition: position !== undefined ? ((position + 3) / 6).toFixed(3) : undefined,
     importance,
     normImportance: importance / 100,
   };
