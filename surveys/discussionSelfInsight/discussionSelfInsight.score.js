@@ -29,11 +29,13 @@ export default function scoreFunc(responses) {
 
   const completedValues = rawValues.filter((v) => !Number.isNaN(v)); // don't include empty values in response
   const normedValues = normalize(completedValues, minVal, maxVal);
+  const order = responses.getKeys();
 
   const result = {
     rawScore: mean(completedValues),
     normScore: mean(normedValues),
     completion: completedValues.length / rawValues.length,
+    order: order,
   };
   return result;
 }
