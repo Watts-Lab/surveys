@@ -31,7 +31,7 @@ export default function scoreFunc(responses) {
 
   const normedValues = normalize(completedValues, minVal, maxVal);
 
-  const order = responses.getKeys();
+  const order = Object.keys(responses);
 
   const result = {
     rawScore: mean(completedValues),
