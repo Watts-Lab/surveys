@@ -5,10 +5,22 @@ const dummy = {
   set(response) {},
 };
 
+const ids = ["sq_100", "sq_101", "sq_102", "sq_103"];
+const ids2 = ["sq_104", "sq_105", "sq_106", "sq_107"];
+
 describe("RelatenessNeedSatisfaction", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<RelatednessNeedSatisfaction onComplete={dummy.set} />);
+
+    const idList = [];
+    cy.get(".sv-question.sv-row__question").each(($el) => {
+      cy.wrap($el).invoke("attr", "id").then(curr => {
+        idList.push(curr);
+      });
+    })
+    cy.wrap(idList).should("not.be.deep.equal", ids);
+    cy.wrap(idList).should("not.be.deep.equal", ids2);
 
     cy.get('[data-name="closeness"] input[value="2"]').click({
       force: true,
