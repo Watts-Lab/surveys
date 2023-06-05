@@ -10,18 +10,14 @@ describe("PartisanFeelingThermometerUS", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<PartisanFeelingThermometerUS onComplete={dummy.set} />);
 
-    cy.get("input[type=range]")
-      .invoke("val", 25)
-      .trigger("mousedown", "center");
+    cy.get("input[type=range]").invoke("val", 25).click({ force: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {
-        cy.wrap($form.find('input[type="button"][value="Next"]')).click();
+        cy.wrap($form.find('input[type="button"][value="Next"]')).click({ force: true });
       });
 
-    cy.get("input[type=range]")
-      .invoke("val", 25)
-      .trigger("mousedown", "center");
+    cy.get("input[type=range]").invoke("val", 75).click({ force: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {
@@ -30,6 +26,14 @@ describe("PartisanFeelingThermometerUS", () => {
 
     cy.get(".sv-body").should("not.exist");
     
+    cy.get("@callback").should("have.been.called");
+    cy.get("@callback").then((spy) => {
+      const spyCall = spy.getCall(-1).args[0];
+      console.log(spyCall);
+    expect(spyCall.result.rawScore).to.eq(50);
+    expect(spyCall.result.normScore).to.eq(0.5);
+    });
+
     // TODO: fix these assertions
     // cy.get("@callback").should("have.been.called");
     // cy.get("@callback").then((spy) => {
