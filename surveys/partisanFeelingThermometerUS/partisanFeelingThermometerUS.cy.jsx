@@ -10,9 +10,15 @@ describe("PartisanFeelingThermometerUS", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<PartisanFeelingThermometerUS onComplete={dummy.set} />);
 
-  //  if (cy.wrap(".sv-question.sv-row__question").invoke("attr", "id") === "sq_102") {
-  //    cy.reload();
-  //  }
+    //cy.get("#sq_102_ariaTitle > .sv-string-viewer").invoke("text").should("be.equal", "democratTemp");
+    if (cy.get("#sq_102_ariaTitle > .sv-string-viewer").invoke("text").then(
+      (text) => {
+        if (text === "How would you rate Republicans?"){
+          cy.reload();
+          cy.mount(<PartisanFeelingThermometerUS onComplete={dummy.set} />)
+        }
+      })
+    ) 
 
     cy.get("input[type=range]").invoke("val", 25).click({ force: true });
 
