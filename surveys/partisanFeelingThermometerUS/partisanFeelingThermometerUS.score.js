@@ -12,6 +12,7 @@ export default function scoreFunc(responses) {
   const result = {
     normRepublicanTemp: normRepublicanTemp,
     normDemocratTemp: normDemocratTemp,
+    rawScore: normRepublicanTemp - normDemocratTemp,
     normScore: Math.abs(normRepublicanTemp - normDemocratTemp),
     order: order
   };

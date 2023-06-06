@@ -10,7 +10,6 @@ describe("PartisanFeelingThermometerUS", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<PartisanFeelingThermometerUS onComplete={dummy.set} />);
 
-    //cy.get("#sq_102_ariaTitle > .sv-string-viewer").invoke("text").should("be.equal", "democratTemp");
     if (cy.get("#sq_102_ariaTitle > .sv-string-viewer").invoke("text").then(
       (text) => {
         if (text === "How would you rate Republicans?"){
@@ -20,7 +19,7 @@ describe("PartisanFeelingThermometerUS", () => {
       })
     ) 
 
-    cy.get("input[type=range]").invoke("val", 25).click({ force: true });
+    cy.get("input[type=range]").invoke("val", 75).click({ force: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {
@@ -41,8 +40,9 @@ describe("PartisanFeelingThermometerUS", () => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
     expect(spyCall.result.normRepublicanTemp).to.eq(0.25);
-    expect(spyCall.result.normDemocratTemp).to.eq(0.25);
-    expect(spyCall.result.normScore).to.eq(0);
+    expect(spyCall.result.normDemocratTemp).to.eq(0.75);
+    expect(spyCall.result.rawScore).to.eq(-0.5);
+    expect(spyCall.result.normScore).to.eq(0.5);
     });
 
     // TODO: fix these assertions
