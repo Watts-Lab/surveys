@@ -1,6 +1,9 @@
 name: Cypress Component Tests
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
   cypress-run-chrome:
