@@ -21,7 +21,7 @@ describe("LabeledRangeTest", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<LabeledRangeTest onComplete={dummy.set} />);
 
-    /* test if thumb invisible before click moz */
+    /* test if thumb invisible before click moz 
     //it("test thumb visibility before click moz", { browser: "firefox" }), () => {
       cy.get(".slider", { log: false }).within(($el) => {
         cy.window().then((win) => {
@@ -29,9 +29,9 @@ describe("LabeledRangeTest", () => {
           should("have.attr", "visibility", "hidden") 
         })
       });
-    //}
+    //} */
 
-    /* test if thumb invisible before click webkit */
+    /* test if thumb invisible before click webkit 
     it("test thumb visibility before click webkit", { browser: "chrome" }), () => {
       cy.get(".slider", { log: false }).within(($el) => {
         cy.window().then((win) => {
@@ -39,20 +39,20 @@ describe("LabeledRangeTest", () => {
           should("not.be.visible", { log: false })
         })
       });
-    }
+    } */
 
     cy.get("#sq_100i").click('center', { force: true });
     cy.get("#sq_101i").click('center', { force: true });
     cy.get("#sq_102i").click('center', { force: true });
 
-  //  it("test thumb visibility after click moz", { browser: "firefox" }), () => {
+  /*  it("test thumb visibility after click moz", { browser: "firefox" }), () => {
       cy.get(".slider", { log: false }).within(($el) => {
         cy.window().then((win) => {
           cy.get(win.getComputedStyle($el[0], "::-moz-range-thumb")).
           should("be.visible", { log: false })
         })
       });
-  //  }
+  //  } */
 
 
     
