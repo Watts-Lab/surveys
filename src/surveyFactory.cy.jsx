@@ -70,6 +70,8 @@ describe("SurveyFactory", () => {
       force: true,
     });
 
+    cy.wait(1000);
+    
     cy.getLocalStorage(storageName).then((result) => {
       const parsed = JSON.parse(result);
       expect(parsed).to.deep.equal(stored);
