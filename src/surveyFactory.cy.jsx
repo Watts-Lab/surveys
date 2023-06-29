@@ -65,13 +65,14 @@ describe("SurveyFactory", () => {
     });
 
     cy.get('[data-name="openResponse"] textarea').type("because it is");
+    cy.get('[data-name="openResponse"] textarea').should('have.value', 'because it is');
 
     cy.get('[data-name="name"] input[value="ron"]').click({
       force: true,
     });
 
     cy.wait(1000);
-    
+
     cy.getLocalStorage(storageName).then((result) => {
       const parsed = JSON.parse(result);
       expect(parsed).to.deep.equal(stored);
