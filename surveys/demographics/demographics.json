@@ -369,5 +369,6 @@
     }
   ],
   "showPrevButton": false,
-  "showQuestionNumbers": "off"
+  "showQuestionNumbers": "off",
+  "showCompletedPage": false
 }
