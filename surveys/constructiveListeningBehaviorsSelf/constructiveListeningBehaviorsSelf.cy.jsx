@@ -64,8 +64,8 @@ describe("ConstructiveListeningBehaviors", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["rawScore"]).to.eq(3);
-      expect(spyCall["result"]["normScore"]).to.eq(1);
+      expect(spyCall["result"]["rawScore"]).to.eq((3).toFixed(3));
+      expect(spyCall["result"]["normScore"]).to.eq((1).toFixed(3));
       expect(spyCall["result"]["completion"]).to.eq(0.6);
       expect(spyCall["responses"]["allowedExpression"]).to.eq(3);
       expect(spyCall["responses"]["undividedAttention"]).to.be.undefined;

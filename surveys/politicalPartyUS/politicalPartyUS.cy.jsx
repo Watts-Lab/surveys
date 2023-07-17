@@ -33,7 +33,7 @@ describe("PoliticaPartyUS", () => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
       expect(spyCall["result"]["party"]).to.eq("Republican");
-      expect(spyCall["result"]["normPosition"]).to.eq(1);
+      expect(spyCall["result"]["normPosition"]).to.eq((1).toFixed(3));
       expect(spyCall["result"]["normImportance"]).to.eq(0.5);
       expect(spyCall["result"]["position"]).to.eq(3);
     });
