@@ -17,12 +17,13 @@
           "maxRateDescription": "Intensely",
           "displayMode": "buttons"
         }
-      ],
-      "showQuestionNumbers": "off"
+      ]
     }
   ],
   "showTitle": false,
   "showPageTitles": false,
+  "showCompletedPage": false,
+  "showQuestionNumbers": "off",
   "questionsOnPageMode": "singlePage",
   "widthMode": "responsive"
 }

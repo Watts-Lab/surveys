@@ -57,6 +57,8 @@ You can use the online SurveyJS visual editor if you would like: https://surveyj
 
 Question names should be a one-word camelCase descriptor of the question that can be included directly in a json file.
 
+Make the default completion message not show using ```"showCompletedPage": false```
+
 ### Scoring function
 
 To replicate a survey, we need to include not only the questions and scales, but also the function that aggregates the survey into a particular score.
@@ -169,6 +171,8 @@ describe("SuperSpecialSurvey", () => {
       .then(($form) => {
         cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
       });
+
+    cy.get(".sv-body").should("not.exist"); // test for completion message
 
     cy.get("@callback").should("have.been.called");
     cy.get("@callback").then((spy) => {

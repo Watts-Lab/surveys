@@ -46,5 +46,6 @@
   ],
   "showPageTitles": true,
   "questionsOnPageMode": "questionPerPage",
-  "widthMode": "responsive"
+  "widthMode": "responsive",
+  "showCompletedPage": false
 }

@@ -116,5 +116,6 @@
   "showPageTitles": false,
   "autoGrowComment": true,
   "questionsOnPageMode": "singlePage",
-  "widthMode": "responsive"
+  "widthMode": "responsive",
+  "showCompletedPage": false
 }

@@ -28,6 +28,8 @@ describe("PartisanFeelingThermometerUS", () => {
         cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
       });
 
+    cy.get(".sv-body").should("not.exist");
+    
     // TODO: fix these assertions
     // cy.get("@callback").should("have.been.called");
     // cy.get("@callback").then((spy) => {
