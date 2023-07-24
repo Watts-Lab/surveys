@@ -20,7 +20,7 @@ jobs:
           build: npm run build
           component: true
           record: true
-          group: "Chrome browser tests"
+          group: "Chrome browser"
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -39,14 +39,14 @@ jobs:
           build: npm run build
           component: true
           record: true
-          group: "Firefox browser tests"
+          group: "Firefox browser"
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   cypress-run-edge:
     timeout-minutes: 15
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -58,7 +58,7 @@ jobs:
           build: npm run build
           component: true
           record: true
-          group: "Edge browser tests"
+          group: "Edge browser"
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
