@@ -65,9 +65,14 @@
   width: 16px;
   border-radius: 40%;
   background: rgb(26, 179, 148);
+  visibility: hidden;
 }
 
 .slider.sliderClicked::-webkit-slider-thumb {
+  visibility: visible;
+}
+
+.slider.sliderClicked::-moz-range-thumb {
   visibility: visible;
 }
 
@@ -117,7 +122,8 @@
 datalist.sliderLabels {
   position: relative;
   width: 94.5%;
-  left: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sliderLabel .each_label {

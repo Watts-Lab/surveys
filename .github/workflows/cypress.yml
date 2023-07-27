@@ -1,11 +1,20 @@
 name: Cypress Component Tests
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
-  cypress-run:
-    timeout-minutes: 15
-    runs-on: ubuntu-latest
+  cypress_matrix:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        browser: [chrome, firefox, edge]
+
+    timeout-minutes: 60
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -13,9 +22,11 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.0
         with:
-          build: npm run build
+          browser: ${{ matrix.browser }}
           component: true
           record: true
+          group: "${{ matrix.browser }} on ${{ matrix.os }}"
+          headed: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

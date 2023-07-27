@@ -21,19 +21,41 @@ describe("LabeledRangeTest", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<LabeledRangeTest onComplete={dummy.set} />);
 
-    // cy.get('[data-name="party"] input[value="Republican"]').click({
-    //   force: true,
-    // });
+    /* test if thumb invisible before click moz 
+    //it("test thumb visibility before click moz", { browser: "firefox" }), () => {
+      cy.get(".slider", { log: false }).within(($el) => {
+        cy.window().then((win) => {
+          cy.get(win.getComputedStyle($el[0], "::-moz-range-thumb")).
+          should("have.attr", "visibility", "hidden") 
+        })
+      });
+    //} */
 
-    // cy.get(
-    //   '[data-name="republicanStrength"] input[value="Strong Republican"]'
-    // ).click({ force: true });
+    /* test if thumb invisible before click webkit 
+    it("test thumb visibility before click webkit", { browser: "chrome" }), () => {
+      cy.get(".slider", { log: false }).within(($el) => {
+        cy.window().then((win) => {
+          cy.get(win.getComputedStyle($el[0], "::-webkit-slider-thumb")).
+          should("not.be.visible", { log: false })
+        })
+      });
+    } */
 
-    // cy.screenshot("politicalPartyUS/page1", { overwrite: true });
+    // cy.screenshot("labeledRangeTest/beforeClick", { overwrite: true });
 
-    // cy.get(`input[type="button"][value="Next"]`).click({ force: true });
+    cy.get("#sq_100i").click("center", { force: true });
+    cy.get("#sq_101i").click("center", { force: true });
+    cy.get("#sq_102i").click("center", { force: true });
 
-    // cy.screenshot("politicalPartyUS/page2", { overwrite: true });
+    // cy.screenshot("labeledRangeTest/afterClick", { overwrite: true });
+    /*  it("test thumb visibility after click moz", { browser: "firefox" }), () => {
+      cy.get(".slider", { log: false }).within(($el) => {
+        cy.window().then((win) => {
+          cy.get(win.getComputedStyle($el[0], "::-moz-range-thumb")).
+          should("be.visible", { log: false })
+        })
+      });
+  //  } */
 
     // cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
