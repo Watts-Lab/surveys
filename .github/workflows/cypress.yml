@@ -6,9 +6,14 @@ on:
     types: [opened, reopened]
 
 jobs:
-  cypress-run-chrome:
+  cypress_matrix:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        browser: [chrome, firefox, edge]
+
     timeout-minutes: 15
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -16,49 +21,11 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.0
         with:
-          browser: chrome
+          browser: ${{ matrix.browser }}
           build: npm run build
           component: true
           record: true
-          group: "Chrome browser"
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  cypress-run-firefox:
-    timeout-minutes: 15
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Cypress run
-        uses: cypress-io/github-action@v4.2.0
-        with:
-          browser: firefox
-          build: npm run build
-          component: true
-          record: true
-          group: "Firefox browser"
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  cypress-run-edge:
-    timeout-minutes: 15
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Cypress run
-        uses: cypress-io/github-action@v4.2.0
-        with:
-          browser: edge
-          build: npm run build
-          component: true
-          record: true
-          group: "Edge browser"
+          group: "${{ matrix.browser }} on ${{ matrix.os }}"
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
