@@ -23,9 +23,9 @@ describe("RelatenessNeedSatisfaction", () => {
     //   force: true,
     // });
 
-    // cy.screenshot("relatednessNeedSatisfaction/screenshot", {
-    //   overwrite: true,
-    // });
+    cy.screenshot("relatednessNeedSatisfaction/screenshot", {
+      overwrite: true,
+    });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {

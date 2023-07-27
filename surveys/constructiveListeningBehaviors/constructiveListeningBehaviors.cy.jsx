@@ -49,9 +49,9 @@ describe("ConstructiveListeningBehaviors", () => {
       force: true,
     });
 
-    // cy.screenshot("constructiveListeningBehaviors/screenshot", {
-    //   overwrite: true,
-    // });
+    cy.screenshot("constructiveListeningBehaviors/screenshot", {
+      overwrite: true,
+    });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {

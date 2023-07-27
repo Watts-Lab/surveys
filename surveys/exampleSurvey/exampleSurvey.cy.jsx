@@ -1,5 +1,4 @@
 import React from "react";
-// import { ExampleSurvey } from "@watts-lab/surveys";
 import { ExampleSurvey } from "../../src/index";
 import sha from "../../surveys/exampleSurvey/sha.json";
 
@@ -26,7 +25,7 @@ describe("ExampleSurvey", () => {
       .click()
       .type(loremIpsum);
 
-    // cy.screenshot("exampleSurvey/screenshot", { overwrite: true });
+    cy.screenshot("exampleSurvey/screenshot", { overwrite: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {

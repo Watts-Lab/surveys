@@ -1,5 +1,4 @@
 import React from "react";
-//import { AutonomyNeedSatisfaction } from "@watts-lab/surveys";
 import { AutonomyNeedSatisfaction } from "../../src/index";
 
 const dummy = {
@@ -43,7 +42,7 @@ describe("AutonomyNeedSatisfaction", () => {
     //   force: true,
     // });
 
-    // cy.screenshot("autonomyNeedSatisfaction/screenshot", { overwrite: true });
+    cy.screenshot("autonomyNeedSatisfaction/screenshot", { overwrite: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {

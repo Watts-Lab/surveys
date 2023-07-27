@@ -1,5 +1,4 @@
 import React from "react";
-//import { Demographics } from "@watts-lab/surveys";
 import { Demographics } from "../../src/index";
 
 const dummy = {
@@ -43,7 +42,7 @@ describe("Demographics", () => {
     cy.get(`[data-name="country_reside"] input`).click({ force: true });
     cy.contains("United States").click({ force: true });
 
-    // cy.screenshot("demographics/screenshotGeneral", { overwrite: true });
+    cy.screenshot("demographics/screenshotGeneral", { overwrite: true });
 
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
@@ -62,7 +61,7 @@ describe("Demographics", () => {
       force: true,
     });
 
-    // cy.screenshot("demographics/screenshotUSA", { overwrite: true });
+    cy.screenshot("demographics/screenshotUSA", { overwrite: true });
 
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
