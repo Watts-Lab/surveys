@@ -40,7 +40,7 @@ describe("LabeledRangeTest", () => {
         })
       });
     } */
-
+     
     cy.screenshot("labeledRangeTest/beforeClick", { overwrite: true });
 
     cy.get("#sq_100i").click("center", { force: true });
@@ -48,6 +48,7 @@ describe("LabeledRangeTest", () => {
     cy.get("#sq_102i").click("center", { force: true });
 
     cy.screenshot("labeledRangeTest/afterClick", { overwrite: true });
+
     /*  it("test thumb visibility after click moz", { browser: "firefox" }), () => {
       cy.get(".slider", { log: false }).within(($el) => {
         cy.window().then((win) => {
