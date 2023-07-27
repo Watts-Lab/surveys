@@ -23,7 +23,7 @@ describe("RelatenessNeedSatisfaction", () => {
     //   force: true,
     // });
 
-    cy.screenshot("relatednessNeedSatisfaction/screenshot", {
+    // cy.screenshot("relatednessNeedSatisfaction/screenshot", {
       overwrite: true,
     });
 

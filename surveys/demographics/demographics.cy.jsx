@@ -43,7 +43,7 @@ describe("Demographics", () => {
     cy.get(`[data-name="country_reside"] input`).click({ force: true });
     cy.contains("United States").click({ force: true });
 
-    cy.screenshot("demographics/screenshotGeneral", { overwrite: true });
+    // cy.screenshot("demographics/screenshotGeneral", { overwrite: true });
 
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
@@ -62,12 +62,12 @@ describe("Demographics", () => {
       force: true,
     });
 
-    cy.screenshot("demographics/screenshotUSA", { overwrite: true });
+    // cy.screenshot("demographics/screenshotUSA", { overwrite: true });
 
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
     cy.get(".sv-body").should("not.exist");
-    
+
     cy.get("@callback").should("have.been.called");
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];

@@ -43,7 +43,7 @@ describe("AutonomyNeedSatisfaction", () => {
     //   force: true,
     // });
 
-    cy.screenshot("autonomyNeedSatisfaction/screenshot", { overwrite: true });
+    // cy.screenshot("autonomyNeedSatisfaction/screenshot", { overwrite: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {
@@ -59,7 +59,7 @@ describe("AutonomyNeedSatisfaction", () => {
       expect(spyCall["result"]["rawScore"]).to.eq((2).toFixed(3));
       expect(spyCall["result"]["normScore"]).to.eq((0.125).toFixed(3));
       expect(spyCall["result"]["completion"]).to.eq(0.625);
-      expect(spyCall["responses"]["chooseDirection"]).to.eq(2.000);
+      expect(spyCall["responses"]["chooseDirection"]).to.eq(2.0);
       expect(spyCall["responses"]["controlledPressured"]).to.be.undefined;
     });
   });

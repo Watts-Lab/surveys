@@ -18,16 +18,16 @@ describe("PoliticaPartyUS", () => {
       '[data-name="republicanStrength"] input[value="Strong Republican"]'
     ).click({ force: true });
 
-    cy.screenshot("politicalPartyUS/page1", { overwrite: true });
+    // cy.screenshot("politicalPartyUS/page1", { overwrite: true });
 
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
-    cy.screenshot("politicalPartyUS/page2", { overwrite: true });
+    // cy.screenshot("politicalPartyUS/page2", { overwrite: true });
 
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
     cy.get(".sv-body").should("not.exist");
-    
+
     cy.get("@callback").should("have.been.called");
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
@@ -49,12 +49,12 @@ describe("PoliticaPartyUS", () => {
 
     cy.get('[data-name="partyOther"] input').click().type("Fancy dress party");
 
-    cy.screenshot("politicalPartyUS/page1_other", { overwrite: true });
+    // cy.screenshot("politicalPartyUS/page1_other", { overwrite: true });
 
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
     cy.wait(1000);
-    
+
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
     cy.get("@callback").should("have.been.called");

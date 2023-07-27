@@ -48,7 +48,7 @@ describe("Demographics", () => {
       "tell us more about the trouble you had joining the study"
     ).should("not.exist");
 
-    cy.screenshot("discussionQualityControl/screenshot", { overwrite: true });
+    // cy.screenshot("discussionQualityControl/screenshot", { overwrite: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {
@@ -56,7 +56,7 @@ describe("Demographics", () => {
       });
 
     cy.get(".sv-body").should("not.exist");
-    
+
     cy.get("@callback").should("have.been.called");
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
