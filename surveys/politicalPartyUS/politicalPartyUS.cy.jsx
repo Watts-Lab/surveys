@@ -27,13 +27,13 @@ describe("PoliticaPartyUS", () => {
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
     cy.get(".sv-body").should("not.exist");
-    
+
     cy.get("@callback").should("have.been.called");
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
       expect(spyCall["result"]["party"]).to.eq("Republican");
-      expect(spyCall["result"]["normPosition"]).to.eq(1);
+      expect(spyCall["result"]["normPosition"]).to.eq((1).toFixed(3));
       expect(spyCall["result"]["normImportance"]).to.eq(0.5);
       expect(spyCall["result"]["position"]).to.eq(3);
     });
@@ -52,6 +52,8 @@ describe("PoliticaPartyUS", () => {
     cy.screenshot("politicalPartyUS/page1_other", { overwrite: true });
 
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
+
+    cy.wait(1000);
 
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 

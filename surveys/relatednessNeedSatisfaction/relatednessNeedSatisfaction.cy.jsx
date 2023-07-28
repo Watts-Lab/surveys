@@ -50,8 +50,8 @@ describe("RelatenessNeedSatisfaction", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["rawScore"]).to.eq(2);
-      expect(spyCall["result"]["normScore"]).to.eq(0.125);
+      expect(spyCall["result"]["rawScore"]).to.eq((2).toFixed(3));
+      expect(spyCall["result"]["normScore"]).to.eq((0.125).toFixed(3));
       expect(spyCall["result"]["completion"]).to.be.closeTo(0.66, 0.01);
       expect(spyCall["responses"]["distance"]).to.eq(8);
       expect(spyCall["responses"]["caredAbout"]).to.be.undefined;

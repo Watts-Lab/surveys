@@ -1,5 +1,4 @@
 import React from "react";
-// import { ExampleSurvey } from "@watts-lab/surveys";
 import { ExampleSurvey } from "../../src/index";
 import sha from "../../surveys/exampleSurvey/sha.json";
 

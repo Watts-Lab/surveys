@@ -1,5 +1,4 @@
 import React from "react";
-//import { Demographics } from "@watts-lab/surveys";
 import { Demographics } from "../../src/index";
 
 const dummy = {
@@ -67,7 +66,7 @@ describe("Demographics", () => {
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
     cy.get(".sv-body").should("not.exist");
-    
+
     cy.get("@callback").should("have.been.called");
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];

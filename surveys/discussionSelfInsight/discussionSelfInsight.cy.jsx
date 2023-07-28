@@ -45,7 +45,7 @@ describe("DiscussionSelfInsight", () => {
       force: true,
     });
 
-    cy.screenshot("discussionSelfInsight/screenshot", { overwrite: true });
+    // cy.screenshot("discussionSelfInsight/screenshot", { overwrite: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {
@@ -53,13 +53,13 @@ describe("DiscussionSelfInsight", () => {
       });
 
     cy.get(".sv-body").should("not.exist");
-    
+
     cy.get("@callback").should("have.been.called");
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["rawScore"]).to.eq(3.25);
-      expect(spyCall["result"]["normScore"]).to.eq(0.375);
+      expect(spyCall["result"]["rawScore"]).to.eq((3.25).toFixed(3));
+      expect(spyCall["result"]["normScore"]).to.eq((0.375).toFixed(3));
       expect(spyCall["result"]["completion"]).to.eq(0.8);
       expect(spyCall["responses"]["thinkDeeply"]).to.eq(4);
     });
