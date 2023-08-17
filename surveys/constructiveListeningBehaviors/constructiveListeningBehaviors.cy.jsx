@@ -5,25 +5,25 @@ const dummy = {
   set(response) {},
 };
 
-const ids = ["sq_100", "sq_101", "sq_102", "sq_103", 
-  "sq_104", "sq_105", "sq_106", "sq_107", "sq_108", "sq_109", "sq_110"];
-const ids2 = ["sq_111", "sq_112", "sq_113", "sq_114", 
-  "sq_115", "sq_116", "sq_117", "sq_118", "sq_119", "sq_120", "sq_121"];
+const dataNames = [
+  "tryToUnderstand",
+  "askedQuestions",
+  "encouragedClarification",
+  "expressedInterest",
+  "listenedAttentively",
+  "paidAttention",
+  "gaveSpace",
+  "undividedAttention",
+  "positiveAtmosphere",
+  "allowedExpression"
+];
 
 describe("ConstructiveListeningBehaviors", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<ConstructiveListeningBehaviors onComplete={dummy.set} />);
-
-    const idList = [];
-    cy.get(".sv-question.sv-row__question").each(($el) => {
-      cy.wrap($el).invoke("attr", "id").then(curr => {
-        idList.push(curr);
-      });
-    })
     
-    cy.wrap(idList).should("not.be.deep.equal", ids);
-    cy.wrap(idList).should("not.be.deep.equal", ids2);
+    cy.checkRandomization(dataNames);
 
     cy.get('[data-name="tryToUnderstand"] input[value="3"]').click({
       force: true,
