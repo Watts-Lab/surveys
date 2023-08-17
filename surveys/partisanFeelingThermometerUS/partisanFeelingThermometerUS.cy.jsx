@@ -10,6 +10,7 @@ describe("PartisanFeelingThermometerUS", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<PartisanFeelingThermometerUS onComplete={dummy.set} />);
 
+    // check randomization by reloading until it gets a democrat prompt first
     if (cy.get("#sq_102_ariaTitle > .sv-string-viewer").invoke("text").then(
       (text) => {
         if (text === "How would you rate Republicans?"){
