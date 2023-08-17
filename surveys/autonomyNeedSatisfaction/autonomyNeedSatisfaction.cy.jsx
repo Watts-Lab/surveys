@@ -15,32 +15,13 @@ const dataNames = [
   "voiceOpinion",
   "controlledPressured",
 ];
-const dataNameSet = new Set(dataNames);
 
 describe("AutonomyNeedSatisfaction", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<AutonomyNeedSatisfaction onComplete={dummy.set} />);
 
-    // check that the order of the questions is randomized
-    const nameList = [];
-    cy.get(".sv-question.sv-row__question").each(($el) => {
-      cy.wrap($el)
-        .invoke("attr", "data-name")
-        .then((curr) => {
-          nameList.push(curr);
-        });
-    });
-
-    cy.wrap(nameList).then((nameList) => {
-      const questions = nameList.slice(1); // slice to remove the prompt
-      const nameSet = new Set(questions); // convert to set to allow comparison without order
-      console.log("Expect set:", nameSet);
-      console.log("to equal set:", dataNameSet);
-      expect(nameSet).to.be.deep.equal(dataNameSet); // check that all expected questions are present
-      expect(questions).to.have.length(dataNames.length); // check that there are no extra questions
-      expect(questions).to.not.be.deep.equal(dataNames); // check that the order is randomized
-    });
+    cy.checkRandomization(dataNames);
 
     // submit answers
     cy.get('[data-name="chooseDirection"] input[value="2"]').click({
