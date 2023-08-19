@@ -8,6 +8,7 @@ export default function scoreFunc(responses) {
     - minScore) / (maxScore - minScore);
 
   const order = Object.keys(responses);
+  console.log(order);
 
   const result = {
     normRepublicanTemp: normRepublicanTemp,
