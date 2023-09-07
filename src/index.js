@@ -64,6 +64,11 @@ import relatednessNeedSatisfactionSha from "../surveys/relatednessNeedSatisfacti
 import { default as relatednessNeedSatisfactionScoreFunc } from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.score.js";
 export const RelatednessNeedSatisfaction = SurveyFactory("relatednessNeedSatisfaction", relatednessNeedSatisfactionJson, relatednessNeedSatisfactionScoreFunc, relatednessNeedSatisfactionSha);
 
+import superSpecialSurveyJson from "../surveys/superSpecialSurvey/superSpecialSurvey.json";
+import superSpecialSurveySha from "../surveys/superSpecialSurvey/sha.json";
+import { default as superSpecialSurveyScoreFunc } from "../surveys/superSpecialSurvey/superSpecialSurvey.score.js";
+export const SuperSpecialSurvey = SurveyFactory("superSpecialSurvey", superSpecialSurveyJson, superSpecialSurveyScoreFunc, superSpecialSurveySha);
+
 import teamViabilityJson from "../surveys/teamViability/teamViability.json";
 import teamViabilitySha from "../surveys/teamViability/sha.json";
 import { default as teamViabilityScoreFunc } from "../surveys/teamViability/teamViability.score.js";

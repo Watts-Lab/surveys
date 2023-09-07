@@ -1,0 +1,153 @@
+{
+    "logoPosition": "right",
+    "focusFirstQuestionAutomatic": false,
+    "pages": [
+      {
+        "name": "page1",
+        "elements": [
+          {
+            "type": "html",
+            "name": "Prompt",
+            "hideNumber": true,
+            "html": "<h1> Please select the option that most closely reflects how much you agree with the following statements. </h1><h1>I see myself as ...</h1>"
+          },
+          {
+            "type": "panel",
+            "name": "randomizationPanel",
+            "elements": [
+              {
+                "type": "rating",
+                "name": "extroversion",
+                "title": "... extroverted, enthusiastic",
+                "hideNumber": true,
+                "isRequired": true,
+                "rateCount": 7,
+                "rateMax": 7,
+                "minRateDescription": "Disagree strongly",
+                "maxRateDescription": "Agree strongly",
+                "displayMode": "buttons"
+              },
+              {
+                "type": "rating",
+                "name": "criticalness",
+                "title": "... critical, quarrelsome",
+                "hideNumber": true,
+                "isRequired": true,
+                "rateCount": 7,
+                "rateMax": 7,
+                "minRateDescription": "Disagree strongly",
+                "maxRateDescription": "Agree strongly",
+                "displayMode": "buttons"
+              },
+              {
+                "type": "rating",
+                "name": "dependability",
+                "title": "... dependable, self-disciplined",
+                "hideNumber": true,
+                "isRequired": true,
+                "rateCount": 7,
+                "rateMax": 7,
+                "minRateDescription": "Disagree strongly",
+                "maxRateDescription": "Agree strongly",
+                "displayMode": "buttons"
+              },
+              {
+                "type": "rating",
+                "name": "anxiety",
+                "title": "... anxious, easily upset",
+                "hideNumber": true,
+                "isRequired": true,
+                "rateCount": 7,
+                "rateMax": 7,
+                "minRateDescription": "Disagree strongly",
+                "maxRateDescription": "Agree strongly",
+                "displayMode": "buttons"
+              },
+              {
+                "type": "rating",
+                "name": "openness",
+                "title": "... open to new experience, complex",
+                "hideNumber": true,
+                "isRequired": true,
+                "rateCount": 7,
+                "rateMax": 7,
+                "minRateDescription": "Disagree strongly",
+                "maxRateDescription": "Agree strongly",
+                "displayMode": "buttons"
+              },
+              {
+                "type": "rating",
+                "name": "quietness",
+                "title": "... reserved, quiet",
+                "hideNumber": true,
+                "isRequired": true,
+                "rateCount": 7,
+                "rateMax": 7,
+                "minRateDescription": "Disagree strongly",
+                "maxRateDescription": "Agree strongly",
+                "displayMode": "buttons"
+              },
+              {
+                "type": "rating",
+                "name": "sympathy",
+                "title": "... sympathetic, warm",
+                "hideNumber": true,
+                "isRequired": true,
+                "rateCount": 7,
+                "rateMax": 7,
+                "minRateDescription": "Disagree strongly",
+                "maxRateDescription": "Agree strongly",
+                "displayMode": "buttons"
+              },
+              {
+                "type": "rating",
+                "name": "carelessness",
+                "title": "... disorganized, careless",
+                "hideNumber": true,
+                "isRequired": true,
+                "rateCount": 7,
+                "rateMax": 7,
+                "minRateDescription": "Disagree strongly",
+                "maxRateDescription": "Agree strongly",
+                "displayMode": "buttons"
+              }, 
+              {
+                "type": "rating",
+                "name": "calmness",
+                "title": "... calm, emotionally stable",
+                "hideNumber": true,
+                "isRequired": true,
+                "rateCount": 7,
+                "rateMax": 7,
+                "minRateDescription": "Disagree strongly",
+                "maxRateDescription": "Agree strongly",
+                "displayMode": "buttons"
+              },
+              {
+                "type": "rating",
+                "name": "conventionality",
+                "title": "... conventional, uncreative",
+                "hideNumber": true,
+                "isRequired": true,
+                "rateCount": 7,
+                "rateMax": 7,
+                "minRateDescription": "Disagree strongly",
+                "maxRateDescription": "Agree strongly",
+                "displayMode": "buttons"
+              }
+            ],
+            "questionsOrder": "random",
+            "showQuestionNumbers": "off"
+          }
+        ],
+        "questionTitleLocation": "top",
+        "questionsOrder": "initial"
+      }
+    ],
+    "showPageTitles": false,
+    "questionsOnPageMode": "singlePage",
+    "widthMode": "responsive",
+    "showCompletedPage": false
+  
+  }
+  
