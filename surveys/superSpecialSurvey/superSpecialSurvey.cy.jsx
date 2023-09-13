@@ -37,11 +37,12 @@ describe("SuperSpecialSurvey", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-    //  expect(spyCall["result"]["rawScore"]).to.eq((2).toFixed(3));
-    //  expect(spyCall["result"]["normScore"]).to.eq((0.125).toFixed(3));
-    //  expect(spyCall["result"]["completion"]).to.be.closeTo(0.66, 0.01);
-    //  expect(spyCall["responses"]["distance"]).to.eq(8);
-    //  expect(spyCall["responses"]["caredAbout"]).to.be.undefined;
+      expect(spyCall["result"]["test"]).to.eq((0.786).toFixed(3));
+    //  expect(spyCall["result"]["rawScore"].(5);
+    //  expect(spyCall["result"]["rawScore"]["quietness"]).to.eq(2);
+      expect(spyCall["result"]["normExtroversionScore"]).to.eq((0.786).toFixed(3));
+      expect(spyCall["result"]["normEmotionalStabilityScore"]).to.be.undefined;
+      expect(spyCall["result"]["completion"]).to.eq(0.2);
     });
   });
 });
