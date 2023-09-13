@@ -14,9 +14,13 @@ describe("SuperSpecialSurvey", () => {
       force: true,
     });
 
-    cy.get('[data-name="calmness"] input[value="2"]').click({
+    cy.get('[data-name="quietness"] input[value="2"]').click({
       force: true,
     });
+
+    cy.get('[data-name="calmness"] input[value="3"]').click({
+        force: true,
+      });
 
     cy.screenshot("superSpecialSurvey/screenshot", {
       overwrite: true,
