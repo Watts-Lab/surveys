@@ -1,21 +1,5 @@
-// function normalize(array, minVal, maxVal) {
- //   return array.map((val) => (val - minVal) / (maxVal - minVal));
-// }
 function normalize(val, minVal, maxVal) {
     return (val - minVal) / (maxVal - minVal);
-}
-
-function normalizeDict(dict, minVal, maxVal) {
-    return Object.entries(dict).forEach((k,v) => normalize(v, minVal, maxVal));
-    //normalize(Object.values(dict), minVal, maxVal);
-}
-
-function sum(array) {
-    return array.reduce((acc, val) => acc + val, 0);
-}
-
-function mean(array) {
-    return sum(array) / array.length;
 }
 
 function reverseCode(value, minVal, maxVal) {
@@ -57,22 +41,17 @@ export default function scoreFunc(responses) {
         opennessToExperience: decidesCompletion(responses["openness"], reverseCode(responses["conventionality"], minVal, maxVal))
     };
 
-    const completedValues = Object.fromEntries(Object.entries(rawBigFiveValues).filter(([k,v]) => !Number.isNaN(v))); // don't include empty values in response, not normalized yet
-
-    const completionLevel = Object.values(rawBigFiveValues).filter((v) => !Number.isNaN(v)).length / 5;
-    // const normBigFiveValues = Object.entries(rawBigFiveValues).forEach(([k,v]) => {
-    //    v = normalize(v, 2*minVal, 2*maxVal).toFixed(3)
-    // });
+    const completionLevel = Object.values(rawBigFiveValues).filter(v => v !== undefined).length / 5;
+    const normBigFiveValues = Object.fromEntries(Object.entries(rawBigFiveValues).map(([k,v]) => [k, parseFloat(normalize(v, 2*minVal, 2*maxVal)).toFixed(3)]));
 
     const result = {
-        rawScore: rawValues.filter((v) => !Number.isNaN(v)),            // non-empty raw inputs from the questions
-        normExtroversionScore: normalize(rawBigFiveValues["extroversion"], 2*minVal, 2*maxVal).toFixed(3),
-        normAgreeablenessScore: normalize(rawBigFiveValues["agreeablness"], 2*minVal, 2*maxVal).toFixed(3),
-        normConscientiousnessScore: normalize(rawBigFiveValues["conscientiousness"], 2*minVal, 2*maxVal.toFixed(3)),
-        normEmotionalStabilityScore: normalize(rawBigFiveValues["emotionalStability"], 2*minVal, 2*maxVal).toFixed(3),
-        normOpennessToExperienceScore: normalize(rawBigFiveValues["opennessToExperience"], 2*minVal, 2*maxVal).toFixed(3),
-        // normScore: Object.values(normedValues).forEach(v => v.toFixed(3)),         // non-empty calculated normalized big-5 personaly scores
-        completion: completionLevel // rawBigFiveValues.length / 5    // proportion of 5 outcomes that can be calculated with the inputs
+        // These 5 are the normalized scores of big-5 personality traits; returns undefined if no enough information collected 
+        normExtroversionScore: normBigFiveValues["extroversion"],
+        normAgreeablenessScore: normBigFiveValues["agreeablness"],
+        normConscientiousnessScore: normBigFiveValues["conscientiousness"],
+        normEmotionalStabilityScore: normBigFiveValues["emotionalStability"],
+        normOpennessToExperienceScore: normBigFiveValues["opennessToExperience"],
+        completion: completionLevel   // proportion of 5 outcomes that can be calculated with the inputs
     };
 
     return result;
