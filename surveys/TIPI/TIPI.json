@@ -1,0 +1,136 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<h1> Here are a number of personality traits that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other. </h1><h1>I see myself as ...</h1>"
+        },
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<p> Scale key: (1) Strongly Disagree, (2) Disagree, (3) Slightly Disagree, (4) Neutral, (5) Slightly Agree, (6) Agree, (7) Strongly Agree</p>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "extroversion",
+              "title": "... extroverted, enthusiastic",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "criticalness",
+              "title": "... critical, quarrelsome",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "dependability",
+              "title": "... dependable, self-disciplined",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "anxiety",
+              "title": "... anxious, easily upset",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "openness",
+              "title": "... open to new experience, complex",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "quietness",
+              "title": "... reserved, quiet",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "sympathy",
+              "title": "... sympathetic, warm",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "carelessness",
+              "title": "... disorganized, careless",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "calmness",
+              "title": "... calm, emotionally stable",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "conventionality",
+              "title": "... conventional, uncreative",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            }
+          ],
+          "questionsOrder": "random",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "widthMode": "responsive",
+  "showCompletedPage": false
+}

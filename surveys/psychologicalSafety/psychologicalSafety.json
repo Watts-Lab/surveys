@@ -18,7 +18,7 @@
             {
               "type": "rating",
               "name": "holdMistake",
-              "title": "If you made a mistake in this group, it was often held against you.",
+              "title": "If I made a mistake in this group, it was often held against me.",
               "rateMax": 7,
               "minRateDescription": "Strongly Disagree",
               "maxRateDescription": "Strongly Agree",

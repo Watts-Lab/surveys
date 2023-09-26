@@ -20,10 +20,6 @@ describe("Demographics", () => {
 
     cy.contains("Married or Domestic Partnership").click({ force: true });
 
-    cy.get(`[data-name="impairment"] input[value="hearing"]`)
-      .next()
-      .click({ force: true });
-
     cy.get(`[data-name="language_primary"] input`).click({ force: true });
     cy.contains("French").click({ force: true });
 
