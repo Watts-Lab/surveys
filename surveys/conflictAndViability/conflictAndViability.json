@@ -1,0 +1,71 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<h1>Please answer the following questions about your experience today.</h1><p> Scale key: (1) Strongly Disagree, (2) Disagree, (3) Slightly Disagree, (4) Neutral, (5) Slightly Agree, (6) Agree, (7) Strongly Agree</p>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "heated",
+              "title": "I felt that the conversation became heated.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "conflict",
+              "title": "I experienced conflict during the discussion.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "capableUnit",
+              "title": "This group is capable of working together as a unit.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+
+            {
+              "type": "rating",
+              "name": "workTogetherAgain",
+              "title": "Most members of this group would welcome the opportunity to work together in the future.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            }
+          ],
+          "questionsOrder": "random",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "widthMode": "responsive",
+  "showCompletedPage": false
+}
