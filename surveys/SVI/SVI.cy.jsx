@@ -71,10 +71,6 @@ describe("SubjectiveValueInventory", () => {
       force: true,
     });
 
-    cy.get('[data-name="Relationship 4"] input[value="4"]').click({
-      force: true,
-    });
-
     cy.get("form") // submit surveyJS form
       .then(($form) => {
         cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
@@ -83,7 +79,7 @@ describe("SubjectiveValueInventory", () => {
     // check mandatory is enforced
     cy.contains("Response required");
 
-    cy.get('[data-name="conventionality"] input[value="4"]').click({
+    cy.get('[data-name="Relationship 4"] input[value="4"]').click({
       force: true,
     });
 
@@ -101,10 +97,10 @@ describe("SubjectiveValueInventory", () => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
       expect(spyCall["result"]["InstrumentalOutcome"]).to.eq((5.25).toFixed(3));
-      expect(spyCall["result"]["Self"]).to.eq((5.5).toFixed(3));
+      expect(spyCall["result"]["Self"]).to.eq((4.5).toFixed(3));
       expect(spyCall["result"]["Process"]).to.eq((6).toFixed(3));
       expect(spyCall["result"]["Relationship"]).to.eq((5.5).toFixed(3));
-      expect(spyCall["result"]["Global"]).to.eq((5.533333333).toFixed(3));
+      expect(spyCall["result"]["Global"]).to.eq((5.266666667).toFixed(3));
       expect(spyCall["result"]["Rapport"]).to.eq((5.714285714).toFixed(3));
     });
   });

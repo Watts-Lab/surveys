@@ -1,690 +1,483 @@
 {
-   "logoPosition":"right",
-   "focusFirstQuestionAutomatic":false,
-   "pages":[
+ "logoPosition": "right",
+ "focusFirstQuestionAutomatic": false,
+ "pages": [
+  {
+   "name": "page1",
+   "elements": [
+    {
+     "type": "html",
+     "name": "Prompt",
+     "hideNumber": true,
+     "html": "<h2> Please answer the following questions about your experience today.</h2><br>For each question, please respond with the choice that most accurately reflects your opinion.  You will notice that some of the questions are similar to one another; this is primarily to ensure the validity and reliability of the questionnaire.  Please simply answer each question independently, without reference to any of the other questions."
+    },
+    {
+     "type": "html",
+     "name": "Elaboration",
+     "hideNumber": true
+    },
+    {
+     "type": "panel",
+     "name": "randomizationPanel",
+     "elements": [
       {
-         "name":"page1",
-         "elements":[
-            {
-               "type":"html",
-               "name":"Prompt",
-               "hideNumber":true,
-               "html":"<h2> Please answer the following questions about your experience today.</h2><br>For each question, please respond with the choice that most accurately reflects your opinion.  You will notice that some of the questions are similar to one another; this is primarily to ensure the validity and reliability of the questionnaire.  Please simply answer each question independently, without reference to any of the other questions."
-            },
-            {
-               "type":"html",
-               "name":"Elaboration",
-               "hideNumber":true
-            },
-            {
-               "type":"panel",
-               "name":"randomizationPanel",
-               "elements":[
-                  {
-                     "type":"rating",
-                     "name":"Instrumental Outcome 1",
-                     "title":"How satisfied are you with your own outcome -- i.e., the extent to which the terms of your agreement (or lack of agreement) benefit you?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Instumental Outcome 2",
-                     "title":"How satisfied are you with the balance between your own outcome and your counterpart(s)’s outcome(s)?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Instrumental Outcome 3",
-                     "title":"Did you feel like you forfeited or “lost” in this negotiation?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Instrumental Outcome 4",
-                     "title":"Do you think the terms of your agreement are consistent with principles of legitimacy or objective criteria (e.g., common standards of fairness, precedent, industry practice, legality, etc.)?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Self 1",
-                     "title":"Did you “lose face” (i.e., damage your sense of pride) in the negotiation? ",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (A great deal)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Self 2",
-                     "title":"Did this negotiation make you feel more or less competent as a negotiator?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Much Less)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Neutral)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Much More)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Self 3",
-                     "title":"Did you behave according to your own principles and values?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Self 4",
-                     "title":"Did this negotiation positively or negatively impact your self-image or your impression of yourself?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Extremely Negative)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Neutral)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Extremely Positive)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Process 1",
-                     "title":"Do you feel your counterpart(s) listened to your concerns?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Process 2",
-                     "title":"Would you characterize the negotiation process as fair?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Process 3",
-                     "title":"How satisfied are you with the ease (or difficulty) of reaching an agreement?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Process 4",
-                     "title":"Did your counterpart(s) consider your wishes, opinions, or needs?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Relationship 1",
-                     "title":"What kind of “overall” impression did your counterpart(s) make on you?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Extremely Negative)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Neutral)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Extremely Positive)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Relationship 2",
-                     "title":"How satisfied are you with your relationship with your counterpart(s) as a result of this negotiation?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Relationship 3",
-                     "title":"Did the negotiation make you trust your counterpart(s)?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  },
-                  {
-                     "type":"rating",
-                     "name":"Relationship 4",
-                     "title":"Did the negotiation build a good foundation for a future relationship with your counterpart(s)?",
-                     "rateValues":[
-                        {
-                           "value":1,
-                           "text":"1 (Not At All)"
-                        },
-                        {
-                           "value":2,
-                           "text":"2"
-                        },
-                        {
-                           "value":3,
-                           "text":"3"
-                        },
-                        {
-                           "value":4,
-                           "text":"4 (Moderately)"
-                        },
-                        {
-                           "value":5,
-                           "text":"5"
-                        },
-                        {
-                           "value":6,
-                           "text":"6"
-                        },
-                        {
-                           "value":7,
-                           "text":"7 (Perfectly)"
-                        },
-                        {
-                           "value":"undefined",
-                           "text":"NA"
-                        }
-                     ],
-                     "displayMode":"buttons",
-                     "isRequired":true
-                  }
-               ],
-               "questionsOrder":"none",
-               "showQuestionNumbers":"off"
-            }
-         ],
-         "questionTitleLocation":"top",
-         "questionsOrder":"initial"
+       "type": "radiogroup",
+       "name": "Instrumental Outcome 1",
+       "title": "How satisfied are you with your own outcome -- i.e., the extent to which the terms of your agreement (or lack of agreement) benefit you?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Instrumental Outcome 2",
+       "title": "How satisfied are you with the balance between your own outcome and your counterpart(s)’s outcome(s)?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Instrumental Outcome 3",
+       "title": "Did you feel like you forfeited or “lost” in this negotiation?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (A great deal)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Instrumental Outcome 4",
+       "title": "Do you think the terms of your agreement are consistent with principles of legitimacy or objective criteria (e.g., common standards of fairness, precedent, industry practice, legality, etc.)?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Self 1",
+       "title": "Did you “lose face” (i.e., damage your sense of pride) in the negotiation? ",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Self 2",
+       "title": "Did this negotiation make you feel more or less competent as a negotiator?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (It made me feel les competent)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (It did not make me feel more or less competent)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (It made me feel more competent)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Self 3",
+       "title": "Did you behave according to your own principles and values?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Self 4",
+       "title": "Did this negotiation positively or negatively impact your self-image or your impression of yourself?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (It negatively impacted my self-image)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (It did not positively or ngatively impact my self-image)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (It positively impacted my self-image)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Process 1",
+       "title": "Do you feel your counterpart(s) listened to your concerns?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Process 2",
+       "title": "Would you characterize the negotiation process as fair?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Process 3",
+       "title": "How satisfied are you with the ease (or difficulty) of reaching an agreement?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all satisfied)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately satisfied)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly satisfied)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Process 4",
+       "title": "Did your counterpart(s) consider your wishes, opinions, or needs?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Relationship 1",
+       "title": "What kind of “overall” impression did your counterpart(s) make on you?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Extremely negative)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Neither negative nor positive)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Extremely positive)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Relationship 2",
+       "title": "How satisfied are you with your relationship with your counterpart(s) as a result of this negotiation?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Relationship 3",
+       "title": "Did the negotiation make you trust your counterpart(s)?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "Relationship 4",
+       "title": "Did the negotiation build a good foundation for a future relationship with your counterpart(s)?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": 1,
+         "text": "1 (Not at all)"
+        },
+        2,
+        3,
+        {
+         "value": 4,
+         "text": "4 (Moderately)"
+        },
+        5,
+        6,
+        {
+         "value": 7,
+         "text": "7 (Perfectly)"
+        },
+        {
+         "value": "undefined",
+         "text": "NA"
+        }
+       ]
       }
+     ],
+     "questionsOrder": "none",
+     "showQuestionNumbers": "off"
+    }
    ],
-   "showPageTitles":false,
-   "widthMode":"responsive",
-   "showCompletedPage":false
+   "questionTitleLocation": "top",
+   "questionsOrder": "initial"
+  }
+ ],
+ "showPageTitles": false,
+ "showCompletedPage": false,
+ "widthMode": "responsive"
 }
