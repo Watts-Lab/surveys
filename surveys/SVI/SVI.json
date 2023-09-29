@@ -152,7 +152,7 @@
         6,
         {
          "value": 7,
-         "text": "7 (Perfectly)"
+         "text": "7 (A great deal)"
         },
         {
          "value": "undefined",
@@ -168,7 +168,7 @@
        "choices": [
         {
          "value": 1,
-         "text": "1 (It made me feel les competent)"
+         "text": "1 (It made me feel less competent)"
         },
         2,
         3,
@@ -230,7 +230,7 @@
         3,
         {
          "value": 4,
-         "text": "4 (It did not positively or ngatively impact my self-image)"
+         "text": "4 (It did not positively or negatively impact my self-image)"
         },
         5,
         6,
