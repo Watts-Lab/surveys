@@ -25,7 +25,8 @@
               "value": "fairly_paid",
               "text": "fairly paid"
             },
-            "overpaid"
+            "overpaid",
+            "N/A"
           ],
           "displayMode": "buttons"
         },
