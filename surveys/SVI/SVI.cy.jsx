@@ -5,7 +5,7 @@ const dummy = {
   set(response) {},
 };
 
-describe("SuperSpecialSurvey", () => {
+describe("SubjectiveValueInventory", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<SVI onComplete={dummy.set} />);
@@ -100,24 +100,12 @@ describe("SuperSpecialSurvey", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["InstrumentalOutcome"]).to.eq(
-        (5.25).toFixed(3)
-      );
-      expect(spyCall["result"]["Self"]).to.eq(
-        (5.5).toFixed(3)
-      );
-      expect(spyCall["result"]["Process"]).to.eq(
-        (6).toFixed(3)
-      );
-      expect(spyCall["result"]["Relationship"]).to.eq(
-        (5.5).toFixed(3)
-      );
-      expect(spyCall["result"]["Global"]).to.eq(
-        (5.533333333).toFixed(3)
-      );
-      expect(spyCall["result"]["Rapport"]).to.eq(
-        (5.714285714).toFixed(3)
-      );
+      expect(spyCall["result"]["InstrumentalOutcome"]).to.eq((5.25).toFixed(3));
+      expect(spyCall["result"]["Self"]).to.eq((5.5).toFixed(3));
+      expect(spyCall["result"]["Process"]).to.eq((6).toFixed(3));
+      expect(spyCall["result"]["Relationship"]).to.eq((5.5).toFixed(3));
+      expect(spyCall["result"]["Global"]).to.eq((5.533333333).toFixed(3));
+      expect(spyCall["result"]["Rapport"]).to.eq((5.714285714).toFixed(3));
     });
   });
 });
