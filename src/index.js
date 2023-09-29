@@ -84,6 +84,11 @@ import relatednessNeedSatisfactionSha from "../surveys/relatednessNeedSatisfacti
 import { default as relatednessNeedSatisfactionScoreFunc } from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.score.js";
 export const RelatednessNeedSatisfaction = SurveyFactory("relatednessNeedSatisfaction", relatednessNeedSatisfactionJson, relatednessNeedSatisfactionScoreFunc, relatednessNeedSatisfactionSha);
 
+import SVIJson from "../surveys/SVI/SVI.json";
+import SVISha from "../surveys/SVI/sha.json";
+import { default as SVIScoreFunc } from "../surveys/SVI/SVI.score.js";
+export const SVI = SurveyFactory("SVI", SVIJson, SVIScoreFunc, SVISha);
+
 import teamViabilityJson from "../surveys/teamViability/teamViability.json";
 import teamViabilitySha from "../surveys/teamViability/sha.json";
 import { default as teamViabilityScoreFunc } from "../surveys/teamViability/teamViability.score.js";
