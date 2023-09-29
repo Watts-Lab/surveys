@@ -1,5 +1,5 @@
 import React from "react";
-import { TIPI } from "../../src/index";
+import { SVI } from "../../src/index";
 
 const dummy = {
   set(response) {},
@@ -8,7 +8,7 @@ const dummy = {
 describe("SuperSpecialSurvey", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
-    cy.mount(<TIPI onComplete={dummy.set} />);
+    cy.mount(<SVI onComplete={dummy.set} />);
 
     // Instrumental Outcome
     cy.get('[data-name="Instrumental Outcome 1"] input[value="5"]').click({
