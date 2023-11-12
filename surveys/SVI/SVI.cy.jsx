@@ -14,9 +14,11 @@ describe("SubjectiveValueInventory", () => {
     cy.get('[data-name="Instrumental Outcome 1"] input[value="5"]').click({
       force: true,
     });
+
     cy.get('[data-name="Instrumental Outcome 2"] input[value="6"]').click({
       force: true,
     });
+    
     cy.get('[data-name="Instrumental Outcome 3"] input[value="2"]').click({
       force: true,
     });

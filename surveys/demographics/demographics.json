@@ -24,6 +24,7 @@
           "type": "radiogroup",
           "name": "gender",
           "title": "What is your gender?",
+          "isRequired": true,
           "choices": [
             {
               "value": "female",
@@ -163,6 +164,7 @@
           "type": "radiogroup",
           "name": "education_US",
           "title": "What is the highest level of education you have completed?",
+          "isRequired": true,
           "choices": [
             {
               "value": "2",
@@ -204,6 +206,7 @@
           "type": "checkbox",
           "name": "race_US",
           "title": "Please choose one or more races that you consider yourself to be.",
+          "isRequired": true,
           "choices": [
             "White",
             "Black or African-American",
