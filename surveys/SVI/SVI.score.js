@@ -14,7 +14,7 @@ function mean(array) {
   if (filteredArr.length === 0) {
     return NaN;
   }
-  return sum(array) / filteredArr.length;}
+  return sum(filteredArr) / filteredArr.length;}
 
 export default function scoreFunc(responses) {
   const minVal = 1;
@@ -25,7 +25,7 @@ export default function scoreFunc(responses) {
     responses["Instrumental Outcome 1"],
     responses["Instrumental Outcome 2"],
     responses["Instrumental Outcome 4"],
-    reverseCode(responses["Instrumental Ouctome 3"], minVal, maxVal)
+    reverseCode(responses["Instrumental Outcome 3"], minVal, maxVal)
   ].map(parseFloat);
 
   // Self
@@ -57,7 +57,7 @@ export default function scoreFunc(responses) {
     responses["Instrumental Outcome 1"],
     responses["Instrumental Outcome 2"],
     responses["Instrumental Outcome 4"],
-    reverseCode(responses["Instrumental Ouctome 3"], minVal, maxVal),
+    reverseCode(responses["Instrumental Outcome 3"], minVal, maxVal),
     reverseCode(responses["Self 1"], minVal, maxVal),
     responses["Self 2"],
     responses["Self 3"],
