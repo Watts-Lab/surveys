@@ -9,6 +9,7 @@ describe("AwarenessMonitoringGrowth", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<AwarenessMonitoringGrowth onComplete={dummy.set} />);
+    cy.viewport("macbook-11");
 
     // awareness
     cy.get('[data-name="innermostThoughts"] input[value="6"]').click({

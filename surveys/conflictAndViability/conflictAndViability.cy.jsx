@@ -9,6 +9,7 @@ describe("ConflictAndViability", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<ConflictAndViability onComplete={dummy.set} />);
+    cy.viewport("macbook-11");
 
     cy.get('[data-name="heated"] input[value="6"]').click({
       force: true,
