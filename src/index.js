@@ -4,6 +4,11 @@
 
 import SurveyFactory from "./surveyFactory.jsx"
 
+import attitudeAttributesJson from "../surveys/attitudeAttributes/attitudeAttributes.json";
+import attitudeAttributesSha from "../surveys/attitudeAttributes/sha.json";
+import { default as attitudeAttributesScoreFunc } from "../surveys/attitudeAttributes/attitudeAttributes.score.js";
+export const AttitudeAttributes = SurveyFactory("attitudeAttributes", attitudeAttributesJson, attitudeAttributesScoreFunc, attitudeAttributesSha);
+
 import autonomyNeedSatisfactionJson from "../surveys/autonomyNeedSatisfaction/autonomyNeedSatisfaction.json";
 import autonomyNeedSatisfactionSha from "../surveys/autonomyNeedSatisfaction/sha.json";
 import { default as autonomyNeedSatisfactionScoreFunc } from "../surveys/autonomyNeedSatisfaction/autonomyNeedSatisfaction.score.js";
