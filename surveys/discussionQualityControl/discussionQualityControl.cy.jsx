@@ -11,6 +11,7 @@ describe("Demographics", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<DiscussionQualityControl onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     cy.get('[data-name="participateAgain"] input[value="no"]').click({
       force: true,
