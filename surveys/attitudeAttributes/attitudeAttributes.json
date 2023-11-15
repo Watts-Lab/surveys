@@ -1,0 +1,117 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "importance",
+              "title": "How important is this issue to you personally?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all important" },
+                { "value": 1, "text": "Not too important" },
+                { "value": 2, "text": "Somewhat important" },
+                { "value": 3, "text": "Very Important" },
+                { "value": 4, "text": "Extremely Important" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "knowledge",
+              "title": "How well informed would you say you are about this issue?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not informed at all" },
+                { "value": 1, "text": "Slightly informed" },
+                { "value": 2, "text": "Moderately well informed" },
+                { "value": 3, "text": "Well informed" },
+                { "value": 4, "text": "Fully informed" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "certainty",
+              "title": "How certain are you of your opinion on this issue?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all certain" },
+                { "value": 1, "text": "Slightly certain" },
+                { "value": 2, "text": "Moderately certain" },
+                { "value": 3, "text": "Mostly certain" },
+                { "value": 4, "text": "Completely certain" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ambivalence",
+              "title": "Would you say that you are strongly on one side of this issue, or that your feelings are mixed?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "No mixed feelings at all" },
+                { "value": 1, "text": "Slightly mixed feelings" },
+                { "value": 2, "text": "Moderately mixed feelings" },
+                { "value": 3, "text": "A lot of mixed feelings" },
+                { "value": 4, "text": "Extremely mixed feelings" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "personalRelevance",
+              "title": "To what extent does this issue have a direct impact on your life?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Does not affect my life at all" },
+                { "value": 1, "text": "Affects me slightly" },
+                { "value": 2, "text": "Affects me a moderate amount" },
+                { "value": 3, "text": "Affects me a lot" },
+                { "value": 4, "text": "Has an extreme effect on my life" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "moralConviction",
+              "title": "To what extent is your position on this issue a reflection of your core moral beliefs and convictions?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 1, "text": "Slightly" },
+                { "value": 2, "text": "Moderately" },
+                { "value": 3, "text": "Strongly" },
+                { "value": 4, "text": "Completely" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "elaboration",
+              "title": "In general, how much would you say you've thought about this issue?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all" },
+                { "value": 1, "text": "A little" },
+                { "value": 2, "text": "A moderate amount" },
+                { "value": 3, "text": "A considerable amount" },
+                { "value": 4, "text": "Extensively" }
+              ]
+            }
+          ],
+          "questionsOrder": "random",
+          "state": "expanded",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "questionsOnPageMode": "singlePage",
+  "widthMode": "responsive",
+  "showCompletedPage": false
+}

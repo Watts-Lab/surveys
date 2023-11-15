@@ -5,7 +5,7 @@ const dummy = {
   set(response) {},
 };
 
-describe("SuperSpecialSurvey", () => {
+describe("TIPI", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<TIPI onComplete={dummy.set} />);
