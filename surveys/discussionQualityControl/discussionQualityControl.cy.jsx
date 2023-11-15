@@ -49,7 +49,7 @@ describe("Demographics", () => {
       "tell us more about the trouble you had joining the study"
     ).should("not.exist");
 
-    // cy.screenshot("discussionQualityControl/screenshot", { overwrite: true });
+    cy.screenshot("discussionQualityControl/screenshot", { overwrite: true });
 
     cy.get("form") // submit surveyJS form
       .then(($form) => {

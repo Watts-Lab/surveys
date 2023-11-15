@@ -1,0 +1,120 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<p> Scale key: (1) Strongly Disagree, (2) Disagree, (3) Slightly Disagree, (4) Neutral, (5) Slightly Agree, (6) Agree, (7) Strongly Agree</p>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "innermostThoughts",
+              "title": "Right now, I am aware of my innermost thoughts.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "othersThinkOfMe",
+              "title": "Right now, I am concerned about what others think of me.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "goingOnAroundMe",
+              "title": "Right now, I am conscious of what is going on around me.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "canAdjust",
+              "title": "I have found that I can adjust my behavior to meet the requirements of any situation I find myself in.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "troubleChanging",
+              "title": "I have trouble changing my behavior to suit different people and different situations.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "emotionalIntuition",
+              "title": "My powers of intuition are quite good when it comes to understanding others' emotions and motives.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "tellInappropriate",
+              "title": "I can usually tell when I've said something inappropriate by reading it in the listener's eyes.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "fixedIntelligence",
+              "title": "My intelligence is something about me that I can't change very much.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "onlyLearnNewThings",
+              "title": "I can learn new things, but I can't really change my basic intelligence.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            }
+          ],
+          "questionsOrder": "random",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "widthMode": "responsive",
+  "showCompletedPage": false
+}
