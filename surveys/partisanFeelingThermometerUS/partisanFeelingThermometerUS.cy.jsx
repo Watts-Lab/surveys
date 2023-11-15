@@ -9,6 +9,7 @@ describe("PartisanFeelingThermometerUS", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<PartisanFeelingThermometerUS onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     // check randomization by reloading until it gets a democrat prompt first
     if (cy.get("#sq_102_ariaTitle > .sv-string-viewer").invoke("text").then(

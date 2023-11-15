@@ -9,6 +9,7 @@ describe("PoliticaPartyUS", () => {
   it("completesRepublican", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<PoliticalPartyUS onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     cy.get('[data-name="party"] input[value="Republican"]').click({
       force: true,

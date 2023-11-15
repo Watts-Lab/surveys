@@ -9,6 +9,7 @@ describe("Demographics", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<Demographics onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     cy.get(`[data-name="birth_year"] input`).click().type("1985");
 
@@ -19,10 +20,6 @@ describe("Demographics", () => {
     cy.get(`[data-name="marital_status"] input`).click({ force: true });
 
     cy.contains("Married or Domestic Partnership").click({ force: true });
-
-    cy.get(`[data-name="impairment"] input[value="hearing"]`)
-      .next()
-      .click({ force: true });
 
     cy.get(`[data-name="language_primary"] input`).click({ force: true });
     cy.contains("French").click({ force: true });

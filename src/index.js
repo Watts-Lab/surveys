@@ -4,10 +4,25 @@
 
 import SurveyFactory from "./surveyFactory.jsx"
 
+import attitudeAttributesJson from "../surveys/attitudeAttributes/attitudeAttributes.json";
+import attitudeAttributesSha from "../surveys/attitudeAttributes/sha.json";
+import { default as attitudeAttributesScoreFunc } from "../surveys/attitudeAttributes/attitudeAttributes.score.js";
+export const AttitudeAttributes = SurveyFactory("attitudeAttributes", attitudeAttributesJson, attitudeAttributesScoreFunc, attitudeAttributesSha);
+
 import autonomyNeedSatisfactionJson from "../surveys/autonomyNeedSatisfaction/autonomyNeedSatisfaction.json";
 import autonomyNeedSatisfactionSha from "../surveys/autonomyNeedSatisfaction/sha.json";
 import { default as autonomyNeedSatisfactionScoreFunc } from "../surveys/autonomyNeedSatisfaction/autonomyNeedSatisfaction.score.js";
 export const AutonomyNeedSatisfaction = SurveyFactory("autonomyNeedSatisfaction", autonomyNeedSatisfactionJson, autonomyNeedSatisfactionScoreFunc, autonomyNeedSatisfactionSha);
+
+import awarenessMonitoringGrowthJson from "../surveys/awarenessMonitoringGrowth/awarenessMonitoringGrowth.json";
+import awarenessMonitoringGrowthSha from "../surveys/awarenessMonitoringGrowth/sha.json";
+import { default as awarenessMonitoringGrowthScoreFunc } from "../surveys/awarenessMonitoringGrowth/awarenessMonitoringGrowth.score.js";
+export const AwarenessMonitoringGrowth = SurveyFactory("awarenessMonitoringGrowth", awarenessMonitoringGrowthJson, awarenessMonitoringGrowthScoreFunc, awarenessMonitoringGrowthSha);
+
+import conflictAndViabilityJson from "../surveys/conflictAndViability/conflictAndViability.json";
+import conflictAndViabilitySha from "../surveys/conflictAndViability/sha.json";
+import { default as conflictAndViabilityScoreFunc } from "../surveys/conflictAndViability/conflictAndViability.score.js";
+export const ConflictAndViability = SurveyFactory("conflictAndViability", conflictAndViabilityJson, conflictAndViabilityScoreFunc, conflictAndViabilitySha);
 
 import constructiveListeningBehaviorsJson from "../surveys/constructiveListeningBehaviors/constructiveListeningBehaviors.json";
 import constructiveListeningBehaviorsSha from "../surveys/constructiveListeningBehaviors/sha.json";
@@ -49,6 +64,16 @@ import partisanFeelingThermometerUSSha from "../surveys/partisanFeelingThermomet
 import { default as partisanFeelingThermometerUSScoreFunc } from "../surveys/partisanFeelingThermometerUS/partisanFeelingThermometerUS.score.js";
 export const PartisanFeelingThermometerUS = SurveyFactory("partisanFeelingThermometerUS", partisanFeelingThermometerUSJson, partisanFeelingThermometerUSScoreFunc, partisanFeelingThermometerUSSha);
 
+import perceptionOfOthersJson from "../surveys/perceptionOfOthers/perceptionOfOthers.json";
+import perceptionOfOthersSha from "../surveys/perceptionOfOthers/sha.json";
+import { default as perceptionOfOthersScoreFunc } from "../surveys/perceptionOfOthers/perceptionOfOthers.score.js";
+export const PerceptionOfOthers = SurveyFactory("perceptionOfOthers", perceptionOfOthersJson, perceptionOfOthersScoreFunc, perceptionOfOthersSha);
+
+import persuasionAndLearningJson from "../surveys/persuasionAndLearning/persuasionAndLearning.json";
+import persuasionAndLearningSha from "../surveys/persuasionAndLearning/sha.json";
+import { default as persuasionAndLearningScoreFunc } from "../surveys/persuasionAndLearning/persuasionAndLearning.score.js";
+export const PersuasionAndLearning = SurveyFactory("persuasionAndLearning", persuasionAndLearningJson, persuasionAndLearningScoreFunc, persuasionAndLearningSha);
+
 import politicalPartyUSJson from "../surveys/politicalPartyUS/politicalPartyUS.json";
 import politicalPartyUSSha from "../surveys/politicalPartyUS/sha.json";
 import { default as politicalPartyUSScoreFunc } from "../surveys/politicalPartyUS/politicalPartyUS.score.js";
@@ -64,7 +89,17 @@ import relatednessNeedSatisfactionSha from "../surveys/relatednessNeedSatisfacti
 import { default as relatednessNeedSatisfactionScoreFunc } from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.score.js";
 export const RelatednessNeedSatisfaction = SurveyFactory("relatednessNeedSatisfaction", relatednessNeedSatisfactionJson, relatednessNeedSatisfactionScoreFunc, relatednessNeedSatisfactionSha);
 
+import SVIJson from "../surveys/SVI/SVI.json";
+import SVISha from "../surveys/SVI/sha.json";
+import { default as SVIScoreFunc } from "../surveys/SVI/SVI.score.js";
+export const SVI = SurveyFactory("SVI", SVIJson, SVIScoreFunc, SVISha);
+
 import teamViabilityJson from "../surveys/teamViability/teamViability.json";
 import teamViabilitySha from "../surveys/teamViability/sha.json";
 import { default as teamViabilityScoreFunc } from "../surveys/teamViability/teamViability.score.js";
 export const TeamViability = SurveyFactory("teamViability", teamViabilityJson, teamViabilityScoreFunc, teamViabilitySha);
+
+import TIPIJson from "../surveys/TIPI/TIPI.json";
+import TIPISha from "../surveys/TIPI/sha.json";
+import { default as TIPIScoreFunc } from "../surveys/TIPI/TIPI.score.js";
+export const TIPI = SurveyFactory("TIPI", TIPIJson, TIPIScoreFunc, TIPISha);

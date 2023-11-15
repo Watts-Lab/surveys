@@ -20,6 +20,7 @@ describe("AutonomyNeedSatisfaction", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<AutonomyNeedSatisfaction onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     cy.checkRandomization(dataNames);
 

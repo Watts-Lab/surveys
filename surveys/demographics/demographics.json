@@ -24,6 +24,7 @@
           "type": "radiogroup",
           "name": "gender",
           "title": "What is your gender?",
+          "isRequired": true,
           "choices": [
             {
               "value": "female",
@@ -58,57 +59,6 @@
             "Other"
           ],
           "autocomplete": "country"
-        },
-        {
-          "type": "checkbox",
-          "name": "impairment",
-          "title": "Do you have any health conditions or illnesses which affect you in any of the following areas?",
-          "description": "In answering this question, you should consider whether you are affected in any of these areas while receiving any treatment or medication or using devices to help you. (For example, a hearing aid.)",
-          "choices": [
-            {
-              "value": "vision",
-              "text": "Vision (e.g. blindness or partial sight)"
-            },
-            {
-              "value": "hearing",
-              "text": "Hearing (e.g. deafness or partial hearing)"
-            },
-            {
-              "value": "mobility",
-              "text": "Mobility (e.g. walking short distances or climbing stairs)"
-            },
-            {
-              "value": "dexterity",
-              "text": "Dexterity (e.g. lifting and carrying objects, using a keyboard)"
-            },
-            {
-              "value": "understanding",
-              "text": "Learning or understanding or concentrating"
-            },
-            {
-              "value": "memory",
-              "text": "Memory"
-            },
-            {
-              "value": "mental_health",
-              "text": "Mental health"
-            },
-            {
-              "value": "stamina",
-              "text": "Stamina or breathing or fatigue"
-            },
-            {
-              "value": "sociobehavioral",
-              "text": "Social or behavioral (e.g. autism spectrum disorder (ASD) which includes Asperger’s, or attention deficit hyperactivity disorder (ADHD))"
-            },
-            {
-              "value": "none",
-              "text": "None of the above / Prefer not to say"
-            }
-          ],
-          "separateSpecialChoices": true,
-          "noneText": "None of the above",
-          "maxSelectedChoices": 12
         },
         {
           "type": "dropdown",
@@ -214,6 +164,7 @@
           "type": "radiogroup",
           "name": "education_US",
           "title": "What is the highest level of education you have completed?",
+          "isRequired": true,
           "choices": [
             {
               "value": "2",
@@ -255,6 +206,7 @@
           "type": "checkbox",
           "name": "race_US",
           "title": "Please choose one or more races that you consider yourself to be.",
+          "isRequired": true,
           "choices": [
             "White",
             "Black or African-American",
@@ -326,7 +278,7 @@
           "type": "checkbox",
           "name": "ethnicity_UK",
           "title": "What is your ethnic group?",
-          "description": " It’s up to you how you answer this question. Your ethnic group could be your cultural or family background.",
+          "description": " It's up to you how you answer this question. Your ethnic group could be your cultural or family background.",
           "choices": [
             "English / Welsh / Scottish / Northern Irish / British",
             "Irish",

@@ -20,6 +20,7 @@ describe("LabeledRangeTest", () => {
   it("is styled properly", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<LabeledRangeTest onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     /* test if thumb invisible before click moz 
     //it("test thumb visibility before click moz", { browser: "firefox" }), () => {

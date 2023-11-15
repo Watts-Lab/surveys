@@ -1,0 +1,111 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<h1>Please answer the following questions about your experience with your discussion group.</h1><p> Scale key: (1) Strongly Disagree, (2) Disagree, (3) Slightly Disagree, (4) Neutral, (5) Slightly Agree, (6) Agree, (7) Strongly Agree</p>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "liking",
+              "title": "I liked the other people in my group.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+
+            {
+              "type": "rating",
+              "name": "dismissiveOther",
+              "title": "Others in the discussion were dismissive of views other than their own.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "curious",
+              "title": "Other people were curious to know why my opinion differs from theirs.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "respectfulDisagreement",
+              "title": "I felt that others respected my views even when we did not agree.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "authenticity",
+              "title": "Others in the discussion expressed their views authentically.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "ambiguity",
+              "title": "Others in the discussion were ambiguous in expressing their opinions.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "directness",
+              "title": "Others in the discussion were direct when communicating their opinions.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "undermining",
+              "title": "I felt that others in the discussion tried to undermine me.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            }
+          ],
+          "questionsOrder": "random",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "widthMode": "responsive",
+  "showCompletedPage": false
+}

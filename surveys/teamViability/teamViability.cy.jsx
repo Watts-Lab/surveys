@@ -18,6 +18,7 @@ describe("TeamViability", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<TeamViability onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     cy.checkRandomization(dataNames);
 
