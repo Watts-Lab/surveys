@@ -9,6 +9,7 @@ describe("RelatenessNeedSatisfaction", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<RelatednessNeedSatisfaction onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     cy.get('[data-name="closeness"] input[value="2"]').click({
       force: true,

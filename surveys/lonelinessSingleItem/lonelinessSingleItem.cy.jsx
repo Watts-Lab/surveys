@@ -9,6 +9,7 @@ describe("Demographics", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<LonelinessSingleItem onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     cy.get(`[data-name="loneliness"] input[value="2"]`).click({ force: true });
 

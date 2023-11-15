@@ -9,6 +9,7 @@ describe("AttitudeAttributes", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<AttitudeAttributes onComplete={dummy.set} />);
+    cy.viewport("macbook-11");
 
     cy.get('[data-name="importance"] input[value="2"]').click({
       force: true,

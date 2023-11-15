@@ -12,6 +12,7 @@ describe("ExampleSurvey", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<ExampleSurvey onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     cy.get(`[data-name="nps_score"] input[value="1"]`)
       .next()

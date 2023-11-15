@@ -9,6 +9,7 @@ describe("Demographics", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<Demographics onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     cy.get(`[data-name="birth_year"] input`).click().type("1985");
 

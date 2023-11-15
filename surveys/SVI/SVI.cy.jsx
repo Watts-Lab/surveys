@@ -9,6 +9,7 @@ describe("SubjectiveValueInventory", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<SVI onComplete={dummy.set} />);
+    cy.viewport("macbook-11");
 
     // Instrumental Outcome
     cy.get('[data-name="Instrumental Outcome 1"] input[value="5"]').click({
@@ -18,7 +19,7 @@ describe("SubjectiveValueInventory", () => {
     cy.get('[data-name="Instrumental Outcome 2"] input[value="6"]').click({
       force: true,
     });
-    
+
     cy.get('[data-name="Instrumental Outcome 3"] input[value="2"]').click({
       force: true,
     });

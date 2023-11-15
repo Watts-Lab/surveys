@@ -9,6 +9,7 @@ describe("PsychologicalSafety", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<PsychologicalSafety onComplete={dummy.set} />);
+    cy.viewport('macbook-11');
 
     cy.get('[data-name="holdMistake"] input[value="6"]').click({
       force: true,
