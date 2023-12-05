@@ -18,6 +18,17 @@ function reverseCode(value, minVal, maxVal) {
   return maxVal - (value - minVal);
 }
 
+function findOrder() {
+  const nameList = [];
+  const questionElements = document.querySelectorAll(".sv-question.sv-row__question");
+
+  questionElements.forEach((element) => {
+    const curr = element.getAttribute("data-name");
+    nameList.push(curr);
+  });
+  return nameList;
+}
+
 export default function scoreFunc(responses) {
   const minVal = 1;
   const maxVal = 7;
@@ -35,7 +46,7 @@ export default function scoreFunc(responses) {
 
   const normedValues = normalize(completedValues, minVal, maxVal);
 
-  const order = Object.keys(responses);
+  const order = findOrder();
 
   const result = {
     rawScore: mean(completedValues).toFixed(3),

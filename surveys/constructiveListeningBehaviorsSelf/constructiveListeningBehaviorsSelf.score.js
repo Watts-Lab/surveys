@@ -10,6 +10,20 @@ function mean(array) {
   return sum(array) / array.length;
 }
 
+function findOrder() {
+  const nameList = [];
+  const questionElements = document.querySelectorAll(".sv-question.sv-row__question");
+
+  questionElements.forEach((element) => {
+    const curr = element.getAttribute("data-name");
+    if (curr !== 'Prompt') {
+      nameList.push(curr);
+    }
+
+  });
+  return nameList;
+}
+
 export default function scoreFunc(responses) {
   const minVal = -3;
   const maxVal = 3;
@@ -29,7 +43,8 @@ export default function scoreFunc(responses) {
 
   const completedValues = rawValues.filter((v) => !Number.isNaN(v)); // don't include empty values in response
   const normedValues = normalize(completedValues, minVal, maxVal);
-  const order = Object.keys(responses);
+  const order = findOrder();
+  console.log("order", order);
 
   const result = {
     rawScore: mean(completedValues).toFixed(3),
