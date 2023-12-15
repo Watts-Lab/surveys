@@ -201,5 +201,8 @@
         }
       ]
     }
-  ]
+  ],
+  "showPageTitles": false,
+  "showCompletedPage": false,
+  "widthMode": "responsive"
 }
