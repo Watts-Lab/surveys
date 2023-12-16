@@ -41,6 +41,10 @@ describe("RMETTen", () => {
           }
         });
 
+        cy.screenshot(`rmetTen/screenshot_${pageIndex}`, {
+          overwrite: true,
+        });
+
         // Click "Next" button if not on the last page
         if (pageIndex < surveyJson.pages.length - 1) {
           cy.get('input[type="button"][value="Next"]').click({ force: true });

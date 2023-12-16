@@ -42,6 +42,7 @@
           "type": "radiogroup",
           "name": "question1",
           "title": "Choose which word best describes what the person in the picture is thinking or feeling?",
+          "hideNumber": true,
           "choices": ["aghast", "fantasizing", "impatient", "alarmed"],
           "colCount": 2
         }
@@ -64,6 +65,7 @@
           "type": "radiogroup",
           "name": "question6",
           "title": "Choose which word best describes what the person in the picture is thinking or feeling?",
+          "hideNumber": true,
           "choices": ["terrified", "amused", "regretful", "flirtatious"],
           "colCount": 2
         }
@@ -86,6 +88,7 @@
           "type": "radiogroup",
           "name": "question7",
           "title": "Choose which word best describes what the person in the picture is thinking or feeling?",
+          "hideNumber": true,
           "choices": ["contemplative", "flustered", "encouraging", "amused"],
           "colCount": 2
         }
@@ -108,6 +111,7 @@
           "type": "radiogroup",
           "name": "question11",
           "title": "Choose which word best describes what the person in the picture is thinking or feeling?",
+          "hideNumber": true,
           "choices": ["doubtful", "affectionate", "playful", "aghast"],
           "colCount": 2
         }
@@ -130,6 +134,7 @@
           "type": "radiogroup",
           "name": "question12",
           "title": "Choose which word best describes what the person in the picture is thinking or feeling?",
+          "hideNumber": true,
           "choices": ["preoccupied", "grateful", "insisting", "imploring"],
           "colCount": 2
         }
@@ -152,6 +157,7 @@
           "type": "radiogroup",
           "name": "question14",
           "title": "Choose which word best describes what the person in the picture is thinking or feeling?",
+          "hideNumber": true,
           "choices": ["pensive", "irritated", "excited", "hostile"],
           "colCount": 2
         }
@@ -174,6 +180,7 @@
           "type": "radiogroup",
           "name": "question16",
           "title": "Choose which word best describes what the person in the picture is thinking or feeling?",
+          "hideNumber": true,
           "choices": ["joking", "cautious", "arrogant", "reassuring"],
           "colCount": 2
         }
@@ -196,6 +203,7 @@
           "type": "radiogroup",
           "name": "question18",
           "title": "Choose which word best describes what the person in the picture is thinking or feeling?",
+          "hideNumber": true,
           "choices": ["interested", "joking", "affectionate", "contented"],
           "colCount": 2
         }
@@ -218,6 +226,7 @@
           "type": "radiogroup",
           "name": "question20",
           "title": "Choose which word best describes what the person in the picture is thinking or feeling?",
+          "hideNumber": true,
           "choices": ["impatient", "aghast", "irritated", "reflective"],
           "colCount": 2
         }
