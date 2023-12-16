@@ -1,7 +1,7 @@
 import React from "react";
-import { RmetTen } from "../../src/index";
+import { RmeTen } from "../../src/index";
 
-const surveyJsonPath = "surveys/rmetTen/rmetTen.json";
+const surveyJsonPath = "surveys/rmeTen/rmeTen.json";
 
 // Initialize an empty answers object
 const answers = {};
@@ -13,7 +13,7 @@ const dummy = {
 describe("RMETTen", () => {
   it("completes the survey", () => {
     cy.spy(dummy, "set").as("callback");
-    cy.mount(<RmetTen onComplete={dummy.set} />);
+    cy.mount(<RmeTen onComplete={dummy.set} />);
     cy.viewport("macbook-11");
 
     cy.readFile(surveyJsonPath).then((surveyJson) => {
@@ -41,7 +41,7 @@ describe("RMETTen", () => {
           }
         });
 
-        cy.screenshot(`rmetTen/screenshot_${pageIndex}`, {
+        cy.screenshot(`rmeTen/screenshot_${pageIndex}`, {
           overwrite: true,
         });
 

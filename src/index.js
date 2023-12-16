@@ -89,10 +89,10 @@ import relatednessNeedSatisfactionSha from "../surveys/relatednessNeedSatisfacti
 import { default as relatednessNeedSatisfactionScoreFunc } from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.score.js";
 export const RelatednessNeedSatisfaction = SurveyFactory("relatednessNeedSatisfaction", relatednessNeedSatisfactionJson, relatednessNeedSatisfactionScoreFunc, relatednessNeedSatisfactionSha);
 
-import rmetTenJson from "../surveys/rmetTen/rmetTen.json";
-import rmetTenSha from "../surveys/rmetTen/sha.json";
-import { default as rmetTenScoreFunc } from "../surveys/rmetTen/rmetTen.score.js";
-export const RmetTen = SurveyFactory("rmetTen", rmetTenJson, rmetTenScoreFunc, rmetTenSha);
+import rmeTenJson from "../surveys/rmeTen/rmeTen.json";
+import rmeTenSha from "../surveys/rmeTen/sha.json";
+import { default as rmeTenScoreFunc } from "../surveys/rmeTen/rmeTen.score.js";
+export const RmeTen = SurveyFactory("rmeTen", rmeTenJson, rmeTenScoreFunc, rmeTenSha);
 
 import SVIJson from "../surveys/SVI/SVI.json";
 import SVISha from "../surveys/SVI/sha.json";
