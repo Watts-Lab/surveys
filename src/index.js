@@ -34,6 +34,11 @@ import constructiveListeningBehaviorsSelfSha from "../surveys/constructiveListen
 import { default as constructiveListeningBehaviorsSelfScoreFunc } from "../surveys/constructiveListeningBehaviorsSelf/constructiveListeningBehaviorsSelf.score.js";
 export const ConstructiveListeningBehaviorsSelf = SurveyFactory("constructiveListeningBehaviorsSelf", constructiveListeningBehaviorsSelfJson, constructiveListeningBehaviorsSelfScoreFunc, constructiveListeningBehaviorsSelfSha);
 
+import CRTJson from "../surveys/CRT/CRT.json";
+import CRTSha from "../surveys/CRT/sha.json";
+import { default as CRTScoreFunc } from "../surveys/CRT/CRT.score.js";
+export const CRT = SurveyFactory("CRT", CRTJson, CRTScoreFunc, CRTSha);
+
 import demographicsJson from "../surveys/demographics/demographics.json";
 import demographicsSha from "../surveys/demographics/sha.json";
 import { default as demographicsScoreFunc } from "../surveys/demographics/demographics.score.js";
