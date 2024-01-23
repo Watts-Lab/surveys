@@ -56,8 +56,28 @@
           "name": "clearInstructions",
           "title": "Were the instructions easy to understand?",
           "hideNumber": true,
-          "minRateDescription": "Not at all easy",
-          "maxRateDescription": "Very easy",
+          "rateValues": [
+            {
+              "value": 1,
+              "text": "very difficult"
+            },
+            {
+              "value": 2,
+              "text": "difficult"
+            },
+            {
+              "value": 3,
+              "text": "neutral"
+            },
+            {
+              "value": 4,
+              "text": "easy"
+            },
+            {
+              "value": 5,
+              "text": "very easy"
+            }
+          ],
           "displayMode": "buttons"
         },
         {
@@ -65,8 +85,32 @@
           "name": "videoQuality",
           "title": "Please rate the quality of the video call.",
           "hideNumber": true,
-          "minRateDescription": "Very Poor",
-          "maxRateDescription": "Excellent",
+          "rateValues": [
+            {
+              "value": 1,
+              "text": "very poor"
+            },
+            {
+              "value": 2,
+              "text": "poor"
+            },
+            {
+              "value": 3,
+              "text": "fair"
+            },
+            {
+              "value": 4,
+              "text": "good"
+            },
+            {
+              "value": 5,
+              "text": "excellent"
+            },
+            {
+              "value": "NA",
+              "text": "N/A"
+            }
+          ],
           "displayMode": "buttons"
         },
         {
