@@ -1,15 +1,3 @@
-// No postprocessing needed for this survey
-// Item 4: Insisting
-// Item 6: Fantasizing
-// Item 11: Regretful
-// Item 15: Contemplative
-// Item 17: Doubtful
-// Item 22: Preoccupied
-// Item 24: Pensive
-// Item 27: Cautious
-// Item 28: Interested
-// Item 29: Reflective
-
 const answers = {
   question1: "insisting",
   question2: "fantasizing",
