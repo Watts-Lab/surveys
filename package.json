@@ -1,6 +1,6 @@
 {
   "name": "@watts-lab/surveys",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -8,6 +8,7 @@
     "prebuild": "node computeSha.js && node builder.js",
     "build": "npx rollup --config",
     "test": "npx cypress open"
+
   },
   "repository": {
     "type": "git",
