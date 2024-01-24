@@ -24,16 +24,16 @@ const answers = {
 };
 
 export default function scoreFunc(responses) {
-
-  // Calculate score
   let score = 0;
-  for (let i = 1; i <= 10; i++) {
-    if (responses[`question${i}`] === answers[`question${i}`]) {
-      score++;
-    }
-  }
 
-  console.log(score);
-  // Return score
+  Object.keys(answers).forEach((questionName) => {
+    const response = responses[questionName];
+    const answer = answers[questionName];
+
+    if (response === answer) {
+      score += 1;
+    }
+  });
+
   return { score: score, maxScore: 10, minScore: 0, responses: responses };
 }
