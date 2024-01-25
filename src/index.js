@@ -34,6 +34,11 @@ import constructiveListeningBehaviorsSelfSha from "../surveys/constructiveListen
 import { default as constructiveListeningBehaviorsSelfScoreFunc } from "../surveys/constructiveListeningBehaviorsSelf/constructiveListeningBehaviorsSelf.score.js";
 export const ConstructiveListeningBehaviorsSelf = SurveyFactory("constructiveListeningBehaviorsSelf", constructiveListeningBehaviorsSelfJson, constructiveListeningBehaviorsSelfScoreFunc, constructiveListeningBehaviorsSelfSha);
 
+import CRTJson from "../surveys/CRT/CRT.json";
+import CRTSha from "../surveys/CRT/sha.json";
+import { default as CRTScoreFunc } from "../surveys/CRT/CRT.score.js";
+export const CRT = SurveyFactory("CRT", CRTJson, CRTScoreFunc, CRTSha);
+
 import demographicsJson from "../surveys/demographics/demographics.json";
 import demographicsSha from "../surveys/demographics/sha.json";
 import { default as demographicsScoreFunc } from "../surveys/demographics/demographics.score.js";
@@ -88,6 +93,11 @@ import relatednessNeedSatisfactionJson from "../surveys/relatednessNeedSatisfact
 import relatednessNeedSatisfactionSha from "../surveys/relatednessNeedSatisfaction/sha.json";
 import { default as relatednessNeedSatisfactionScoreFunc } from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.score.js";
 export const RelatednessNeedSatisfaction = SurveyFactory("relatednessNeedSatisfaction", relatednessNeedSatisfactionJson, relatednessNeedSatisfactionScoreFunc, relatednessNeedSatisfactionSha);
+
+import rmeTenJson from "../surveys/rmeTen/rmeTen.json";
+import rmeTenSha from "../surveys/rmeTen/sha.json";
+import { default as rmeTenScoreFunc } from "../surveys/rmeTen/rmeTen.score.js";
+export const RmeTen = SurveyFactory("rmeTen", rmeTenJson, rmeTenScoreFunc, rmeTenSha);
 
 import SVIJson from "../surveys/SVI/SVI.json";
 import SVISha from "../surveys/SVI/sha.json";
