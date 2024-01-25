@@ -151,7 +151,7 @@
           "type": "text",
           "name": "textExpansion",
           "title": "Is there anything else we should know?",
-          "description": "Please don't include any identifying information.",
+          "description": "Please don't include any personally identifying information.",
           "hideNumber": true
         }
       ],

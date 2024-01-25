@@ -48,6 +48,20 @@
         },
         {
           "type": "dropdown",
+          "name": "marital_status",
+          "title": "What is your marital status?",
+          "choices": [
+            "Single Never Married",
+            "Married or Domestic Partnership",
+            "Widowed",
+            "Divorced",
+            "Separated",
+            "Other"
+          ],
+          "autocomplete": "country"
+        },
+        {
+          "type": "dropdown",
           "name": "language_primary",
           "title": "What language do you use most often?",
           "description": "For example, the language you use at home.",
@@ -109,6 +123,22 @@
           "isRequired": true,
           "minRateDescription": "Not at all comfortable",
           "maxRateDescription": "Very comfortable"
+        },
+        {
+          "type": "radiogroup",
+          "name": "employment_status",
+          "title": "Are you currently...",
+          "choices": [
+            "Employed for wages",
+            "Self-employed",
+            "Out of work and looking for work",
+            "Out of work but not currently looking for work",
+            "A homemaker",
+            "A student",
+            "Military",
+            "Retired",
+            "Unable to work"
+          ]
         },
         {
           "type": "dropdown",
