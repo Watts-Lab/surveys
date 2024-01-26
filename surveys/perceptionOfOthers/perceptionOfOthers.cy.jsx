@@ -5,11 +5,23 @@ const dummy = {
   set(response) {},
 };
 
+const dataNames = [
+  "liking",
+  "dismissiveOther",
+  "curious",
+  "respectfulDisagreement",
+  "authenticity",
+  "ambiguity",
+  "directness",
+  "undermining",
+];
+
 describe("PerceptionOfOthers", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<PerceptionOfOthers onComplete={dummy.set} />);
     cy.viewport("macbook-11");
+    cy.checkRandomization(dataNames);
 
     cy.get('[data-name="liking"] input[value="6"]').click({
       force: true,

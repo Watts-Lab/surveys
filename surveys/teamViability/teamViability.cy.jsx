@@ -5,11 +5,22 @@ const dummy = {
   set(response) {},
 };
 
+const dataNames = [
+  "capableUnit",
+  "futureSuccess",
+  "fallingApart",
+  "welcomeReuinion",
+  "persistDespiteObstacles",
+  "succeedDespiteDislike"
+];
+
 describe("TeamViability", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<TeamViability onComplete={dummy.set} />);
     cy.viewport("macbook-11");
+
+    cy.checkRandomization(dataNames);
 
     cy.get('[data-name="capableUnit"] input[value="2"]').click({
       force: true,

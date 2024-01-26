@@ -5,11 +5,25 @@ const dummy = {
   set(response) {},
 };
 
+const dataNames = [
+  "tryToUnderstand",
+  "askedQuestions",
+  "encouragedClarification",
+  "expressedInterest",
+  "listenedAttentively",
+  "paidAttention",
+  "gaveSpace",
+  "undividedAttention",
+  "positiveAtmosphere",
+  "allowedExpression"
+];
+
 describe("ConstructiveListeningBehaviors", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<ConstructiveListeningBehaviors onComplete={dummy.set} />);
     cy.viewport('macbook-11');
+    cy.checkRandomization(dataNames);
 
     cy.get('[data-name="tryToUnderstand"] input[value="3"]').click({
       force: true,

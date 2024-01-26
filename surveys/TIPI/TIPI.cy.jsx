@@ -5,11 +5,25 @@ const dummy = {
   set(response) {},
 };
 
+const dataNames = [
+  "extroversion",
+  "criticalness",
+  "dependability",
+  "anxiety",
+  "openness",
+  "quietness",
+  "sympathy",
+  "carelessness",
+  "calmness",
+  "conventionality",
+];
+
 describe("TIPI", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<TIPI onComplete={dummy.set} />);
     cy.viewport("macbook-11");
+    cy.checkRandomization(dataNames);
 
     // extroversion
     cy.get('[data-name="extroversion"] input[value="1"]').click({
