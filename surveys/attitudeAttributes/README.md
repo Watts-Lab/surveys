@@ -1,5 +1,7 @@
 # Attitude attributes
 
+![Screenshot](screenshot.png)
+
 Attitudes towards an issue can be productively measured on a Likert scale with values ranging from "agree"-"disagree" or "definitely no"-"definitely yes", etc.
 
 > **Should the United States return to a gold standard?**
