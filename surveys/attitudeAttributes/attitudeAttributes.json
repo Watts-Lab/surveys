@@ -12,7 +12,7 @@
             {
               "type": "radiogroup",
               "name": "importance",
-              "title": "How important is this issue to you personally?",
+              "title": "How important is this topic to you personally?",
               "isRequired": true,
               "choices": [
                 { "value": 0, "text": "Not at all important" },
@@ -25,7 +25,7 @@
             {
               "type": "radiogroup",
               "name": "knowledge",
-              "title": "How well informed would you say you are about this issue?",
+              "title": "How well informed would you say you are about this topic?",
               "isRequired": true,
               "choices": [
                 { "value": 0, "text": "Not informed at all" },
@@ -38,7 +38,7 @@
             {
               "type": "radiogroup",
               "name": "certainty",
-              "title": "How certain are you of your opinion on this issue?",
+              "title": "How certain are you of your opinion on this topic?",
               "isRequired": true,
               "choices": [
                 { "value": 0, "text": "Not at all certain" },
@@ -51,7 +51,7 @@
             {
               "type": "radiogroup",
               "name": "ambivalence",
-              "title": "Would you say that you are strongly on one side of this issue, or that your feelings are mixed?",
+              "title": "Would you say that you are strongly on one side of this topic, or that your feelings are mixed?",
               "isRequired": true,
               "choices": [
                 { "value": 0, "text": "No mixed feelings at all" },
@@ -64,7 +64,7 @@
             {
               "type": "radiogroup",
               "name": "personalRelevance",
-              "title": "To what extent does this issue have a direct impact on your life?",
+              "title": "To what extent does this topic have a direct impact on your life?",
               "isRequired": true,
               "choices": [
                 { "value": 0, "text": "Does not affect my life at all" },
@@ -77,7 +77,7 @@
             {
               "type": "radiogroup",
               "name": "moralConviction",
-              "title": "To what extent is your position on this issue a reflection of your core moral beliefs and convictions?",
+              "title": "To what extent is your position on this topic a reflection of your core moral beliefs and convictions?",
               "isRequired": true,
               "choices": [
                 { "value": 0, "text": "Not at all" },
@@ -90,7 +90,7 @@
             {
               "type": "radiogroup",
               "name": "elaboration",
-              "title": "In general, how much would you say you've thought about this issue?",
+              "title": "In general, how much would you say you've thought about this topic?",
               "isRequired": true,
               "choices": [
                 { "value": 0, "text": "Not at all" },
