@@ -1,6 +1,6 @@
 {
   "name": "@watts-lab/surveys",
-  "version": "1.12.0",
+  "version": "1.12.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -8,7 +8,6 @@
     "prebuild": "node computeSha.js && node builder.js",
     "build": "npx rollup --config",
     "test": "npx cypress open"
-
   },
   "repository": {
     "type": "git",
@@ -39,7 +38,7 @@
     "@rollup/plugin-dynamic-import-vars": "^1.4.4",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^14.1.0",
-    "cypress": "^11.2.0",
+    "cypress": "^13.6.3",
     "cypress-localstorage-commands": "^2.2.1",
     "cypress-rollup-preprocessor": "^1.2.0",
     "glob": "^8.1.0",
