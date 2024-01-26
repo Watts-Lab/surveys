@@ -1,6 +1,6 @@
 import "survey-react/modern.min.css";
 import * as SurveyJS from "survey-react";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import packageJson from "../package.json";
 import { labeledRange } from "./customQuestionTypes/labeledRange";
 
@@ -9,67 +9,91 @@ SurveyJS.StylesManager.applyTheme("modern");
 
 import "./customQuestionTypes/labeledRange.css";
 
-export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
-  // console.log("sha", sha);
+// Timespent doesn't track properly across rerenders, so track it manually
 
-  function Survey({ onComplete, storageName }) {
+export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
+  function BuiltSurvey({ onComplete, storageName }) {
+    const [submitted, setSubmitted] = useState(false);
+    const timerStartedAt = useRef(Date.now());
+
     const surveyModel = new SurveyJS.Model(surveyJson);
 
-    useEffect(() => {
-      surveyModel.startTimer();
-    }, []);
+    const saveState = useCallback(
+      (survey) => {
+        // make sure we have most recent version of previous timeSpent
+        var prevData = window.localStorage.getItem(storageName) || null;
+        var data = prevData ? JSON.parse(prevData) : null;
+        const prevTimeSpent = data?.timeSpent || 0;
+        const newTimeSpent = Date.now() - timerStartedAt.current;
+        timerStartedAt.current = Date.now(); // reset timer
 
-    function saveState(survey) {
-      var res = { currentPageNo: survey.currentPageNo, data: survey.data };
-      //console.log("Saving state to localStorage", res);
-      window.localStorage.setItem(storageName, JSON.stringify(res));
-    }
+        var res = {
+          currentPageNo: survey.currentPageNo,
+          data: survey.data,
+          timeSpent: prevTimeSpent + newTimeSpent,
+        };
 
-    function loadState(survey) {
-      var storageSt = window.localStorage.getItem(storageName) || "";
-      var res = {};
-      if (storageSt) res = JSON.parse(storageSt);
-      if (res.currentPageNo) survey.currentPageNo = res.currentPageNo;
-      if (res.data) {
-        survey.data = res.data;
-        //console.log("Loading state from localStorage", res);
-      }
-    }
+        window.localStorage.setItem(storageName, JSON.stringify(res));
+      },
+      [storageName]
+    );
 
-    function clearStorage() {
+    const clearStorage = useCallback(() => {
       window.localStorage.removeItem(storageName);
-    }
+    }, [storageName]);
 
-    const scoreResponses = (sender) => {
-      const { data: responses } = sender;
-      sender.stopTimer();
-      const result = scoreFunc(responses);
-      const record = {
-        surveySource: packageJson["name"],
-        version: packageJson["version"],
-        surveySha: sha.survey,
-        scoreSha: sha.score,
-        surveyName,
-        responses,
-        result,
-        secondsElapsed: sender.timeSpent,
+    const scoreResponses = useCallback(
+      (sender) => {
+        const { data: responses } = sender;
+
+        var prevData = window.localStorage.getItem(storageName) || null;
+        var data = prevData ? JSON.parse(prevData) : null;
+        const prevTimeSpent = data?.timeSpent || 0;
+        const newTimeSpent = Date.now() - timerStartedAt.current;
+
+        const result = scoreFunc(responses);
+        const record = {
+          surveySource: packageJson["name"],
+          version: packageJson["version"],
+          surveySha: sha.survey,
+          scoreSha: sha.score,
+          surveyName,
+          responses,
+          result,
+          secondsElapsed: (prevTimeSpent + newTimeSpent) / 1000,
+        };
+        clearStorage();
+        setSubmitted(true);
+        onComplete(record);
+      },
+      [clearStorage, onComplete, scoreFunc, sha.score, sha.survey, surveyName]
+    );
+
+    useEffect(() => {
+      console.log("loading survey");
+
+      surveyModel.onComplete.add(scoreResponses);
+      surveyModel.onValueChanged.add(saveState);
+      surveyModel.onCurrentPageChanged.add(saveState);
+
+      return () => {
+        if (submitted) {
+          clearStorage();
+        } else {
+          saveState(surveyModel);
+        }
       };
-      // console.log(record);
-      onComplete(record);
-      clearStorage();
-    };
+    }, [saveState, scoreResponses, clearStorage]);
 
-    surveyModel.onComplete.add(scoreResponses);
-    surveyModel.onValueChanged.add(function (survey, options) {
-      saveState(survey);
-    });
-    surveyModel.onCurrentPageChanged.add(function (survey, options) {
-      saveState(survey);
-    });
-    loadState(surveyModel);
+    var prevData = window.localStorage.getItem(storageName) || null;
+    if (prevData) {
+      var data = JSON.parse(prevData);
+      surveyModel.currentPageNo = data.currentPageNo;
+      surveyModel.data = data.data;
+    }
 
     return <SurveyJS.Survey model={surveyModel} />;
   }
 
-  return Survey;
+  return BuiltSurvey;
 }
