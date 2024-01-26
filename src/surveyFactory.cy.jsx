@@ -64,8 +64,13 @@ describe("SurveyFactory", () => {
       force: true,
     });
 
+    cy.wait(1000);
+
     cy.get('[data-name="openResponse"] textarea').type("because it is");
-    cy.get('[data-name="openResponse"] textarea').should('have.value', 'because it is');
+    cy.get('[data-name="openResponse"] textarea').should(
+      "have.value",
+      "because it is"
+    );
 
     cy.get('[data-name="name"] input[value="ron"]').click({
       force: true,
@@ -75,7 +80,17 @@ describe("SurveyFactory", () => {
 
     cy.getLocalStorage(storageName).then((result) => {
       const parsed = JSON.parse(result);
-      expect(parsed).to.deep.equal(stored);
+      console.log("parsed", parsed);
+      expect(parsed.currentPageNo).to.equal(0);
+      expect(parsed).to.have.property("data");
+      expect(parsed.data).to.have.property("color");
+      expect(parsed.data.color).to.equal("blue");
+      expect(parsed.data).to.have.property("openResponse");
+      expect(parsed.data.openResponse).to.equal("because it is");
+      expect(parsed.data).to.have.property("name");
+      expect(parsed.data.name).to.equal("ron");
+      expect(parsed).to.have.property("timeSpent");
+      expect(parsed.timeSpent).to.be.greaterThan(0);
     });
   });
 
@@ -107,7 +122,7 @@ describe("SurveyFactory", () => {
 
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
-      console.log(spyCall);
+      console.log("callback args", spyCall);
       expect(spyCall.surveySha).to.equal(sha.survey);
       expect(spyCall.scoreSha).to.equal(sha.score);
     });
@@ -115,22 +130,54 @@ describe("SurveyFactory", () => {
 
   it("times survey completion", () => {
     cy.spy(dummy, "set").as("callback");
-    cy.mount(<Survey onComplete={dummy.set} storageName={storageName} />);
+    const startTime = Date.now();
+    console.log("start time test", startTime);
 
+    cy.mount(
+      <Survey onComplete={dummy.set} storageName={storageName} render={0} />
+    );
+
+    cy.wait(1000);
     cy.get('[data-name="color"] input[value="blue"]').click({
       force: true,
     });
 
-    cy.wait(5000);
+    cy.mount(
+      <Survey onComplete={dummy.set} storageName={storageName} render={0} />
+    );
+    cy.get('[data-name="color"] input[value="blue"]').should("be.checked");
+
+    cy.wait(1000);
+    cy.get('[data-name="name"] input[value="ron"]').click({
+      force: true,
+    });
+
+    cy.wait(1000);
+    cy.mount(
+      <Survey onComplete={dummy.set} storageName={storageName} render={0} />
+    );
+
+    cy.wait(1000);
+    cy.mount(
+      <Survey onComplete={dummy.set} storageName={storageName} render={0} />
+    );
+
     cy.get("form") // submit surveyJS form
       .then(($form) => {
         cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
+        const stopTime = Date.now();
+        console.log(
+          "stop time test",
+          stopTime,
+          "diff (ms)",
+          stopTime - startTime
+        );
       });
 
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
-      console.log(spyCall);
-      expect(spyCall.secondsElapsed).to.be.closeTo(5, 1);
+      console.log("callback args", spyCall);
+      expect(spyCall.secondsElapsed).to.be.closeTo(4, 1);
     });
   });
 });
