@@ -19,6 +19,11 @@ import awarenessMonitoringGrowthSha from "../surveys/awarenessMonitoringGrowth/s
 import { default as awarenessMonitoringGrowthScoreFunc } from "../surveys/awarenessMonitoringGrowth/awarenessMonitoringGrowth.score.js";
 export const AwarenessMonitoringGrowth = SurveyFactory("awarenessMonitoringGrowth", awarenessMonitoringGrowthJson, awarenessMonitoringGrowthScoreFunc, awarenessMonitoringGrowthSha);
 
+import awarenessOfArgumentsYNJson from "../surveys/awarenessOfArgumentsYN/awarenessOfArgumentsYN.json";
+import awarenessOfArgumentsYNSha from "../surveys/awarenessOfArgumentsYN/sha.json";
+import { default as awarenessOfArgumentsYNScoreFunc } from "../surveys/awarenessOfArgumentsYN/awarenessOfArgumentsYN.score.js";
+export const AwarenessOfArgumentsYN = SurveyFactory("awarenessOfArgumentsYN", awarenessOfArgumentsYNJson, awarenessOfArgumentsYNScoreFunc, awarenessOfArgumentsYNSha);
+
 import conflictAndViabilityJson from "../surveys/conflictAndViability/conflictAndViability.json";
 import conflictAndViabilitySha from "../surveys/conflictAndViability/sha.json";
 import { default as conflictAndViabilityScoreFunc } from "../surveys/conflictAndViability/conflictAndViability.score.js";
@@ -38,6 +43,11 @@ import CRTJson from "../surveys/CRT/CRT.json";
 import CRTSha from "../surveys/CRT/sha.json";
 import { default as CRTScoreFunc } from "../surveys/CRT/CRT.score.js";
 export const CRT = SurveyFactory("CRT", CRTJson, CRTScoreFunc, CRTSha);
+
+import culturalConflictNormsJson from "../surveys/culturalConflictNorms/culturalConflictNorms.json";
+import culturalConflictNormsSha from "../surveys/culturalConflictNorms/sha.json";
+import { default as culturalConflictNormsScoreFunc } from "../surveys/culturalConflictNorms/culturalConflictNorms.score.js";
+export const CulturalConflictNorms = SurveyFactory("culturalConflictNorms", culturalConflictNormsJson, culturalConflictNormsScoreFunc, culturalConflictNormsSha);
 
 import demographicsJson from "../surveys/demographics/demographics.json";
 import demographicsSha from "../surveys/demographics/sha.json";
