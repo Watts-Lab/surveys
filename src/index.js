@@ -99,6 +99,11 @@ import psychologicalSafetySha from "../surveys/psychologicalSafety/sha.json";
 import { default as psychologicalSafetyScoreFunc } from "../surveys/psychologicalSafety/psychologicalSafety.score.js";
 export const PsychologicalSafety = SurveyFactory("psychologicalSafety", psychologicalSafetyJson, psychologicalSafetyScoreFunc, psychologicalSafetySha);
 
+import receptiveness4Json from "../surveys/receptiveness4/receptiveness4.json";
+import receptiveness4Sha from "../surveys/receptiveness4/sha.json";
+import { default as receptiveness4ScoreFunc } from "../surveys/receptiveness4/receptiveness4.score.js";
+export const Receptiveness4 = SurveyFactory("receptiveness4", receptiveness4Json, receptiveness4ScoreFunc, receptiveness4Sha);
+
 import relatednessNeedSatisfactionJson from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.json";
 import relatednessNeedSatisfactionSha from "../surveys/relatednessNeedSatisfaction/sha.json";
 import { default as relatednessNeedSatisfactionScoreFunc } from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.score.js";
