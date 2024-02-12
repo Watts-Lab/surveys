@@ -102,6 +102,7 @@
             }
           ],
           "questionsOrder": "random",
+          "state": "expanded",
           "showQuestionNumbers": "off"
         }
       ],
@@ -110,6 +111,7 @@
     }
   ],
   "showPageTitles": false,
+  "questionsOnPageMode": "singlePage",
   "widthMode": "responsive",
   "showCompletedPage": false
 }
