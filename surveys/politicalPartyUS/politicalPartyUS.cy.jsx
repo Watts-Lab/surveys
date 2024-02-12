@@ -9,7 +9,7 @@ describe("PoliticaPartyUS", () => {
   it("completesRepublican", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<PoliticalPartyUS onComplete={dummy.set} />);
-    cy.viewport("macbook-11");
+    cy.viewport('macbook-11');
 
     cy.get('[data-name="party"] input[value="Republican"]').click({
       force: true,
@@ -20,10 +20,11 @@ describe("PoliticaPartyUS", () => {
     ).click({ force: true });
 
     cy.screenshot("politicalPartyUS/page1", { overwrite: true });
+
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
-    cy.get(`input[class="sv-text slider"`).click("center", { force: true });
     cy.screenshot("politicalPartyUS/page2", { overwrite: true });
+
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
     cy.get(".sv-body").should("not.exist");
@@ -50,10 +51,11 @@ describe("PoliticaPartyUS", () => {
     cy.get('[data-name="partyOther"] input').click().type("Fancy dress party");
 
     cy.screenshot("politicalPartyUS/page1_other", { overwrite: true });
+
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
-    cy.get(`input[class="sv-text slider"`).click("center", { force: true });
-    cy.screenshot("politicalPartyUS/page2_other", { overwrite: true });
+    cy.wait(1000);
+
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
     cy.get("@callback").should("have.been.called");

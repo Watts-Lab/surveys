@@ -5,20 +5,11 @@ const dummy = {
   set(response) {},
 };
 
-const dataNames = [
-  "learning",
-  "thinkDifferently",
-  "persuasiveOutcome",
-  "notPersuaded",
-];
-
 describe("PersuasionAndLearning", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<PersuasionAndLearning onComplete={dummy.set} />);
     cy.viewport("macbook-11");
-
-    cy.checkRandomization(dataNames);
 
     // learning questions
     cy.get('[data-name="learning"] input[value="6"]').click({

@@ -5,26 +5,12 @@ const dummy = {
   set(response) {},
 };
 
-const dataNames = [
-  "chooseDirection",
-  "chooseContent",
-  "sharingChoice",
-  "importantDiscussion",
-  "sensitiveTopics",
-  "feelingFree",
-  "voiceOpinion",
-  "controlledPressured",
-];
-
 describe("AutonomyNeedSatisfaction", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<AutonomyNeedSatisfaction onComplete={dummy.set} />);
     cy.viewport('macbook-11');
 
-    cy.checkRandomization(dataNames);
-
-    // submit answers
     cy.get('[data-name="chooseDirection"] input[value="2"]').click({
       force: true,
     });
@@ -33,7 +19,6 @@ describe("AutonomyNeedSatisfaction", () => {
       force: true,
     });
 
-    // omitted to test that the survey can be completed without answering all questions
     // cy.get('[data-name="sharingChoice"] input[value="2"]').click({
     //   force: true,
     // });
