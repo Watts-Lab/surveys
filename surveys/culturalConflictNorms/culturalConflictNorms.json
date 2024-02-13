@@ -9,7 +9,7 @@
           "type": "html",
           "name": "Prompt",
           "hideNumber": true,
-          "html": "<h1>We're interested in learning how your cultural background has shaped your approach to handling conflict.</h1><p> Scale key: (1) Strongly Disagree, (2) Disagree, (3) Slightly Disagree, (4) Neutral, (5) Slightly Agree, (6) Agree, (7) Strongly Agree</p>"
+          "html": "<h1>Consider the group of people you have discussions with most frequently. This could be your family, coworkers, classmates, or close friends. In this group, would you say:</h1>"
         },
         {
           "type": "panel",
@@ -18,7 +18,7 @@
             {
               "type": "rating",
               "name": "openConflict",
-              "title": "In my culture, conflict is usually dealt with openly.",
+              "title": "Conflict is usually dealt with openly.",
               "rateMax": 7,
               "minRateDescription": "Strongly Disagree",
               "maxRateDescription": "Strongly Agree",
@@ -28,7 +28,7 @@
             {
               "type": "rating",
               "name": "avoidConflict",
-              "title": "In my culture, people try to avoid conflict at all costs.",
+              "title": "People try to avoid conflict at all costs.",
               "rateMax": 7,
               "minRateDescription": "Strongly Disagree",
               "maxRateDescription": "Strongly Agree",
@@ -38,7 +38,7 @@
             {
               "type": "rating",
               "name": "resolveImmediately",
-              "title": "If a conflict arises in my culture, the people involved initiate steps to resolve the conflict immediately.",
+              "title": "If a conflict arises, the people involved initiate steps to resolve the conflict immediately.",
               "rateMax": 7,
               "minRateDescription": "Strongly Disagree",
               "maxRateDescription": "Strongly Agree",
@@ -49,7 +49,7 @@
             {
               "type": "rating",
               "name": "conflictIsDetrimental",
-              "title": "Conflict is detrimental to getting work done in my culture.",
+              "title": "Conflict is detrimental to getting work done.",
               "rateMax": 7,
               "minRateDescription": "Strongly Disagree",
               "maxRateDescription": "Strongly Agree",
@@ -59,7 +59,7 @@
             {
               "type": "rating",
               "name": "emotionAccepted",
-              "title": "Emotional displays (i.e. crying, yelling) are accepted by my culture.",
+              "title": "Emotional displays (i.e. crying, yelling) are accepted.",
               "rateMax": 7,
               "minRateDescription": "Strongly Disagree",
               "maxRateDescription": "Strongly Agree",
@@ -69,7 +69,7 @@
             {
               "type": "rating",
               "name": "disagreementsEncouraged",
-              "title": "In my culture, disagreements are encouraged.",
+              "title": "Disagreements are encouraged.",
               "rateMax": 7,
               "minRateDescription": "Strongly Disagree",
               "maxRateDescription": "Strongly Agree",
@@ -79,7 +79,7 @@
             {
               "type": "rating",
               "name": "differencesAvoided",
-              "title": "Differences of opinion are avoided in my culture.",
+              "title": "Differences of opinion are avoided.",
               "rateMax": 7,
               "minRateDescription": "Strongly Disagree",
               "maxRateDescription": "Strongly Agree",
