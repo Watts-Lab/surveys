@@ -59,29 +59,23 @@ export function labeledRange(SurveyJS) {
     },
 
     afterRender: (question, el) => {
-      // console.log("question", question);
+      console.log("el", el);
+      const slider = el.getElementsByTagName("input")[0];
       el.classList.add("sliderContainer");
       const dl = document.createElement("datalist");
       dl.id = `${question.name}_slider_vals`;
+      dl.style.justifyContent = 'normal';
       question.valueLabels.forEach((label) => {
         var option = document.createElement("div");
         option.classList.add("sliderLabel");
-        // if (label.text) {
-        //   option.innerHTML = `
-        //     <div class="each_label">
-        //         <div class="tick"></div>
-        //         <div class="label_value">${label.text}</div>
-        //     </div>
-        //   `;
-        //   option.setAttribute("value", label.value);
-        //   dl.appendChild(option);
-        // }
-        // console.log(
-        //   `label ${label.text}, label isempty ${label.locTextValue.isEmpty}`,
-        //   label
-        // );
+        var leftPosition = ((label.value - slider.min) / (slider.max - slider.min) * 100);
+        option.style.left = `${leftPosition}%`;
+        console.log("value", label.value);
+        console.log("left", leftPosition);
+        console.log("min", slider.min);
+        console.log("max", slider.max);
         option.innerHTML = `
-          <div class="each_label">
+        <div class="each_label">
               <div class="tick"></div>
               <div class="label_value">${
                 label.locTextValue.isEmpty ? " " : label.text
@@ -94,7 +88,8 @@ export function labeledRange(SurveyJS) {
       dl.classList.add("sliderLabels");
       el.appendChild(dl);
 
-      const slider = el.getElementsByTagName("input")[0];
+
+
       slider.setAttribute("list", dl.id);
       slider.classList.add("slider");
 
