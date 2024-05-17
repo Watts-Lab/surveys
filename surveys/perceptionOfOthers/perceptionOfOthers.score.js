@@ -20,51 +20,60 @@ function reverseCode(value, minVal, maxVal) {
 
 export default function scoreFunc(responses) {
   const minVal = 1;
-  const maxVal = 7;
+  const maxVal = 5;
 
   const rawLikingValues = [responses["liking"]].map(parseFloat);
-
-  const rawReceptivenessValues = [
-    reverseCode(responses["dismissiveOther"], minVal, maxVal),
-    responses["curious"],
-    responses["respectfulDisagreement"],
+  const rawSelfPerspectiveTakingValues = [
+    responses["selfPerspectiveTaking"],
   ].map(parseFloat);
-
-  const rawAuthenticityValues = [responses["authenticity"]].map(parseFloat);
-
-  const rawAmbiguityValues = [responses["ambiguity"]].map(parseFloat);
-
-  const rawDirectnessValues = [responses["directness"]].map(parseFloat);
-
-  const rawUnderminingValues = [responses["undermining"]].map(parseFloat);
+  const rawCommonValues = [responses["common"]].map(parseFloat);
+  const rawPoliteValues = [responses["polite"]].map(parseFloat);
+  const rawPartnerListeningValues = [responses["partnerListening"]].map(
+    parseFloat
+  );
+  const rawPartnerPerspectiveTakingValues = [
+    responses["partnerPerspectiveTaking"],
+  ].map(parseFloat);
+  const rawPartnerTalkingValues = [responses["partnerTalking"]].map(parseFloat);
+  const rawPartnerReceptivenessValues = [
+    reverseCode(responses["defensive"], minVal, maxVal),
+  ].map(parseFloat);
 
   const result = {
     rawLiking: mean(rawLikingValues).toFixed(3),
     normLiking: mean(normalize(rawLikingValues, minVal, maxVal)).toFixed(3),
 
-    rawReceptiveness: mean(rawReceptivenessValues).toFixed(3),
-    normReceptiveness: mean(
-      normalize(rawReceptivenessValues, minVal, maxVal)
+    rawSelfPerspectiveTaking: mean(rawSelfPerspectiveTakingValues).toFixed(3),
+    normSelfPerspectiveTaking: mean(
+      normalize(rawSelfPerspectiveTakingValues, minVal, maxVal)
     ).toFixed(3),
 
-    rawAuthenticity: mean(rawAuthenticityValues).toFixed(3),
-    normAuthenticity: mean(
-      normalize(rawAuthenticityValues, minVal, maxVal)
+    rawCommon: mean(rawCommonValues).toFixed(3),
+    normCommon: mean(normalize(rawCommonValues, minVal, maxVal)).toFixed(3),
+
+    rawPolite: mean(rawPoliteValues).toFixed(3),
+    normPolite: mean(normalize(rawPoliteValues, minVal, maxVal)).toFixed(3),
+
+    rawPartnerListening: mean(rawPartnerListeningValues).toFixed(3),
+    normPartnerListening: mean(
+      normalize(rawPartnerListeningValues, minVal, maxVal)
     ).toFixed(3),
 
-    rawAmbiguity: mean(rawAmbiguityValues).toFixed(3),
-    normAmbiguity: mean(normalize(rawAmbiguityValues, minVal, maxVal)).toFixed(
-      3
-    ),
-
-    rawDirectness: mean(rawDirectnessValues).toFixed(3),
-    normDirectness: mean(
-      normalize(rawDirectnessValues, minVal, maxVal)
+    rawPartnerPerspectiveTaking: mean(
+      rawPartnerPerspectiveTakingValues
+    ).toFixed(3),
+    normPartnerPerspectiveTaking: mean(
+      normalize(rawPartnerPerspectiveTakingValues, minVal, maxVal)
     ).toFixed(3),
 
-    rawUndermining: mean(rawUnderminingValues).toFixed(3),
-    normUndermining: mean(
-      normalize(rawUnderminingValues, minVal, maxVal)
+    rawPartnerTalking: mean(rawPartnerTalkingValues).toFixed(3),
+    normPartnerTalking: mean(
+      normalize(rawPartnerTalkingValues, minVal, maxVal)
+    ).toFixed(3),
+
+    rawPartnerReceptiveness: mean(rawPartnerReceptivenessValues).toFixed(3),
+    normPartnerReceptiveness: mean(
+      normalize(rawPartnerReceptivenessValues, minVal, maxVal)
     ).toFixed(3),
   };
   return result;
