@@ -1,0 +1,265 @@
+{
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "discussionEnjoy",
+          "title": "How much did you enjoy the discussion?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Not at all"
+            },
+            {
+              "value": "2",
+              "text": "Not very much"
+            },
+            {
+              "value": "3",
+              "text": "Some"
+            },
+            {
+              "value": "4",
+              "text": "A fair amount"
+            },
+            {
+              "value": "5",
+              "text": "A great deal"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "selfLearned",
+          "title": "How much did you learn during the discussion?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "6",
+              "text": "Nothing at all"
+            },
+            {
+              "value": "5",
+              "text": "Very little"
+            },
+            {
+              "value": "2",
+              "text": "Some"
+            },
+            {
+              "value": "4",
+              "text": "A fair amount"
+            },
+            {
+              "value": "3",
+              "text": "A great deal"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "discussionDepth",
+          "title": "How thoroughly did your discussion explore different ideas and perspectives?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Not at all"
+            },
+            {
+              "value": "3",
+              "text": "Only at the surface level"
+            },
+            {
+              "value": "4",
+              "text": "Moderately"
+            },
+            {
+              "value": "5",
+              "text": "Quite Thoroughly"
+            },
+            {
+              "value": "6",
+              "text": "Deeply and extensively"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "discussionDisagreement",
+          "title": "How much did participants disagree on the discussion topic?",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Not at all"
+            },
+            {
+              "value": "2",
+              "text": "Not very much"
+            },
+            {
+              "value": "3",
+              "text": "Some"
+            },
+            {
+              "value": "4",
+              "text": "A fair amount"
+            },
+            {
+              "value": "5",
+              "text": "A great deal"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "discussionTension",
+          "title": "How would you describe the emotional atmosphere of the discussion?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1S",
+              "text": "Very tense and uncomfortable"
+            },
+            {
+              "value": "2",
+              "text": "Moderately tense"
+            },
+            {
+              "value": "3",
+              "text": "Somewhat relaxed, with multiple moments of tension"
+            },
+            {
+              "value": "4",
+              "text": "Mostly relaxed, with rare moments of tension"
+            },
+            {
+              "value": "5",
+              "text": "Completely relaxed and calm"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "selfSpeakUp",
+          "title": "Did you get a chance to speak when you had something to say?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Never"
+            },
+            {
+              "value": "2",
+              "text": "Rarely"
+            },
+            {
+              "value": "3",
+              "text": "Sometimes"
+            },
+            {
+              "value": "4",
+              "text": "Often"
+            },
+            {
+              "value": "5",
+              "text": "Always"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "selfVoice",
+          "title": "Did you feel comfortable speaking up and sharing your opinions?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very uncomfortable"
+            },
+            {
+              "value": "2",
+              "text": "Somewhat uncomfortable"
+            },
+            {
+              "value": "5",
+              "text": "Neutral"
+            },
+            {
+              "value": "3",
+              "text": "Fairly comfortable"
+            },
+            {
+              "value": "4",
+              "text": "Very comfortable"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "selfAnxious",
+          "title": "How often did you feel anxious during the discussion?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Not at all"
+            },
+            {
+              "value": "2",
+              "text": "Not very much"
+            },
+            {
+              "value": "3",
+              "text": "Some"
+            },
+            {
+              "value": "4",
+              "text": "A fair amount"
+            },
+            {
+              "value": "5",
+              "text": "A great deal"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "selfInsight",
+          "title": "How much did this discussion help you understand your own thoughts more deeply?",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Not at all"
+            },
+            {
+              "value": "2",
+              "text": "Not very much"
+            },
+            {
+              "value": "3",
+              "text": "Some"
+            },
+            {
+              "value": "4",
+              "text": "A fair amount"
+            },
+            {
+              "value": "5",
+              "text": "A great deal"
+            }
+          ]
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "showCompletedPage": false,
+  "widthMode": "responsive"
+}
