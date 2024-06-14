@@ -133,3 +133,8 @@ import TIPIJson from "../surveys/TIPI/TIPI.json";
 import TIPISha from "../surveys/TIPI/sha.json";
 import { default as TIPIScoreFunc } from "../surveys/TIPI/TIPI.score.js";
 export const TIPI = SurveyFactory("TIPI", TIPIJson, TIPIScoreFunc, TIPISha);
+
+import traitRatingsJson from "../surveys/traitRatings/traitRatings.json";
+import traitRatingsSha from "../surveys/traitRatings/sha.json";
+import { default as traitRatingsScoreFunc } from "../surveys/traitRatings/traitRatings.score.js";
+export const TraitRatings = SurveyFactory("traitRatings", traitRatingsJson, traitRatingsScoreFunc, traitRatingsSha);

@@ -26,6 +26,8 @@ This allows the factors to be correlated, and is probably what we want to pay at
 
 The two methods are produce the same result for 3 of the 4 factors, and the difference in the remaining factor is in both cases less than 0.4%. As a result, we can choose to use the four factors from the oblique rotation analysis.
 
+![screenshot](screenshot.png)
+
 ## Double-checking this choice
 
 We can double-check that this result is reasonable by comparing the correlation of these four items against the correlation with every other four-item question set. Using the combined dataset for all studies reported in the paper (rather than just the study used to design the scale) gives 16698 rows. The best performing four-item question set gives a correlation of 0.902, while the correlation of the most loaded factors is 0.890, about a 1% difference. As such, we safely defer to the paper's listed highest loaded factors.
