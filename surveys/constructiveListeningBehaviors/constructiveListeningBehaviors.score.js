@@ -31,10 +31,13 @@ export default function scoreFunc(responses) {
 
   const normedValues = normalize(completedValues, minVal, maxVal);
 
+  const order = Object.keys(responses);
+
   const result = {
     rawScore: mean(completedValues).toFixed(3),
     normScore: mean(normedValues).toFixed(3),
     completion: completedValues.length / rawValues.length,
+    order: order,
   };
   return result;
 }
