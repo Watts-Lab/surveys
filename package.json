@@ -1,6 +1,6 @@
 {
   "name": "@watts-lab/surveys",
-  "version": "1.12.2",
+  "version": "1.14.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",

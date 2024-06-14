@@ -1,0 +1,101 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<h1>Consider the group of people you have discussions with most frequently. This could be your family, coworkers, classmates, or close friends. In this group, would you say:</h1>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "openConflict",
+              "title": "Conflict is usually dealt with openly.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "avoidConflict",
+              "title": "People try to avoid conflict at all costs.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "resolveImmediately",
+              "title": "If a conflict arises, the people involved initiate steps to resolve the conflict immediately.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+
+            {
+              "type": "rating",
+              "name": "conflictIsDetrimental",
+              "title": "Conflict is detrimental to getting work done.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "emotionAccepted",
+              "title": "Emotional displays (i.e. crying, yelling) are accepted.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "disagreementsEncouraged",
+              "title": "Disagreements are encouraged.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            },
+            {
+              "type": "rating",
+              "name": "differencesAvoided",
+              "title": "Differences of opinion are avoided.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly Disagree",
+              "maxRateDescription": "Strongly Agree",
+              "displayMode": "buttons",
+              "isRequired": true
+            }
+          ],
+          "questionsOrder": "random",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "widthMode": "responsive",
+  "showCompletedPage": false
+}

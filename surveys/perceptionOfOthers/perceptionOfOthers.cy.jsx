@@ -23,31 +23,31 @@ describe("PerceptionOfOthers", () => {
     cy.viewport("macbook-11");
     cy.checkRandomization(dataNames);
 
-    cy.get('[data-name="liking"] input[value="6"]').click({
+    cy.get('[data-name="liking"] input[value="1"]').click({
       force: true,
     });
 
-    cy.get('[data-name="dismissiveOther"] input[value="2"]').click({
+    cy.get('[data-name="selfPerspectiveTaking"] input[value="2"]').click({
       force: true,
     });
 
-    cy.get('[data-name="curious"] input[value="3"]').click({
+    cy.get('[data-name="common"] input[value="3"]').click({
       force: true,
     });
 
-    cy.get('[data-name="respectfulDisagreement"] input[value="4"]').click({
+    cy.get('[data-name="polite"] input[value="4"]').click({
       force: true,
     });
 
-    cy.get('[data-name="authenticity"] input[value="1"]').click({
+    cy.get('[data-name="partnerListening"] input[value="5"]').click({
       force: true,
     });
 
-    cy.get('[data-name="ambiguity"] input[value="2"]').click({
+    cy.get('[data-name="partnerPerspectiveTaking"] input[value="4"]').click({
       force: true,
     });
 
-    cy.get('[data-name="directness"] input[value="7"]').click({
+    cy.get('[data-name="partnerTalking"] input[value="3"]').click({
       force: true,
     });
 
@@ -59,7 +59,7 @@ describe("PerceptionOfOthers", () => {
     // check mandatory is enforced
     cy.contains("Response required");
 
-    cy.get('[data-name="undermining"] input[value="2"]').click({
+    cy.get('[data-name="defensive"] input[value="2"]').click({
       force: true,
     });
 
@@ -76,14 +76,14 @@ describe("PerceptionOfOthers", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["normLiking"]).to.eq((0.83333).toFixed(3));
-      expect(spyCall["result"]["normReceptiveness"]).to.eq(
-        (0.555555).toFixed(3)
+      expect(spyCall["result"]["normLiking"]).to.eq((0).toFixed(3));
+      expect(spyCall["result"]["normPartnerPerspectiveTaking"]).to.eq(
+        (0.75).toFixed(3)
       );
-      expect(spyCall["result"]["normAuthenticity"]).to.eq((0).toFixed(3));
-      expect(spyCall["result"]["normAmbiguity"]).to.eq((0.166666).toFixed(3));
-      expect(spyCall["result"]["normDirectness"]).to.eq((1).toFixed(3));
-      expect(spyCall["result"]["normUndermining"]).to.eq((0.166667).toFixed(3));
+      expect(spyCall["result"]["normPolite"]).to.eq((0.75).toFixed(3));
+      expect(spyCall["result"]["normPartnerReceptiveness"]).to.eq(
+        (0.75).toFixed(3)
+      );
     });
   });
 });

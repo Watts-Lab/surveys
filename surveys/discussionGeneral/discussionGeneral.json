@@ -6,8 +6,8 @@
       "elements": [
         {
           "type": "radiogroup",
-          "name": "liking",
-          "title": "How much did you like them?",
+          "name": "discussionEnjoy",
+          "title": "How much did you enjoy the discussion?",
           "isRequired": true,
           "choices": [
             {
@@ -34,45 +34,72 @@
         },
         {
           "type": "radiogroup",
-          "name": "selfPerspectiveTaking",
-          "title": "How easy was it for you to see things from their point of view?",
+          "name": "selfLearned",
+          "title": "How much did you learn during the discussion?",
           "isRequired": true,
           "choices": [
             {
-              "value": "1",
-              "text": "Very difficult"
-            },
-            {
-              "value": "2",
-              "text": "Somewhat difficult"
-            },
-            {
-              "value": "3",
-              "text": "Neither easy nor difficult"
-            },
-            {
-              "value": "4",
-              "text": "Fairly easy"
+              "value": "6",
+              "text": "Nothing at all"
             },
             {
               "value": "5",
-              "text": "Very easy"
+              "text": "Very little"
+            },
+            {
+              "value": "2",
+              "text": "Some"
+            },
+            {
+              "value": "4",
+              "text": "A fair amount"
+            },
+            {
+              "value": "3",
+              "text": "A great deal"
             }
           ]
         },
         {
           "type": "radiogroup",
-          "name": "common",
-          "title": "How much do you think you have in common with them?",
+          "name": "discussionDepth",
+          "title": "How thoroughly did your discussion explore different ideas and perspectives?",
           "isRequired": true,
           "choices": [
             {
               "value": "1",
-              "text": "Nothing at all"
+              "text": "Not at all"
+            },
+            {
+              "value": "3",
+              "text": "Only at the surface level"
+            },
+            {
+              "value": "4",
+              "text": "Moderately"
+            },
+            {
+              "value": "5",
+              "text": "Quite Thoroughly"
+            },
+            {
+              "value": "6",
+              "text": "Deeply and extensively"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "discussionDisagreement",
+          "title": "How much did participants disagree on the discussion topic?",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Not at all"
             },
             {
               "value": "2",
-              "text": "Very little"
+              "text": "Not very much"
             },
             {
               "value": "3",
@@ -80,7 +107,7 @@
             },
             {
               "value": "4",
-              "text": "Quite a bit"
+              "text": "A fair amount"
             },
             {
               "value": "5",
@@ -90,64 +117,92 @@
         },
         {
           "type": "radiogroup",
-          "name": "polite",
-          "title": "How polite were they during the discussion?",
+          "name": "discussionTension",
+          "title": "How would you describe the emotional atmosphere of the discussion?",
           "isRequired": true,
           "choices": [
             {
-              "value": "1",
-              "text": "Very impolite"
+              "value": "1S",
+              "text": "Very tense and uncomfortable"
             },
             {
               "value": "2",
-              "text": "Somewhat impolite"
+              "text": "Moderately tense"
             },
             {
               "value": "3",
-              "text": "Neither polite nor impolite"
+              "text": "Somewhat relaxed, with multiple moments of tension"
             },
             {
               "value": "4",
-              "text": "Fairly polite"
+              "text": "Mostly relaxed, with rare moments of tension"
             },
             {
               "value": "5",
-              "text": "Very polite"
+              "text": "Completely relaxed and calm"
             }
           ]
         },
         {
           "type": "radiogroup",
-          "name": "partnerListening",
-          "title": "How well did they listen to you?",
+          "name": "selfSpeakUp",
+          "title": "Did you get a chance to speak when you had something to say?",
           "isRequired": true,
           "choices": [
             {
               "value": "1",
-              "text": "Very poorly"
+              "text": "Never"
             },
             {
               "value": "2",
-              "text": "Somewhat poorly"
+              "text": "Rarely"
             },
             {
               "value": "3",
-              "text": "Neither poorly nor well"
+              "text": "Sometimes"
             },
             {
               "value": "4",
-              "text": "Fairly well"
+              "text": "Often"
             },
             {
               "value": "5",
-              "text": "Very well"
+              "text": "Always"
             }
           ]
         },
         {
           "type": "radiogroup",
-          "name": "partnerPerspectiveTaking",
-          "title": "How well were they able to see things from your point of view?",
+          "name": "selfVoice",
+          "title": "Did you feel comfortable speaking up and sharing your opinions?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "1",
+              "text": "Very uncomfortable"
+            },
+            {
+              "value": "2",
+              "text": "Somewhat uncomfortable"
+            },
+            {
+              "value": "5",
+              "text": "Neutral"
+            },
+            {
+              "value": "3",
+              "text": "Fairly comfortable"
+            },
+            {
+              "value": "4",
+              "text": "Very comfortable"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "selfAnxious",
+          "title": "How often did you feel anxious during the discussion?",
           "isRequired": true,
           "choices": [
             {
@@ -156,55 +211,26 @@
             },
             {
               "value": "2",
-              "text": "Slightly"
+              "text": "Not very much"
             },
             {
               "value": "3",
-              "text": "Moderately"
+              "text": "Some"
             },
             {
               "value": "4",
-              "text": "Mostly"
+              "text": "A fair amount"
             },
             {
               "value": "5",
-              "text": "Perfectly"
+              "text": "A great deal"
             }
           ]
         },
         {
           "type": "radiogroup",
-          "name": "partnerTalking",
-          "title": "How much did they talk during the discussion?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "1",
-              "text": "Hardly at all"
-            },
-            {
-              "value": "2",
-              "text": "Not quite enough"
-            },
-            {
-              "value": "3",
-              "text": "About the right amount"
-            },
-            {
-              "value": "4",
-              "text": "A little too much"
-            },
-            {
-              "value": "5",
-              "text": "Far too much"
-            }
-          ]
-        },
-        {
-          "type": "radiogroup",
-          "name": "defensive",
-          "title": "Did they get defensive or resistant to views different from their own?",
-          "isRequired": true,
+          "name": "selfInsight",
+          "title": "How much did this discussion help you understand your own thoughts more deeply?",
           "choices": [
             {
               "value": "1",

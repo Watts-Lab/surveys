@@ -46,7 +46,8 @@ The original survey reported in the Sourcebook contains 38 listening behavior it
 > 6. Pays close attention to what I say
 > 7. Gives me time and space to talk
 > 8. Gives me his/her undivided attention
-> 9. Creates a positive atmosphere for me to talk 10) Allows me to express myself fully
+> 9. Creates a positive atmosphere for me to talk
+> 10. Allows me to express myself fully
 >
 > ### Destructive listening behaviors
 >
