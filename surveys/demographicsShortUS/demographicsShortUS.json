@@ -1,0 +1,160 @@
+{
+  "title": "Demographics",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "only",
+      "elements": [
+        {
+          "type": "text",
+          "name": "birth_year",
+          "title": "What year were you born?",
+          "valueName": "birth_year",
+          "isRequired": true,
+          "validators": [
+            {
+              "type": "numeric",
+              "minValue": 1900,
+              "maxValue": 2022
+            }
+          ],
+          "placeholder": "4-digit year (e.g. 1839)"
+        },
+        {
+          "type": "radiogroup",
+          "name": "gender",
+          "title": "What is your gender?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "female",
+              "text": "Female"
+            },
+            {
+              "value": "male",
+              "text": "Male"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "gender_other",
+          "visibleIf": "{gender} = 'other'",
+          "title": "Please enter your gender below:"
+        },
+
+        {
+          "type": "dropdown",
+          "name": "language_primary",
+          "title": "What language do you use most often?",
+          "description": "For example, the language you use at home.",
+          "isRequired": true,
+          "choices": [
+            "Arabic",
+            "Armenian",
+            "Cambodian",
+            "Chinese",
+            "Czech",
+            "Dutch",
+            "English",
+            "French",
+            "French Creole",
+            "German",
+            "Greek",
+            "Gujarathi",
+            "Hebrew",
+            "Hindi",
+            "Hungarian",
+            "Italian",
+            "Japanese",
+            "Korean",
+            "Navaho",
+            "Persian",
+            "Polish",
+            "Portuguese",
+            "Russian",
+            "Spanish",
+            "Tagalog",
+            "Thai",
+            "Ukrainian",
+            "Vietnamese",
+            "Yiddish",
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "language_primary_expansion",
+          "visibleIf": "{language_primary} = 'item1'",
+          "title": "Please enter your primary language below:"
+        },
+        {
+          "type": "radiogroup",
+          "name": "education_US",
+          "title": "What is the highest level of education you have completed?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "2",
+              "text": "Less than a high school diploma"
+            },
+            {
+              "value": "3",
+              "text": "High school diploma or GED"
+            },
+            {
+              "value": "4",
+              "text": "Some college, but no degree"
+            },
+            {
+              "value": "5",
+              "text": "Associate's degree (for example: AA, AS)"
+            },
+            {
+              "value": "6",
+              "text": "Bachelor's degree (for example: BA, BS)"
+            },
+            {
+              "value": "7",
+              "text": "Master's degree (for example: MA, MS, MEng, MBA)"
+            },
+            {
+              "value": "8",
+              "text": "Doctorate (for example: PhD, EdD)"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "race_US",
+          "title": "Please choose one or more races that you consider yourself to be.",
+          "isRequired": true,
+          "choices": [
+            "White",
+            "Black or African-American",
+            "American Indian or Alaska Native",
+            "Asian",
+            "Native Hawaiian or other Pacific Islander",
+            "Other"
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "latin_US",
+          "title": "Are you of Hispanic, Latino, or Spanish origin?",
+          "choices": ["Yes", "No"]
+        }
+      ]
+    }
+  ],
+  "showPrevButton": false,
+  "showQuestionNumbers": "off",
+  "showCompletedPage": false
+}
