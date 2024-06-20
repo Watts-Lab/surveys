@@ -22,14 +22,14 @@ describe("PartisanFeelingThermometerUS", () => {
       .then(() => {
         cy.contains("How would you rate Democrats");
         cy.get("input[type=range]").invoke("val", 75).click({ force: true });
-        cy.screenshot("partisanFeelingThermometerUS/screenshot_page1", {
+        cy.screenshot("lonelinessSingleItem/screenshot_page1", {
           overwrite: true,
         });
         cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
         cy.contains("How would you rate Republicans");
         cy.get("input[type=range]").invoke("val", 25).click({ force: true });
-        cy.screenshot("partisanFeelingThermometerUS/screenshot_page2", {
+        cy.screenshot("lonelinessSingleItem/screenshot_page2", {
           overwrite: true,
         });
         cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
