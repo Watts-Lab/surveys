@@ -8,6 +8,7 @@ const dummy = {
 describe("PartisanFeelingThermometerUS", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
+    cy.viewport("macbook-11");
     cy.mount(<PartisanFeelingThermometerUS onComplete={dummy.set} />);
     cy.viewport("macbook-11");
 

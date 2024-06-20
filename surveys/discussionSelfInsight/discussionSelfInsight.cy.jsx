@@ -5,11 +5,21 @@ const dummy = {
   set(response) {},
 };
 
+const dataNames = [
+  "understandSelf",
+  "thinkDeeply",
+  "newInsights",
+  "reflectOnAttitudes",
+  "thinkDifferently"
+];
+
 describe("DiscussionSelfInsight", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<DiscussionSelfInsight onComplete={dummy.set} />);
     cy.viewport('macbook-11');
+
+    cy.checkRandomization(dataNames);
 
     cy.get('[data-name="understandSelf"] input[value="4"]').click({
       force: true,

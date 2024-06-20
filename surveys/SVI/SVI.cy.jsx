@@ -5,11 +5,31 @@ const dummy = {
   set(response) {},
 };
 
+const dataNames = [
+  "Instrumental Outcome 1",
+  "Instrumental Outcome 2",
+  "Instrumental Outcome 3",
+  "Instrumental Outcome 4",
+  "Self 1",
+  "Self 2",
+  "Self 3",
+  "Self 4",
+  "Process 1",
+  "Process 2",
+  "Process 3",
+  "Process 4",
+  "Relationship 1",
+  "Relationship 2",
+  "Relationship 3",
+  "Relationship 4",
+];
+
 describe("SubjectiveValueInventory", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
     cy.mount(<SVI onComplete={dummy.set} />);
     cy.viewport("macbook-11");
+    cy.checkRandomization(dataNames);
 
     // Instrumental Outcome
     cy.get('[data-name="Instrumental Outcome 1"] input[value="5"]').click({
