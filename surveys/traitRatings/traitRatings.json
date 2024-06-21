@@ -1,0 +1,135 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Prompt",
+          "hideNumber": true,
+          "html": "<br/><h1> How well do each of the following traits describe them?</h1>"
+        },
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "patriotic",
+              "title": "Patriotic",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all well" },
+                { "value": 1, "text": "Not too well" },
+                { "value": 2, "text": "Moderately well" },
+                { "value": 3, "text": "Very well" },
+                { "value": 4, "text": "Extremely well" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "intelligent",
+              "title": "Intelligent",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all well" },
+                { "value": 1, "text": "Not too well" },
+                { "value": 2, "text": "Moderately well" },
+                { "value": 3, "text": "Very well" },
+                { "value": 4, "text": "Extremely well" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "honest",
+              "title": "Honest",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all well" },
+                { "value": 1, "text": "Not too well" },
+                { "value": 2, "text": "Moderately well" },
+                { "value": 3, "text": "Very well" },
+                { "value": 4, "text": "Extremely well" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "openMinded",
+              "title": "Open-minded",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all well" },
+                { "value": 1, "text": "Not too well" },
+                { "value": 2, "text": "Moderately well" },
+                { "value": 3, "text": "Very well" },
+                { "value": 4, "text": "Extremely well" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "generous",
+              "title": "Generous",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all well" },
+                { "value": 1, "text": "Not too well" },
+                { "value": 2, "text": "Moderately well" },
+                { "value": 3, "text": "Very well" },
+                { "value": 4, "text": "Extremely well" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "hypocritical",
+              "title": "Hypocritical",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all well" },
+                { "value": 1, "text": "Not too well" },
+                { "value": 2, "text": "Moderately well" },
+                { "value": 3, "text": "Very well" },
+                { "value": 4, "text": "Extremely well" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "selfish",
+              "title": "Selfish",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all well" },
+                { "value": 1, "text": "Not too well" },
+                { "value": 2, "text": "Moderately well" },
+                { "value": 3, "text": "Very well" },
+                { "value": 4, "text": "Extremely well" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "mean",
+              "title": "Mean",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all well" },
+                { "value": 1, "text": "Not too well" },
+                { "value": 2, "text": "Moderately well" },
+                { "value": 3, "text": "Very well" },
+                { "value": 4, "text": "Extremely well" }
+              ]
+            }
+          ],
+          "questionsOrder": "random",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "questionsOnPageMode": "singlePage",
+  "widthMode": "responsive",
+  "showCompletedPage": false
+}

@@ -19,6 +19,11 @@ import awarenessMonitoringGrowthSha from "../surveys/awarenessMonitoringGrowth/s
 import { default as awarenessMonitoringGrowthScoreFunc } from "../surveys/awarenessMonitoringGrowth/awarenessMonitoringGrowth.score.js";
 export const AwarenessMonitoringGrowth = SurveyFactory("awarenessMonitoringGrowth", awarenessMonitoringGrowthJson, awarenessMonitoringGrowthScoreFunc, awarenessMonitoringGrowthSha);
 
+import awarenessOfArgumentsYNJson from "../surveys/awarenessOfArgumentsYN/awarenessOfArgumentsYN.json";
+import awarenessOfArgumentsYNSha from "../surveys/awarenessOfArgumentsYN/sha.json";
+import { default as awarenessOfArgumentsYNScoreFunc } from "../surveys/awarenessOfArgumentsYN/awarenessOfArgumentsYN.score.js";
+export const AwarenessOfArgumentsYN = SurveyFactory("awarenessOfArgumentsYN", awarenessOfArgumentsYNJson, awarenessOfArgumentsYNScoreFunc, awarenessOfArgumentsYNSha);
+
 import conflictAndViabilityJson from "../surveys/conflictAndViability/conflictAndViability.json";
 import conflictAndViabilitySha from "../surveys/conflictAndViability/sha.json";
 import { default as conflictAndViabilityScoreFunc } from "../surveys/conflictAndViability/conflictAndViability.score.js";
@@ -34,10 +39,30 @@ import constructiveListeningBehaviorsSelfSha from "../surveys/constructiveListen
 import { default as constructiveListeningBehaviorsSelfScoreFunc } from "../surveys/constructiveListeningBehaviorsSelf/constructiveListeningBehaviorsSelf.score.js";
 export const ConstructiveListeningBehaviorsSelf = SurveyFactory("constructiveListeningBehaviorsSelf", constructiveListeningBehaviorsSelfJson, constructiveListeningBehaviorsSelfScoreFunc, constructiveListeningBehaviorsSelfSha);
 
+import CRTJson from "../surveys/CRT/CRT.json";
+import CRTSha from "../surveys/CRT/sha.json";
+import { default as CRTScoreFunc } from "../surveys/CRT/CRT.score.js";
+export const CRT = SurveyFactory("CRT", CRTJson, CRTScoreFunc, CRTSha);
+
+import culturalConflictNormsJson from "../surveys/culturalConflictNorms/culturalConflictNorms.json";
+import culturalConflictNormsSha from "../surveys/culturalConflictNorms/sha.json";
+import { default as culturalConflictNormsScoreFunc } from "../surveys/culturalConflictNorms/culturalConflictNorms.score.js";
+export const CulturalConflictNorms = SurveyFactory("culturalConflictNorms", culturalConflictNormsJson, culturalConflictNormsScoreFunc, culturalConflictNormsSha);
+
 import demographicsJson from "../surveys/demographics/demographics.json";
 import demographicsSha from "../surveys/demographics/sha.json";
 import { default as demographicsScoreFunc } from "../surveys/demographics/demographics.score.js";
 export const Demographics = SurveyFactory("demographics", demographicsJson, demographicsScoreFunc, demographicsSha);
+
+import demographicsShortUSJson from "../surveys/demographicsShortUS/demographicsShortUS.json";
+import demographicsShortUSSha from "../surveys/demographicsShortUS/sha.json";
+import { default as demographicsShortUSScoreFunc } from "../surveys/demographicsShortUS/demographicsShortUS.score.js";
+export const DemographicsShortUS = SurveyFactory("demographicsShortUS", demographicsShortUSJson, demographicsShortUSScoreFunc, demographicsShortUSSha);
+
+import discussionGeneralJson from "../surveys/discussionGeneral/discussionGeneral.json";
+import discussionGeneralSha from "../surveys/discussionGeneral/sha.json";
+import { default as discussionGeneralScoreFunc } from "../surveys/discussionGeneral/discussionGeneral.score.js";
+export const DiscussionGeneral = SurveyFactory("discussionGeneral", discussionGeneralJson, discussionGeneralScoreFunc, discussionGeneralSha);
 
 import discussionQualityControlJson from "../surveys/discussionQualityControl/discussionQualityControl.json";
 import discussionQualityControlSha from "../surveys/discussionQualityControl/sha.json";
@@ -84,10 +109,20 @@ import psychologicalSafetySha from "../surveys/psychologicalSafety/sha.json";
 import { default as psychologicalSafetyScoreFunc } from "../surveys/psychologicalSafety/psychologicalSafety.score.js";
 export const PsychologicalSafety = SurveyFactory("psychologicalSafety", psychologicalSafetyJson, psychologicalSafetyScoreFunc, psychologicalSafetySha);
 
+import receptiveness4Json from "../surveys/receptiveness4/receptiveness4.json";
+import receptiveness4Sha from "../surveys/receptiveness4/sha.json";
+import { default as receptiveness4ScoreFunc } from "../surveys/receptiveness4/receptiveness4.score.js";
+export const Receptiveness4 = SurveyFactory("receptiveness4", receptiveness4Json, receptiveness4ScoreFunc, receptiveness4Sha);
+
 import relatednessNeedSatisfactionJson from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.json";
 import relatednessNeedSatisfactionSha from "../surveys/relatednessNeedSatisfaction/sha.json";
 import { default as relatednessNeedSatisfactionScoreFunc } from "../surveys/relatednessNeedSatisfaction/relatednessNeedSatisfaction.score.js";
 export const RelatednessNeedSatisfaction = SurveyFactory("relatednessNeedSatisfaction", relatednessNeedSatisfactionJson, relatednessNeedSatisfactionScoreFunc, relatednessNeedSatisfactionSha);
+
+import rmeTenJson from "../surveys/rmeTen/rmeTen.json";
+import rmeTenSha from "../surveys/rmeTen/sha.json";
+import { default as rmeTenScoreFunc } from "../surveys/rmeTen/rmeTen.score.js";
+export const RmeTen = SurveyFactory("rmeTen", rmeTenJson, rmeTenScoreFunc, rmeTenSha);
 
 import SVIJson from "../surveys/SVI/SVI.json";
 import SVISha from "../surveys/SVI/sha.json";
@@ -103,3 +138,8 @@ import TIPIJson from "../surveys/TIPI/TIPI.json";
 import TIPISha from "../surveys/TIPI/sha.json";
 import { default as TIPIScoreFunc } from "../surveys/TIPI/TIPI.score.js";
 export const TIPI = SurveyFactory("TIPI", TIPIJson, TIPIScoreFunc, TIPISha);
+
+import traitRatingsJson from "../surveys/traitRatings/traitRatings.json";
+import traitRatingsSha from "../surveys/traitRatings/sha.json";
+import { default as traitRatingsScoreFunc } from "../surveys/traitRatings/traitRatings.score.js";
+export const TraitRatings = SurveyFactory("traitRatings", traitRatingsJson, traitRatingsScoreFunc, traitRatingsSha);
