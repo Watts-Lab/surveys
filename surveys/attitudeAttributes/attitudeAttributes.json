@@ -42,10 +42,10 @@
               "isRequired": true,
               "choices": [
                 { "value": 0, "text": "Not at all certain" },
-                { "value": 1, "text": "Slightly certain" },
+                { "value": 1, "text": "Not too certain" },
                 { "value": 2, "text": "Moderately certain" },
                 { "value": 3, "text": "Mostly certain" },
-                { "value": 4, "text": "Completely certain" }
+                { "value": 4, "text": "Absolutely certain" }
               ]
             },
             {
@@ -77,14 +77,14 @@
             {
               "type": "radiogroup",
               "name": "moralConviction",
-              "title": "To what extent is your position on this topic a reflection of your core moral beliefs and convictions?",
+              "title": "How strongly is your opinion on this topic connected to your moral beliefs about right and wrong?",
               "isRequired": true,
               "choices": [
-                { "value": 0, "text": "Not at all" },
-                { "value": 1, "text": "Slightly" },
-                { "value": 2, "text": "Moderately" },
-                { "value": 3, "text": "Strongly" },
-                { "value": 4, "text": "Completely" }
+                { "value": 0, "text": "Not connected at all" },
+                { "value": 1, "text": "Weakly connected" },
+                { "value": 2, "text": "Moderately connected" },
+                { "value": 3, "text": "Strongly connected" },
+                { "value": 4, "text": "Completely connected" }
               ]
             },
             {

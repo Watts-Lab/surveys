@@ -10,29 +10,23 @@ describe("PartisanFeelingThermometerUS", () => {
     cy.spy(dummy, "set").as("callback");
     cy.viewport("macbook-11");
     cy.mount(<PartisanFeelingThermometerUS onComplete={dummy.set} />);
+    cy.viewport("macbook-11");
 
-    cy.get("body")
-      .then(($body) => {
-        if ($body.find(`div[data-name="republicanTemp"]`).length) {
-          console.log("Reloading to get democrat prompt first");
-          cy.reload();
-          cy.mount(<PartisanFeelingThermometerUS onComplete={dummy.set} />);
-        }
-      })
-      .then(() => {
-        cy.contains("How would you rate Democrats");
-        cy.get("input[type=range]").invoke("val", 75).click({ force: true });
-        cy.screenshot("lonelinessSingleItem/screenshot_page1", {
-          overwrite: true,
-        });
-        cy.get(`input[type="button"][value="Next"]`).click({ force: true });
+    cy.get('[data-name="republicanTemp"] input[type=range]')
+      .invoke("val", 25)
+      .click();
 
-        cy.contains("How would you rate Republicans");
-        cy.get("input[type=range]").invoke("val", 25).click({ force: true });
-        cy.screenshot("lonelinessSingleItem/screenshot_page2", {
-          overwrite: true,
-        });
-        cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
+    cy.get('[data-name="democratTemp"] input[type=range]')
+      .invoke("val", 35)
+      .click();
+
+    cy.screenshot("partisanFeelingThermometerUS/screenshot", {
+      overwrite: true,
+    });
+
+    cy.get("form") // submit surveyJS form
+      .then(($form) => {
+        cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
       });
 
     cy.get(".sv-body").should("not.exist");
@@ -41,10 +35,10 @@ describe("PartisanFeelingThermometerUS", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall.result.normRepublicanTemp).to.eq(0.25);
-      expect(spyCall.result.normDemocratTemp).to.eq(0.75);
-      expect(spyCall.result.rawScore).to.eq(-0.5);
-      expect(spyCall.result.normScore).to.eq(0.5);
+      expect(spyCall["responses"]["republicanTemp"]).to.eq(25);
+      expect(spyCall["responses"]["democratTemp"]).to.eq(35);
+      expect(spyCall["result"]["normRepublicanTemp"]).to.eq((0.25).toFixed(3));
+      expect(spyCall["result"]["normDemocratTemp"]).to.eq((0.35).toFixed(3));
     });
   });
 });

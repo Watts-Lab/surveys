@@ -1,6 +1,10 @@
 # Perceptions of Others
 
-This survey asks about a generic other, "them/they", and could apply either to a specific individual alter, or the group as a whole. It should be preceded with a statement directing the respondent what person(s) they should keep in mind when answering the questions. For example:
+This survey asks about a generic other, "them/they", and could apply either to a specific individual alter, or the group as a whole.
+
+**It should be preceded with a statement directing the respondent what person(s) they should keep in mind when answering the questions.**
+
+For example:
 
 > We would now like to ask some questions about (the other people in your group / your conversation partner / the person you were negotiating with / the provost / the person you found it most difficult to get along with.)
 
