@@ -21,7 +21,7 @@ describe("RMETTen", () => {
       surveyJson.pages.forEach((page) => {
         page.elements.forEach((element) => {
           if (element.type === "radiogroup") {
-            answers[element.name] = element.choices[0];
+            answers[element.name] = element.choices[0].value;
           }
         });
       });

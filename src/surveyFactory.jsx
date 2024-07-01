@@ -12,10 +12,11 @@ import "./customQuestionTypes/labeledRange.css";
 // timeSpent doesn't track properly across rerenders, so track it manually
 
 export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
-  function BuiltSurvey({ onComplete, storageName }) {
+  function BuiltSurvey({ onComplete, storageName, language }) {
     const timerStartedAt = useRef(Date.now());
 
     const surveyModel = new SurveyJS.Model(surveyJson);
+    surveyModel.locale = language; // set the language for the survey
 
     const saveState = useCallback(
       (survey) => {
