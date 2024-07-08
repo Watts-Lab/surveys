@@ -1,517 +1,4679 @@
 {
-  "title": "Demographics",
+  "title": {
+   "default": "Demographics",
+   "ar": "التركيبه السكانيه",
+   "es": "Demografía",
+   "fr": "Démographie",
+   "hi": "जनसांख्यिकी",
+   "ja": "人口 統計",
+   "pt": "Demografia",
+   "ru": "Демография",
+   "zh": "人口",
+   "bn": "জনসংখ্যার"
+  },
   "logoPosition": "right",
   "pages": [
-    {
-      "name": "universal",
-      "elements": [
-        {
-          "type": "text",
-          "name": "birth_year",
-          "title": "What year were you born?",
-          "valueName": "birth_year",
-          "isRequired": true,
-          "validators": [
-            {
-              "type": "numeric",
-              "minValue": 1900,
-              "maxValue": 2022
-            }
-          ],
-          "placeholder": "4-digit year (e.g. 1839)"
-        },
-        {
-          "type": "radiogroup",
-          "name": "gender",
-          "title": "What is your gender?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "female",
-              "text": "Female"
-            },
-            {
-              "value": "male",
-              "text": "Male"
-            },
-            {
-              "value": "other",
-              "text": "Other"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "name": "gender_other",
-          "visibleIf": "{gender} = 'other'",
-          "title": "Please enter your gender below:"
-        },
-        {
-          "type": "dropdown",
-          "name": "marital_status",
-          "title": "What is your marital status?",
-          "choices": [
-            "Single Never Married",
-            "Married or Domestic Partnership",
-            "Widowed",
-            "Divorced",
-            "Separated",
-            "Other"
-          ],
-          "autocomplete": "country"
-        },
-        {
-          "type": "dropdown",
-          "name": "language_primary",
-          "title": "What language do you use most often?",
-          "description": "For example, the language you use at home.",
-          "isRequired": true,
-          "choices": [
-            "Arabic",
-            "Armenian",
-            "Cambodian",
-            "Chinese",
-            "Czech",
-            "Dutch",
-            "English",
-            "French",
-            "French Creole",
-            "German",
-            "Greek",
-            "Gujarathi",
-            "Hebrew",
-            "Hindi",
-            "Hungarian",
-            "Italian",
-            "Japanese",
-            "Korean",
-            "Navaho",
-            "Persian",
-            "Polish",
-            "Portuguese",
-            "Russian",
-            "Spanish",
-            "Tagalog",
-            "Thai",
-            "Ukrainian",
-            "Vietnamese",
-            "Yiddish",
-            {
-              "value": "item1",
-              "text": "Other"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "name": "language_primary_expansion",
-          "visibleIf": "{language_primary} = 'item1'",
-          "title": "Please enter your primary language below:"
-        },
-        {
-          "type": "rating",
-          "name": "english_written",
-          "title": "How comfortable are you reading and writing in English?",
-          "isRequired": true,
-          "minRateDescription": "Not at all comfortable",
-          "maxRateDescription": "Very comfortable"
-        },
-        {
-          "type": "rating",
-          "name": "english_spoken",
-          "title": "How comfortable are you speaking in English?",
-          "isRequired": true,
-          "minRateDescription": "Not at all comfortable",
-          "maxRateDescription": "Very comfortable"
-        },
-        {
-          "type": "radiogroup",
-          "name": "employment_status",
-          "title": "Are you currently...",
-          "choices": [
-            "Employed for wages",
-            "Self-employed",
-            "Out of work and looking for work",
-            "Out of work but not currently looking for work",
-            "A homemaker",
-            "A student",
-            "Military",
-            "Retired",
-            "Unable to work"
-          ]
-        },
-        {
-          "type": "dropdown",
-          "name": "country_reside",
-          "title": "What country do you live in?",
-          "isRequired": true,
-          "choices": [
-            "Afghanistan",
-            "Albania",
-            "Algeria",
-            "Andorra",
-            "Angola",
-            "Antigua and Barbuda",
-            "Argentina",
-            "Armenia",
-            "Australia",
-            "Austria",
-            "Azerbaijan",
-            "Bahamas",
-            "Bahrain",
-            "Bangladesh",
-            "Barbados",
-            "Belarus",
-            "Belgium",
-            "Belize",
-            "Benin",
-            "Bhutan",
-            "Bolivia",
-            "Bosnia and Herzegovina",
-            "Botswana",
-            "Brazil",
-            "Brunei",
-            "Bulgaria",
-            "Burkina Faso",
-            "Burundi",
-            "Cabo Verde",
-            "Cambodia",
-            "Cameroon",
-            "Canada",
-            "Central African Republic",
-            "Chad",
-            "Chile",
-            "China",
-            "Colombia",
-            "Comoros",
-            "Congo",
-            "Costa Rica",
-            "Croatia",
-            "Cuba",
-            "Cyprus",
-            "Czechia",
-            "Denmark",
-            "Djibouti",
-            "Dominica",
-            "Dominican Republic",
-            "East Timor (Timor-Leste)",
-            "Ecuador",
-            "Egypt",
-            "El Salvador",
-            "Equatorial Guinea",
-            "Eritrea",
-            "Estonia",
-            "Eswatini",
-            "Ethiopia",
-            "Fiji",
-            "Finland",
-            "France",
-            "Gabon",
-            "Gambia",
-            "Georgia",
-            "Germany",
-            "Ghana",
-            "Greece",
-            "Grenada",
-            "Guatemala",
-            "Guinea",
-            "Guinea-Bissau",
-            "Guyana",
-            "Haiti",
-            "Honduras",
-            "Hungary",
-            "Iceland",
-            "India",
-            "Indonesia",
-            "Iran",
-            "Iraq",
-            "Ireland",
-            "Israel",
-            "Italy",
-            "Jamaica",
-            "Japan",
-            "Jordan",
-            "Kazakhstan",
-            "Kenya",
-            "Kiribati",
-            "Korea, North",
-            "Korea, South",
-            "Kosovo",
-            "Kuwait",
-            "Kyrgyzstan",
-            "Laos",
-            "Latvia",
-            "Lebanon",
-            "Lesotho",
-            "Liberia",
-            "Libya",
-            "Liechtenstein",
-            "Lithuania",
-            "Luxembourg",
-            "Madagascar",
-            "Malawi",
-            "Malaysia",
-            "Maldives",
-            "Mali",
-            "Malta",
-            "Marshall Islands",
-            "Mauritania",
-            "Mauritius",
-            "Mexico",
-            "Micronesia",
-            "Moldova",
-            "Monaco",
-            "Mongolia",
-            "Montenegro",
-            "Morocco",
-            "Mozambique",
-            "Myanmar (Burma)",
-            "Namibia",
-            "Nauru",
-            "Nepal",
-            "Netherlands",
-            "New Zealand",
-            "Nicaragua",
-            "Niger",
-            "Nigeria",
-            "North Macedonia (formerly Macedonia)",
-            "Norway",
-            "Oman",
-            "Pakistan",
-            "Palau",
-            "Panama",
-            "Papua New Guinea",
-            "Paraguay",
-            "Peru",
-            "Philippines",
-            "Poland",
-            "Portugal",
-            "Qatar",
-            "Romania",
-            "Russia",
-            "Rwanda",
-            "Saint Kitts and Nevis",
-            "Saint Lucia",
-            "Saint Vincent and the Grenadines",
-            "Samoa",
-            "San Marino",
-            "Sao Tome and Principe",
-            "Saudi Arabia",
-            "Senegal",
-            "Serbia",
-            "Seychelles",
-            "Sierra Leone",
-            "Singapore",
-            "Slovakia",
-            "Slovenia",
-            "Solomon Islands",
-            "Somalia",
-            "South Africa",
-            "South Sudan",
-            "Spain",
-            "Sri Lanka",
-            "Sudan",
-            "Suriname",
-            "Sweden",
-            "Switzerland",
-            "Syria",
-            "Taiwan",
-            "Tajikistan",
-            "Tanzania",
-            "Thailand",
-            "Togo",
-            "Tonga",
-            "Trinidad and Tobago",
-            "Tunisia",
-            "Turkey",
-            "Turkmenistan",
-            "Tuvalu",
-            "Uganda",
-            "Ukraine",
-            "United Arab Emirates",
-            "United Kingdom",
-            "United States",
-            "Uruguay",
-            "Uzbekistan",
-            "Vanuatu",
-            "Vatican City",
-            "Venezuela",
-            "Vietnam",
-            "Yemen",
-            "Zambia",
-            "Zimbabwe",
-            {
-              "value": "item1",
-              "text": "Other"
-            }
-          ]
+   {
+    "name": "universal",
+    "elements": [
+     {
+      "type": "text",
+      "name": "birth_year",
+      "title": {
+       "default": "What year were you born?",
+       "ar": "في أي سنة ولدت؟",
+       "es": "¿En qué año naciste?",
+       "fr": "En quelle année êtes-vous né ?",
+       "hi": "आपका जन्म किस वर्ष में हुआ था?",
+       "ja": "あなたは何年に生まれましたか?",
+       "pt": "Em que ano você nasceu?",
+       "ru": "В каком году вы родились?",
+       "zh": "你是哪一年出生的？",
+       "bn": "তুমি কোন সালে জন্মগ্রহণ করেছ?"
+      },
+      "valueName": "birth_year",
+      "isRequired": true,
+      "validators": [
+       {
+        "type": "numeric",
+        "minValue": 1900,
+        "maxValue": 2022
+       }
+      ],
+      "placeholder": {
+       "default": "4-digit year (e.g. 1839)",
+       "ar": "سنة مكونة من 4 أرقام (على سبيل المثال 1839)",
+       "es": "Año de 4 dígitos (por ejemplo, 1839)",
+       "fr": "Année à 4 chiffres (par exemple 1839)",
+       "hi": "4-अंकीय वर्ष (जैसे 1839)",
+       "ja": "4 桁の西暦 (例: 1839)",
+       "pt": "Ano de 4 dígitos (por exemplo, 1839)",
+       "ru": "4-значный год (например, 1839)",
+       "zh": "4 位年份（例如 1839 年）",
+       "bn": "4-অঙ্কের বছর (উদাঃ 1839)"
+      }
+     },
+     {
+      "type": "radiogroup",
+      "name": "gender",
+      "title": {
+       "default": "What is your gender?",
+       "ar": "ما هو جنسك؟",
+       "es": "¿Cuál es tu género?",
+       "fr": "Quel est votre sexe ?",
+       "hi": "आपका लिंग क्या है?",
+       "ja": "あなたの性別は何ですか?",
+       "pt": "Qual é o seu gênero?",
+       "ru": "Какой у вас пол?",
+       "zh": "你的性别是什么？",
+       "bn": "আপনার লিঙ্গ কি?"
+      },
+      "isRequired": true,
+      "choices": [
+       {
+        "value": "female",
+        "text": {
+         "default": "Female",
+         "ar": "أنثى",
+         "es": "Hembra",
+         "fr": "Femelle",
+         "hi": "मादा",
+         "ja": "女性",
+         "pt": "Fêmea",
+         "ru": "Женский",
+         "zh": "女性",
+         "bn": "নারী"
         }
+       },
+       {
+        "value": "male",
+        "text": {
+         "default": "Male",
+         "ar": "ذكر",
+         "es": "Masculino",
+         "fr": "Mâle",
+         "hi": "पुरुष",
+         "ja": "男性",
+         "pt": "Macho",
+         "ru": "Мужской",
+         "zh": "雄",
+         "bn": "পুরুষ"
+        }
+       },
+       {
+        "value": "other",
+        "text": {
+         "default": "Other",
+         "ar": "آخر",
+         "es": "Otro",
+         "fr": "Autre",
+         "hi": "दूसरा",
+         "ja": "他",
+         "pt": "Outro",
+         "ru": "Другой",
+         "zh": "其他",
+         "bn": "অন্যান্য"
+        }
+       }
       ]
-    },
-    {
-      "name": "united states residents",
-      "elements": [
-        {
-          "type": "radiogroup",
-          "name": "education_US",
-          "title": "What is the highest level of education you have completed?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "2",
-              "text": "Less than a high school diploma"
-            },
-            {
-              "value": "3",
-              "text": "High school diploma or GED"
-            },
-            {
-              "value": "4",
-              "text": "Some college, but no degree"
-            },
-            {
-              "value": "5",
-              "text": "Associate's degree (for example: AA, AS)"
-            },
-            {
-              "value": "6",
-              "text": "Bachelor's degree (for example: BA, BS)"
-            },
-            {
-              "value": "7",
-              "text": "Master's degree (for example: MA, MS, MEng, MBA)"
-            },
-            {
-              "value": "8",
-              "text": "Doctorate (for example: PhD, EdD)"
-            }
-          ]
-        },
-        {
-          "type": "radiogroup",
-          "name": "latin_US",
-          "title": "Are you of Hispanic, Latino, or Spanish origin?",
-          "choices": ["Yes", "No"]
-        },
-        {
-          "type": "checkbox",
-          "name": "race_US",
-          "title": "Please choose one or more races that you consider yourself to be.",
-          "isRequired": true,
-          "choices": [
-            "White",
-            "Black or African-American",
-            "American Indian or Alaska Native",
-            "Asian",
-            "Native Hawaiian or other Pacific Islander",
-            "Other"
-          ]
-        },
-        {
-          "type": "radiogroup",
-          "name": "income_US",
-          "title": "Thinking back over the past year, what was your family's annual income?",
-          "choices": [
-            "Less than $10,000",
-            "$10,000-$19,999",
-            "$20,000-$29,999",
-            "$30,000-$39,999",
-            "$40,000-$49,999",
-            "$50,000-$74,999",
-            "$75,000-$99,999",
-            "$100,000-$149,999",
-            "$150,000 or more"
-          ]
+     },
+     {
+      "type": "text",
+      "name": "gender_other",
+      "visibleIf": "{gender} = 'other'",
+      "title": {
+       "default": "Please enter your gender below:",
+       "ar": "الرجاء إدخال جنسك أدناه:",
+       "es": "Ingrese su género a continuación:",
+       "fr": "Veuillez entrer votre sexe ci-dessous :",
+       "hi": "कृपया नीचे अपना लिंग दर्ज करें:",
+       "ja": "以下に性別を入力してください。",
+       "pt": "Por favor, digite seu gênero abaixo:",
+       "ru": "Пожалуйста, введите свой пол ниже:",
+       "zh": "请在下面输入您的性别：",
+       "bn": "দয়া করে নীচে আপনার লিঙ্গ লিখুন:"
+      }
+     },
+     {
+      "type": "dropdown",
+      "name": "marital_status",
+      "title": {
+       "default": "What is your marital status?",
+       "ar": "ما هي حالتك الاجتماعية؟",
+       "es": "¿Cuál es su estado civil?",
+       "fr": "Quel est votre état civil ?",
+       "hi": "आपकी वैवाहिक स्थिति क्या है?",
+       "ja": "あなたの婚姻状況は?",
+       "pt": "Qual é o seu estado civil?",
+       "ru": "Каково ваше семейное положение?",
+       "zh": "你的婚姻状况如何？",
+       "bn": "আপনার বৈবাহিক অবস্থা কি?"
+      },
+      "choices": [
+       {
+        "value": "Single Never Married",
+        "text": {
+         "ar": "أعزب لم يتزوج قط",
+         "es": "Soltero Nunca Casado",
+         "fr": "Célibataire jamais marié",
+         "hi": "सिंगल नेवर मैरिड",
+         "ja": "独身未婚",
+         "pt": "Solteiro Nunca Casado",
+         "ru": "Холост Никогда не был женат",
+         "zh": "单身 从未结婚",
+         "bn": "অবিবাহিত কখনও বিয়ে হয়নি"
         }
-      ],
-      "visibleIf": "{country_reside} = 'United States'",
-      "title": "United States Residents"
-    },
-    {
-      "name": "united kingdom residents",
-      "elements": [
-        {
-          "type": "radiogroup",
-          "name": "education_UK",
-          "title": "What is the highest level of education you have completed?",
-          "choices": [
-            {
-              "value": "1",
-              "text": "Primary school"
-            },
-            {
-              "value": "2",
-              "text": "Secondary school up to 16 years"
-            },
-            {
-              "value": "3",
-              "text": "Higher or secondary or further education (A-levels, BTEC, etc.)"
-            },
-            {
-              "value": "5",
-              "text": "NVQ levels 4-5, HNC, HND, etc."
-            },
-            {
-              "value": "6",
-              "text": "Bachelor's degree (BA, BSc, etc.)"
-            },
-            {
-              "value": "7",
-              "text": "Master's degree (MA, MS, MEng, MBA, etc.)"
-            },
-            {
-              "value": "8",
-              "text": "Doctorate (PhD, EdD, etc.)"
-            }
-          ]
-        },
-        {
-          "type": "checkbox",
-          "name": "ethnicity_UK",
-          "title": "What is your ethnic group?",
-          "description": " It's up to you how you answer this question. Your ethnic group could be your cultural or family background.",
-          "choices": [
-            "English / Welsh / Scottish / Northern Irish / British",
-            "Irish",
-            "Gypsy or Irish Traveller",
-            "Other White Background",
-            "White and Black Caribbean",
-            "White and Black African",
-            "White and Asian",
-            "Other mixed/multiple ethnic background",
-            "Indian",
-            "Pakistani",
-            "Bangladeshi",
-            "Chinese",
-            "African",
-            "Caribbean",
-            "Other Black/African Caribbean background",
-            "Arab",
-            "Other ethnic group"
-          ]
-        },
-        {
-          "type": "radiogroup",
-          "name": "income_UK",
-          "title": "Thinking back over the past year, what was your family's annual income?",
-          "choices": [
-            "Less than £10,000",
-            "£10,000-£19,999",
-            "£20,000-£29,999",
-            "£30,000-£39,999",
-            "£40,000-£49,999",
-            "£50,000-£74,999",
-            "£75,000-£99,999",
-            "£100,000-£149,999",
-            "£150,000 or more"
-          ]
+       },
+       {
+        "value": "Married or Domestic Partnership",
+        "text": {
+         "ar": "الزواج أو الشراكة المنزلية",
+         "es": "Casado o Pareja de Hecho",
+         "fr": "Partenariat marié ou domestique",
+         "hi": "विवाहित या घरेलू साझेदारी",
+         "ja": "既婚またはドメスティックパートナーシップ",
+         "pt": "Casado ou união estável",
+         "ru": "Супружеское или гражданское партнерство",
+         "zh": "已婚或同居伴侣关系",
+         "bn": "বিবাহিত বা গার্হস্থ্য অংশীদারিত্ব"
         }
+       },
+       {
+        "value": "Widowed",
+        "text": {
+         "ar": "الارامل",
+         "es": "Viudo",
+         "fr": "Veuf",
+         "hi": "विधवा",
+         "ja": "未亡人",
+         "pt": "Viúva",
+         "ru": "Овдовевший",
+         "zh": "寡",
+         "bn": "বিধবা"
+        }
+       },
+       {
+        "value": "Divorced",
+        "text": {
+         "ar": "مطلق",
+         "es": "Divorciado",
+         "fr": "Divorcé",
+         "hi": "तलाकशुदा",
+         "ja": "離婚",
+         "pt": "Divorciado",
+         "ru": "Разведённый",
+         "zh": "离婚",
+         "bn": "তালাকপ্রাপ্ত"
+        }
+       },
+       {
+        "value": "Separated",
+        "text": {
+         "ar": "منفصل",
+         "es": "Separado",
+         "fr": "Séparé",
+         "hi": "वियुक्त दंपति",
+         "ja": "離れ離れ",
+         "pt": "Separado",
+         "ru": "Отделенный",
+         "zh": "分开",
+         "bn": "পৃথক"
+        }
+       },
+       {
+        "value": "Other",
+        "text": {
+         "ar": "آخر",
+         "es": "Otro",
+         "fr": "Autre",
+         "hi": "दूसरा",
+         "ja": "他",
+         "pt": "Outro",
+         "ru": "Другой",
+         "zh": "其他",
+         "bn": "অন্যান্য"
+        }
+       }
       ],
-      "visibleIf": "{country_reside} = 'United Kingdom'",
-      "title": "United Kingdom Residents"
+      "autocomplete": "country"
+     },
+     {
+      "type": "dropdown",
+      "name": "language_primary",
+      "title": {
+       "default": "What language do you use most often?",
+       "ar": "ما هي اللغة التي تستخدمها في أغلب الأحيان؟",
+       "es": "¿Qué idioma utilizas con más frecuencia?",
+       "fr": "Quel langage utilisez-vous le plus souvent ?",
+       "hi": "आप अक्सर किस भाषा का उपयोग करते हैं?",
+       "ja": "最もよく使う言語は何ですか?",
+       "pt": "Qual linguagem você usa com mais frequência?",
+       "ru": "Какой язык вы используете чаще всего?",
+       "zh": "您最常使用哪种语言？",
+       "bn": "আপনি সাধারণত কোন ভাষা ব্যবহার করেন?"
+      },
+      "description": {
+       "default": "For example, the language you use at home.",
+       "ar": "على سبيل المثال ، اللغة التي تستخدمها في المنزل.",
+       "es": "Por ejemplo, el idioma que usas en casa.",
+       "fr": "Par exemple, la langue que vous utilisez à la maison.",
+       "hi": "उदाहरण के लिए, वह भाषा जिसका आप घर पर उपयोग करते हैं।",
+       "ja": "たとえば、家庭で使用している言語などです。",
+       "pt": "Por exemplo, o idioma que você usa em casa.",
+       "ru": "Например, язык, которым вы пользуетесь дома.",
+       "zh": "例如，您在家中使用的语言。",
+       "bn": "উদাহরণস্বরূপ, আপনি বাড়িতে যে ভাষা ব্যবহার করেন।"
+      },
+      "isRequired": true,
+      "choices": [
+       {
+        "value": "Arabic",
+        "text": {
+         "ar": "العربية",
+         "es": "Árabe",
+         "fr": "Arabe",
+         "hi": "अरबी",
+         "ja": "アラビア語",
+         "pt": "Árabe",
+         "ru": "Арабский",
+         "zh": "阿拉伯语",
+         "bn": "আরবি"
+        }
+       },
+       {
+        "value": "Armenian",
+        "text": {
+         "ar": "الأرمينية",
+         "es": "Armenio",
+         "fr": "Arménien",
+         "hi": "आर्मीनियाई",
+         "ja": "アルメニア語",
+         "pt": "Armênio",
+         "ru": "Армянский",
+         "zh": "亚美尼亚语",
+         "bn": "আর্মেনীয়"
+        }
+       },
+       {
+        "value": "Cambodian",
+        "text": {
+         "ar": "كمبودي",
+         "es": "Camboyano",
+         "fr": "Cambodgien",
+         "hi": "कम्बोडियन",
+         "ja": "カンボジア人",
+         "pt": "Cambojano",
+         "ru": "Камбоджийский",
+         "zh": "柬埔寨人",
+         "bn": "কম্বোডিয়ান"
+        }
+       },
+       {
+        "value": "Chinese",
+        "text": {
+         "ar": "الصينية",
+         "es": "Chino",
+         "fr": "Chinois",
+         "hi": "चीनी",
+         "ja": "中国語",
+         "pt": "Chinês",
+         "ru": "Китайский",
+         "zh": "中文",
+         "bn": "চিনা"
+        }
+       },
+       {
+        "value": "Czech",
+        "text": {
+         "ar": "التشيكية",
+         "es": "Checo",
+         "fr": "Tchèque",
+         "hi": "चेक",
+         "ja": "チェコ語",
+         "pt": "Tcheco",
+         "ru": "Чешский",
+         "zh": "捷克语",
+         "bn": "চেক"
+        }
+       },
+       {
+        "value": "Dutch",
+        "text": {
+         "ar": "الهولندية",
+         "es": "Holandés",
+         "fr": "Néerlandais",
+         "hi": "डच",
+         "ja": "オランダ語",
+         "pt": "Holandês",
+         "ru": "Нидерландский",
+         "zh": "荷兰语",
+         "bn": "ডাচ"
+        }
+       },
+       {
+        "value": "English",
+        "text": {
+         "ar": "الإنكليزية",
+         "es": "Inglés",
+         "fr": "Anglais",
+         "hi": "अंग्रेज़ी",
+         "ja": "英語",
+         "pt": "Inglês",
+         "ru": "Английский",
+         "zh": "英语",
+         "bn": "ইংরাজি"
+        }
+       },
+       {
+        "value": "French",
+        "text": {
+         "ar": "الفرنسية",
+         "es": "Francés",
+         "fr": "Français",
+         "hi": "फ़्रेंच",
+         "ja": "フランス語",
+         "pt": "Francês",
+         "ru": "Французский",
+         "zh": "法语",
+         "bn": "ফরাসী"
+        }
+       },
+       {
+        "value": "French Creole",
+        "text": {
+         "ar": "الكريول الفرنسي",
+         "es": "Criollo francés",
+         "fr": "Créole français",
+         "hi": "फ्रेंच क्रियोल",
+         "ja": "フランスクレオール語",
+         "pt": "Crioulo francês",
+         "ru": "Французский креольский",
+         "zh": "法语克里奥尔语",
+         "bn": "ফরাসি ক্রেওল"
+        }
+       },
+       {
+        "value": "German",
+        "text": {
+         "ar": "الألمانية",
+         "es": "Alemán",
+         "fr": "Allemand",
+         "hi": "जर्मन",
+         "ja": "ドイツ語",
+         "pt": "Alemão",
+         "ru": "Немецкий",
+         "zh": "德语",
+         "bn": "জার্মান"
+        }
+       },
+       {
+        "value": "Greek",
+        "text": {
+         "ar": "اليونانية",
+         "es": "Griego",
+         "fr": "Grec",
+         "hi": "यूनानी",
+         "ja": "ギリシャ語",
+         "pt": "Grego",
+         "ru": "Греческий",
+         "zh": "希腊语",
+         "bn": "গ্রীক"
+        }
+       },
+       {
+        "value": "Gujarathi",
+        "text": {
+         "ar": "الغوجاراتي",
+         "es": "Gujarathi",
+         "fr": "Gujarathi",
+         "hi": "गुजराती",
+         "ja": "グジャラート語",
+         "pt": "Gujarathi",
+         "ru": "Гуджарати",
+         "zh": "古吉拉特语",
+         "bn": "গুজরাটি"
+        }
+       },
+       {
+        "value": "Hebrew",
+        "text": {
+         "ar": "العبرية",
+         "es": "Hebreo",
+         "fr": "Hébreu",
+         "hi": "हिब्रू",
+         "ja": "ヘブライ語",
+         "pt": "Hebraico",
+         "ru": "Иврит",
+         "zh": "希伯来语",
+         "bn": "হিব্রু"
+        }
+       },
+       {
+        "value": "Hindi",
+        "text": {
+         "ar": "الهندية",
+         "es": "Hindi",
+         "fr": "Hindi",
+         "hi": "हिंदी",
+         "ja": "ヒンディー語",
+         "pt": "Hindi",
+         "ru": "Хинди",
+         "zh": "印地语",
+         "bn": "হিন্দি"
+        }
+       },
+       {
+        "value": "Hungarian",
+        "text": {
+         "ar": "المجرية",
+         "es": "Húngaro",
+         "fr": "Hongrois",
+         "hi": "हंगेरियन",
+         "ja": "ハンガリー語",
+         "pt": "Húngaro",
+         "ru": "Венгерский",
+         "zh": "匈牙利语",
+         "bn": "হাংগেরীয়"
+        }
+       },
+       {
+        "value": "Italian",
+        "text": {
+         "ar": "الإيطالية",
+         "es": "Italiano",
+         "fr": "Italien",
+         "hi": "इटैलियन",
+         "ja": "イタリア語",
+         "pt": "Italiano",
+         "ru": "Итальянский",
+         "zh": "意大利语",
+         "bn": "ইতালীয়"
+        }
+       },
+       {
+        "value": "Japanese",
+        "text": {
+         "ar": "اليابانية",
+         "es": "Japonés",
+         "fr": "Japonais",
+         "hi": "जापानी",
+         "ja": "日本語",
+         "pt": "Japonês",
+         "ru": "Японский",
+         "zh": "日语",
+         "bn": "জাপানী"
+        }
+       },
+       {
+        "value": "Korean",
+        "text": {
+         "ar": "الكورية",
+         "es": "Coreano",
+         "fr": "Coréen",
+         "hi": "कोरियाई",
+         "ja": "韓国語",
+         "pt": "Coreano",
+         "ru": "Корейский",
+         "zh": "朝鲜语",
+         "bn": "কোরিয়ান"
+        }
+       },
+       {
+        "value": "Navaho",
+        "text": {
+         "ar": "نافاهو",
+         "es": "Navajo",
+         "fr": "Navaho",
+         "hi": "नवाहो",
+         "ja": "ナバホ",
+         "pt": "Navaho",
+         "ru": "Навахо",
+         "zh": "纳瓦霍语",
+         "bn": "নাভাহো"
+        }
+       },
+       {
+        "value": "Persian",
+        "text": {
+         "ar": "فارسي",
+         "es": "Persa",
+         "fr": "Perse",
+         "hi": "फ़ारसी",
+         "ja": "ペルシャ語",
+         "pt": "Persa",
+         "ru": "Персидский",
+         "zh": "波斯语",
+         "bn": "পারসিক"
+        }
+       },
+       {
+        "value": "Polish",
+        "text": {
+         "ar": "البولندية",
+         "es": "Polaco",
+         "fr": "Polonais",
+         "hi": "पोलिश",
+         "ja": "ポーランド語",
+         "pt": "Polonês",
+         "ru": "Польский",
+         "zh": "波兰语",
+         "bn": "পোলিশ"
+        }
+       },
+       {
+        "value": "Portuguese",
+        "text": {
+         "ar": "البرتغالية",
+         "es": "Portugués",
+         "fr": "Portugais",
+         "hi": "पुर्तगाली",
+         "ja": "ポルトガル語",
+         "pt": "Português",
+         "ru": "Португальский",
+         "zh": "葡萄牙语",
+         "bn": "পর্তুগিজ"
+        }
+       },
+       {
+        "value": "Russian",
+        "text": {
+         "ar": "الروسية",
+         "es": "Ruso",
+         "fr": "Russe",
+         "hi": "रूसी",
+         "ja": "ロシア語",
+         "pt": "Russo",
+         "ru": "Русский",
+         "zh": "俄语",
+         "bn": "রুশ"
+        }
+       },
+       {
+        "value": "Spanish",
+        "text": {
+         "ar": "الإسبانية",
+         "es": "Español",
+         "fr": "Espagnol",
+         "hi": "स्पैनिश",
+         "ja": "スペイン語",
+         "pt": "Espanhol",
+         "ru": "Испанский",
+         "zh": "西班牙语",
+         "bn": "স্প্যানিশ"
+        }
+       },
+       {
+        "value": "Tagalog",
+        "text": {
+         "ar": "التغالوغيه",
+         "es": "Tagalo",
+         "fr": "Tagalog",
+         "hi": "तागालोग",
+         "ja": "タガログ語",
+         "pt": "Tagalo",
+         "ru": "Тагальский",
+         "zh": "塔加洛语",
+         "bn": "তাগালগ"
+        }
+       },
+       {
+        "value": "Thai",
+        "text": {
+         "ar": "التايلندية",
+         "es": "Tailandés",
+         "fr": "Thaï",
+         "hi": "थाई",
+         "ja": "タイ語",
+         "pt": "Tailandês",
+         "ru": "Тайский",
+         "zh": "泰语",
+         "bn": "থাই"
+        }
+       },
+       {
+        "value": "Ukrainian",
+        "text": {
+         "ar": "الأوكرانية",
+         "es": "Ucraniano",
+         "fr": "Ukrainien",
+         "hi": "यूक्रेनियाई",
+         "ja": "ウクライナ語",
+         "pt": "Ucraniano",
+         "ru": "Украинский",
+         "zh": "乌克兰语",
+         "bn": "ইউক্রেনীয়"
+        }
+       },
+       {
+        "value": "Vietnamese",
+        "text": {
+         "ar": "الفيتنامية",
+         "es": "Vietnamita",
+         "fr": "Vietnamien",
+         "hi": "वियतनामी",
+         "ja": "ベトナム語",
+         "pt": "Vietnamita",
+         "ru": "Вьетнамский",
+         "zh": "越南语",
+         "bn": "ভিয়েতনামী"
+        }
+       },
+       {
+        "value": "Yiddish",
+        "text": {
+         "ar": "الييديه",
+         "es": "Yiddish",
+         "fr": "Yiddish",
+         "hi": "यिडिश",
+         "ja": "イディッシュ語",
+         "pt": "Iídiche",
+         "ru": "Идиш",
+         "zh": "意第绪语",
+         "bn": "ইদ্দিশ"
+        }
+       },
+       {
+        "value": "item1",
+        "text": {
+         "default": "Other",
+         "ar": "آخر",
+         "es": "Otro",
+         "fr": "Autre",
+         "hi": "दूसरा",
+         "ja": "他",
+         "pt": "Outro",
+         "ru": "Другой",
+         "zh": "其他",
+         "bn": "অন্যান্য"
+        }
+       }
+      ]
+     },
+     {
+      "type": "text",
+      "name": "language_primary_expansion",
+      "visibleIf": "{language_primary} = 'item1'",
+      "title": {
+       "default": "Please enter your primary language below:",
+       "ar": "الرجاء إدخال لغتك الأساسية أدناه:",
+       "es": "Ingrese su idioma principal a continuación:",
+       "fr": "Veuillez entrer votre langue principale ci-dessous :",
+       "hi": "कृपया नीचे अपनी प्राथमिक भाषा दर्ज करें:",
+       "ja": "以下に第一言語を入力してください。",
+       "pt": "Por favor, insira seu idioma principal abaixo:",
+       "ru": "Пожалуйста, введите свой основной язык ниже:",
+       "zh": "请在下面输入您的主要语言：",
+       "bn": "দয়া করে নীচে আপনার প্রাথমিক ভাষা লিখুন:"
+      }
+     },
+     {
+      "type": "rating",
+      "name": "english_written",
+      "title": {
+       "default": "How comfortable are you reading and writing in English?",
+       "ar": "ما مدى ارتياحك للقراءة والكتابة باللغة الإنجليزية؟",
+       "es": "¿Qué tan cómodo te sientes leyendo y escribiendo en inglés?",
+       "fr": "Dans quelle mesure êtes-vous à l’aise pour lire et écrire en anglais ?",
+       "hi": "आप अंग्रेजी में पढ़ने और लिखने में कितने सहज हैं?",
+       "ja": "英語で読んだり書いたりするのはどれくらい快適ですか?",
+       "pt": "Quão confortável você está lendo e escrevendo em inglês?",
+       "ru": "Насколько комфортно вы читаете и пишете на английском языке?",
+       "zh": "你用英语阅读和写作的自如程度如何？",
+       "bn": "আপনি ইংরেজিতে পড়তে এবং লিখতে কতটা স্বাচ্ছন্দ্যবোধ করেন?"
+      },
+      "isRequired": true,
+      "minRateDescription": {
+       "default": "Not at all comfortable",
+       "ar": "ليس مريحا على الإطلاق",
+       "es": "Nada cómodo",
+       "fr": "Pas du tout confortable",
+       "hi": "बिल्कुल भी आरामदायक नहीं",
+       "ja": "全然快適じゃない",
+       "pt": "Nada confortável",
+       "ru": "Совсем не удобно",
+       "zh": "一点也不舒服",
+       "bn": "মোটেও আরামদায়ক নয়"
+      },
+      "maxRateDescription": {
+       "default": "Very comfortable",
+       "ar": "مريح جدا",
+       "es": "Muy cómodo",
+       "fr": "Très confortable",
+       "hi": "बहुत आरामदायक",
+       "ja": "とても快適",
+       "pt": "Muito confortável",
+       "ru": "Очень удобно",
+       "zh": "很舒服",
+       "bn": "খুব আরামদায়ক"
+      }
+     },
+     {
+      "type": "rating",
+      "name": "english_spoken",
+      "title": {
+       "default": "How comfortable are you speaking in English?",
+       "ar": "ما مدى ارتياحك للتحدث باللغة الإنجليزية؟",
+       "es": "¿Qué tan cómodo te sientes hablando en inglés?",
+       "fr": "Dans quelle mesure êtes-vous à l’aise de parler en anglais ?",
+       "hi": "आप अंग्रेजी में बोलने में कितने सहज हैं?",
+       "ja": "英語で話すのはどれくらい快適ですか?",
+       "pt": "Quão confortável você está falando em inglês?",
+       "ru": "Насколько комфортно вы говорите по-английски?",
+       "zh": "你说英语有多舒服？",
+       "bn": "আপনি ইংরেজিতে কথা বলতে কতটা স্বাচ্ছন্দ্যবোধ করেন?"
+      },
+      "isRequired": true,
+      "minRateDescription": {
+       "default": "Not at all comfortable",
+       "ar": "ليس مريحا على الإطلاق",
+       "es": "Nada cómodo",
+       "fr": "Pas du tout confortable",
+       "hi": "बिल्कुल भी आरामदायक नहीं",
+       "ja": "全然快適じゃない",
+       "pt": "Nada confortável",
+       "ru": "Совсем не удобно",
+       "zh": "一点也不舒服",
+       "bn": "মোটেও আরামদায়ক নয়"
+      },
+      "maxRateDescription": {
+       "default": "Very comfortable",
+       "ar": "مريح جدا",
+       "es": "Muy cómodo",
+       "fr": "Très confortable",
+       "hi": "बहुत आरामदायक",
+       "ja": "とても快適",
+       "pt": "Muito confortável",
+       "ru": "Очень удобно",
+       "zh": "很舒服",
+       "bn": "খুব আরামদায়ক"
+      }
+     },
+     {
+      "type": "radiogroup",
+      "name": "employment_status",
+      "title": {
+       "default": "Are you currently...",
+       "ar": "هل أنت حاليا ...",
+       "es": "¿Estás...",
+       "fr": "Êtes-vous actuellement...",
+       "hi": "क्या आप वर्तमान में...",
+       "ja": "あなたは現在...",
+       "pt": "Você está atualmente...",
+       "ru": "Вы в настоящее время...",
+       "zh": "你目前是...",
+       "bn": "আপনি কি বর্তমানে..."
+      },
+      "choices": [
+       {
+        "value": "Employed for wages",
+        "text": {
+         "ar": "العاملون مقابل الأجور",
+         "es": "Empleado por un salario",
+         "fr": "Employé pour un salaire",
+         "hi": "मजदूरी के लिए नियोजित",
+         "ja": "賃金のために雇用される",
+         "pt": "Empregados por salários",
+         "ru": "Наемный работник за заработную плату",
+         "zh": "受雇于工资",
+         "bn": "মজুরির জন্য নিযুক্ত"
+        }
+       },
+       {
+        "value": "Self-employed",
+        "text": {
+         "ar": "العاملين لحسابهم الخاص",
+         "es": "Autónomo",
+         "fr": "Indépendant",
+         "hi": "स्‍वनियोजित",
+         "ja": "自営業者",
+         "pt": "Autônomo",
+         "ru": "Самозанятый",
+         "zh": "自雇人士",
+         "bn": "স্ব-কর্মসংস্থান"
+        }
+       },
+       {
+        "value": "Out of work and looking for work",
+        "text": {
+         "ar": "عاطل عن العمل ويبحث عن عمل",
+         "es": "Sin trabajo y buscando trabajo",
+         "fr": "Sans emploi et à la recherche d’un emploi",
+         "hi": "काम से बाहर और काम की तलाश में",
+         "ja": "失業中、仕事探し中",
+         "pt": "Desempregado e à procura de trabalho",
+         "ru": "Без работы и в поисках работы",
+         "zh": "失业和找工作",
+         "bn": "কাজের বাইরে এবং কাজের সন্ধানে"
+        }
+       },
+       {
+        "value": "Out of work but not currently looking for work",
+        "text": {
+         "ar": "عاطل عن العمل ولكن لا تبحث حاليا عن عمل",
+         "es": "Estar desempleado pero no estar buscando trabajo actualmente",
+         "fr": "Sans emploi mais pas actuellement à la recherche d’un emploi",
+         "hi": "काम से बाहर लेकिन वर्तमान में काम की तलाश नहीं है",
+         "ja": "失業中だが、現在仕事を探していない",
+         "pt": "Desempregado, mas não procurando trabalho no momento",
+         "ru": "Без работы, но в настоящее время не ищу работу",
+         "zh": "失业但目前没有找工作",
+         "bn": "কাজের বাইরে কিন্তু বর্তমানে কাজ খুঁজছেন না"
+        }
+       },
+       {
+        "value": "A homemaker",
+        "text": {
+         "ar": "ربة منزل",
+         "es": "Un ama de casa",
+         "fr": "Une femme au foyer",
+         "hi": "एक गृहिणी",
+         "ja": "専業主婦",
+         "pt": "Uma dona de casa",
+         "ru": "Домохозяйка",
+         "zh": "家庭主妇",
+         "bn": "একজন গৃহিণী"
+        }
+       },
+       {
+        "value": "A student",
+        "text": {
+         "ar": "طالب",
+         "es": "Un estudiante",
+         "fr": "Un étudiant",
+         "hi": "एक छात्र",
+         "ja": "生徒の様子",
+         "pt": "Um estudante",
+         "ru": "Студент",
+         "zh": "学生",
+         "bn": "একজন ছাত্র"
+        }
+       },
+       {
+        "value": "Military",
+        "text": {
+         "ar": "عسكري",
+         "es": "Militar",
+         "fr": "Militaire",
+         "hi": "सैन्‍य",
+         "ja": "軍",
+         "pt": "Militar",
+         "ru": "Военный",
+         "zh": "军事",
+         "bn": "সামরিক"
+        }
+       },
+       {
+        "value": "Retired",
+        "text": {
+         "ar": "متقاعد",
+         "es": "Jubilado",
+         "fr": "Retraité",
+         "hi": "रिटायर्ड",
+         "ja": "引退",
+         "pt": "Aposentado",
+         "ru": "Отставной",
+         "zh": "退休",
+         "bn": "অবসরপ্রাপ্ত"
+        }
+       },
+       {
+        "value": "Unable to work",
+        "text": {
+         "ar": "غير قادر على العمل",
+         "es": "Incapaz de trabajar",
+         "fr": "Incapable de travailler",
+         "hi": "काम करने में असमर्थ",
+         "ja": "仕事ができない",
+         "pt": "Impossibilitado de trabalhar",
+         "ru": "Нетрудоспособность",
+         "zh": "无法工作",
+         "bn": "কাজ করতে অক্ষম"
+        }
+       }
+      ]
+     },
+     {
+      "type": "dropdown",
+      "name": "country_reside",
+      "title": {
+       "default": "What country do you live in?",
+       "ar": "في أي بلد تعيش؟",
+       "es": "¿En qué país vives?",
+       "fr": "Dans quel pays vivez-vous ?",
+       "hi": "आप किस देश में रहते हैं?",
+       "ja": "あなたはどの国に住んでいますか?",
+       "pt": "Em que país você vive?",
+       "ru": "В какой стране вы живете?",
+       "zh": "你住在哪个国家？",
+       "bn": "আপনি কোন দেশে বাস করেন?"
+      },
+      "isRequired": true,
+      "choices": [
+       {
+        "value": "Afghanistan",
+        "text": {
+         "ar": "أفغانستان",
+         "es": "Afganistán",
+         "fr": "Afghanistan",
+         "hi": "अफ़गानिस्तान",
+         "ja": "アフガニスタン",
+         "pt": "Afeganistão",
+         "ru": "Афганистан",
+         "zh": "阿富汗",
+         "bn": "আফগানিস্তান"
+        }
+       },
+       {
+        "value": "Albania",
+        "text": {
+         "ar": "ألبانيا",
+         "es": "Albania",
+         "fr": "Albanie",
+         "hi": "अल्बानिया",
+         "ja": "アルバニア",
+         "pt": "Albânia",
+         "ru": "Албания",
+         "zh": "阿尔巴尼亚",
+         "bn": "আলবানিয়া"
+        }
+       },
+       {
+        "value": "Algeria",
+        "text": {
+         "ar": "الجزائر",
+         "es": "Argelia",
+         "fr": "Algérie",
+         "hi": "अल्जीरिया",
+         "ja": "アルジェリア",
+         "pt": "Argélia",
+         "ru": "Алжир",
+         "zh": "阿尔及利亚",
+         "bn": "আলজেরিয়া"
+        }
+       },
+       {
+        "value": "Andorra",
+        "text": {
+         "ar": "أندورا",
+         "es": "Andorra",
+         "fr": "Andorre",
+         "hi": "अन्डोरा",
+         "ja": "アンドラ",
+         "pt": "Andorra",
+         "ru": "Андорра",
+         "zh": "安道尔",
+         "bn": "অ্যান্ডোরা"
+        }
+       },
+       {
+        "value": "Angola",
+        "text": {
+         "ar": "أنغولا",
+         "es": "Angola",
+         "fr": "Angola",
+         "hi": "अंगोला",
+         "ja": "アンゴラ",
+         "pt": "Angola",
+         "ru": "Ангола",
+         "zh": "安哥拉",
+         "bn": "অ্যাঙ্গোলা"
+        }
+       },
+       {
+        "value": "Antigua and Barbuda",
+        "text": {
+         "ar": "أنتيغوا وبربودا",
+         "es": "Antigua y Barbuda",
+         "fr": "Antigua-et-Barbuda",
+         "hi": "एंटीगुआ और बारबुडा",
+         "ja": "アンティグア・バーブーダ",
+         "pt": "Antígua e Barbuda",
+         "ru": "Антигуа и Барбуда",
+         "zh": "安提瓜和巴布达",
+         "bn": "অ্যান্টিগুয়া ও বার্বুডা"
+        }
+       },
+       {
+        "value": "Argentina",
+        "text": {
+         "ar": "الأرجنتين",
+         "es": "Argentina",
+         "fr": "Argentine",
+         "hi": "अर्जेंटीना",
+         "ja": "アルゼンチン",
+         "pt": "Argentina",
+         "ru": "Аргентина",
+         "zh": "阿根廷",
+         "bn": "আর্জেন্টিনা"
+        }
+       },
+       {
+        "value": "Armenia",
+        "text": {
+         "ar": "أرمينيا",
+         "es": "Armenia",
+         "fr": "Arménie",
+         "hi": "आर्मीनिया",
+         "ja": "アルメニア",
+         "pt": "Armênia",
+         "ru": "Армения",
+         "zh": "亚美尼亚",
+         "bn": "আর্মেনিয়া"
+        }
+       },
+       {
+        "value": "Australia",
+        "text": {
+         "ar": "أستراليا",
+         "es": "Australia",
+         "fr": "Australie",
+         "hi": "ऑस्ट्रेलिया",
+         "ja": "オーストラリア",
+         "pt": "Austrália",
+         "ru": "Австралия",
+         "zh": "澳大利亚",
+         "bn": "অস্ট্রেলিয়া"
+        }
+       },
+       {
+        "value": "Austria",
+        "text": {
+         "ar": "النمسا",
+         "es": "Austria",
+         "fr": "Autriche",
+         "hi": "ऑस्ट्रिया",
+         "ja": "オーストリア",
+         "pt": "Áustria",
+         "ru": "Австрия",
+         "zh": "奥地利",
+         "bn": "অস্ট্রিয়া"
+        }
+       },
+       {
+        "value": "Azerbaijan",
+        "text": {
+         "ar": "أذربيجان",
+         "es": "Azerbaiyán",
+         "fr": "Azerbaïdjan",
+         "hi": "अज़रबैजान",
+         "ja": "アゼルバイジャン",
+         "pt": "Azerbaijão",
+         "ru": "Азербайджан",
+         "zh": "阿塞拜疆",
+         "bn": "আজারবাইজান"
+        }
+       },
+       {
+        "value": "Bahamas",
+        "text": {
+         "ar": "جزر البهاما",
+         "es": "Bahamas",
+         "fr": "Bahamas",
+         "hi": "बहामास",
+         "ja": "バハマ",
+         "pt": "Bahamas",
+         "ru": "Багамские Острова",
+         "zh": "巴哈马",
+         "bn": "বাহামা দ্বীপপুঞ্জ"
+        }
+       },
+       {
+        "value": "Bahrain",
+        "text": {
+         "ar": "البحرين",
+         "es": "Bahrein",
+         "fr": "Bahreïn",
+         "hi": "बहरीन",
+         "ja": "バーレーン",
+         "pt": "Bahrein",
+         "ru": "Бахрейн",
+         "zh": "巴林",
+         "bn": "বাহরিন"
+        }
+       },
+       {
+        "value": "Bangladesh",
+        "text": {
+         "ar": "بنغلاديش",
+         "es": "Bangladesh",
+         "fr": "Bangladesh",
+         "hi": "बांग्लादेश",
+         "ja": "バングラデシュ",
+         "pt": "Bangladesh",
+         "ru": "Бангладеш",
+         "zh": "孟加拉国",
+         "bn": "বাংলাদেশ"
+        }
+       },
+       {
+        "value": "Barbados",
+        "text": {
+         "ar": "بربادوس",
+         "es": "Barbados",
+         "fr": "Barbade",
+         "hi": "बारबाडोस",
+         "ja": "バルバドス",
+         "pt": "Barbados",
+         "ru": "Барбадос",
+         "zh": "巴巴多斯",
+         "bn": "বার্বাডোস"
+        }
+       },
+       {
+        "value": "Belarus",
+        "text": {
+         "ar": "بيلاروسيا",
+         "es": "Bielorrusia",
+         "fr": "Biélorussie",
+         "hi": "बेलारूस",
+         "ja": "ベラルーシ",
+         "pt": "Belarus",
+         "ru": "Беларусь",
+         "zh": "白俄罗斯",
+         "bn": "বেলারুশ"
+        }
+       },
+       {
+        "value": "Belgium",
+        "text": {
+         "ar": "بلجيكا",
+         "es": "Bélgica",
+         "fr": "Belgique",
+         "hi": "बेल्जियम",
+         "ja": "ベルギー",
+         "pt": "Bélgica",
+         "ru": "Бельгия",
+         "zh": "比利时",
+         "bn": "বেলজিয়াম"
+        }
+       },
+       {
+        "value": "Belize",
+        "text": {
+         "ar": "بيلز",
+         "es": "Belice",
+         "fr": "Belize",
+         "hi": "बेलीज़",
+         "ja": "ベリーズ",
+         "pt": "Belize",
+         "ru": "Белиз",
+         "zh": "伯利兹",
+         "bn": "বেলিজ"
+        }
+       },
+       {
+        "value": "Benin",
+        "text": {
+         "ar": "بنن",
+         "es": "Benin",
+         "fr": "Bénin",
+         "hi": "बेनिन",
+         "ja": "ベナン",
+         "pt": "Benim",
+         "ru": "Бенин",
+         "zh": "贝宁",
+         "bn": "বেনিন"
+        }
+       },
+       {
+        "value": "Bhutan",
+        "text": {
+         "ar": "بوتان",
+         "es": "Bhután",
+         "fr": "Bhoutan",
+         "hi": "भूटान",
+         "ja": "ブータン",
+         "pt": "Butão",
+         "ru": "Бутан",
+         "zh": "不丹",
+         "bn": "ভুটানের"
+        }
+       },
+       {
+        "value": "Bolivia",
+        "text": {
+         "ar": "بوليفيا",
+         "es": "Bolivia",
+         "fr": "Bolivie",
+         "hi": "बोलीविया",
+         "ja": "ボリビア",
+         "pt": "Bolívia",
+         "ru": "Боливия",
+         "zh": "玻利维亚",
+         "bn": "বলিভিয়া"
+        }
+       },
+       {
+        "value": "Bosnia and Herzegovina",
+        "text": {
+         "ar": "البوسنة والهرسك",
+         "es": "Bosnia-Herzegovina",
+         "fr": "Bosnie-Herzégovine",
+         "hi": "बोस्निया और हर्ज़िगोविना",
+         "ja": "ボスニア・ヘルツェゴビナ",
+         "pt": "Bósnia e Herzegovina",
+         "ru": "Босния и Герцеговина",
+         "zh": "波斯尼亚和黑塞哥维那",
+         "bn": "বসনিয়া ও হার্জেগোভিনা"
+        }
+       },
+       {
+        "value": "Botswana",
+        "text": {
+         "ar": "بوتسوانا",
+         "es": "Botswana",
+         "fr": "Botswana",
+         "hi": "बोत्सवाना",
+         "ja": "ボツワナ",
+         "pt": "Botsuana",
+         "ru": "Ботсвана",
+         "zh": "博茨瓦纳",
+         "bn": "বতসোয়ানা"
+        }
+       },
+       {
+        "value": "Brazil",
+        "text": {
+         "ar": "البرازيل",
+         "es": "Brasil",
+         "fr": "Brésil",
+         "hi": "ब्राज़ील",
+         "ja": "ブラジル",
+         "pt": "Brasil",
+         "ru": "Бразилия",
+         "zh": "巴西",
+         "bn": "ব্রাজিল"
+        }
+       },
+       {
+        "value": "Brunei",
+        "text": {
+         "ar": "بروناي",
+         "es": "Brunéi",
+         "fr": "Brunei",
+         "hi": "ब्रुनेई",
+         "ja": "ブルネイ",
+         "pt": "Brunei",
+         "ru": "Бруней",
+         "zh": "文莱",
+         "bn": "ব্রুনেই"
+        }
+       },
+       {
+        "value": "Bulgaria",
+        "text": {
+         "ar": "بلغاريا",
+         "es": "Bulgaria",
+         "fr": "Bulgarie",
+         "hi": "बल्गारिया",
+         "ja": "ブルガリア",
+         "pt": "Bulgária",
+         "ru": "Болгария",
+         "zh": "保加利亚",
+         "bn": "বুলগেরিয়া"
+        }
+       },
+       {
+        "value": "Burkina Faso",
+        "text": {
+         "ar": "بوركينا فاسو",
+         "es": "Burkina Faso",
+         "fr": "Burkina Faso",
+         "hi": "बुर्किना फासो",
+         "ja": "ブルキナファソ",
+         "pt": "Burquina Faso",
+         "ru": "Буркина-Фасо",
+         "zh": "布基纳法索",
+         "bn": "বুর্কিনা ফাসো"
+        }
+       },
+       {
+        "value": "Burundi",
+        "text": {
+         "ar": "بوروندي",
+         "es": "Burundi",
+         "fr": "Burundi",
+         "hi": "बुरुंडी",
+         "ja": "ブルンジ",
+         "pt": "Burundi",
+         "ru": "Бурунди",
+         "zh": "蒲隆地",
+         "bn": "বুরুন্ডি"
+        }
+       },
+       {
+        "value": "Cabo Verde",
+        "text": {
+         "ar": "كابو فيردي",
+         "es": "Cabo Verde",
+         "fr": "Cabo Verde",
+         "hi": "काबो वर्डे",
+         "ja": "カーボベルデ",
+         "pt": "Cabo Verde",
+         "ru": "Кабо-Верде",
+         "zh": "佛得角",
+         "bn": "কাবো ভার্দে"
+        }
+       },
+       {
+        "value": "Cambodia",
+        "text": {
+         "ar": "كمبوديا",
+         "es": "Camboya",
+         "fr": "Cambodge",
+         "hi": "कम्बोडिया",
+         "ja": "カンボジア",
+         "pt": "Camboja",
+         "ru": "Камбоджа",
+         "zh": "柬埔寨",
+         "bn": "কম্বোডিয়া"
+        }
+       },
+       {
+        "value": "Cameroon",
+        "text": {
+         "ar": "الكاميرون",
+         "es": "Camerún",
+         "fr": "Cameroun",
+         "hi": "कैमरून",
+         "ja": "カメルーン",
+         "pt": "Camarões",
+         "ru": "Камерун",
+         "zh": "喀麦隆",
+         "bn": "ক্যামেরুন"
+        }
+       },
+       {
+        "value": "Canada",
+        "text": {
+         "ar": "كندا",
+         "es": "Canadá",
+         "fr": "Canada",
+         "hi": "कनाडा",
+         "ja": "カナダ",
+         "pt": "Canadá",
+         "ru": "Канада",
+         "zh": "加拿大",
+         "bn": "কানাডা"
+        }
+       },
+       {
+        "value": "Central African Republic",
+        "text": {
+         "ar": "جمهورية أفريقيا الوسطى",
+         "es": "República Centroafricana",
+         "fr": "République centrafricaine",
+         "hi": "मध्य अफ्रीकी गणराज्य",
+         "ja": "中央アフリカ共和国",
+         "pt": "República Centro-Africana",
+         "ru": "Центральноафриканская Республика",
+         "zh": "中非共和国",
+         "bn": "মধ্য আফ্রিকান প্রজাতন্ত্র"
+        }
+       },
+       {
+        "value": "Chad",
+        "text": {
+         "ar": "تشاد",
+         "es": "Chad",
+         "fr": "Tchad",
+         "hi": "चाड",
+         "ja": "チャド",
+         "pt": "Chade",
+         "ru": "Чад",
+         "zh": "乍得",
+         "bn": "চাদ"
+        }
+       },
+       {
+        "value": "Chile",
+        "text": {
+         "ar": "شيلي",
+         "es": "Chile",
+         "fr": "Chili",
+         "hi": "चिली",
+         "ja": "チリ",
+         "pt": "Chile",
+         "ru": "Чили",
+         "zh": "智利",
+         "bn": "চিলি"
+        }
+       },
+       {
+        "value": "China",
+        "text": {
+         "ar": "الصين",
+         "es": "China",
+         "fr": "Chine",
+         "hi": "चीन",
+         "ja": "中国",
+         "pt": "China",
+         "ru": "Китай",
+         "zh": "中国",
+         "bn": "চীন"
+        }
+       },
+       {
+        "value": "Colombia",
+        "text": {
+         "ar": "كولومبيا",
+         "es": "Colombia",
+         "fr": "Colombie",
+         "hi": "कोलंबिया",
+         "ja": "コロンビア",
+         "pt": "Colômbia",
+         "ru": "Колумбия",
+         "zh": "哥伦比亚",
+         "bn": "কলম্বিয়া"
+        }
+       },
+       {
+        "value": "Comoros",
+        "text": {
+         "ar": "جزر القمر",
+         "es": "Comoras",
+         "fr": "Comores",
+         "hi": "कोमोरोस",
+         "ja": "コモロ",
+         "pt": "Comores",
+         "ru": "Коморские Острова",
+         "zh": "科摩罗",
+         "bn": "কোমোরোস"
+        }
+       },
+       {
+        "value": "Congo",
+        "text": {
+         "ar": "الكونغو",
+         "es": "Congo",
+         "fr": "Congo",
+         "hi": "कांगो",
+         "ja": "コンゴ共和国",
+         "pt": "Congo",
+         "ru": "Конго",
+         "zh": "刚果",
+         "bn": "কঙ্গো"
+        }
+       },
+       {
+        "value": "Costa Rica",
+        "text": {
+         "ar": "كوستاريكا",
+         "es": "Costa Rica",
+         "fr": "Costa Rica",
+         "hi": "कोस्टा रिका",
+         "ja": "コスタリカ",
+         "pt": "Costa Rica",
+         "ru": "Коста-Рика",
+         "zh": "哥斯达黎加",
+         "bn": "কোস্টা রিকা"
+        }
+       },
+       {
+        "value": "Croatia",
+        "text": {
+         "ar": "كرواتيا",
+         "es": "Croacia",
+         "fr": "Croatie (Hrvatska)",
+         "hi": "क्रोएशिया",
+         "ja": "クロアチア",
+         "pt": "Croácia",
+         "ru": "Хорватия",
+         "zh": "克罗地亚",
+         "bn": "ক্রোয়েশিয়া"
+        }
+       },
+       {
+        "value": "Cuba",
+        "text": {
+         "ar": "كوبا",
+         "es": "Cuba",
+         "fr": "Cuba",
+         "hi": "क्यूबा",
+         "ja": "キューバ",
+         "pt": "Cuba",
+         "ru": "Куба",
+         "zh": "古巴",
+         "bn": "কিউবা"
+        }
+       },
+       {
+        "value": "Cyprus",
+        "text": {
+         "ar": "قبرص",
+         "es": "Chipre",
+         "fr": "Chypre",
+         "hi": "साइप्रस",
+         "ja": "キプロス",
+         "pt": "Chipre",
+         "ru": "Кипр",
+         "zh": "塞浦路斯",
+         "bn": "সাইপ্রাসের"
+        }
+       },
+       {
+        "value": "Czechia",
+        "text": {
+         "ar": "التشيك",
+         "es": "Chequia",
+         "fr": "Tchéquie",
+         "hi": "चेकिया",
+         "ja": "チェコ",
+         "pt": "República Tcheca",
+         "ru": "Чехия",
+         "zh": "捷克",
+         "bn": "চেকিয়া"
+        }
+       },
+       {
+        "value": "Denmark",
+        "text": {
+         "ar": "الدانمارك",
+         "es": "Dinamarca",
+         "fr": "Danemark",
+         "hi": "डेनमार्क",
+         "ja": "デンマーク",
+         "pt": "Dinamarca",
+         "ru": "Дания",
+         "zh": "丹麦",
+         "bn": "ডেনমার্ক"
+        }
+       },
+       {
+        "value": "Djibouti",
+        "text": {
+         "ar": "جيبوتي",
+         "es": "Yibuti",
+         "fr": "Djibouti",
+         "hi": "जिबूती",
+         "ja": "ジブチ",
+         "pt": "Djibuti",
+         "ru": "Джибути",
+         "zh": "吉布提",
+         "bn": "জিবুতি"
+        }
+       },
+       {
+        "value": "Dominica",
+        "text": {
+         "ar": "دومينيكا",
+         "es": "Dominica",
+         "fr": "Dominique",
+         "hi": "डोमिनिका",
+         "ja": "ドミニカ国",
+         "pt": "Domínica",
+         "ru": "Доминика",
+         "zh": "多米尼加",
+         "bn": "ডোমিনিকা"
+        }
+       },
+       {
+        "value": "Dominican Republic",
+        "text": {
+         "ar": "جمهورية الدومينيكان",
+         "es": "República Dominicana",
+         "fr": "République dominicaine",
+         "hi": "डॉमिनिकन गणराज्य",
+         "ja": "ドミニカ共和国",
+         "pt": "República Dominicana",
+         "ru": "Доминиканская Республика",
+         "zh": "多米尼加共和国",
+         "bn": "ডোমিনিকান প্রজাতন্ত্র"
+        }
+       },
+       {
+        "value": "East Timor (Timor-Leste)",
+        "text": {
+         "ar": "تيمور الشرقية (تيمور الشرقية)",
+         "es": "Timor Oriental (Timor-Leste)",
+         "fr": "Timor oriental (Timor-Leste)",
+         "hi": "पूर्वी तिमोर (तिमोर-लेस्ते)",
+         "ja": "東ティモール(東ティモール)",
+         "pt": "Timor-Leste (Timor-Leste)",
+         "ru": "Восточный Тимор (Восточный Тимор)",
+         "zh": "东帝汶（东帝汶）",
+         "bn": "পূর্ব তিমুর (পূর্ব তিমুর)"
+        }
+       },
+       {
+        "value": "Ecuador",
+        "text": {
+         "ar": "الإكوادور",
+         "es": "Ecuador",
+         "fr": "Équateur",
+         "hi": "इक्वेडोर",
+         "ja": "エクアドル",
+         "pt": "Equador",
+         "ru": "Эквадор",
+         "zh": "厄瓜多尔",
+         "bn": "ইকুয়েডর"
+        }
+       },
+       {
+        "value": "Egypt",
+        "text": {
+         "ar": "مصر",
+         "es": "Egipto",
+         "fr": "Égypte",
+         "hi": "मिस्र",
+         "ja": "エジプト",
+         "pt": "Egito",
+         "ru": "Египет",
+         "zh": "埃及",
+         "bn": "মিশর"
+        }
+       },
+       {
+        "value": "El Salvador",
+        "text": {
+         "ar": "السلفادور",
+         "es": "El Salvador",
+         "fr": "Salvador",
+         "hi": "अल साल्वाडोर",
+         "ja": "エルサルバドル",
+         "pt": "El Salvador",
+         "ru": "Сальвадор",
+         "zh": "萨尔瓦多",
+         "bn": "এল সালভাদর"
+        }
+       },
+       {
+        "value": "Equatorial Guinea",
+        "text": {
+         "ar": "غينيا الاستوائية",
+         "es": "Guinea Ecuatorial",
+         "fr": "Guinée équatoriale",
+         "hi": "इक्वेटोरियल गिनी",
+         "ja": "赤道ギニア",
+         "pt": "Guiné Equatorial",
+         "ru": "Экваториальная Гвинея",
+         "zh": "赤道几内亚",
+         "bn": "নিরক্ষীয় গিনি"
+        }
+       },
+       {
+        "value": "Eritrea",
+        "text": {
+         "ar": "إريتريا",
+         "es": "Eritrea",
+         "fr": "Érythrée",
+         "hi": "इरिट्रिया",
+         "ja": "エリトリア",
+         "pt": "Eritreia",
+         "ru": "Эритрея",
+         "zh": "厄立特里亚",
+         "bn": "ইরিত্রিয়া"
+        }
+       },
+       {
+        "value": "Estonia",
+        "text": {
+         "ar": "إستونيا",
+         "es": "Estonia",
+         "fr": "Estonie",
+         "hi": "एस्टोनिया",
+         "ja": "エストニア",
+         "pt": "Estônia",
+         "ru": "Эстония",
+         "zh": "爱沙尼亚",
+         "bn": "এস্তোনিয়া"
+        }
+       },
+       {
+        "value": "Eswatini",
+        "text": {
+         "ar": "إسواتيني",
+         "es": "Esuatini",
+         "fr": "Eswatini",
+         "hi": "इस्वातिनी",
+         "ja": "エスワティニ",
+         "pt": "Essuatíni",
+         "ru": "Эсватини",
+         "zh": "斯威士兰",
+         "bn": "ইসোয়াতিনি"
+        }
+       },
+       {
+        "value": "Ethiopia",
+        "text": {
+         "ar": "إثيوبيا",
+         "es": "Etiopía",
+         "fr": "Éthiopie",
+         "hi": "इथियोपिया",
+         "ja": "エチオピア",
+         "pt": "Etiópia",
+         "ru": "Эфиопия",
+         "zh": "埃塞俄比亚",
+         "bn": "ইথিওপিয়া"
+        }
+       },
+       {
+        "value": "Fiji",
+        "text": {
+         "ar": "فيجي",
+         "es": "Fiji",
+         "fr": "Fidji",
+         "hi": "फ़िजी",
+         "ja": "フィジー",
+         "pt": "Fiji",
+         "ru": "Фиджи",
+         "zh": "斐济",
+         "bn": "ফিজি"
+        }
+       },
+       {
+        "value": "Finland",
+        "text": {
+         "ar": "فنلندا",
+         "es": "Finlandia",
+         "fr": "Finlande",
+         "hi": "फ़िनलैंड",
+         "ja": "フィンランド",
+         "pt": "Finlândia",
+         "ru": "Финляндия",
+         "zh": "芬兰",
+         "bn": "ফিনল্যান্ড"
+        }
+       },
+       {
+        "value": "France",
+        "text": {
+         "ar": "فرنسا",
+         "es": "Francia",
+         "fr": "France",
+         "hi": "फ़्रांस",
+         "ja": "フランス",
+         "pt": "França",
+         "ru": "Франция",
+         "zh": "法国",
+         "bn": "ফ্রান্স"
+        }
+       },
+       {
+        "value": "Gabon",
+        "text": {
+         "ar": "غابون",
+         "es": "Gabón",
+         "fr": "Gabon",
+         "hi": "गैबॉन",
+         "ja": "ガボン",
+         "pt": "Gabão",
+         "ru": "Габон",
+         "zh": "加蓬",
+         "bn": "গ্যাবন"
+        }
+       },
+       {
+        "value": "Gambia",
+        "text": {
+         "ar": "غامبيا",
+         "es": "Gambia",
+         "fr": "Gambie",
+         "hi": "गाम्बिया",
+         "ja": "ガンビア",
+         "pt": "Gâmbia",
+         "ru": "Гамбия",
+         "zh": "冈比亚",
+         "bn": "গাম্বিয়া"
+        }
+       },
+       {
+        "value": "Georgia",
+        "text": {
+         "ar": "جورجيا",
+         "es": "Georgia",
+         "fr": "Géorgie",
+         "hi": "जॉर्जिया",
+         "ja": "グルジア",
+         "pt": "Geórgia",
+         "ru": "Грузия",
+         "zh": "格鲁吉亚",
+         "bn": "জর্জিয়া"
+        }
+       },
+       {
+        "value": "Germany",
+        "text": {
+         "ar": "ألمانيا",
+         "es": "Alemania",
+         "fr": "Allemagne",
+         "hi": "जर्मनी",
+         "ja": "ドイツ",
+         "pt": "Alemanha",
+         "ru": "Германия",
+         "zh": "德国",
+         "bn": "জার্মানী"
+        }
+       },
+       {
+        "value": "Ghana",
+        "text": {
+         "ar": "غانا",
+         "es": "Ghana",
+         "fr": "Ghana",
+         "hi": "घाना",
+         "ja": "ガーナ",
+         "pt": "Gana",
+         "ru": "Гана",
+         "zh": "加纳",
+         "bn": "ঘানা"
+        }
+       },
+       {
+        "value": "Greece",
+        "text": {
+         "ar": "اليونان",
+         "es": "Grecia",
+         "fr": "Grèce",
+         "hi": "यूनान",
+         "ja": "ギリシャ",
+         "pt": "Grécia",
+         "ru": "Греция",
+         "zh": "希腊",
+         "bn": "গ্রীস"
+        }
+       },
+       {
+        "value": "Grenada",
+        "text": {
+         "ar": "غرينادا",
+         "es": "Granada",
+         "fr": "Grenade",
+         "hi": "ग्रेनाडा",
+         "ja": "グレナダ",
+         "pt": "Granada",
+         "ru": "Гренада",
+         "zh": "格林纳达",
+         "bn": "গ্রানাডা"
+        }
+       },
+       {
+        "value": "Guatemala",
+        "text": {
+         "ar": "جواتيمالا",
+         "es": "Guatemala",
+         "fr": "Guatemala",
+         "hi": "ग्वाटेमाला",
+         "ja": "グアテマラ",
+         "pt": "Guatemala",
+         "ru": "Гватемала",
+         "zh": "危地马拉",
+         "bn": "গুয়াতেমালা"
+        }
+       },
+       {
+        "value": "Guinea",
+        "text": {
+         "ar": "غينيا",
+         "es": "Guinea",
+         "fr": "Guinée",
+         "hi": "गिनी",
+         "ja": "ギニア",
+         "pt": "Guiné",
+         "ru": "Гвинея",
+         "zh": "几内亚",
+         "bn": "গিনি"
+        }
+       },
+       {
+        "value": "Guinea-Bissau",
+        "text": {
+         "ar": "غينيا بيساو",
+         "es": "Guinea-Bissau",
+         "fr": "Guinée-Bissau",
+         "hi": "गिनी-बिसाऊ",
+         "ja": "ギニアビサウ",
+         "pt": "Guiné-Bissau",
+         "ru": "Гвинея-Бисау",
+         "zh": "几内亚比绍",
+         "bn": "গিনি-বিসাউ"
+        }
+       },
+       {
+        "value": "Guyana",
+        "text": {
+         "ar": "غيانا",
+         "es": "Guyana",
+         "fr": "Guyana",
+         "hi": "गयाना",
+         "ja": "ガイアナ",
+         "pt": "Guiana",
+         "ru": "Гайана",
+         "zh": "圭亚那",
+         "bn": "গায়ানা"
+        }
+       },
+       {
+        "value": "Haiti",
+        "text": {
+         "ar": "هايتي",
+         "es": "Haití",
+         "fr": "Haïti",
+         "hi": "हैती",
+         "ja": "ハイチ",
+         "pt": "Haiti",
+         "ru": "Гаити",
+         "zh": "海地",
+         "bn": "হাইতি"
+        }
+       },
+       {
+        "value": "Honduras",
+        "text": {
+         "ar": "هندوراس",
+         "es": "Honduras",
+         "fr": "Honduras",
+         "hi": "होंडुरास",
+         "ja": "ホンジュラス",
+         "pt": "Honduras",
+         "ru": "Гондурас",
+         "zh": "洪都拉斯",
+         "bn": "হন্ডুরাস"
+        }
+       },
+       {
+        "value": "Hungary",
+        "text": {
+         "ar": "المجر",
+         "es": "Hungría",
+         "fr": "Hongrie",
+         "hi": "हंगरी",
+         "ja": "ハンガリー",
+         "pt": "Hungria",
+         "ru": "Венгрия",
+         "zh": "匈牙利",
+         "bn": "হাংগেরী"
+        }
+       },
+       {
+        "value": "Iceland",
+        "text": {
+         "ar": "أيسلندا",
+         "es": "Islandia",
+         "fr": "Islande",
+         "hi": "आइसलैंड",
+         "ja": "アイスランド",
+         "pt": "Islândia",
+         "ru": "Исландия",
+         "zh": "冰岛",
+         "bn": "আইসল্যান্ড"
+        }
+       },
+       {
+        "value": "India",
+        "text": {
+         "ar": "الهند",
+         "es": "India",
+         "fr": "Inde",
+         "hi": "भारत",
+         "ja": "インド",
+         "pt": "Índia",
+         "ru": "Индия",
+         "zh": "印度",
+         "bn": "ভারত"
+        }
+       },
+       {
+        "value": "Indonesia",
+        "text": {
+         "ar": "إندونيسيا",
+         "es": "Indonesia",
+         "fr": "Indonésie",
+         "hi": "इंडोनेशिया",
+         "ja": "インドネシア",
+         "pt": "Indonésia",
+         "ru": "Индонезия",
+         "zh": "印度尼西亚",
+         "bn": "ইন্দোনেশিয়া"
+        }
+       },
+       {
+        "value": "Iran",
+        "text": {
+         "ar": "إيران",
+         "es": "Irán",
+         "fr": "Iran",
+         "hi": "ईरान",
+         "ja": "イラン",
+         "pt": "Irã",
+         "ru": "Иран",
+         "zh": "伊朗",
+         "bn": "ইরান"
+        }
+       },
+       {
+        "value": "Iraq",
+        "text": {
+         "ar": "العراق",
+         "es": "Irak",
+         "fr": "Irak",
+         "hi": "इराक",
+         "ja": "イラク",
+         "pt": "Iraque",
+         "ru": "Ирак",
+         "zh": "伊拉克",
+         "bn": "ইরাক"
+        }
+       },
+       {
+        "value": "Ireland",
+        "text": {
+         "ar": "أيرلندا",
+         "es": "Irlanda",
+         "fr": "Irlande",
+         "hi": "आयरलैंड",
+         "ja": "アイルランド",
+         "pt": "Irlanda",
+         "ru": "Ирландия",
+         "zh": "爱尔兰",
+         "bn": "আয়ারল্যান্ড"
+        }
+       },
+       {
+        "value": "Israel",
+        "text": {
+         "ar": "إسرائيل",
+         "es": "Israel",
+         "fr": "Israël",
+         "hi": "इज़राइल",
+         "ja": "イスラエル",
+         "pt": "Israel",
+         "ru": "Израиль",
+         "zh": "以色列",
+         "bn": "ইজরায়েল"
+        }
+       },
+       {
+        "value": "Italy",
+        "text": {
+         "ar": "إيطاليا",
+         "es": "Italia",
+         "fr": "Italie",
+         "hi": "इटली",
+         "ja": "イタリア",
+         "pt": "Itália",
+         "ru": "Италия",
+         "zh": "意大利",
+         "bn": "ইতালি"
+        }
+       },
+       {
+        "value": "Jamaica",
+        "text": {
+         "ar": "جامايكا",
+         "es": "Jamaica",
+         "fr": "Jamaïque",
+         "hi": "जमैका",
+         "ja": "ジャマイカ",
+         "pt": "Jamaica",
+         "ru": "Ямайка",
+         "zh": "牙买加",
+         "bn": "জামাইকা"
+        }
+       },
+       {
+        "value": "Japan",
+        "text": {
+         "ar": "اليابان",
+         "es": "Japón",
+         "fr": "Japon",
+         "hi": "जापान",
+         "ja": "日本",
+         "pt": "Japão",
+         "ru": "Япония",
+         "zh": "日本",
+         "bn": "জাপান"
+        }
+       },
+       {
+        "value": "Jordan",
+        "text": {
+         "ar": "الأردن",
+         "es": "Jordania",
+         "fr": "Jordanie",
+         "hi": "जॉर्डन",
+         "ja": "ヨルダン",
+         "pt": "Jordânia",
+         "ru": "Иордания",
+         "zh": "约旦",
+         "bn": "জর্ডন"
+        }
+       },
+       {
+        "value": "Kazakhstan",
+        "text": {
+         "ar": "كازاخستان",
+         "es": "Kazajstán",
+         "fr": "Kazakhstan",
+         "hi": "कज़ाकस्तान",
+         "ja": "カザフスタン",
+         "pt": "Cazaquistão",
+         "ru": "Казахстан",
+         "zh": "哈萨克斯坦",
+         "bn": "কাজাখস্তান"
+        }
+       },
+       {
+        "value": "Kenya",
+        "text": {
+         "ar": "كينيا",
+         "es": "Kenia",
+         "fr": "Kenya",
+         "hi": "केन्या",
+         "ja": "ケニア",
+         "pt": "Quênia",
+         "ru": "Кения",
+         "zh": "肯尼亚",
+         "bn": "কেনিয়া"
+        }
+       },
+       {
+        "value": "Kiribati",
+        "text": {
+         "ar": "كيريباس",
+         "es": "Kiribati",
+         "fr": "Kiribati",
+         "hi": "किरिबाती",
+         "ja": "キリバス",
+         "pt": "Kiribati",
+         "ru": "Кирибати",
+         "zh": "基里巴斯",
+         "bn": "কিরিবাটি"
+        }
+       },
+       {
+        "value": "Korea, North",
+        "text": {
+         "ar": "كوريا الشمالية",
+         "es": "Corea, Norte",
+         "fr": "Corée, Nord",
+         "hi": "कोरिया, उत्तर",
+         "ja": "朝鮮民主主義人民共和国、北朝鮮",
+         "pt": "Coreia, Norte",
+         "ru": "Северная Корея",
+         "zh": "韩国， 朝鲜",
+         "bn": "কোরিয়া, উত্তর"
+        }
+       },
+       {
+        "value": "Korea, South",
+        "text": {
+         "ar": "كوريا الجنوبية",
+         "es": "Corea, Sur",
+         "fr": "Corée, Sud",
+         "hi": "कोरिया, दक्षिण",
+         "ja": "韓国、韓国",
+         "pt": "Coreia, Sul",
+         "ru": "Южная Корея",
+         "zh": "韩国， 韩国",
+         "bn": "কোরিয়া, দক্ষিণ"
+        }
+       },
+       {
+        "value": "Kosovo",
+        "text": {
+         "ar": "كوسوفو",
+         "es": "Kosovo",
+         "fr": "Kosovo",
+         "hi": "कोसोवो",
+         "ja": "コソボ",
+         "pt": "Kosovo",
+         "ru": "Косово",
+         "zh": "科索沃",
+         "bn": "কসোভো"
+        }
+       },
+       {
+        "value": "Kuwait",
+        "text": {
+         "ar": "الكويت",
+         "es": "Kuwait",
+         "fr": "Koweït",
+         "hi": "कुवैत",
+         "ja": "クウェート",
+         "pt": "Kuaite",
+         "ru": "Кувейт",
+         "zh": "科威特",
+         "bn": "কুয়েত"
+        }
+       },
+       {
+        "value": "Kyrgyzstan",
+        "text": {
+         "ar": "قيرغيزستان",
+         "es": "Kirguizistán",
+         "fr": "Kirghizistan",
+         "hi": "किरगिज़स्तान",
+         "ja": "キルギス",
+         "pt": "Quirguistão",
+         "ru": "Киргизия",
+         "zh": "吉尔吉斯斯坦",
+         "bn": "কিরঘিজস্তান"
+        }
+       },
+       {
+        "value": "Laos",
+        "text": {
+         "ar": "لاوس",
+         "es": "Laos",
+         "fr": "Laos",
+         "hi": "लाओस",
+         "ja": "ラオス",
+         "pt": "Laos",
+         "ru": "Лаос",
+         "zh": "老挝",
+         "bn": "লাওস"
+        }
+       },
+       {
+        "value": "Latvia",
+        "text": {
+         "ar": "لاتفيا",
+         "es": "Letonia",
+         "fr": "Lettonie",
+         "hi": "लाटविया",
+         "ja": "ラトビア",
+         "pt": "Letônia",
+         "ru": "Латвия",
+         "zh": "拉托维亚",
+         "bn": "ল্যাটভিয়া"
+        }
+       },
+       {
+        "value": "Lebanon",
+        "text": {
+         "ar": "لبنان",
+         "es": "Líbano",
+         "fr": "Liban",
+         "hi": "लेबनान",
+         "ja": "レバノン",
+         "pt": "Líbano",
+         "ru": "Ливан",
+         "zh": "黎巴嫩",
+         "bn": "লেবানন"
+        }
+       },
+       {
+        "value": "Lesotho",
+        "text": {
+         "ar": "ليسوتو",
+         "es": "Lesotho",
+         "fr": "Lesotho",
+         "hi": "लेसोथो",
+         "ja": "レソト",
+         "pt": "Lesoto",
+         "ru": "Лесото",
+         "zh": "莱索托",
+         "bn": "লেসোথো"
+        }
+       },
+       {
+        "value": "Liberia",
+        "text": {
+         "ar": "ليبيريا",
+         "es": "Liberia",
+         "fr": "Libéria",
+         "hi": "लाइबेरिया",
+         "ja": "リベリア",
+         "pt": "Libéria",
+         "ru": "Либерия",
+         "zh": "利比里亚",
+         "bn": "লাইবেরিয়া"
+        }
+       },
+       {
+        "value": "Libya",
+        "text": {
+         "ar": "ليبيا",
+         "es": "Libia",
+         "fr": "Libye",
+         "hi": "लीबिया",
+         "ja": "リビア",
+         "pt": "Líbia",
+         "ru": "Ливия",
+         "zh": "利比亚",
+         "bn": "লিবিয়া"
+        }
+       },
+       {
+        "value": "Liechtenstein",
+        "text": {
+         "ar": "ليشتنشتاين",
+         "es": "Liechtenstein",
+         "fr": "Liechtenstein",
+         "hi": "लिचेंस्टीन",
+         "ja": "リヒテンシュタイン",
+         "pt": "Liechtenstein",
+         "ru": "Лихтенштейн",
+         "zh": "列支敦士登",
+         "bn": "লিচেনস্টাইন"
+        }
+       },
+       {
+        "value": "Lithuania",
+        "text": {
+         "ar": "لتوانيا",
+         "es": "Lituania",
+         "fr": "Lituanie",
+         "hi": "लिथुआनिया",
+         "ja": "リトアニア",
+         "pt": "Lituânia",
+         "ru": "Литва",
+         "zh": "立陶宛",
+         "bn": "লিথুয়ানিয়া"
+        }
+       },
+       {
+        "value": "Luxembourg",
+        "text": {
+         "ar": "لوكسمبورج",
+         "es": "Luxemburgo",
+         "fr": "Luxembourg",
+         "hi": "लक्ज़म्बर्ग",
+         "ja": "ルクセンブルク",
+         "pt": "Luxemburgo",
+         "ru": "Люксембург",
+         "zh": "卢森堡",
+         "bn": "লুক্সেমবুর্গ"
+        }
+       },
+       {
+        "value": "Madagascar",
+        "text": {
+         "ar": "مدغشقر",
+         "es": "Madagascar",
+         "fr": "Madagascar",
+         "hi": "मेडागास्कर",
+         "ja": "マダガスカル",
+         "pt": "Madagáscar",
+         "ru": "Мадагаскар",
+         "zh": "马达加斯加",
+         "bn": "মাদাগাস্কার"
+        }
+       },
+       {
+        "value": "Malawi",
+        "text": {
+         "ar": "ملاوي",
+         "es": "Malawi",
+         "fr": "Malawi",
+         "hi": "मलावी",
+         "ja": "マラウイ",
+         "pt": "Malawi",
+         "ru": "Малави",
+         "zh": "马拉维",
+         "bn": "মালাউই"
+        }
+       },
+       {
+        "value": "Malaysia",
+        "text": {
+         "ar": "ماليزيا",
+         "es": "Malasia",
+         "fr": "Malaisie",
+         "hi": "मलेशिया",
+         "ja": "マレーシア",
+         "pt": "Malásia",
+         "ru": "Малайзия",
+         "zh": "马来西亚",
+         "bn": "মালয়েশিয়া"
+        }
+       },
+       {
+        "value": "Maldives",
+        "text": {
+         "ar": "ملديف",
+         "es": "Maldivas",
+         "fr": "Maldives",
+         "hi": "मालदीव",
+         "ja": "モルディブ",
+         "pt": "Maldivas",
+         "ru": "Мальдивы",
+         "zh": "马尔代夫",
+         "bn": "মালদ্বীপ"
+        }
+       },
+       {
+        "value": "Mali",
+        "text": {
+         "ar": "مالي",
+         "es": "Malí",
+         "fr": "Mali",
+         "hi": "माली",
+         "ja": "マリ",
+         "pt": "Mali",
+         "ru": "Мали",
+         "zh": "马里",
+         "bn": "মালি"
+        }
+       },
+       {
+        "value": "Malta",
+        "text": {
+         "ar": "مالطا",
+         "es": "Malta",
+         "fr": "Malte",
+         "hi": "माल्टा",
+         "ja": "マルタ",
+         "pt": "Malta",
+         "ru": "Мальта",
+         "zh": "马耳他",
+         "bn": "মাল্টা"
+        }
+       },
+       {
+        "value": "Marshall Islands",
+        "text": {
+         "ar": "جزر مارشال",
+         "es": "Islas Marshall",
+         "fr": "Îles Marshall",
+         "hi": "मार्शल द्वीपसमूह",
+         "ja": "マーシャル諸島",
+         "pt": "Ilhas Marshall",
+         "ru": "Маршалловы Острова",
+         "zh": "马绍尔群岛",
+         "bn": "মার্শাল দ্বীপপুঞ্জ"
+        }
+       },
+       {
+        "value": "Mauritania",
+        "text": {
+         "ar": "موريتانيا",
+         "es": "Mauritania",
+         "fr": "Mauritanie",
+         "hi": "मॉरिटानिया",
+         "ja": "モーリタニア",
+         "pt": "Mauritânia",
+         "ru": "Мавритания",
+         "zh": "毛里塔尼亚",
+         "bn": "মৌরিতানিয়া"
+        }
+       },
+       {
+        "value": "Mauritius",
+        "text": {
+         "ar": "موريشيوس",
+         "es": "Mauricio",
+         "fr": "Maurice",
+         "hi": "मॉरिशस",
+         "ja": "モーリシャス",
+         "pt": "Maurícia",
+         "ru": "Маврикий",
+         "zh": "毛里求斯",
+         "bn": "মরিশাস"
+        }
+       },
+       {
+        "value": "Mexico",
+        "text": {
+         "ar": "المكسيك",
+         "es": "México",
+         "fr": "Mexique",
+         "hi": "मेक्सिको",
+         "ja": "メキシコ",
+         "pt": "México",
+         "ru": "Мексика",
+         "zh": "墨西哥",
+         "bn": "মেক্সিকো"
+        }
+       },
+       {
+        "value": "Micronesia",
+        "text": {
+         "ar": "ميكرونيزيا",
+         "es": "Micronesia",
+         "fr": "Micronésie",
+         "hi": "माइक्रोनेशिया",
+         "ja": "ミクロネシア",
+         "pt": "Micronésia",
+         "ru": "Микронезия",
+         "zh": "密克罗尼西亚",
+         "bn": "মাইক্রোনেশিয়া"
+        }
+       },
+       {
+        "value": "Moldova",
+        "text": {
+         "ar": "مولدافيا",
+         "es": "Moldavia",
+         "fr": "Moldavie",
+         "hi": "मोल्दोवा",
+         "ja": "モルドバ",
+         "pt": "Moldávia",
+         "ru": "Молдова",
+         "zh": "摩尔多瓦",
+         "bn": "মলদোভা"
+        }
+       },
+       {
+        "value": "Monaco",
+        "text": {
+         "ar": "موناكو",
+         "es": "Mónaco",
+         "fr": "Monaco",
+         "hi": "मोनाको",
+         "ja": "モナコ",
+         "pt": "Mónaco",
+         "ru": "Монако",
+         "zh": "摩纳哥",
+         "bn": "মোনাকো"
+        }
+       },
+       {
+        "value": "Mongolia",
+        "text": {
+         "ar": "منغوليا",
+         "es": "Mongolia",
+         "fr": "Mongolie",
+         "hi": "मंगोलिया",
+         "ja": "モンゴル国",
+         "pt": "Mongólia",
+         "ru": "Монголия",
+         "zh": "蒙古",
+         "bn": "মঙ্গোলিয়া"
+        }
+       },
+       {
+        "value": "Montenegro",
+        "text": {
+         "ar": "الجبل الأسود",
+         "es": "Montenegro",
+         "fr": "Monténégro",
+         "hi": "मोंटेनेग्रो",
+         "ja": "モンテネグロ",
+         "pt": "Montenegro",
+         "ru": "Черногория",
+         "zh": "黑山",
+         "bn": "মন্টিনিগ্রো"
+        }
+       },
+       {
+        "value": "Morocco",
+        "text": {
+         "ar": "المغرب",
+         "es": "Marruecos",
+         "fr": "Maroc",
+         "hi": "मोरक्को",
+         "ja": "モロッコ",
+         "pt": "Marrocos",
+         "ru": "Марокко",
+         "zh": "摩洛哥",
+         "bn": "মরোক্কো"
+        }
+       },
+       {
+        "value": "Mozambique",
+        "text": {
+         "ar": "موزمبيق",
+         "es": "Mozambique",
+         "fr": "Mozambique",
+         "hi": "मोज़ाम्बिक",
+         "ja": "モザンビーク",
+         "pt": "Moçambique",
+         "ru": "Мозамбик",
+         "zh": "莫桑比克",
+         "bn": "মোজাম্বিক"
+        }
+       },
+       {
+        "value": "Myanmar (Burma)",
+        "text": {
+         "ar": "ميانمار (بورما)",
+         "es": "Myanmar (Birmania)",
+         "fr": "Myanmar (Birmanie)",
+         "hi": "म्यांमार (बर्मा)",
+         "ja": "ミャンマー(ビルマ)",
+         "pt": "Mianmar (Birmânia)",
+         "ru": "Мьянма (Бирма)",
+         "zh": "缅甸 （缅甸）",
+         "bn": "মায়ানমার (বার্মা)"
+        }
+       },
+       {
+        "value": "Namibia",
+        "text": {
+         "ar": "ناميبيا",
+         "es": "Namibia",
+         "fr": "Namibie",
+         "hi": "नामीबिया",
+         "ja": "ナミビア",
+         "pt": "Namíbia",
+         "ru": "Намибия",
+         "zh": "纳米比亚",
+         "bn": "নামিবিয়া"
+        }
+       },
+       {
+        "value": "Nauru",
+        "text": {
+         "ar": "ناورو",
+         "es": "Nauru",
+         "fr": "Nauru",
+         "hi": "नाउरु",
+         "ja": "ナウル",
+         "pt": "Nauru",
+         "ru": "Науру",
+         "zh": "瑙鲁",
+         "bn": "নাউরু"
+        }
+       },
+       {
+        "value": "Nepal",
+        "text": {
+         "ar": "نيبال",
+         "es": "Nepal",
+         "fr": "Népal",
+         "hi": "नेपाल",
+         "ja": "ネパール",
+         "pt": "Nepal",
+         "ru": "Непал",
+         "zh": "尼泊尔",
+         "bn": "নেপাল"
+        }
+       },
+       {
+        "value": "Netherlands",
+        "text": {
+         "ar": "هولندا",
+         "es": "Países Bajos",
+         "fr": "Pays-Bas",
+         "hi": "नीदरलैंड",
+         "ja": "オランダ",
+         "pt": "Países Baixos",
+         "ru": "Нидерланды",
+         "zh": "荷兰",
+         "bn": "নেদারল্যান্ড"
+        }
+       },
+       {
+        "value": "New Zealand",
+        "text": {
+         "ar": "نيوزيلندا",
+         "es": "Nueva Zelanda",
+         "fr": "Nouvelle-Zélande",
+         "hi": "न्यूज़ीलैंड",
+         "ja": "ニュージーランド",
+         "pt": "Nova Zelândia",
+         "ru": "Новая Зеландия",
+         "zh": "新西兰",
+         "bn": "নিউজিল্যান্ড"
+        }
+       },
+       {
+        "value": "Nicaragua",
+        "text": {
+         "ar": "نيكاراجوا",
+         "es": "Nicaragua",
+         "fr": "Nicaragua",
+         "hi": "निकारागुआ",
+         "ja": "ニカラグア",
+         "pt": "Nicarágua",
+         "ru": "Никарагуа",
+         "zh": "尼加拉瓜",
+         "bn": "নিকারাগুয়া"
+        }
+       },
+       {
+        "value": "Niger",
+        "text": {
+         "ar": "النيجر",
+         "es": "Níger",
+         "fr": "Niger",
+         "hi": "नाइजर",
+         "ja": "ニジェール",
+         "pt": "Níger",
+         "ru": "Нигер",
+         "zh": "尼日尔",
+         "bn": "নাইজার"
+        }
+       },
+       {
+        "value": "Nigeria",
+        "text": {
+         "ar": "نيجيريا",
+         "es": "Nigeria",
+         "fr": "Nigéria",
+         "hi": "नाइजीरिया",
+         "ja": "ナイジェリア",
+         "pt": "Nigéria",
+         "ru": "Нигерия",
+         "zh": "尼日利亚",
+         "bn": "নাইজেরিয়া"
+        }
+       },
+       {
+        "value": "North Macedonia (formerly Macedonia)",
+        "text": {
+         "ar": "مقدونيا الشمالية (مقدونيا سابقا)",
+         "es": "Macedonia del Norte (antes Macedonia)",
+         "fr": "Macédoine du Nord (anciennement Macédoine)",
+         "hi": "उत्तर मैसेडोनिया (पूर्व में मैसेडोनिया)",
+         "ja": "北マケドニア(旧マケドニア)",
+         "pt": "Macedônia do Norte (antiga Macedônia)",
+         "ru": "Северная Македония (бывшая Македония)",
+         "zh": "北马其顿（原马其顿）",
+         "bn": "উত্তর ম্যাসেডোনিয়া (পূর্বে মেসিডোনিয়া)"
+        }
+       },
+       {
+        "value": "Norway",
+        "text": {
+         "ar": "النرويج",
+         "es": "Noruega",
+         "fr": "Norvège",
+         "hi": "नॉर्वे",
+         "ja": "ノルウェー",
+         "pt": "Noruega",
+         "ru": "Норвегия",
+         "zh": "挪威",
+         "bn": "নরওয়ে"
+        }
+       },
+       {
+        "value": "Oman",
+        "text": {
+         "ar": "عُمان",
+         "es": "Omán",
+         "fr": "Oman",
+         "hi": "ओमान",
+         "ja": "オマーン",
+         "pt": "Omã",
+         "ru": "Оман",
+         "zh": "阿曼",
+         "bn": "ওমান"
+        }
+       },
+       {
+        "value": "Pakistan",
+        "text": {
+         "ar": "باكستان",
+         "es": "Pakistán",
+         "fr": "Pakistan",
+         "hi": "पाकिस्तान",
+         "ja": "パキスタン",
+         "pt": "Paquistão",
+         "ru": "Пакистан",
+         "zh": "巴基斯坦",
+         "bn": "পাকিস্তান"
+        }
+       },
+       {
+        "value": "Palau",
+        "text": {
+         "ar": "بالاو",
+         "es": "Palau",
+         "fr": "Palaos",
+         "hi": "पलाऊ",
+         "ja": "パラオ",
+         "pt": "Palau",
+         "ru": "Палау",
+         "zh": "帕劳",
+         "bn": "পালাউ"
+        }
+       },
+       {
+        "value": "Panama",
+        "text": {
+         "ar": "بنما",
+         "es": "Panamá",
+         "fr": "Panama",
+         "hi": "पनामा",
+         "ja": "パナマ",
+         "pt": "Panamá",
+         "ru": "Панама",
+         "zh": "巴拿马",
+         "bn": "পানামা"
+        }
+       },
+       {
+        "value": "Papua New Guinea",
+        "text": {
+         "ar": "بابوا غينيا الجديدة",
+         "es": "Papúa Nueva Guinea",
+         "fr": "Papouasie-Nouvelle-Guinée",
+         "hi": "पापुआ न्यू गिनी",
+         "ja": "パプアニューギニア",
+         "pt": "Papua-Nova Guiné",
+         "ru": "Папуа-Новая Гвинея",
+         "zh": "巴布亚新几内亚",
+         "bn": "পাপুয়া নিউ গিনি"
+        }
+       },
+       {
+        "value": "Paraguay",
+        "text": {
+         "ar": "باراجواي",
+         "es": "Paraguay",
+         "fr": "Paraguay",
+         "hi": "पैराग्वे",
+         "ja": "パラグアイ",
+         "pt": "Paraguai",
+         "ru": "Парагвай",
+         "zh": "巴拉圭",
+         "bn": "প্যারাগুয়ে"
+        }
+       },
+       {
+        "value": "Peru",
+        "text": {
+         "ar": "بيرو",
+         "es": "Perú",
+         "fr": "Pérou",
+         "hi": "पेरू",
+         "ja": "ペルー",
+         "pt": "Peru",
+         "ru": "Перу",
+         "zh": "秘鲁",
+         "bn": "পেরু"
+        }
+       },
+       {
+        "value": "Philippines",
+        "text": {
+         "ar": "الفلبين",
+         "es": "Filipinas",
+         "fr": "Philippines",
+         "hi": "फ़िलिपींस",
+         "ja": "フィリピン",
+         "pt": "Filipinas",
+         "ru": "Филиппины",
+         "zh": "菲律宾",
+         "bn": "ফিলিপাইন"
+        }
+       },
+       {
+        "value": "Poland",
+        "text": {
+         "ar": "بولندا",
+         "es": "Polonia",
+         "fr": "Pologne",
+         "hi": "पोलैंड",
+         "ja": "ポーランド",
+         "pt": "Polônia",
+         "ru": "Польша",
+         "zh": "波兰",
+         "bn": "পোল্যান্ড"
+        }
+       },
+       {
+        "value": "Portugal",
+        "text": {
+         "ar": "البرتغال",
+         "es": "Portugal",
+         "fr": "Portugal",
+         "hi": "पुर्तगाल",
+         "ja": "ポルトガル",
+         "pt": "Portugal",
+         "ru": "Португалия",
+         "zh": "葡萄牙",
+         "bn": "পর্তুগাল"
+        }
+       },
+       {
+        "value": "Qatar",
+        "text": {
+         "ar": "قطر",
+         "es": "Qatar",
+         "fr": "Qatar",
+         "hi": "कतर",
+         "ja": "カタール",
+         "pt": "Catar",
+         "ru": "Катар",
+         "zh": "卡塔尔",
+         "bn": "কাতার"
+        }
+       },
+       {
+        "value": "Romania",
+        "text": {
+         "ar": "رومانيا",
+         "es": "Rumania",
+         "fr": "Roumanie",
+         "hi": "रोमानिया",
+         "ja": "ルーマニア",
+         "pt": "Romênia",
+         "ru": "Румыния",
+         "zh": "罗马尼亚",
+         "bn": "রোমানিয়া"
+        }
+       },
+       {
+        "value": "Russia",
+        "text": {
+         "ar": "روسيا",
+         "es": "Rusia",
+         "fr": "Russie",
+         "hi": "रूस",
+         "ja": "ロシア",
+         "pt": "Rússia",
+         "ru": "Россия",
+         "zh": "俄罗斯",
+         "bn": "রাশিয়া"
+        }
+       },
+       {
+        "value": "Rwanda",
+        "text": {
+         "ar": "رواندا",
+         "es": "Ruanda",
+         "fr": "Rwanda",
+         "hi": "रवांडा",
+         "ja": "ルワンダ",
+         "pt": "Ruanda",
+         "ru": "Руанда",
+         "zh": "卢旺达",
+         "bn": "রুয়ান্ডা"
+        }
+       },
+       {
+        "value": "Saint Kitts and Nevis",
+        "text": {
+         "ar": "سانت كيتس ونيفيس",
+         "es": "San Cristóbal y Nieves",
+         "fr": "Saint-Kitts-et-Nevis",
+         "hi": "सेंट किट्स और नेविस",
+         "ja": "セントクリストファー・ネイビス",
+         "pt": "São Cristóvão e Névis",
+         "ru": "Сент-Китс и Невис",
+         "zh": "圣基茨和尼维斯",
+         "bn": "সেন্ট কিটস ও নেভিস"
+        }
+       },
+       {
+        "value": "Saint Lucia",
+        "text": {
+         "ar": "سانت لوسيا",
+         "es": "Santa Lucía",
+         "fr": "Sainte-Lucie",
+         "hi": "सेंट लूसिया",
+         "ja": "セントルシア",
+         "pt": "Santa Lúcia",
+         "ru": "Сент-Люсия",
+         "zh": "圣卢西亚",
+         "bn": "সেন্ট লুসিয়া"
+        }
+       },
+       {
+        "value": "Saint Vincent and the Grenadines",
+        "text": {
+         "ar": "سانت فنسنت وجزر غرينادين",
+         "es": "San Vicente y las Granadinas",
+         "fr": "Saint-Vincent-et-les-Grenadines",
+         "hi": "सेंट विंसेंट और ग्रेनेडाइंस",
+         "ja": "セントビンセント・グレナディーン諸島",
+         "pt": "São Vicente e Granadinas",
+         "ru": "Сент-Винсент и Гренадины",
+         "zh": "圣文森特和格林纳丁斯",
+         "bn": "সেন্ট ভিনসেন্ট ও গ্রেনাডাইন দ্বীপপুঞ্জ"
+        }
+       },
+       {
+        "value": "Samoa",
+        "text": {
+         "ar": "ساموا",
+         "es": "Samoa",
+         "fr": "Samoa",
+         "hi": "समोआ",
+         "ja": "サモア",
+         "pt": "Samoa",
+         "ru": "Самоа",
+         "zh": "萨摩亚",
+         "bn": "সামোয়া"
+        }
+       },
+       {
+        "value": "San Marino",
+        "text": {
+         "ar": "سان مارينو",
+         "es": "San Marino",
+         "fr": "Saint-Marin",
+         "hi": "सान मारिनो",
+         "ja": "サンマリノ",
+         "pt": "San Marino",
+         "ru": "Сан-Марино",
+         "zh": "圣马力诺",
+         "bn": "সান মারিনো"
+        }
+       },
+       {
+        "value": "Sao Tome and Principe",
+        "text": {
+         "ar": "سان تومي وبرينسيبي",
+         "es": "Santo Tomé y Príncipe",
+         "fr": "Sao Tomé-et-Principe",
+         "hi": "साओ टोम और प्रिंसिपे",
+         "ja": "サントメ・プリンシペ",
+         "pt": "São Tomé e Príncipe",
+         "ru": "Сан-Томе и Принсипи",
+         "zh": "圣多美和普林西比",
+         "bn": "সাও টোম ও প্রিন্সিপে"
+        }
+       },
+       {
+        "value": "Saudi Arabia",
+        "text": {
+         "ar": "المملكة العربية السعودية",
+         "es": "Arabia Saudí",
+         "fr": "Arabie Saoudite",
+         "hi": "सऊदी अरब",
+         "ja": "サウジアラビア",
+         "pt": "Arábia Saudita",
+         "ru": "Саудовская Аравия",
+         "zh": "沙特阿拉伯",
+         "bn": "সৌদি আরব"
+        }
+       },
+       {
+        "value": "Senegal",
+        "text": {
+         "ar": "السنغال",
+         "es": "Senegal",
+         "fr": "Sénégal",
+         "hi": "सेनेगल",
+         "ja": "セネガル",
+         "pt": "Senegal",
+         "ru": "Сенегал",
+         "zh": "塞内加尔",
+         "bn": "সেনেগাল"
+        }
+       },
+       {
+        "value": "Serbia",
+        "text": {
+         "ar": "صربيا",
+         "es": "Serbia",
+         "fr": "Serbie",
+         "hi": "सर्बिया",
+         "ja": "セルビア",
+         "pt": "Sérvia e Montenegro",
+         "ru": "Сербия",
+         "zh": "塞尔维亚",
+         "bn": "সার্বিয়া"
+        }
+       },
+       {
+        "value": "Seychelles",
+        "text": {
+         "ar": "سيشيل",
+         "es": "Seychelles",
+         "fr": "Seychelles",
+         "hi": "सेशल्स",
+         "ja": "セーシェル",
+         "pt": "Seicheles",
+         "ru": "Сейшельские Острова",
+         "zh": "塞舌尔",
+         "bn": "সেশেলস"
+        }
+       },
+       {
+        "value": "Sierra Leone",
+        "text": {
+         "ar": "سيراليون",
+         "es": "Sierra Leona",
+         "fr": "Sierra Leone",
+         "hi": "सिएरा लियोन",
+         "ja": "シエラレオネ",
+         "pt": "Serra Leoa",
+         "ru": "Сьерра-Леоне",
+         "zh": "塞拉利昂",
+         "bn": "সিয়েরা লিওন"
+        }
+       },
+       {
+        "value": "Singapore",
+        "text": {
+         "ar": "سنغافورة",
+         "es": "Singapur",
+         "fr": "Singapour",
+         "hi": "सिंगापुर",
+         "ja": "シンガポール",
+         "pt": "Cingapura",
+         "ru": "Сингапур",
+         "zh": "新加坡",
+         "bn": "সিঙ্গাপুর"
+        }
+       },
+       {
+        "value": "Slovakia",
+        "text": {
+         "ar": "سلوفاكيا",
+         "es": "Eslovaquia",
+         "fr": "Slovaquie",
+         "hi": "स्लोवाकिया",
+         "ja": "スロバキア",
+         "pt": "Eslováquia",
+         "ru": "Словакия",
+         "zh": "斯洛伐克",
+         "bn": "শ্লোভাকিয়া"
+        }
+       },
+       {
+        "value": "Slovenia",
+        "text": {
+         "ar": "سلوفينيا",
+         "es": "Eslovenia",
+         "fr": "Slovénie",
+         "hi": "स्लोवेनिया",
+         "ja": "スロベニア",
+         "pt": "Eslovênia",
+         "ru": "Словения",
+         "zh": "斯洛文尼亚",
+         "bn": "শ্লোভেনিয়া"
+        }
+       },
+       {
+        "value": "Solomon Islands",
+        "text": {
+         "ar": "جزر سليمان",
+         "es": "Islas Salomón",
+         "fr": "Îles Salomon",
+         "hi": "सोलोमन द्वीप",
+         "ja": "ソロモン諸島",
+         "pt": "Ilhas Salomão",
+         "ru": "Соломоновы Острова",
+         "zh": "所罗门群岛",
+         "bn": "সলোমন দ্বীপপুঞ্জ"
+        }
+       },
+       {
+        "value": "Somalia",
+        "text": {
+         "ar": "الصومال",
+         "es": "Somalia",
+         "fr": "Somalie",
+         "hi": "सोमालिया",
+         "ja": "ソマリア",
+         "pt": "Somália",
+         "ru": "Сомали",
+         "zh": "索马里",
+         "bn": "সোমালিয়া"
+        }
+       },
+       {
+        "value": "South Africa",
+        "text": {
+         "ar": "جنوب أفريقيا",
+         "es": "Sudáfrica",
+         "fr": "Afrique du Sud",
+         "hi": "दक्षिण अफ़्रीका",
+         "ja": "南アフリカ",
+         "pt": "África do Sul",
+         "ru": "Южная Африка",
+         "zh": "南非",
+         "bn": "দক্ষিণ আফ্রিকা"
+        }
+       },
+       {
+        "value": "South Sudan",
+        "text": {
+         "ar": "جنوب السودان",
+         "es": "Sudán del Sur",
+         "fr": "Soudan du Sud",
+         "hi": "दक्षिण सूडान",
+         "ja": "南スーダン",
+         "pt": "Sudão do Sul",
+         "ru": "Южный Судан",
+         "zh": "南苏丹",
+         "bn": "দক্ষিণ সুদান"
+        }
+       },
+       {
+        "value": "Spain",
+        "text": {
+         "ar": "إسبانيا",
+         "es": "España",
+         "fr": "Espagne",
+         "hi": "स्पेन",
+         "ja": "スペイン",
+         "pt": "Espanha",
+         "ru": "Испания",
+         "zh": "西班牙",
+         "bn": "স্পেন"
+        }
+       },
+       {
+        "value": "Sri Lanka",
+        "text": {
+         "ar": "سريلانكا",
+         "es": "Sri Lanka",
+         "fr": "Sri Lanka",
+         "hi": "श्रीलंका",
+         "ja": "スリランカ",
+         "pt": "Sri Lanka",
+         "ru": "Шри-Ланка",
+         "zh": "斯里兰卡",
+         "bn": "শ্রীলঙ্কা"
+        }
+       },
+       {
+        "value": "Sudan",
+        "text": {
+         "ar": "السودان",
+         "es": "Sudán",
+         "fr": "Soudan",
+         "hi": "सूडान",
+         "ja": "スーダン",
+         "pt": "Sudão",
+         "ru": "Судан",
+         "zh": "苏丹",
+         "bn": "সুদান"
+        }
+       },
+       {
+        "value": "Suriname",
+        "text": {
+         "ar": "سورينام",
+         "es": "Suriname",
+         "fr": "Suriname",
+         "hi": "सूरीनाम",
+         "ja": "スリナム",
+         "pt": "Suriname",
+         "ru": "Суринам",
+         "zh": "苏里南",
+         "bn": "সুরিনাম"
+        }
+       },
+       {
+        "value": "Sweden",
+        "text": {
+         "ar": "السويد",
+         "es": "Suecia",
+         "fr": "Suède",
+         "hi": "स्वीडन",
+         "ja": "スウェーデン",
+         "pt": "Suécia",
+         "ru": "Швеция",
+         "zh": "瑞典",
+         "bn": "সুইডেন"
+        }
+       },
+       {
+        "value": "Switzerland",
+        "text": {
+         "ar": "سويسرا",
+         "es": "Suiza",
+         "fr": "Suisse",
+         "hi": "स्विट्ज़रलैंड",
+         "ja": "スイス",
+         "pt": "Suíça",
+         "ru": "Швейцария",
+         "zh": "瑞士",
+         "bn": "সুইজারল্যান্ড"
+        }
+       },
+       {
+        "value": "Syria",
+        "text": {
+         "ar": "سوريا",
+         "es": "Siria",
+         "fr": "Syrie",
+         "hi": "सीरिया",
+         "ja": "シリア",
+         "pt": "Síria",
+         "ru": "Сирия",
+         "zh": "叙利亚",
+         "bn": "সিরিয়া"
+        }
+       },
+       {
+        "value": "Taiwan",
+        "text": {
+         "ar": "تايوان",
+         "es": "Taiwán",
+         "fr": "Taiwan",
+         "hi": "ताइवान",
+         "ja": "台湾",
+         "pt": "Taiwan",
+         "ru": "Тайвань",
+         "zh": "台湾",
+         "bn": "তাইওয়ান"
+        }
+       },
+       {
+        "value": "Tajikistan",
+        "text": {
+         "ar": "طاجيكستان",
+         "es": "Tayikistán",
+         "fr": "Tadjikistan",
+         "hi": "ताजिकिस्तान",
+         "ja": "タジキスタン",
+         "pt": "Tajiquistão",
+         "ru": "Таджикистан",
+         "zh": "塔吉克斯坦",
+         "bn": "তাজিকিস্তান"
+        }
+       },
+       {
+        "value": "Tanzania",
+        "text": {
+         "ar": "تنزانيا",
+         "es": "Tanzania",
+         "fr": "Tanzanie",
+         "hi": "तंज़ानिया",
+         "ja": "タンザニア",
+         "pt": "Tanzânia",
+         "ru": "Танзания",
+         "zh": "坦桑尼亚",
+         "bn": "তানজানিয়া"
+        }
+       },
+       {
+        "value": "Thailand",
+        "text": {
+         "ar": "تايلاند",
+         "es": "Tailandia",
+         "fr": "Thaïlande",
+         "hi": "थाईलैंड",
+         "ja": "タイ",
+         "pt": "Tailândia",
+         "ru": "Таиланд",
+         "zh": "泰国",
+         "bn": "থাইল্যান্ড"
+        }
+       },
+       {
+        "value": "Togo",
+        "text": {
+         "ar": "توغو",
+         "es": "Togo",
+         "fr": "Togo",
+         "hi": "टोगो",
+         "ja": "トーゴ",
+         "pt": "Togo",
+         "ru": "Того",
+         "zh": "多哥",
+         "bn": "টোগো"
+        }
+       },
+       {
+        "value": "Tonga",
+        "text": {
+         "ar": "تونغا",
+         "es": "Tonga",
+         "fr": "Tonga",
+         "hi": "टोंगा",
+         "ja": "トンガ",
+         "pt": "Tonga",
+         "ru": "Тонга",
+         "zh": "汤加",
+         "bn": "টোঙ্গা"
+        }
+       },
+       {
+        "value": "Trinidad and Tobago",
+        "text": {
+         "ar": "ترنداد وتوباجو",
+         "es": "Trinidad y Tobago",
+         "fr": "Trinité-et-Tobago",
+         "hi": "त्रिनिदाद और टोबैगो",
+         "ja": "トリニダード・トバゴ",
+         "pt": "Trinidad e Tobago",
+         "ru": "Тринидад и Тобаго",
+         "zh": "特立尼达和多巴哥",
+         "bn": "ত্রিনিদাদ ও টোবাগো"
+        }
+       },
+       {
+        "value": "Tunisia",
+        "text": {
+         "ar": "تونس",
+         "es": "Túnez",
+         "fr": "Tunisie",
+         "hi": "ट्यूनीशिया",
+         "ja": "チュニジア",
+         "pt": "Tunísia",
+         "ru": "Тунис",
+         "zh": "突尼斯",
+         "bn": "টিউনিসিয়া"
+        }
+       },
+       {
+        "value": "Turkey",
+        "text": {
+         "ar": "تركيا",
+         "es": "Turquía",
+         "fr": "Turquie",
+         "hi": "तुर्कस्तान",
+         "ja": "トルコ",
+         "pt": "Turquia",
+         "ru": "Турция",
+         "zh": "土耳其",
+         "bn": "তুর্কি"
+        }
+       },
+       {
+        "value": "Turkmenistan",
+        "text": {
+         "ar": "تركمانستان",
+         "es": "Turkmenistán",
+         "fr": "Turkménistan",
+         "hi": "तुर्कमेनिस्तान",
+         "ja": "トルクメニスタン",
+         "pt": "Turquemenistão",
+         "ru": "Туркменистан",
+         "zh": "土库曼斯坦",
+         "bn": "তুর্কমেনিস্তান"
+        }
+       },
+       {
+        "value": "Tuvalu",
+        "text": {
+         "ar": "توفالو",
+         "es": "Tuvalu",
+         "fr": "Tuvalu",
+         "hi": "तुवालु",
+         "ja": "ツバル",
+         "pt": "Tuvalu",
+         "ru": "Тувалу",
+         "zh": "图瓦卢",
+         "bn": "টুভালু"
+        }
+       },
+       {
+        "value": "Uganda",
+        "text": {
+         "ar": "أوغندا",
+         "es": "Uganda",
+         "fr": "Ouganda",
+         "hi": "युगांडा",
+         "ja": "ウガンダ",
+         "pt": "Uganda",
+         "ru": "Уганда",
+         "zh": "乌干达",
+         "bn": "উগান্ডা"
+        }
+       },
+       {
+        "value": "Ukraine",
+        "text": {
+         "ar": "أوكرانيا",
+         "es": "Ucrania",
+         "fr": "Ukraine",
+         "hi": "यूक्रेन",
+         "ja": "ウクライナ",
+         "pt": "Ucrânia",
+         "ru": "Украина",
+         "zh": "乌克兰",
+         "bn": "ইউক্রেন"
+        }
+       },
+       {
+        "value": "United Arab Emirates",
+        "text": {
+         "ar": "الإمارات العربية المتحدة",
+         "es": "Emiratos Árabes Unidos",
+         "fr": "Émirats arabes unis",
+         "hi": "संयुक्त अरब अमीरात",
+         "ja": "アラブ首長国連邦",
+         "pt": "Emirados Árabes Unidos",
+         "ru": "Объединённые Арабские Эмираты",
+         "zh": "阿拉伯联合酋长国",
+         "bn": "সংযুক্ত আরব আমিরশাহি"
+        }
+       },
+       {
+        "value": "United Kingdom",
+        "text": {
+         "ar": "المملكة المتحدة",
+         "es": "Reino Unido",
+         "fr": "Royaume-Uni",
+         "hi": "युनाइटेड किंगडम",
+         "ja": "英国",
+         "pt": "Reino Unido",
+         "ru": "Великобритания",
+         "zh": "英国",
+         "bn": "যুক্তরাজ্য"
+        }
+       },
+       {
+        "value": "United States",
+        "text": {
+         "ar": "الولايات المتحدة الأمريكية",
+         "es": "Estados Unidos",
+         "fr": "États-Unis",
+         "hi": "संयुक्त राज्य",
+         "ja": "米国",
+         "pt": "Estados Unidos",
+         "ru": "США",
+         "zh": "美国",
+         "bn": "যুক্তরাষ্ট্র"
+        }
+       },
+       {
+        "value": "Uruguay",
+        "text": {
+         "ar": "اوروجواي",
+         "es": "Uruguay",
+         "fr": "Uruguay",
+         "hi": "उरुग्वे",
+         "ja": "ウルグアイ",
+         "pt": "Uruguai",
+         "ru": "Уругвай",
+         "zh": "乌拉圭",
+         "bn": "উরুগুয়ে"
+        }
+       },
+       {
+        "value": "Uzbekistan",
+        "text": {
+         "ar": "أوزبكستان",
+         "es": "Uzbekistán",
+         "fr": "Ouzbékistan",
+         "hi": "उज़्बेकिस्तान",
+         "ja": "ウズベキスタン",
+         "pt": "Uzbequistão",
+         "ru": "Узбекистан",
+         "zh": "乌兹别克斯坦",
+         "bn": "উজবেকিস্তান"
+        }
+       },
+       {
+        "value": "Vanuatu",
+        "text": {
+         "ar": "فانواتو",
+         "es": "Vanuatu",
+         "fr": "Vanuatu",
+         "hi": "वानुअतु",
+         "ja": "バヌアツ",
+         "pt": "Vanuatu",
+         "ru": "Вануату",
+         "zh": "瓦努阿图",
+         "bn": "ভানুয়াটু"
+        }
+       },
+       {
+        "value": "Vatican City",
+        "text": {
+         "ar": "الفاتيكان",
+         "es": "Ciudad del Vaticano",
+         "fr": "Vatican",
+         "hi": "वैटिकन शहर",
+         "ja": "バチカン市国",
+         "pt": "Cidade do Vaticano",
+         "ru": "Ватикан",
+         "zh": "梵蒂冈城",
+         "bn": "ভ্যাটিকান সিটি"
+        }
+       },
+       {
+        "value": "Venezuela",
+        "text": {
+         "ar": "فنزويلا",
+         "es": "Venezuela",
+         "fr": "Venezuela",
+         "hi": "वेनेज़ुएला",
+         "ja": "ベネズエラ",
+         "pt": "Venezuela",
+         "ru": "Венесуэла",
+         "zh": "委内瑞拉",
+         "bn": "ভেনিজুয়েলা"
+        }
+       },
+       {
+        "value": "Vietnam",
+        "text": {
+         "ar": "فيتنام",
+         "es": "Vietnam",
+         "fr": "Viêt Nam",
+         "hi": "वियतनाम",
+         "ja": "ベトナム",
+         "pt": "Vietname",
+         "ru": "Вьетнам",
+         "zh": "越南",
+         "bn": "ভিয়েতনাম"
+        }
+       },
+       {
+        "value": "Yemen",
+        "text": {
+         "ar": "اليمن",
+         "es": "Yemen",
+         "fr": "Yémen",
+         "hi": "यमन",
+         "ja": "イエメン",
+         "pt": "Iêmen",
+         "ru": "Йемен",
+         "zh": "也门",
+         "bn": "ইয়েমেন"
+        }
+       },
+       {
+        "value": "Zambia",
+        "text": {
+         "ar": "زامبيا",
+         "es": "Zambia",
+         "fr": "Zambie",
+         "hi": "ज़ाम्बिया",
+         "ja": "ザンビア",
+         "pt": "Zâmbia",
+         "ru": "Замбия",
+         "zh": "赞比亚",
+         "bn": "জাম্বিয়া"
+        }
+       },
+       {
+        "value": "Zimbabwe",
+        "text": {
+         "ar": "زيمبابوي",
+         "es": "Zimbabue",
+         "fr": "Zimbabwe",
+         "hi": "ज़िम्बाब्वे",
+         "ja": "ジンバブエ",
+         "pt": "Zimbábue",
+         "ru": "Зимбабве",
+         "zh": "津巴布韦",
+         "bn": "জিম্বাবোয়ে"
+        }
+       },
+       {
+        "value": "item1",
+        "text": {
+         "default": "Other",
+         "ar": "آخر",
+         "es": "Otro",
+         "fr": "Autre",
+         "hi": "दूसरा",
+         "ja": "他",
+         "pt": "Outro",
+         "ru": "Другой",
+         "zh": "其他",
+         "bn": "অন্যান্য"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "united states residents",
+    "elements": [
+     {
+      "type": "radiogroup",
+      "name": "education_US",
+      "title": {
+       "default": "What is the highest level of education you have completed?",
+       "ar": "ما هو أعلى مستوى تعليمي أكملته؟",
+       "es": "¿Cuál es el nivel más alto de educación que ha completado?",
+       "fr": "Quel est le plus haut niveau d’éducation que vous ayez atteint ?",
+       "hi": "आपने शिक्षा का उच्चतम स्तर क्या पूरा किया है?",
+       "ja": "あなたが修了した最高レベルの教育は何ですか?",
+       "pt": "Qual é o nível mais alto de educação que você concluiu?",
+       "ru": "Какой самый высокий уровень образования вы получили?",
+       "zh": "您完成的最高教育水平是多少？",
+       "bn": "আপনি শিক্ষার সর্বোচ্চ স্তর কোনটি সম্পন্ন করেছেন?"
+      },
+      "isRequired": true,
+      "choices": [
+       {
+        "value": "2",
+        "text": {
+         "default": "Less than a high school diploma",
+         "ar": "أقل من شهادة الثانوية العامة",
+         "es": "Menos que un diploma de escuela secundaria",
+         "fr": "Moins d’un diplôme d’études secondaires",
+         "hi": "हाई स्कूल डिप्लोमा से कम",
+         "ja": "高校の卒業証書未満",
+         "pt": "Menos de um diploma de ensino médio",
+         "ru": "Меньше аттестата о среднем образовании",
+         "zh": "高中文凭以下",
+         "bn": "একটি হাই স্কুল ডিপ্লোমার চেয়ে কম"
+        }
+       },
+       {
+        "value": "3",
+        "text": {
+         "default": "High school diploma or GED",
+         "ar": "شهادة الثانوية العامة أو GED",
+         "es": "Diploma de escuela secundaria o GED",
+         "fr": "Diplôme d’études secondaires ou GED",
+         "hi": "हाई स्कूल डिप्लोमा या GED",
+         "ja": "高校の卒業証書またはGED",
+         "pt": "Diploma de ensino médio ou GED",
+         "ru": "Аттестат о среднем образовании или GED",
+         "zh": "高中文凭或 GED",
+         "bn": "হাই স্কুল ডিপ্লোমা বা জিইডি"
+        }
+       },
+       {
+        "value": "4",
+        "text": {
+         "default": "Some college, but no degree",
+         "ar": "بعض الكليات ، ولكن لا توجد درجة",
+         "es": "Algo de universidad, pero sin título",
+         "fr": "Un peu d’université, mais pas de diplôme",
+         "hi": "कुछ कॉलेज, लेकिन कोई डिग्री नहीं",
+         "ja": "大学はあるが、学位はない",
+         "pt": "Algumas faculdades, mas nenhum diploma",
+         "ru": "Какой-то колледж, но без диплома",
+         "zh": "有大学，但没有学位",
+         "bn": "কিছু কলেজ, কিন্তু ডিগ্রি নেই"
+        }
+       },
+       {
+        "value": "5",
+        "text": {
+         "default": "Associate's degree (for example: AA, AS)",
+         "ar": "درجة الزمالة (على سبيل المثال: AA ، AS)",
+         "es": "Título de asociado (por ejemplo: AA, AS)",
+         "fr": "Diplôme d’associé (par exemple : AA, AS)",
+         "hi": "एसोसिएट डिग्री (उदाहरण के लिए: एए, एएस)",
+         "ja": "準学士号(例:AA、AS)",
+         "pt": "Grau de associado (por exemplo: AA, AS)",
+         "ru": "Степень младшего специалиста (например: AA, AS)",
+         "zh": "副学士学位（例如：AA、AS）",
+         "bn": "সহযোগী ডিগ্রি (উদাহরণস্বরূপ: এএ, এএস)"
+        }
+       },
+       {
+        "value": "6",
+        "text": {
+         "default": "Bachelor's degree (for example: BA, BS)",
+         "ar": "درجة البكالوريوس (على سبيل المثال: بكالوريوس ، بكالوريوس)",
+         "es": "Licenciatura (por ejemplo: BA, BS)",
+         "fr": "Baccalauréat (par exemple : BA, BS)",
+         "hi": "स्नातक की डिग्री (उदाहरण के लिए: बीए, बीएस)",
+         "ja": "学士号(例:BA、BS)",
+         "pt": "Bacharelado (por exemplo: BA, BS)",
+         "ru": "Степень бакалавра (например: BA, BS)",
+         "zh": "学士学位（例如：BA、BS）",
+         "bn": "স্নাতক ডিগ্রি (উদাহরণস্বরূপ: বিএ, বিএস)"
+        }
+       },
+       {
+        "value": "7",
+        "text": {
+         "default": "Master's degree (for example: MA, MS, MEng, MBA)",
+         "ar": "درجة الماجستير (على سبيل المثال: ماجستير ، ماجستير ، منغ ، ماجستير في إدارة الأعمال)",
+         "es": "Maestría (por ejemplo: maestría, maestría, maestría, maestría en administración de empresas)",
+         "fr": "Maîtrise (par exemple : M.A., M.E.M., M.Ing., MBA)",
+         "hi": "मास्टर डिग्री (उदाहरण के लिए: एमए, एमएस, एमईएनजी, एमबीए)",
+         "ja": "修士号(例:MA、MS、MEng、MBA)",
+         "pt": "Mestrado (por exemplo: MA, MS, MEng, MBA)",
+         "ru": "Степень магистра (например: MA, MS, MEng, MBA)",
+         "zh": "硕士学位（例如：硕士、硕士、工程硕士、工商管理硕士）",
+         "bn": "মাস্টার্স ডিগ্রি (উদাহরণস্বরূপ: এমএ, এমএস, এমইজি, এমবিএ)"
+        }
+       },
+       {
+        "value": "8",
+        "text": {
+         "default": "Doctorate (for example: PhD, EdD)",
+         "ar": "الدكتوراه (على سبيل المثال: دكتوراه ، إد)",
+         "es": "Doctorado (por ejemplo: PhD, EdD)",
+         "fr": "Doctorat (par exemple : PhD, EdD)",
+         "hi": "डॉक्टरेट (उदाहरण के लिए: पीएचडी, एडीडी)",
+         "ja": "博士号(例:PhD、EdD)",
+         "pt": "Doutorado (por exemplo: PhD, EdD)",
+         "ru": "Докторантура (например: PhD, EdD)",
+         "zh": "博士学位（例如：PhD、EdD）",
+         "bn": "ডক্টরেট (উদাহরণস্বরূপ: পিএইচডি, এডিডি)"
+        }
+       }
+      ]
+     },
+     {
+      "type": "radiogroup",
+      "name": "latin_US",
+      "title": {
+       "default": "Are you of Hispanic, Latino, or Spanish origin?",
+       "ar": "هل أنت من أصل إسباني أو لاتيني أو إسباني؟",
+       "es": "¿Eres de origen hispano, latino o español?",
+       "fr": "Êtes-vous d’origine hispanique, latino ou espagnole ?",
+       "hi": "क्या आप हिस्पैनिक, लातीनी या स्पेनिश मूल के हैं?",
+       "ja": "あなたはヒスパニック系、ラテン系、またはスペイン系ですか?",
+       "pt": "Você é de origem hispânica, latina ou espanhola?",
+       "ru": "Вы испаноязычного, латиноамериканского или испанского происхождения?",
+       "zh": "您是西班牙裔、拉丁裔还是西班牙裔？",
+       "bn": "আপনি কি হিস্পানিক, ল্যাটিনো বা স্প্যানিশ বংশোদ্ভূত?"
+      },
+      "choices": [
+       {
+        "value": "Yes",
+        "text": {
+         "ar": "نعم",
+         "es": "Sí",
+         "fr": "Oui",
+         "hi": "हाँ",
+         "ja": "はい",
+         "pt": "Sim",
+         "ru": "Да",
+         "zh": "是的",
+         "bn": "হ্যাঁ"
+        }
+       },
+       {
+        "value": "No",
+        "text": {
+         "ar": "لا",
+         "es": "No",
+         "fr": "Non",
+         "hi": "नहीं",
+         "ja": "いいえ",
+         "pt": "Não",
+         "ru": "Нет",
+         "zh": "不",
+         "bn": "না"
+        }
+       }
+      ]
+     },
+     {
+      "type": "checkbox",
+      "name": "race_US",
+      "title": {
+       "default": "Please choose one or more races that you consider yourself to be.",
+       "ar": "يرجى اختيار واحد أو أكثر من السباقات التي تعتبر نفسك عليها.",
+       "es": "Por favor, elige una o más razas en las que consideres que perteneces.",
+       "fr": "Veuillez choisir une ou plusieurs courses que vous considérez être.",
+       "hi": "कृपया एक या अधिक दौड़ चुनें जिन्हें आप स्वयं मानते हैं।",
+       "ja": "あなたがそうだと思う種族を1つ以上選んでください。",
+       "pt": "Por favor, escolha uma ou mais raças que você considera ser.",
+       "ru": "Пожалуйста, выберите одну или несколько рас, к которым вы относитесь.",
+       "zh": "请选择一个或多个您认为自己是种族。",
+       "bn": "দয়া করে এক বা একাধিক জাতি চয়ন করুন যা আপনি নিজেকে বিবেচনা করেন।"
+      },
+      "isRequired": true,
+      "choices": [
+       {
+        "value": "White",
+        "text": {
+         "ar": "أبيض",
+         "es": "Blanco",
+         "fr": "Blanc",
+         "hi": "सफेद",
+         "ja": "白い",
+         "pt": "Branco",
+         "ru": "Белый",
+         "zh": "白",
+         "bn": "সাদা"
+        }
+       },
+       {
+        "value": "Black or African-American",
+        "text": {
+         "ar": "أسود أو أمريكي من أصل أفريقي",
+         "es": "Negro o afroamericano",
+         "fr": "Noir ou Afro-Américain",
+         "hi": "काले या अफ्रीकी-अमेरिकी",
+         "ja": "黒人またはアフリカ系アメリカ人",
+         "pt": "Negro ou afro-americano",
+         "ru": "Чернокожие или афроамериканцы",
+         "zh": "黑人或非裔美国人",
+         "bn": "কালো বা আফ্রিকান-আমেরিকান"
+        }
+       },
+       {
+        "value": "American Indian or Alaska Native",
+        "text": {
+         "ar": "الهنود الأمريكيون أو سكان ألاسكا الأصليون",
+         "es": "Indio americano o nativo de Alaska",
+         "fr": "Amérindien ou natif de l’Alaska",
+         "hi": "अमेरिकी भारतीय या अलास्का मूल निवासी",
+         "ja": "アメリカインディアンまたはアラスカ先住民",
+         "pt": "Índio americano ou nativo do Alasca",
+         "ru": "Американские индейцы или коренные жители Аляски",
+         "zh": "美洲印第安人或阿拉斯加原住民",
+         "bn": "আমেরিকান ভারতীয় বা আলাস্কা নেটিভ"
+        }
+       },
+       {
+        "value": "Asian",
+        "text": {
+         "ar": "آسيوي",
+         "es": "Asiático",
+         "fr": "Asiatique",
+         "hi": "एशियाई",
+         "ja": "アジア人",
+         "pt": "Asiático",
+         "ru": "Азиат",
+         "zh": "亚裔",
+         "bn": "এশিয়ান"
+        }
+       },
+       {
+        "value": "Native Hawaiian or other Pacific Islander",
+        "text": {
+         "ar": "سكان هاواي الأصليون أو سكان جزر المحيط الهادئ الآخرون",
+         "es": "Nativo de Hawái u otras islas del Pacífico",
+         "fr": "Natif d’Hawaï ou d’une autre île du Pacifique",
+         "hi": "मूल हवाईयन या अन्य प्रशांत द्वीप समूह",
+         "ja": "ハワイ先住民またはその他の太平洋諸島民",
+         "pt": "Havaiano nativo ou outro ilhéu do Pacífico",
+         "ru": "Коренной житель Гавайских островов или других островов Тихого океана",
+         "zh": "夏威夷原住民或其他太平洋岛民",
+         "bn": "স্থানীয় হাওয়াইয়ান বা অন্যান্য প্রশান্ত মহাসাগরীয় দ্বীপপুঞ্জ"
+        }
+       },
+       {
+        "value": "Other",
+        "text": {
+         "ar": "آخر",
+         "es": "Otro",
+         "fr": "Autre",
+         "hi": "दूसरा",
+         "ja": "他",
+         "pt": "Outro",
+         "ru": "Другой",
+         "zh": "其他",
+         "bn": "অন্যান্য"
+        }
+       }
+      ]
+     },
+     {
+      "type": "radiogroup",
+      "name": "income_US",
+      "title": {
+       "default": "Thinking back over the past year, what was your family's annual income?",
+       "ar": "بالتفكير في العام الماضي ، ما هو الدخل السنوي لعائلتك؟",
+       "es": "Pensando en el año pasado, ¿cuál era el ingreso anual de su familia?",
+       "fr": "En repensant à l’année écoulée, quel était le revenu annuel de votre famille ?",
+       "hi": "पिछले एक साल के बारे में सोचते हुए, आपके परिवार की वार्षिक आय क्या थी?",
+       "ja": "この1年を振り返ってみて、ご家族の年収はいくらでしたか?",
+       "pt": "Pensando no ano passado, qual era a renda anual da sua família?",
+       "ru": "Оглядываясь назад на прошедший год, каков был годовой доход вашей семьи?",
+       "zh": "回想过去一年，你家的年收入是多少？",
+       "bn": "গত এক বছরের কথা চিন্তা করে দেখেছেন, আপনার পরিবারের বার্ষিক আয় কত ছিল?"
+      },
+      "choices": [
+       {
+        "value": "Less than $10,000",
+        "text": {
+         "ar": "أقل من $10,000",
+         "es": "Menos de $10,000",
+         "fr": "Moins de 10 000 $",
+         "hi": "$10,000 से कम",
+         "ja": "10,000ドル未満",
+         "pt": "Menos de US$ 10.000",
+         "ru": "Менее $10,000",
+         "zh": "少于 10,000 美元",
+         "bn": "১০ হাজার ডলারের কম"
+        }
+       },
+       {
+        "value": "$10,000-$19,999",
+        "text": {
+         "ar": "10,000 دولار - 19,999 دولار",
+         "es": "$10,000-$19,999",
+         "fr": "De 10 000 $ à 19 999 $",
+         "hi": "$ 10,000- $ 19,999",
+         "ja": "$ 10,000 - $ 19,999",
+         "pt": "$10.000-$19.999",
+         "ru": "$10,000-$19,999",
+         "zh": "$10,000-$19,999",
+         "bn": "$10,000- $19,999"
+        }
+       },
+       {
+        "value": "$20,000-$29,999",
+        "text": {
+         "ar": "20,000 دولار - 29,999 دولار",
+         "es": "$20,000-$29,999",
+         "fr": "De 20 000 $ à 29 999 $",
+         "hi": "$ 20,000- $ 29,999",
+         "ja": "20,000ドル- 29,999ドル",
+         "pt": "$20,000-$29,999",
+         "ru": "$20,000-$29,999",
+         "zh": "$20,000-$29,999",
+         "bn": "$20,000- $29,999"
+        }
+       },
+       {
+        "value": "$30,000-$39,999",
+        "text": {
+         "ar": "30,000 دولار - 39,999 دولار",
+         "es": "$30,000-$39,999",
+         "fr": "De 30 000 $ à 39 999 $",
+         "hi": "$ 30,000- $ 39,999",
+         "ja": "30,000ドル- 39,999ドル",
+         "pt": "$30,000-$39,999",
+         "ru": "$30,000-$39,999",
+         "zh": "$30,000-$39,999",
+         "bn": "$30,000- $39,999"
+        }
+       },
+       {
+        "value": "$40,000-$49,999",
+        "text": {
+         "ar": "40,000 دولار - 49,999 دولار",
+         "es": "$40,000-$49,999",
+         "fr": "De 40 000 $ à 49 999 $",
+         "hi": "$ 40,000- $ 49,999",
+         "ja": "$ 40,000 - $ 49,999",
+         "pt": "$40,000-$49,999",
+         "ru": "$40,000–$49,999",
+         "zh": "$40,000-$49,999",
+         "bn": "$40,000- $49,999"
+        }
+       },
+       {
+        "value": "$50,000-$74,999",
+        "text": {
+         "ar": "50,000 دولار - 74,999 دولار",
+         "es": "$50,000-$74,999",
+         "fr": "De 50 000 $ à 74 999 $",
+         "hi": "$ 50,000- $ 74,999",
+         "ja": "50,000ドル- 74,999ドル",
+         "pt": "$50,000-$74,999",
+         "ru": "$50,000–$74,999",
+         "zh": "$50,000-$74,999",
+         "bn": "$50,000- $74,999"
+        }
+       },
+       {
+        "value": "$75,000-$99,999",
+        "text": {
+         "ar": "75,000 دولار - 99,999 دولار",
+         "es": "$75,000-$99,999",
+         "fr": "De 75 000 $ à 99 999 $",
+         "hi": "$ 75,000- $ 99,999",
+         "ja": "75,000ドル- 99,999ドル",
+         "pt": "$75,000-$99,999",
+         "ru": "$75,000-$99,999",
+         "zh": "$75,000-$99,999",
+         "bn": "$75,000- $99,999"
+        }
+       },
+       {
+        "value": "$100,000-$149,999",
+        "text": {
+         "ar": "100,000 دولار - 149,999 دولار",
+         "es": "$100,000-$149,999",
+         "fr": "De 100 000 $ à 149 999 $",
+         "hi": "$ 100,000- $ 149,999",
+         "ja": "$ 100,000 - $ 149,999",
+         "pt": "$100.000-$149.999",
+         "ru": "$100,000–$149,999",
+         "zh": "$100,000-$149,999",
+         "bn": "$100,000- $149,999"
+        }
+       },
+       {
+        "value": "$150,000 or more",
+        "text": {
+         "ar": "$150,000 أو أكثر",
+         "es": "$150,000 o más",
+         "fr": "150 000 $ ou plus",
+         "hi": "$150,000 या अधिक",
+         "ja": "150,000ドル以上",
+         "pt": "$150.000 ou mais",
+         "ru": "$150,000 или более",
+         "zh": "$150,000 或以上",
+         "bn": "$150,000 বা তার বেশি"
+        }
+       }
+      ]
+     }
+    ],
+    "visibleIf": "{country_reside} = 'United States'",
+    "title": {
+     "default": "United States Residents",
+     "ar": "سكان الولايات المتحدة",
+     "es": "Residentes de los Estados Unidos",
+     "fr": "Résidents des États-Unis",
+     "hi": "संयुक्त राज्य अमेरिका के निवासी",
+     "ja": "米国居住者",
+     "pt": "Residentes dos Estados Unidos",
+     "ru": "Резиденты США",
+     "zh": "美国居民",
+     "bn": "মার্কিন যুক্তরাষ্ট্রের বাসিন্দা"
     }
+   },
+   {
+    "name": "united kingdom residents",
+    "elements": [
+     {
+      "type": "radiogroup",
+      "name": "education_UK",
+      "title": {
+       "default": "What is the highest level of education you have completed?",
+       "ar": "ما هو أعلى مستوى تعليمي أكملته؟",
+       "es": "¿Cuál es el nivel más alto de educación que ha completado?",
+       "fr": "Quel est le plus haut niveau d’éducation que vous ayez atteint ?",
+       "hi": "आपने शिक्षा का उच्चतम स्तर क्या पूरा किया है?",
+       "ja": "あなたが修了した最高レベルの教育は何ですか?",
+       "pt": "Qual é o nível mais alto de educação que você concluiu?",
+       "ru": "Какой самый высокий уровень образования вы получили?",
+       "zh": "您完成的最高教育水平是多少？",
+       "bn": "আপনি শিক্ষার সর্বোচ্চ স্তর কোনটি সম্পন্ন করেছেন?"
+      },
+      "choices": [
+       {
+        "value": "1",
+        "text": {
+         "default": "Primary school",
+         "ar": "مدرسة ابتدائية",
+         "es": "Escuela primaria",
+         "fr": "École primaire",
+         "hi": "प्राथमिक शाळा",
+         "ja": "小学校",
+         "pt": "Escola primária",
+         "ru": "Начальная школа",
+         "zh": "小学",
+         "bn": "প্রাথমিক বিদ্যালয়"
+        }
+       },
+       {
+        "value": "2",
+        "text": {
+         "default": "Secondary school up to 16 years",
+         "ar": "مدرسة ثانوية حتى 16 سنة",
+         "es": "Secundaria hasta los 16 años",
+         "fr": "Études secondaires jusqu’à 16 ans",
+         "hi": "16 साल तक का माध्यमिक विद्यालय",
+         "ja": "16歳までの中等学校",
+         "pt": "Ensino médio até 16 anos",
+         "ru": "Средняя школа до 16 лет",
+         "zh": "16岁以下中学",
+         "bn": "১৬ বছর পর্যন্ত মাধ্যমিক বিদ্যালয়"
+        }
+       },
+       {
+        "value": "3",
+        "text": {
+         "default": "Higher or secondary or further education (A-levels, BTEC, etc.)",
+         "ar": "التعليم العالي أو الثانوي أو الإضافي (مستويات A ، BTEC ، إلخ.)",
+         "es": "Educación superior, secundaria o superior (A-levels, BTEC, etc.)",
+         "fr": "Enseignement supérieur ou secondaire ou continue (A-levels, BTEC, etc.)",
+         "hi": "उच्च या माध्यमिक या आगे की शिक्षा (ए-स्तर, बीटीईसी, आदि)",
+         "ja": "高等教育、中等教育、継続教育(Aレベル、BTECなど)",
+         "pt": "Ensino superior, secundário ou complementar (níveis A, BTEC, etc.)",
+         "ru": "Высшее, среднее или дополнительное образование (A-levels, BTEC и т.д.)",
+         "zh": "高等教育或中学或继续教育（A-levels、BTEC等）",
+         "bn": "উচ্চ বা মাধ্যমিক বা আরও শিক্ষা (এ-লেভেল, বিটিইসি, ইত্যাদি)"
+        }
+       },
+       {
+        "value": "5",
+        "text": {
+         "default": "NVQ levels 4-5, HNC, HND, etc.",
+         "ar": "مستويات NVQ 4-5 ، HNC ، HND ، إلخ.",
+         "es": "Niveles NVQ 4-5, HNC, HND, etc.",
+         "fr": "NVQ niveaux 4-5, HNC, HND, etc.",
+         "hi": "NVQ स्तर 4-5, HNC, HND, आदि।",
+         "ja": "NVQレベル4〜5、HNC、HNDなど",
+         "pt": "NVQ níveis 4-5, HNC, HND, etc.",
+         "ru": "Уровни NVQ 4-5, HNC, HND и т.д.",
+         "zh": "NVQ 4-5 级、HNC、HND 等。",
+         "bn": "এনভিকিউ স্তর 4-5, এইচএনসি, এইচএনডি, ইত্যাদি"
+        }
+       },
+       {
+        "value": "6",
+        "text": {
+         "default": "Bachelor's degree (BA, BSc, etc.)",
+         "ar": "درجة البكالوريوس (بكالوريوس ، بكالوريوس ، إلخ)",
+         "es": "Licenciatura (BA, BSc, etc.)",
+         "fr": "Baccalauréat (BA, BSc, etc.)",
+         "hi": "स्नातक की डिग्री (बीए, बीएससी, आदि)",
+         "ja": "学士号(BA、BScなど)",
+         "pt": "Bacharelado (BA, BSc, etc.)",
+         "ru": "Степень бакалавра (BA, BSc и т.д.)",
+         "zh": "学士学位（BA、BSc 等）",
+         "bn": "স্নাতক ডিগ্রি (বিএ, বিএসসি, ইত্যাদি)"
+        }
+       },
+       {
+        "value": "7",
+        "text": {
+         "default": "Master's degree (MA, MS, MEng, MBA, etc.)",
+         "ar": "درجة الماجستير (ماجستير ، ماجستير ، منغ ، ماجستير في إدارة الأعمال ، إلخ.)",
+         "es": "Maestría (MA, MS, MEng, MBA, etc.)",
+         "fr": "Maîtrise (M.A., M.S., M.Ing., MBA, etc.)",
+         "hi": "मास्टर डिग्री (एमए, एमएस, एमईएनजी, एमबीए, आदि)",
+         "ja": "修士号(修士号、修士号、修士号、MBAなど)",
+         "pt": "Mestrado (MA, MS, MEng, MBA, etc.)",
+         "ru": "Степень магистра (MA, MS, MEng, MBA и т.д.)",
+         "zh": "硕士学位（硕士、硕士、工程硕士、工商管理硕士等）",
+         "bn": "স্নাতকোত্তর ডিগ্রি (এমএ, এমএস, এমবিএ, ইত্যাদি)"
+        }
+       },
+       {
+        "value": "8",
+        "text": {
+         "default": "Doctorate (PhD, EdD, etc.)",
+         "ar": "دكتوراه (دكتوراه ، إد ، إلخ)",
+         "es": "Doctorado (PhD, EdD, etc.)",
+         "fr": "Doctorat (PhD, EdD, etc.)",
+         "hi": "डॉक्टरेट (पीएचडी, एडीडी, आदि)",
+         "ja": "博士号(PhD、EdDなど)",
+         "pt": "Doutorado (PhD, EdD, etc.)",
+         "ru": "Докторантура (PhD, EdD и т.д.)",
+         "zh": "博士学位（PhD、EdD等）",
+         "bn": "ডক্টরেট (পিএইচডি, এড, ইত্যাদি)"
+        }
+       }
+      ]
+     },
+     {
+      "type": "checkbox",
+      "name": "ethnicity_UK",
+      "title": {
+       "default": "What is your ethnic group?",
+       "ar": "ما هي مجموعتك العرقية؟",
+       "es": "¿Cuál es tu grupo étnico?",
+       "fr": "Quel est votre groupe ethnique ?",
+       "hi": "आपका जातीय समूह क्या है?",
+       "ja": "あなたの民族は?",
+       "pt": "Qual é o seu grupo étnico?",
+       "ru": "К какой этнической группе вы принадлежите?",
+       "zh": "你的种族是什么？",
+       "bn": "আপনার জাতিগত গোষ্ঠী কি?"
+      },
+      "description": {
+       "default": " It's up to you how you answer this question. Your ethnic group could be your cultural or family background.",
+       "ar": " الأمر متروك لك كيف تجيب على هذا السؤال. يمكن أن تكون مجموعتك العرقية خلفيتك الثقافية أو العائلية.",
+       "es": " Depende de ti cómo respondas a esta pregunta. Su grupo étnico podría ser su origen cultural o familiar.",
+       "fr": " C’est à vous de décider comment vous répondez à cette question. Votre groupe ethnique peut être votre origine culturelle ou familiale.",
+       "hi": " यह आप पर निर्भर है कि आप इस प्रश्न का उत्तर कैसे देते हैं। आपका जातीय समूह आपकी सांस्कृतिक या पारिवारिक पृष्ठभूमि हो सकता है।",
+       "ja": "この質問にどう答えるかはあなた次第です。あなたの民族グループは、あなたの文化的または家族の背景である可能性があります。",
+       "pt": " Depende de você como responder a essa pergunta. Seu grupo étnico pode ser sua origem cultural ou familiar.",
+       "ru": " Вам решать, как вы ответите на этот вопрос. Ваша этническая группа может быть вашей культурной или семейной принадлежностью.",
+       "zh": "如何回答这个问题取决于你。您的种族可能是您的文化或家庭背景。",
+       "bn": " আপনি কীভাবে এই প্রশ্নের উত্তর দেবেন তা আপনার উপর নির্ভর করে। আপনার জাতিগত গোষ্ঠীটি আপনার সাংস্কৃতিক বা পারিবারিক পটভূমি হতে পারে।"
+      },
+      "choices": [
+       {
+        "value": "English / Welsh / Scottish / Northern Irish / British",
+        "text": {
+         "ar": "الإنجليزية / الويلزية / الاسكتلندية / الأيرلندية الشمالية / البريطانية",
+         "es": "Inglés / Galés / Escocés / Irlanda del Norte / Británico",
+         "fr": "Anglais / Gallois / Ecossais / Irlandais du Nord / Britannique",
+         "hi": "अंग्रेजी / वेल्श / स्कॉटिश / उत्तरी आयरिश / ब्रिटिश",
+         "ja": "英語 / ウェールズ語 / スコットランド語 / 北アイルランド語 / イギリス語",
+         "pt": "Inglês / Galês / Escocês / Irlanda do Norte / Britânico",
+         "ru": "Английский / Валлийский / Шотландский / Североирландский / Британский",
+         "zh": "英语 / 威尔士语 / 苏格兰语 / 北爱尔兰语 / 英式",
+         "bn": "ইংরেজি / ওয়েলশ / স্কটিশ / উত্তর আইরিশ / ব্রিটিশ"
+        }
+       },
+       {
+        "value": "Irish",
+        "text": {
+         "ar": "الأيرلندية",
+         "es": "Irlandés",
+         "fr": "Irlandais",
+         "hi": "आयरिश",
+         "ja": "アイルランド語",
+         "pt": "Irlandês",
+         "ru": "Ирландский",
+         "zh": "爱尔兰语",
+         "bn": "আইরিশ"
+        }
+       },
+       {
+        "value": "Gypsy or Irish Traveller",
+        "text": {
+         "ar": "الغجر أو المسافر الأيرلندي",
+         "es": "Viajero gitano o irlandés",
+         "fr": "Voyageur gitan ou irlandais",
+         "hi": "जिप्सी या आयरिश यात्री",
+         "ja": "ジプシーまたはアイルランドの旅行者",
+         "pt": "Viajante cigano ou irlandês",
+         "ru": "Цыганский или ирландский путешественник",
+         "zh": "吉普赛人或爱尔兰旅行者",
+         "bn": "জিপসি বা আইরিশ ভ্রমণকারী"
+        }
+       },
+       {
+        "value": "Other White Background",
+        "text": {
+         "ar": "خلفية بيضاء أخرى",
+         "es": "Otro fondo blanco",
+         "fr": "Autre fond blanc",
+         "hi": "अन्य सफेद पृष्ठभूमि",
+         "ja": "その他の白い背景",
+         "pt": "Outro fundo branco",
+         "ru": "Другой белый фон",
+         "zh": "其他白色背景",
+         "bn": "অন্যান্য সাদা পটভূমি"
+        }
+       },
+       {
+        "value": "White and Black Caribbean",
+        "text": {
+         "ar": "منطقة البحر الكاريبي البيضاء والسوداء",
+         "es": "Caribe blanco y negro",
+         "fr": "Caraïbes blanches et noires",
+         "hi": "सफेद और काले कैरेबियन",
+         "ja": "白人と黒人のカリブ海",
+         "pt": "Caribe branco e negro",
+         "ru": "Белый и черный карибский",
+         "zh": "白色和黑色加勒比海",
+         "bn": "সাদা এবং কালো ক্যারিবিয়ান"
+        }
+       },
+       {
+        "value": "White and Black African",
+        "text": {
+         "ar": "أبيض وأسود أفريقي",
+         "es": "Blanco y negro africano",
+         "fr": "Africains blancs et noirs",
+         "hi": "सफेद और काले अफ्रीकी",
+         "ja": "白人と黒人アフリカ人",
+         "pt": "Branco e Negro Africano",
+         "ru": "Белый и черный африканец",
+         "zh": "白人和黑人非洲人",
+         "bn": "সাদা এবং কালো আফ্রিকান"
+        }
+       },
+       {
+        "value": "White and Asian",
+        "text": {
+         "ar": "الأبيض والآسيوي",
+         "es": "Blanco y asiático",
+         "fr": "Blanc et asiatique",
+         "hi": "सफेद और एशियाई",
+         "ja": "白人とアジア人",
+         "pt": "Branco e asiático",
+         "ru": "Белая и азиатская",
+         "zh": "白人和亚洲人",
+         "bn": "সাদা এবং এশিয়ান"
+        }
+       },
+       {
+        "value": "Other mixed/multiple ethnic background",
+        "text": {
+         "ar": "خلفية عرقية مختلطة / متعددة أخرى",
+         "es": "Otros orígenes étnicos mixtos/múltiples",
+         "fr": "Autres origines ethniques mixtes ou multiples",
+         "hi": "अन्य मिश्रित/एकाधिक जातीय पृष्ठभूमि",
+         "ja": "その他の混血/多民族的背景",
+         "pt": "Outras origens étnicas mistas/múltiplas",
+         "ru": "Другое смешанное/множественное этническое происхождение",
+         "zh": "其他混合/多种族背景",
+         "bn": "অন্যান্য মিশ্র / একাধিক জাতিগত পটভূমি"
+        }
+       },
+       {
+        "value": "Indian",
+        "text": {
+         "ar": "هندي",
+         "es": "Indio",
+         "fr": "Indien",
+         "hi": "भारतीय",
+         "ja": "インディアン",
+         "pt": "Índio",
+         "ru": "Индийский",
+         "zh": "印度",
+         "bn": "ভারতীয়"
+        }
+       },
+       {
+        "value": "Pakistani",
+        "text": {
+         "ar": "باكستاني",
+         "es": "Paquistaní",
+         "fr": "Pakistanais",
+         "hi": "पाकिस्तानी",
+         "ja": "パキスタンの",
+         "pt": "Paquistanês",
+         "ru": "Пакистанский",
+         "zh": "巴基斯坦的",
+         "bn": "পাকিস্তান"
+        }
+       },
+       {
+        "value": "Bangladeshi",
+        "text": {
+         "ar": "بنجلاديشى",
+         "es": "Bangladés",
+         "fr": "Bangladais",
+         "hi": "बांग्लादेशी",
+         "ja": "バングラデシュ",
+         "pt": "Bangladesh",
+         "ru": "Бангладешский",
+         "zh": "孟加拉语",
+         "bn": "বাংলাদেশী"
+        }
+       },
+       {
+        "value": "Chinese",
+        "text": {
+         "ar": "الصينية",
+         "es": "Chino",
+         "fr": "Chinois",
+         "hi": "चीनी",
+         "ja": "中国語",
+         "pt": "Chinês",
+         "ru": "Китайский",
+         "zh": "中文",
+         "bn": "চিনা"
+        }
+       },
+       {
+        "value": "African",
+        "text": {
+         "ar": "إفريقي",
+         "es": "Africano",
+         "fr": "Africain",
+         "hi": "अफ़्रीकी",
+         "ja": "アフリカの",
+         "pt": "Africano",
+         "ru": "Африканский",
+         "zh": "非洲的",
+         "bn": "আফ্রিকান"
+        }
+       },
+       {
+        "value": "Caribbean",
+        "text": {
+         "ar": "الكاريبي",
+         "es": "Caribe",
+         "fr": "Caraïbes",
+         "hi": "कैरिबियन",
+         "ja": "カリブ海",
+         "pt": "Caribe",
+         "ru": "Карибский бассейн",
+         "zh": "加勒比海",
+         "bn": "ক্যারিবিয়ান"
+        }
+       },
+       {
+        "value": "Other Black/African Caribbean background",
+        "text": {
+         "ar": "خلفية أخرى من منطقة البحر الكاريبي السوداء / الأفريقية",
+         "es": "Otros antecedentes negros/afrocaribeños",
+         "fr": "Autres origines noires/afro-caribéennes",
+         "hi": "अन्य काले / अफ्रीकी कैरेबियन पृष्ठभूमि",
+         "ja": "その他の黒人/アフリカ系カリブ海の背景",
+         "pt": "Outro fundo caribenho negro/africano",
+         "ru": "Другие чернокожие/афро-карибские фоны",
+         "zh": "其他黑人/非洲加勒比背景",
+         "bn": "অন্যান্য কালো / আফ্রিকান ক্যারিবিয়ান পটভূমি"
+        }
+       },
+       {
+        "value": "Arab",
+        "text": {
+         "ar": "عربي",
+         "es": "Árabe",
+         "fr": "Arabe",
+         "hi": "अरब",
+         "ja": "アラブ",
+         "pt": "Árabe",
+         "ru": "Араб",
+         "zh": "阿拉伯人",
+         "bn": "আরব"
+        }
+       },
+       {
+        "value": "Other ethnic group",
+        "text": {
+         "ar": "مجموعة عرقية أخرى",
+         "es": "Otro grupo étnico",
+         "fr": "Autre groupe ethnique",
+         "hi": "अन्य जातीय समूह",
+         "ja": "その他の民族",
+         "pt": "Outro grupo étnico",
+         "ru": "Другая этническая группа",
+         "zh": "其他族群",
+         "bn": "অন্যান্য জাতিগত গোষ্ঠী"
+        }
+       }
+      ]
+     },
+     {
+      "type": "radiogroup",
+      "name": "income_UK",
+      "title": {
+       "default": "Thinking back over the past year, what was your family's annual income?",
+       "ar": "بالتفكير في العام الماضي ، ما هو الدخل السنوي لعائلتك؟",
+       "es": "Pensando en el año pasado, ¿cuál era el ingreso anual de su familia?",
+       "fr": "En repensant à l’année écoulée, quel était le revenu annuel de votre famille ?",
+       "hi": "पिछले एक साल के बारे में सोचते हुए, आपके परिवार की वार्षिक आय क्या थी?",
+       "ja": "この1年を振り返ってみて、ご家族の年収はいくらでしたか?",
+       "pt": "Pensando no ano passado, qual era a renda anual da sua família?",
+       "ru": "Оглядываясь назад на прошедший год, каков был годовой доход вашей семьи?",
+       "zh": "回想过去一年，你家的年收入是多少？",
+       "bn": "গত এক বছরের কথা চিন্তা করে দেখেছেন, আপনার পরিবারের বার্ষিক আয় কত ছিল?"
+      },
+      "choices": [
+       {
+        "value": "Less than £10,000",
+        "text": {
+         "ar": "أقل من 10,000 جنيه إسترليني",
+         "es": "Menos de 10.000 £",
+         "fr": "Moins de 10 000 £",
+         "hi": "£ 10,000 से कम",
+         "ja": "£10,000未満",
+         "pt": "Menos de £10.000",
+         "ru": "Менее £10,000",
+         "zh": "少于 10,000 英镑",
+         "bn": "£ 10,000 এর চেয়ে কম"
+        }
+       },
+       {
+        "value": "£10,000-£19,999",
+        "text": {
+         "ar": "10,000 جنيه إسترليني - 19,999 جنيه إسترليني",
+         "es": "£ 10,000- £ 19,999",
+         "fr": "10 000 £ à 19 999 £",
+         "hi": "£ 10,000- £ 19,999",
+         "ja": "£10,000-£19,999",
+         "pt": "£10,000-£19,999",
+         "ru": "£10,000-£19,999",
+         "zh": "£10,000-£19,999",
+         "bn": "£10,000- £19,999"
+        }
+       },
+       {
+        "value": "£20,000-£29,999",
+        "text": {
+         "ar": "20,000 جنيه إسترليني - 29,999 جنيه إسترليني",
+         "es": "£20,000-£29,999",
+         "fr": "20 000 £ à 29 999 £",
+         "hi": "£ 20,000- £ 29,999",
+         "ja": "£20,000-£29,999",
+         "pt": "£20,000-£29,999",
+         "ru": "£20,000-£29,999",
+         "zh": "20,000-29,999英镑",
+         "bn": "£20,000- £ 29,999"
+        }
+       },
+       {
+        "value": "£30,000-£39,999",
+        "text": {
+         "ar": "30,000 جنيه إسترليني - 39,999 جنيه إسترليني",
+         "es": "£30,000-£39,999",
+         "fr": "30 000 £ à 39 999 £",
+         "hi": "£ 30,000- £ 39,999",
+         "ja": "£30,000-£39,999",
+         "pt": "£30,000-£39,999",
+         "ru": "£30,000-£39,999",
+         "zh": "30,000-39,999英镑",
+         "bn": "£ 30,000- £ 39,999"
+        }
+       },
+       {
+        "value": "£40,000-£49,999",
+        "text": {
+         "ar": "40,000 جنيه إسترليني - 49,999 جنيه إسترليني",
+         "es": "£40,000-£49,999",
+         "fr": "40 000 à 49 999 £",
+         "hi": "£ 40,000- £ 49,999",
+         "ja": "£40,000-£49,999",
+         "pt": "£ 40.000 - £ 49.999",
+         "ru": "£40,000-£49,999",
+         "zh": "£40,000-£49,999",
+         "bn": "£ 40,000- £ 49,999"
+        }
+       },
+       {
+        "value": "£50,000-£74,999",
+        "text": {
+         "ar": "50,000 جنيه إسترليني - 74,999 جنيه إسترليني",
+         "es": "£50,000-£74,999",
+         "fr": "50 000 £ à 74 999 £",
+         "hi": "£ 50,000- £ 74,999",
+         "ja": "£50,000-£74,999",
+         "pt": "£50,000-£74,999",
+         "ru": "£50,000-£74,999",
+         "zh": "£50,000-£74,999",
+         "bn": "£ 50,000- £ 74,999"
+        }
+       },
+       {
+        "value": "£75,000-£99,999",
+        "text": {
+         "ar": "75,000 جنيه إسترليني - 99,999 جنيه إسترليني",
+         "es": "£75,000-£99,999",
+         "fr": "75 000 £ à 99 999 £",
+         "hi": "£ 75,000- £ 99,999",
+         "ja": "£75,000-£99,999",
+         "pt": "£75.000-£99.999",
+         "ru": "£75,000-£99,999",
+         "zh": "£75,000-£99,999",
+         "bn": "£ 75,000- £ 99,999"
+        }
+       },
+       {
+        "value": "£100,000-£149,999",
+        "text": {
+         "ar": "100,000 جنيه إسترليني - 149,999 جنيه إسترليني",
+         "es": "£ 100,000- £ 149,999",
+         "fr": "100 000 £ à 149 999 £",
+         "hi": "£ 100,000- £ 149,999",
+         "ja": "£100,000-£149,999",
+         "pt": "£100,000-£149,999",
+         "ru": "£100,000-£149,999",
+         "zh": "£100,000-£149,999",
+         "bn": "£100,000- £149,999"
+        }
+       },
+       {
+        "value": "£150,000 or more",
+        "text": {
+         "ar": "150,000 جنيه إسترليني أو أكثر",
+         "es": "£150,000 o más",
+         "fr": "150 000 £ ou plus",
+         "hi": "£ 150,000 या अधिक",
+         "ja": "£150,000以上",
+         "pt": "£150.000 ou mais",
+         "ru": "£150,000 или более",
+         "zh": "£150,000 或以上",
+         "bn": "£150,000 বা তার বেশি"
+        }
+       }
+      ]
+     }
+    ],
+    "visibleIf": "{country_reside} = 'United Kingdom'",
+    "title": {
+     "default": "United Kingdom Residents",
+     "ar": "سكان المملكة المتحدة",
+     "es": "Residentes en el Reino Unido",
+     "fr": "Résidents du Royaume-Uni",
+     "hi": "यूनाइटेड किंगडम के निवासी",
+     "ja": "英国にお住まいの方",
+     "pt": "Residentes no Reino Unido",
+     "ru": "Резиденты Соединенного Королевства",
+     "zh": "英国居民",
+     "bn": "যুক্তরাজ্যের অধিবাসী"
+    }
+   }
   ],
   "showPrevButton": false,
-  "showQuestionNumbers": "off",
-  "showCompletedPage": false
-}
+  "showCompletedPage": false,
+  "showQuestionNumbers": "off"
+ }

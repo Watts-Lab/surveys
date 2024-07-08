@@ -1,50 +1,127 @@
 {
   "logoPosition": "right",
   "pages": [
-    {
-      "name": "page1",
-      "elements": [
-        {
-          "type": "text",
-          "name": "drill_hammer",
-          "title": "A drill and a hammer cost $330 in total. The drill costs $300 more than the hammer. How much does the hammer cost?",
-          "inputType": "number"
-        },
-        {
-          "type": "text",
-          "name": "rachel",
-          "title": "Rachel is the 10th tallest and the 10th shortest girl in her class. How many girls are in her class?",
-          "inputType": "number"
-        },
-        {
-          "type": "text",
-          "name": "toaster",
-          "title": "When on sale for 20% off, a toaster costs $100. What does it cost when not on sale?",
-          "inputType": "number"
-        },
-        {
-          "type": "text",
-          "name": "apples",
-          "title": "In a pail of 60 apples, red apples are 3 times more common than green ones. How many are green?",
-          "inputType": "number"
-        },
-        {
-          "type": "text",
-          "name": "eggs",
-          "title": "After hatching from its egg, a baby bird doubles in weight every day. By day 12 it weighs a pound. On what day does the bird weigh half a pound?",
-          "inputType": "number"
-        },
-        {
-          "type": "text",
-          "name": "dog_cat",
-          "title": "A dog and a cat weigh 100 pounds in total. The dog weighs 86 pounds. What is the difference in weight between the dog and the cat?",
-          "inputType": "number"
-        }
-      ],
-      "description": "Please only write the numeric answer to the following questions"
+   {
+    "name": "page1",
+    "elements": [
+     {
+      "type": "text",
+      "name": "drill_hammer",
+      "title": {
+       "default": "A drill and a hammer cost $330 in total. The drill costs $300 more than the hammer. How much does the hammer cost?",
+       "ar": "تبلغ تكلفة المثقاب والمطرقة 330 دولارا في المجموع. يكلف المثقاب 300 دولار أكثر من المطرقة. كم تكلفة المطرقة؟",
+       "es": "Un taladro y un martillo cuestan 330 dólares en total. El taladro cuesta 300 dólares más que el martillo. ¿Cuánto cuesta el martillo?",
+       "fr": "Une perceuse et un marteau coûtent 330 $ au total. La perceuse coûte 300 $ de plus que le marteau. Combien coûte le marteau ?",
+       "hi": "एक ड्रिल और एक हथौड़ा की कुल कीमत $ 330 है। ड्रिल की कीमत हथौड़े से $ 300 अधिक है। हथौड़े की कीमत कितनी है?",
+       "ja": "ドリルとハンマーは合計で330ドルでした。ドリルはハンマーよりも300ドル高い。ハンマーの費用はいくらですか?",
+       "pt": "Uma furadeira e um martelo custaram US$ 330 no total. A broca custa US$ 300 a mais que o martelo. Quanto custa o martelo?",
+       "ru": "Дрель и молоток стоят в общей сложности 330 долларов. Дрель стоит на 300 долларов дороже, чем перфоратор. Сколько стоит молоток?",
+       "zh": "钻头和锤子总共花费 330 美元。钻头的成本比锤子高出 300 美元。锤子要多少钱？",
+       "bn": "একটি ড্রিল এবং একটি হাতুড়ির দাম মোট $330। হাতুড়ির চেয়ে ড্রিলের দাম $300 বেশি। হাতুড়ির দাম কত?"
+      },
+      "inputType": "number"
+     },
+     {
+      "type": "text",
+      "name": "rachel",
+      "title": {
+       "default": "Rachel is the 10th tallest and the 10th shortest girl in her class. How many girls are in her class?",
+       "ar": "راشيل هي أطول 10 وأقصر 10 فتاة في فصلها. كم عدد الفتيات في فصلها؟",
+       "es": "Rachel es la décima niña más alta y la décima más baja de su clase. ¿Cuántas chicas hay en su clase?",
+       "fr": "Rachel est la 10e plus grande et la 10e plus petite fille de sa classe. Combien y a-t-il de filles dans sa classe ?",
+       "hi": "राहेल अपनी कक्षा की 10 वीं सबसे लंबी और 10 वीं सबसे छोटी लड़की है। उसकी कक्षा में कितनी लड़कियाँ हैं?",
+       "ja": "レイチェルはクラスで10番目に背が高く、10番目に背が低い女の子です。彼女のクラスには何人の女の子がいますか?",
+       "pt": "Rachel é a 10ª mais alta e a 10ª mais baixa de sua classe. Quantas meninas estão em sua classe?",
+       "ru": "Рэйчел - 10-я самая высокая и 10-я самая низкая девочка в своем классе. Сколько девочек в ее классе?",
+       "zh": "雷切尔是班上第 10 高和第 10 矮的女孩。她班上有多少女生？",
+       "bn": "র ্যাচেল তার ক্লাসের দশম লম্বা এবং দশম খাটো মেয়ে। তার ক্লাসে কয়জন মেয়ে আছে?"
+      },
+      "inputType": "number"
+     },
+     {
+      "type": "text",
+      "name": "toaster",
+      "title": {
+       "default": "When on sale for 20% off, a toaster costs $100. What does it cost when not on sale?",
+       "ar": "عند البيع بخصم 20٪ ، تبلغ تكلفة محمصة الخبز 100 دولار. ما هي التكلفة عندما لا تكون معروضة للبيع؟",
+       "es": "Cuando está a la venta con un 20% de descuento, una tostadora cuesta $ 100. ¿Cuánto cuesta cuando no está en oferta?",
+       "fr": "Lorsqu’il est en vente à 20 % de réduction, un grille-pain coûte 100 $. Combien cela coûte-t-il lorsqu’il n’est pas en solde ?",
+       "hi": "जब 20% की छूट के लिए बिक्री पर, एक टोस्टर की कीमत $ 100 होती है। बिक्री पर नहीं होने पर इसकी कीमत क्या है?",
+       "ja": "20%オフで販売されている場合、トースターの価格は100ドルです。セール以外の費用はいくらですか?",
+       "pt": "Quando à venda com 20% de desconto, uma torradeira custa R$ 100. Quanto custa quando não está à venda?",
+       "ru": "При продаже со скидкой 20% тостер стоит 100 долларов. Сколько он стоит, когда его нет в продаже?",
+       "zh": "当以 20% 的折扣出售时，烤面包机的价格为 100 美元。不打折时要花多少钱？",
+       "bn": "20% ছাড়ের জন্য বিক্রি হলে, একটি টোস্টারের দাম 100 ডলার। বিক্রয় না হলে এটির দাম কী?"
+      },
+      "inputType": "number"
+     },
+     {
+      "type": "text",
+      "name": "apples",
+      "title": {
+       "default": "In a pail of 60 apples, red apples are 3 times more common than green ones. How many are green?",
+       "ar": "في سطل من 60 تفاحة ، يكون التفاح الأحمر أكثر شيوعا 3 مرات من التفاح الأخضر. كم عدد الأخضر؟",
+       "es": "En un cubo de 60 manzanas, las manzanas rojas son 3 veces más comunes que las verdes. ¿Cuántos son verdes?",
+       "fr": "Dans un seau de 60 pommes, les pommes rouges sont 3 fois plus courantes que les vertes. Combien sont verts ?",
+       "hi": "60 सेबों के एक पेल में, लाल सेब हरे लोगों की तुलना में 3 गुना अधिक आम हैं। कितने हरे हैं?",
+       "ja": "60個のリンゴのバケツでは、赤いリンゴは緑のリンゴの3倍一般的です。緑色はいくつありますか?",
+       "pt": "Em um balde de 60 maçãs, as maçãs vermelhas são 3 vezes mais comuns do que as verdes. Quantos são verdes?",
+       "ru": "В ведре с 60 яблоками красные яблоки встречаются в 3 раза чаще, чем зеленые. Сколько из них зеленые?",
+       "zh": "在一桶 60 个苹果中，红苹果的常见率是绿苹果的 3 倍。有多少是绿色的？",
+       "bn": "60 টি আপেলের একটি বালতিতে, লাল আপেল সবুজ আপেল থেকে 3 গুণ বেশি সাধারণ। সবুজ কয়টি?"
+      },
+      "inputType": "number"
+     },
+     {
+      "type": "text",
+      "name": "eggs",
+      "title": {
+       "default": "After hatching from its egg, a baby bird doubles in weight every day. By day 12 it weighs a pound. On what day does the bird weigh half a pound?",
+       "ar": "بعد الفقس من بيضته ، يتضاعف وزن طائر صغير كل يوم. بحلول اليوم 12 يزن رطل. في أي يوم يزن الطائر نصف رطل؟",
+       "es": "Después de eclosionar de su huevo, un pájaro bebé duplica su peso todos los días. Para el día 12 pesa una libra. ¿Qué día pesa el pájaro media libra?",
+       "fr": "Après l’éclosion de son œuf, un oisillon double de poids chaque jour. Au 12e jour, il pèse une livre. Quel jour l’oiseau pèse-t-il une demi-livre ?",
+       "hi": "अपने अंडे से निकलने के बाद, एक पक्षी का बच्चा हर दिन वजन में दोगुना हो जाता है। 12 दिन तक इसका वजन एक पाउंड होता है। किस दिन पक्षी का वजन आधा पाउंड होता है?",
+       "ja": "卵から孵化したひな鳥は、毎日体重が2倍になります。12日目には体重が1ポンドになります。鳥の体重は何日ですか?",
+       "pt": "Depois de eclodir de seu ovo, um filhote de pássaro dobra de peso a cada dia. No dia 12 pesa um quilo. Em que dia a ave pesa meio quilo?",
+       "ru": "После вылупления из яйца птенец каждый день удваивается в весе. К 12 дню он весит фунт. В какой день птица весит полкилограмма?",
+       "zh": "从蛋中孵化出来后，一只幼鸟的体重每天都会翻倍。到第 12 天，它重达一磅。这只鸟在哪一天重半磅？",
+       "bn": "ডিম থেকে বাচ্চা বের হওয়ার পর প্রতিদিন একটি বাচ্চার ওজন দ্বিগুণ হয়। 12 দিনের মধ্যে এটি এক পাউন্ড ওজনের। কোন দিনে পাখির ওজন আধা পাউন্ড হয়?"
+      },
+      "inputType": "number"
+     },
+     {
+      "type": "text",
+      "name": "dog_cat",
+      "title": {
+       "default": "A dog and a cat weigh 100 pounds in total. The dog weighs 86 pounds. What is the difference in weight between the dog and the cat?",
+       "ar": "يزن والقط 100 رطل في المجموع. يزن 86 رطلا. ما هو الفرق في الوزن بين والقط؟",
+       "es": "Un perro y un gato pesan 100 libras en total. El perro pesa 86 libras. ¿Cuál es la diferencia de peso entre el perro y el gato?",
+       "fr": "Un chien et un chat pèsent 100 livres au total. Le chien pèse 86 livres. Quelle est la différence de poids entre le chien et le chat ?",
+       "hi": "एक कुत्ते और एक बिल्ली का वजन कुल 100 पाउंड है। कुत्ते का वजन 86 पाउंड है। कुत्ते और बिल्ली के वजन में क्या अंतर है?",
+       "ja": "犬と猫の体重は合計で100ポンドです。犬の体重は86ポンドです。犬と猫の体重の違いは何ですか?",
+       "pt": "Um cão e um gato pesam 100 quilos no total. O cão pesa 86 quilos. Qual a diferença de peso entre o cão e o gato?",
+       "ru": "Собака и кошка в сумме весят 100 фунтов. Собака весит 86 фунтов. В чем разница в весе между собакой и кошкой?",
+       "zh": "一只狗和一只猫总共重 100 磅。这只狗重 86 磅。狗和猫的体重有什么区别？",
+       "bn": "একটি কুকুর ও একটি বিড়ালের ওজন মোট ১০০ পাউন্ড। কুকুরটির ওজন ৮৬ পাউন্ড। কুকুর ও বিড়ালের মধ্যে ওজনের পার্থক্য কি?"
+      },
+      "inputType": "number"
+     }
+    ],
+    "description": {
+     "default": "Please only write the numeric answer to the following questions",
+     "ar": "يرجى كتابة الإجابة الرقمية فقط على الأسئلة التالية",
+     "es": "Por favor, escriba solo la respuesta numérica a las siguientes preguntas",
+     "fr": "Veuillez n’écrire que la réponse numérique aux questions suivantes",
+     "hi": "कृपया निम्नलिखित प्रश्नों का केवल संख्यात्मक उत्तर लिखें",
+     "ja": "以下の質問に対する回答は数値のみでご記入ください",
+     "pt": "Por favor, escreva apenas a resposta numérica para as seguintes perguntas",
+     "ru": "Пожалуйста, пишите только числовой ответ на следующие вопросы",
+     "zh": "请只写下以下问题的数字答案",
+     "bn": "দয়া করে শুধুমাত্র নিম্নলিখিত প্রশ্নগুলির সাংখ্যিক উত্তর লিখুন"
     }
+   }
   ],
   "showPageTitles": false,
   "showCompletedPage": false,
   "widthMode": "responsive"
-}
+ }

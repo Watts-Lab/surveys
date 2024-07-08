@@ -2,133 +2,495 @@
   "logoPosition": "right",
   "focusFirstQuestionAutomatic": false,
   "pages": [
-    {
-      "name": "page1",
+   {
+    "name": "page1",
+    "elements": [
+     {
+      "type": "html",
+      "name": "Prompt",
+      "hideNumber": true,
+      "html": {
+       "default": "<h1> Here are a number of personality traits that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other. </h1><h1>I see myself as ...</h1>",
+       "es": "<h1> Aquí hay una serie de rasgos de personalidad que pueden o no aplicarse a usted. Indique en qué medida está de acuerdo o en desacuerdo con esa afirmación. Debes calificar el grado en que el par de rasgos se aplica a ti, incluso si una característica se aplica con más fuerza que la otra. </h1><h1>Me veo a mí mismo como...</h1>",
+       "ar": "<h1> فيما يلي عدد من السمات الشخصية التي قد تنطبق أو لا تنطبق عليك. يرجى الإشارة إلى مدى موافقتك أو عدم موافقتك على هذا البيان. يجب أن تقيم مدى انطباق زوج السمات عليك ، حتى لو كانت إحدى الخصائص تنطبق بقوة أكبر من الأخرى. </h1><h1>أرى ...</h1>",
+       "fr": "<h1> Voici un certain nombre de traits de personnalité qui peuvent ou non s’appliquer à vous. Veuillez indiquer dans quelle mesure vous êtes d’accord ou en désaccord avec cette affirmation. Vous devez évaluer dans quelle mesure la paire de traits s’applique à vous, même si l’une d’entre elles s’applique plus fortement que l’autre. </h1><h1>Je me vois comme...</h1>",
+       "hi": "<h1> यहां कई व्यक्तित्व लक्षण दिए गए हैं जो आप पर लागू हो भी सकते हैं और नहीं भी। कृपया बताएं कि आप उस कथन से किस हद तक सहमत या असहमत हैं। आपको उस सीमा को रेट करना चाहिए जिस पर लक्षणों की जोड़ी आप पर लागू होती है, भले ही एक विशेषता दूसरे की तुलना में अधिक दृढ़ता से लागू हो। </h1><h1>मैं खुद को देखता हूं ...</h1>",
+       "ja": "<h1> ここに、あなたに当てはまるかもしれないし、当てはまらないかもしれないいくつかの性格特性があります。その声明に同意または同意しない程度を示してください。特性のペアが、一方の特性が他方よりも強く当てはまる場合でも、どの程度当てはまるかを評価する必要があります。</h1><h1>私は自分自身を...</h1>",
+       "pt": "<h1> Aqui estão vários traços de personalidade que podem ou não se aplicar a você. Por favor, indique até que ponto você concorda ou discorda dessa afirmação. Você deve avaliar até que ponto o par de características se aplica a você, mesmo que uma característica se aplique mais fortemente do que a outra. </h1><h1>Eu me vejo como ...</h1>",
+       "ru": "<h1> Вот ряд личностных черт, которые могут относиться или не относиться к вам. Просьба указать, в какой степени вы согласны или не согласны с этим утверждением. Вы должны оценить степень, в которой пара черт применима к вам, даже если одна характеристика применима сильнее, чем другая. </h1><h1>Я вижу себя как...</h1>",
+       "zh-cn": "<h1> 以下是一些可能适用于您也可能不适用于您的性格特征。请说明您在多大程度上同意或不同意该声明。你应该评估这对特征适用于你的程度，即使一个特征比另一个更适用。</h1><h1>我认为自己是......</h1>",
+       "bn": "<h1> এখানে বেশ কয়েকটি ব্যক্তিত্বের বৈশিষ্ট্য রয়েছে যা আপনার ক্ষেত্রে প্রযোজ্য হতে পারে বা নাও হতে পারে। অনুগ্রহ করে নির্দেশ করুন যে আপনি সেই বিবৃতির সাথে কতটুকু সম্মত বা দ্বিমত পোষণ করছেন। একটি বৈশিষ্ট্য অন্যটির চেয়ে বেশি জোরালোভাবে প্রযোজ্য হলেও আপনার ক্ষেত্রে জোড়া বৈশিষ্ট্যগুলি আপনার জন্য কতটা প্রযোজ্য তা আপনার মূল্যায়ন করা উচিত। </h1><h1>আমি নিজেকে ...</h1> হিসেবে দেখি"
+      }
+     },
+     {
+      "type": "html",
+      "name": "Prompt",
+      "hideNumber": true,
+      "html": {
+       "default": "<p> Scale key: (1) Strongly Disagree, (2) Disagree, (3) Slightly Disagree, (4) Neutral, (5) Slightly Agree, (6) Agree, (7) Strongly Agree</p>",
+       "es": "<p> Clave de escala: (1) Totalmente en desacuerdo, (2) En desacuerdo, (3) Ligeramente en desacuerdo, (4) Neutral, (5) Ligeramente de acuerdo, (6) De acuerdo, (7) Totalmente de acuerdo</p>",
+       "ar": "<p> مفتاح المقياس: (1) لا أوافق بشدة، (2) لا أوافق، (3) لا أوافق قليلا، (4) محايد، (5) أوافق قليلا، (6) أوافق، (7) أوافق بشدة</p>",
+       "fr": "<p> Touche d’échelle : (1) Pas du tout d’accord, (2) Pas d’accord, (3) Plutôt pas d’accord, (4) Neutre, (5) Plutôt d’accord, (6) D’accord, (7) Tout à fait d’accord</p>",
+       "hi": "<p> स्केल कुंजी: (1) दृढ़ता से असहमत, (2) असहमत, (3) थोड़ा असहमत, (4) तटस्थ, (5) थोड़ा सहमत, (6) सहमत, (7) दृढ़ता से सहमत</p>",
+       "ja": "<p> スケールキー:(1)強く同意しない、(2)同意しない、(3)少し同意しない、(4)どちらでもない、(5)少し同意する、(6)同意する、(7)強く同意する</p>",
+       "pt": "<p> Chave de escala: (1) Discordo totalmente, (2) Discordo, (3) Discordo ligeiramente, (4) Neutro, (5) Concordo ligeiramente, (6) Concordo, (7) Concordo totalmente</p>",
+       "ru": "<p> Ключ шкалы: (1) Категорически не согласен, (2) Не согласен, (3) Слегка не согласен, (4) Нейтральный, (5) Слегка согласен, (6) Согласен, (7) Полностью согласен</p>",
+       "zh-cn": "<p> 量表键：（1）非常不同意，（2）不同意，（3）略微不同意，（4）中立，（5）略微同意，（6）同意，（7）非常同意</p>",
+       "bn": "<p> স্কেল কী: (১) দৃঢ়ভাবে দ্বিমত, (২) দ্বিমত, (৩) সামান্য দ্বিমত, (৪) নিরপেক্ষ, (৫) সামান্য একমত, (৬) একমত, (৭) দৃঢ়ভাবে একমত</p>"
+      }
+     },
+     {
+      "type": "panel",
+      "name": "randomizationPanel",
       "elements": [
-        {
-          "type": "html",
-          "name": "Prompt",
-          "hideNumber": true,
-          "html": "<h1> Here are a number of personality traits that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other. </h1><h1>I see myself as ...</h1>"
+       {
+        "type": "rating",
+        "name": "extroversion",
+        "title": {
+         "default": "... extroverted, enthusiastic",
+         "es": "... Extrovertido, entusiasta",
+         "ar": "... منفتح ، متحمس",
+         "fr": "... Extraverti, enthousiaste",
+         "hi": "... बहिर्मुखी, उत्साही",
+         "ja": "...外向的、熱狂的",
+         "pt": "... extrovertido, entusiasmado",
+         "ru": "... экстраверт, энтузиазм",
+         "zh-cn": "...性格外向，热情",
+         "bn": "... বহির্মুখী, উৎসাহী"
         },
-        {
-          "type": "html",
-          "name": "Prompt",
-          "hideNumber": true,
-          "html": "<p> Scale key: (1) Strongly Disagree, (2) Disagree, (3) Slightly Disagree, (4) Neutral, (5) Slightly Agree, (6) Agree, (7) Strongly Agree</p>"
+        "isRequired": true,
+        "rateCount": 7,
+        "rateMax": 7,
+        "minRateDescription": {
+         "default": "Strongly disagree",
+         "es": "Totalmente en desacuerdo",
+         "ar": "لا أوافق بشدة",
+         "fr": "Pas du tout d’accord",
+         "hi": "दृढ़ता से असहमत",
+         "ja": "強く反対する",
+         "pt": "Discordo",
+         "ru": "Категорически не согласен",
+         "zh-cn": "强烈不同意",
+         "bn": "দৃঢ়ভাবে দ্বিমত পোষণ করছি"
         },
-        {
-          "type": "panel",
-          "name": "randomizationPanel",
-          "elements": [
-            {
-              "type": "rating",
-              "name": "extroversion",
-              "title": "... extroverted, enthusiastic",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree",
-              "displayMode": "buttons",
-              "isRequired": true
-            },
-            {
-              "type": "rating",
-              "name": "criticalness",
-              "title": "... critical, quarrelsome",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree",
-              "displayMode": "buttons",
-              "isRequired": true
-            },
-            {
-              "type": "rating",
-              "name": "dependability",
-              "title": "... dependable, self-disciplined",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree",
-              "displayMode": "buttons",
-              "isRequired": true
-            },
-            {
-              "type": "rating",
-              "name": "anxiety",
-              "title": "... anxious, easily upset",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree",
-              "displayMode": "buttons",
-              "isRequired": true
-            },
-            {
-              "type": "rating",
-              "name": "openness",
-              "title": "... open to new experience, complex",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree",
-              "displayMode": "buttons",
-              "isRequired": true
-            },
-            {
-              "type": "rating",
-              "name": "quietness",
-              "title": "... reserved, quiet",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree",
-              "displayMode": "buttons",
-              "isRequired": true
-            },
-            {
-              "type": "rating",
-              "name": "sympathy",
-              "title": "... sympathetic, warm",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree",
-              "displayMode": "buttons",
-              "isRequired": true
-            },
-            {
-              "type": "rating",
-              "name": "carelessness",
-              "title": "... disorganized, careless",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree",
-              "displayMode": "buttons",
-              "isRequired": true
-            },
-            {
-              "type": "rating",
-              "name": "calmness",
-              "title": "... calm, emotionally stable",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree",
-              "displayMode": "buttons",
-              "isRequired": true
-            },
-            {
-              "type": "rating",
-              "name": "conventionality",
-              "title": "... conventional, uncreative",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree",
-              "displayMode": "buttons",
-              "isRequired": true
-            }
-          ],
-          "questionsOrder": "random",
-          "showQuestionNumbers": "off"
-        }
+        "maxRateDescription": {
+         "default": "Strongly agree",
+         "es": "Totalmente de acuerdo",
+         "ar": "أوافق بشدة",
+         "fr": "Tout à fait d’accord",
+         "hi": "पूर्णतः सहमत",
+         "ja": "強く同意する",
+         "pt": "Concordo plenamente",
+         "ru": "Категорически согласен",
+         "zh-cn": "非常同意",
+         "bn": "দৃঢ়ভাবে একমত"
+        },
+        "displayMode": "buttons"
+       },
+       {
+        "type": "rating",
+        "name": "criticalness",
+        "title": {
+         "default": "... critical, quarrelsome",
+         "es": "... crítico, pendenciero",
+         "ar": "... حرجة ، مشاكسة",
+         "fr": "... critique, querelleuse",
+         "hi": "... आलोचनात्मक, झगड़ालू",
+         "ja": "...批判的、喧嘩好き",
+         "pt": "... crítico, briguento",
+         "ru": "... критичный, сварливый",
+         "zh-cn": "...挑剔，争吵",
+         "bn": "... সমালোচনামূলক, ঝগড়াটে"
+        },
+        "isRequired": true,
+        "rateCount": 7,
+        "rateMax": 7,
+        "minRateDescription": {
+         "default": "Strongly disagree",
+         "es": "Totalmente en desacuerdo",
+         "ar": "لا أوافق بشدة",
+         "fr": "Pas du tout d’accord",
+         "hi": "दृढ़ता से असहमत",
+         "ja": "強く反対する",
+         "pt": "Discordo",
+         "ru": "Категорически не согласен",
+         "zh-cn": "强烈不同意",
+         "bn": "দৃঢ়ভাবে দ্বিমত পোষণ করছি"
+        },
+        "maxRateDescription": {
+         "default": "Strongly agree",
+         "es": "Totalmente de acuerdo",
+         "ar": "أوافق بشدة",
+         "fr": "Tout à fait d’accord",
+         "hi": "पूर्णतः सहमत",
+         "ja": "強く同意する",
+         "pt": "Concordo plenamente",
+         "ru": "Категорически согласен",
+         "zh-cn": "非常同意",
+         "bn": "দৃঢ়ভাবে একমত"
+        },
+        "displayMode": "buttons"
+       },
+       {
+        "type": "rating",
+        "name": "dependability",
+        "title": {
+         "default": "... dependable, self-disciplined",
+         "es": "... Confiable, autodisciplinado",
+         "ar": "... يمكن الاعتماد عليها والانضباط الذاتي",
+         "fr": "... fiable, autodiscipliné",
+         "hi": "... भरोसेमंद, आत्म-अनुशासित",
+         "ja": "...信頼性, 自己規律",
+         "pt": "... confiável, autodisciplinado",
+         "ru": "... надежный, самодисциплинированный",
+         "zh-cn": "...可靠，自律",
+         "bn": "... নির্ভরযোগ্য, স্ব-শৃঙ্খলাবদ্ধ"
+        },
+        "isRequired": true,
+        "rateCount": 7,
+        "rateMax": 7,
+        "minRateDescription": {
+         "default": "Strongly disagree",
+         "es": "Totalmente en desacuerdo",
+         "ar": "لا أوافق بشدة",
+         "fr": "Pas du tout d’accord",
+         "hi": "दृढ़ता से असहमत",
+         "ja": "強く反対する",
+         "pt": "Discordo",
+         "ru": "Категорически не согласен",
+         "zh-cn": "强烈不同意",
+         "bn": "দৃঢ়ভাবে দ্বিমত পোষণ করছি"
+        },
+        "maxRateDescription": {
+         "default": "Strongly agree",
+         "es": "Totalmente de acuerdo",
+         "ar": "أوافق بشدة",
+         "fr": "Tout à fait d’accord",
+         "hi": "पूर्णतः सहमत",
+         "ja": "強く同意する",
+         "pt": "Concordo plenamente",
+         "ru": "Категорически согласен",
+         "zh-cn": "非常同意",
+         "bn": "দৃঢ়ভাবে একমত"
+        },
+        "displayMode": "buttons"
+       },
+       {
+        "type": "rating",
+        "name": "anxiety",
+        "title": {
+         "default": "... anxious, easily upset",
+         "es": "... ansioso, se altera fácilmente",
+         "ar": "... قلق ، مستاء بسهولة",
+         "fr": "... anxieux, facilement contrarié",
+         "hi": "... चिंतित, आसानी से परेशान",
+         "ja": "...不安で、すぐに動揺する",
+         "pt": "... ansioso, facilmente chateado",
+         "ru": "... тревожный, легко расстраивающийся",
+         "zh-cn": "...焦虑，容易心烦意乱",
+         "bn": "... উদ্বিগ্ন, সহজেই বিচলিত"
+        },
+        "isRequired": true,
+        "rateCount": 7,
+        "rateMax": 7,
+        "minRateDescription": {
+         "default": "Strongly disagree",
+         "es": "Totalmente en desacuerdo",
+         "ar": "لا أوافق بشدة",
+         "fr": "Pas du tout d’accord",
+         "hi": "दृढ़ता से असहमत",
+         "ja": "強く反対する",
+         "pt": "Discordo",
+         "ru": "Категорически не согласен",
+         "zh-cn": "强烈不同意",
+         "bn": "দৃঢ়ভাবে দ্বিমত পোষণ করছি"
+        },
+        "maxRateDescription": {
+         "default": "Strongly agree",
+         "es": "Totalmente de acuerdo",
+         "ar": "أوافق بشدة",
+         "fr": "Tout à fait d’accord",
+         "hi": "पूर्णतः सहमत",
+         "ja": "強く同意する",
+         "pt": "Concordo plenamente",
+         "ru": "Категорически согласен",
+         "zh-cn": "非常同意",
+         "bn": "দৃঢ়ভাবে একমত"
+        },
+        "displayMode": "buttons"
+       },
+       {
+        "type": "rating",
+        "name": "openness",
+        "title": {
+         "default": "... open to new experience, complex",
+         "es": "... abierto a nuevas experiencias, complejo",
+         "ar": "... منفتح على تجربة جديدة ومعقدة",
+         "fr": "... Ouvert à de nouvelles expériences, complexe",
+         "hi": "... नए अनुभव के लिए खुला, जटिल",
+         "ja": "...新しい経験にオープンで、複雑",
+         "pt": "... aberto a novas experiências,",
+         "ru": "... открыт новому опыту, комплексен",
+         "zh-cn": "...对新体验开放，复杂",
+         "bn": "... নতুন অভিজ্ঞতার জন্য উন্মুক্ত, জটিল"
+        },
+        "isRequired": true,
+        "rateCount": 7,
+        "rateMax": 7,
+        "minRateDescription": {
+         "default": "Strongly disagree",
+         "es": "Totalmente en desacuerdo",
+         "ar": "لا أوافق بشدة",
+         "fr": "Pas du tout d’accord",
+         "hi": "दृढ़ता से असहमत",
+         "ja": "強く反対する",
+         "pt": "Discordo",
+         "ru": "Категорически не согласен",
+         "zh-cn": "强烈不同意",
+         "bn": "দৃঢ়ভাবে দ্বিমত পোষণ করছি"
+        },
+        "maxRateDescription": {
+         "default": "Strongly agree",
+         "es": "Totalmente de acuerdo",
+         "ar": "أوافق بشدة",
+         "fr": "Tout à fait d’accord",
+         "hi": "पूर्णतः सहमत",
+         "ja": "強く同意する",
+         "pt": "Concordo plenamente",
+         "ru": "Категорически согласен",
+         "zh-cn": "非常同意",
+         "bn": "দৃঢ়ভাবে একমত"
+        },
+        "displayMode": "buttons"
+       },
+       {
+        "type": "rating",
+        "name": "quietness",
+        "title": {
+         "default": "... reserved, quiet",
+         "es": "... reservado, tranquilo",
+         "ar": "... محجوزة وهادئة",
+         "fr": "... réservé, calme",
+         "hi": "... आरक्षित, शांत",
+         "ja": "...予約済み, 静か",
+         "pt": "... reservado, silencioso",
+         "ru": "... сдержанный, тихий",
+         "zh-cn": "...矜持， 安静",
+         "bn": "... সংরক্ষিত, শান্ত"
+        },
+        "isRequired": true,
+        "rateCount": 7,
+        "rateMax": 7,
+        "minRateDescription": {
+         "default": "Strongly disagree",
+         "es": "Totalmente en desacuerdo",
+         "ar": "لا أوافق بشدة",
+         "fr": "Pas du tout d’accord",
+         "hi": "दृढ़ता से असहमत",
+         "ja": "強く反対する",
+         "pt": "Discordo",
+         "ru": "Категорически не согласен",
+         "zh-cn": "强烈不同意",
+         "bn": "দৃঢ়ভাবে দ্বিমত পোষণ করছি"
+        },
+        "maxRateDescription": {
+         "default": "Strongly agree",
+         "es": "Totalmente de acuerdo",
+         "ar": "أوافق بشدة",
+         "fr": "Tout à fait d’accord",
+         "hi": "पूर्णतः सहमत",
+         "ja": "強く同意する",
+         "pt": "Concordo plenamente",
+         "ru": "Категорически согласен",
+         "zh-cn": "非常同意",
+         "bn": "দৃঢ়ভাবে একমত"
+        },
+        "displayMode": "buttons"
+       },
+       {
+        "type": "rating",
+        "name": "sympathy",
+        "title": {
+         "default": "... sympathetic, warm",
+         "es": "... simpático, cálido",
+         "ar": "... متعاطف ودافئ",
+         "fr": "... sympathique, chaleureux",
+         "hi": "... सहानुभूतिपूर्ण, गर्म",
+         "ja": "...同情的で、暖かい",
+         "pt": "... simpático, caloroso",
+         "ru": "... отзывчивый, теплый",
+         "zh-cn": "...富有同情心，热情",
+         "bn": "... সহানুভূতিশীল, উষ্ণ"
+        },
+        "isRequired": true,
+        "rateCount": 7,
+        "rateMax": 7,
+        "minRateDescription": {
+         "default": "Strongly disagree",
+         "es": "Totalmente en desacuerdo",
+         "ar": "لا أوافق بشدة",
+         "fr": "Pas du tout d’accord",
+         "hi": "दृढ़ता से असहमत",
+         "ja": "強く反対する",
+         "pt": "Discordo",
+         "ru": "Категорически не согласен",
+         "zh-cn": "强烈不同意",
+         "bn": "দৃঢ়ভাবে দ্বিমত পোষণ করছি"
+        },
+        "maxRateDescription": {
+         "default": "Strongly agree",
+         "es": "Totalmente de acuerdo",
+         "ar": "أوافق بشدة",
+         "fr": "Tout à fait d’accord",
+         "hi": "पूर्णतः सहमत",
+         "ja": "強く同意する",
+         "pt": "Concordo plenamente",
+         "ru": "Категорически согласен",
+         "zh-cn": "非常同意",
+         "bn": "দৃঢ়ভাবে একমত"
+        },
+        "displayMode": "buttons"
+       },
+       {
+        "type": "rating",
+        "name": "carelessness",
+        "title": {
+         "default": "... disorganized, careless",
+         "es": "... Desorganizado, descuidado",
+         "ar": "... غير منظم ، مهمل",
+         "fr": "... désorganisé, insouciant",
+         "hi": "... अव्यवस्थित, लापरवाह",
+         "ja": "...無秩序、不注意",
+         "pt": "... desorganizado, descuidado",
+         "ru": "... неорганизованный, небрежный",
+         "zh-cn": "...杂乱无章，粗心大意",
+         "bn": "... বিশৃঙ্খল, অমনোযোগী"
+        },
+        "isRequired": true,
+        "rateCount": 7,
+        "rateMax": 7,
+        "minRateDescription": {
+         "default": "Strongly disagree",
+         "es": "Totalmente en desacuerdo",
+         "ar": "لا أوافق بشدة",
+         "fr": "Pas du tout d’accord",
+         "hi": "दृढ़ता से असहमत",
+         "ja": "強く反対する",
+         "pt": "Discordo",
+         "ru": "Категорически не согласен",
+         "zh-cn": "强烈不同意",
+         "bn": "দৃঢ়ভাবে দ্বিমত পোষণ করছি"
+        },
+        "maxRateDescription": {
+         "default": "Strongly agree",
+         "es": "Totalmente de acuerdo",
+         "ar": "أوافق بشدة",
+         "fr": "Tout à fait d’accord",
+         "hi": "पूर्णतः सहमत",
+         "ja": "強く同意する",
+         "pt": "Concordo plenamente",
+         "ru": "Категорически согласен",
+         "zh-cn": "非常同意",
+         "bn": "দৃঢ়ভাবে একমত"
+        },
+        "displayMode": "buttons"
+       },
+       {
+        "type": "rating",
+        "name": "calmness",
+        "title": {
+         "default": "... calm, emotionally stable",
+         "es": "... Tranquilo, emocionalmente estable",
+         "ar": "... هادئ ومستقر عاطفيا",
+         "fr": "... calme, émotionnellement stable",
+         "hi": "... शांत, भावनात्मक रूप से स्थिर",
+         "ja": "...落ち着いていて、情緒的に安定している",
+         "pt": "... calmo, emocionalmente estável",
+         "ru": "... спокойный, эмоционально устойчивый",
+         "zh-cn": "...冷静，情绪稳定",
+         "bn": "... শান্ত, মানসিকভাবে স্থিতিশীল"
+        },
+        "isRequired": true,
+        "rateCount": 7,
+        "rateMax": 7,
+        "minRateDescription": {
+         "default": "Strongly disagree",
+         "es": "Totalmente en desacuerdo",
+         "ar": "لا أوافق بشدة",
+         "fr": "Pas du tout d’accord",
+         "hi": "दृढ़ता से असहमत",
+         "ja": "強く反対する",
+         "pt": "Discordo",
+         "ru": "Категорически не согласен",
+         "zh-cn": "强烈不同意",
+         "bn": "দৃঢ়ভাবে দ্বিমত পোষণ করছি"
+        },
+        "maxRateDescription": {
+         "default": "Strongly agree",
+         "es": "Totalmente de acuerdo",
+         "ar": "أوافق بشدة",
+         "fr": "Tout à fait d’accord",
+         "hi": "पूर्णतः सहमत",
+         "ja": "強く同意する",
+         "pt": "Concordo plenamente",
+         "ru": "Категорически согласен",
+         "zh-cn": "非常同意",
+         "bn": "দৃঢ়ভাবে একমত"
+        },
+        "displayMode": "buttons"
+       },
+       {
+        "type": "rating",
+        "name": "conventionality",
+        "title": {
+         "default": "... conventional, uncreative",
+         "es": "... convencional, poco creativo",
+         "ar": "... تقليدي ، غير مبدع",
+         "fr": "... Conventionnel, non créatif",
+         "hi": "... पारंपरिक, अरचनात्मक",
+         "ja": "...従来型、非創造的",
+         "pt": "... convencional, sem criatividade",
+         "ru": "... Конвенциональный, нетворческий",
+         "zh-cn": "...传统的、缺乏创意的",
+         "bn": "... গতানুগতিক, অসৃজনশীল"
+        },
+        "isRequired": true,
+        "rateCount": 7,
+        "rateMax": 7,
+        "minRateDescription": {
+         "default": "Strongly disagree",
+         "es": "Totalmente en desacuerdo",
+         "ar": "لا أوافق بشدة",
+         "fr": "Pas du tout d’accord",
+         "hi": "दृढ़ता से असहमत",
+         "ja": "強く反対する",
+         "pt": "Discordo",
+         "ru": "Категорически не согласен",
+         "zh-cn": "强烈不同意",
+         "bn": "দৃঢ়ভাবে দ্বিমত পোষণ করছি"
+        },
+        "maxRateDescription": {
+         "default": "Strongly agree",
+         "es": "Totalmente de acuerdo",
+         "ar": "أوافق بشدة",
+         "fr": "Tout à fait d’accord",
+         "hi": "पूर्णतः सहमत",
+         "ja": "強く同意する",
+         "pt": "Concordo plenamente",
+         "ru": "Категорически согласен",
+         "zh-cn": "非常同意",
+         "bn": "দৃঢ়ভাবে একমত"
+        },
+        "displayMode": "buttons"
+       }
       ],
-      "questionTitleLocation": "top",
-      "questionsOrder": "initial"
-    }
+      "questionsOrder": "random",
+      "showQuestionNumbers": "off"
+     }
+    ],
+    "questionTitleLocation": "top",
+    "questionsOrder": "initial"
+   }
   ],
   "showPageTitles": false,
   "widthMode": "responsive",
