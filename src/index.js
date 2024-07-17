@@ -24,6 +24,11 @@ import awarenessOfArgumentsYNSha from "../surveys/awarenessOfArgumentsYN/sha.jso
 import { default as awarenessOfArgumentsYNScoreFunc } from "../surveys/awarenessOfArgumentsYN/awarenessOfArgumentsYN.score.js";
 export const AwarenessOfArgumentsYN = SurveyFactory("awarenessOfArgumentsYN", awarenessOfArgumentsYNJson, awarenessOfArgumentsYNScoreFunc, awarenessOfArgumentsYNSha);
 
+import bipartisanshipUSJson from "../surveys/bipartisanshipUS/bipartisanshipUS.json";
+import bipartisanshipUSSha from "../surveys/bipartisanshipUS/sha.json";
+import { default as bipartisanshipUSScoreFunc } from "../surveys/bipartisanshipUS/bipartisanshipUS.score.js";
+export const BipartisanshipUS = SurveyFactory("bipartisanshipUS", bipartisanshipUSJson, bipartisanshipUSScoreFunc, bipartisanshipUSSha);
+
 import conflictAndViabilityJson from "../surveys/conflictAndViability/conflictAndViability.json";
 import conflictAndViabilitySha from "../surveys/conflictAndViability/sha.json";
 import { default as conflictAndViabilityScoreFunc } from "../surveys/conflictAndViability/conflictAndViability.score.js";
