@@ -25,7 +25,7 @@
             {
               "type": "radiogroup",
               "name": "electedOfficials",
-              "title": "How important is it for elected officials to work across party lines to create effective legislation?",
+              "title": "How important is it for elected officials to work across party lines when creating legislation?",
               "isRequired": true,
               "choices": [
                 { "value": 0, "text": "Not at all important" },
