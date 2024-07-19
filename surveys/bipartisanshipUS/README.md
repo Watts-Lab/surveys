@@ -28,7 +28,7 @@ The order of questions is randomized.
 
 ### Operationalization
 
-`How important is it for elected officials to work across party lines to create effective legislation?`
+`How important is it for elected officials to work across party lines when creating legislation?`
 
 ## Common ground between parties
 
