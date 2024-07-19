@@ -1,0 +1,54 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "study",
+              "title": "Do you want to participate in another conversation study like this one?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "No" },
+                { "value": 1, "text": "Yes" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "partners",
+              "title": "Do you want to talk with the same partner(s) again, possibly about a different topic?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "No" },
+                { "value": 1, "text": "Yes" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "topic",
+              "title": "Do you want to discuss the same topic again, possibly in a different group?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "No" },
+                { "value": 1, "text": "Yes" }
+              ]
+            }
+          ],
+          "questionsOrder": "initial",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "widthMode": "responsive",
+  "showCompletedPage": false
+}

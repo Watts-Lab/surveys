@@ -95,23 +95,23 @@
           "choices": [
             {
               "value": "1",
-              "text": "Not at all"
+              "text": "No disagreement at all"
             },
             {
               "value": "2",
-              "text": "Not very much"
+              "text": "Not very much disagreement"
             },
             {
               "value": "3",
-              "text": "Some"
+              "text": "Some disagreement"
             },
             {
               "value": "4",
-              "text": "A fair amount"
+              "text": "A fair amount of disagreement"
             },
             {
               "value": "5",
-              "text": "A great deal"
+              "text": "A great deal of disagreement"
             }
           ]
         },
@@ -122,7 +122,7 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "1S",
+              "value": "1",
               "text": "Very tense and uncomfortable"
             },
             {

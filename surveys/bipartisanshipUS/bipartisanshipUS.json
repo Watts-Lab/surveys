@@ -1,0 +1,63 @@
+{
+  "logoPosition": "right",
+  "focusFirstQuestionAutomatic": false,
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "randomizationPanel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "everydayPeople",
+              "title": "How important is it for everyday people to discuss political issues with someone from the other party?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all important" },
+                { "value": 1, "text": "Not too important" },
+                { "value": 2, "text": "Somewhat important" },
+                { "value": 3, "text": "Very Important" },
+                { "value": 4, "text": "Extremely Important" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "electedOfficials",
+              "title": "How important is it for elected officials to work across party lines when creating legislation?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "Not at all important" },
+                { "value": 1, "text": "Not too important" },
+                { "value": 2, "text": "Somewhat important" },
+                { "value": 3, "text": "Very Important" },
+                { "value": 4, "text": "Extremely Important" }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "bipartisanOpportunity",
+              "title": "How much opportunity is there for Republicans and Democrats to create policies they can both support?",
+              "isRequired": true,
+              "choices": [
+                { "value": 0, "text": "None at all" },
+                { "value": 1, "text": "Very little" },
+                { "value": 2, "text": "Some" },
+                { "value": 3, "text": "A considerable amount" },
+                { "value": 4, "text": "A great deal" }
+              ]
+            }
+          ],
+          "questionsOrder": "random",
+          "showQuestionNumbers": "off"
+        }
+      ],
+      "questionTitleLocation": "top",
+      "questionsOrder": "initial"
+    }
+  ],
+  "showPageTitles": false,
+  "widthMode": "responsive",
+  "showCompletedPage": false
+}

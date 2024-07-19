@@ -24,6 +24,11 @@ import awarenessOfArgumentsYNSha from "../surveys/awarenessOfArgumentsYN/sha.jso
 import { default as awarenessOfArgumentsYNScoreFunc } from "../surveys/awarenessOfArgumentsYN/awarenessOfArgumentsYN.score.js";
 export const AwarenessOfArgumentsYN = SurveyFactory("awarenessOfArgumentsYN", awarenessOfArgumentsYNJson, awarenessOfArgumentsYNScoreFunc, awarenessOfArgumentsYNSha);
 
+import bipartisanshipUSJson from "../surveys/bipartisanshipUS/bipartisanshipUS.json";
+import bipartisanshipUSSha from "../surveys/bipartisanshipUS/sha.json";
+import { default as bipartisanshipUSScoreFunc } from "../surveys/bipartisanshipUS/bipartisanshipUS.score.js";
+export const BipartisanshipUS = SurveyFactory("bipartisanshipUS", bipartisanshipUSJson, bipartisanshipUSScoreFunc, bipartisanshipUSSha);
+
 import conflictAndViabilityJson from "../surveys/conflictAndViability/conflictAndViability.json";
 import conflictAndViabilitySha from "../surveys/conflictAndViability/sha.json";
 import { default as conflictAndViabilityScoreFunc } from "../surveys/conflictAndViability/conflictAndViability.score.js";
@@ -68,6 +73,11 @@ import discussionQualityControlJson from "../surveys/discussionQualityControl/di
 import discussionQualityControlSha from "../surveys/discussionQualityControl/sha.json";
 import { default as discussionQualityControlScoreFunc } from "../surveys/discussionQualityControl/discussionQualityControl.score.js";
 export const DiscussionQualityControl = SurveyFactory("discussionQualityControl", discussionQualityControlJson, discussionQualityControlScoreFunc, discussionQualityControlSha);
+
+import discussionReengagementJson from "../surveys/discussionReengagement/discussionReengagement.json";
+import discussionReengagementSha from "../surveys/discussionReengagement/sha.json";
+import { default as discussionReengagementScoreFunc } from "../surveys/discussionReengagement/discussionReengagement.score.js";
+export const DiscussionReengagement = SurveyFactory("discussionReengagement", discussionReengagementJson, discussionReengagementScoreFunc, discussionReengagementSha);
 
 import discussionSelfInsightJson from "../surveys/discussionSelfInsight/discussionSelfInsight.json";
 import discussionSelfInsightSha from "../surveys/discussionSelfInsight/sha.json";
