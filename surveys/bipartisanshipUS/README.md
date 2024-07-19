@@ -4,6 +4,8 @@
 
 This survey measures US participants' support for bipartisanship along several dimensions.
 
+The order of questions is randomized.
+
 ## Everyday cross-partisan conversations
 
 > "we asked about the importance of cross-partisan dialogue, in particular, asking individuals three items about how important they thought it was for members of their party to engage in conversation with outparty members (e.g., “Talk to people who vote for [OUTPARTY] about politics.”). We categorize these outcomes as relevant to democratic accountability because conversations between citizens are thought to help limit elite influence and organize collective action [e.g., (47)]. To measure the importance of cross-partisan dialogue, we created an additive index of multiple items that only appeared in the follow-up survey"

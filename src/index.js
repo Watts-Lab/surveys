@@ -74,6 +74,11 @@ import discussionQualityControlSha from "../surveys/discussionQualityControl/sha
 import { default as discussionQualityControlScoreFunc } from "../surveys/discussionQualityControl/discussionQualityControl.score.js";
 export const DiscussionQualityControl = SurveyFactory("discussionQualityControl", discussionQualityControlJson, discussionQualityControlScoreFunc, discussionQualityControlSha);
 
+import discussionReengagementJson from "../surveys/discussionReengagement/discussionReengagement.json";
+import discussionReengagementSha from "../surveys/discussionReengagement/sha.json";
+import { default as discussionReengagementScoreFunc } from "../surveys/discussionReengagement/discussionReengagement.score.js";
+export const DiscussionReengagement = SurveyFactory("discussionReengagement", discussionReengagementJson, discussionReengagementScoreFunc, discussionReengagementSha);
+
 import discussionSelfInsightJson from "../surveys/discussionSelfInsight/discussionSelfInsight.json";
 import discussionSelfInsightSha from "../surveys/discussionSelfInsight/sha.json";
 import { default as discussionSelfInsightScoreFunc } from "../surveys/discussionSelfInsight/discussionSelfInsight.score.js";
