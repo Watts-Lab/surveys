@@ -91,6 +91,7 @@
         {
           "type": "radiogroup",
           "name": "discussionDisagreement",
+          "isRequired": true,
           "title": "How much did participants disagree on the discussion topic?",
           "choices": [
             {
@@ -230,6 +231,7 @@
         {
           "type": "radiogroup",
           "name": "selfInsight",
+          "isRequired": true,
           "title": "How much did this discussion help you understand your own thoughts more deeply?",
           "choices": [
             {

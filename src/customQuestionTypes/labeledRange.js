@@ -64,16 +64,17 @@ export function labeledRange(SurveyJS) {
       el.classList.add("sliderContainer");
       const dl = document.createElement("datalist");
       dl.id = `${question.name}_slider_vals`;
-      dl.style.justifyContent = 'normal';
+      dl.style.justifyContent = "normal";
       question.valueLabels.forEach((label) => {
         var option = document.createElement("div");
         option.classList.add("sliderLabel");
-        var leftPosition = ((label.value - slider.min) / (slider.max - slider.min) * 100);
+        var leftPosition =
+          ((label.value - slider.min) / (slider.max - slider.min)) * 100;
         option.style.left = `${leftPosition}%`;
-        console.log("value", label.value);
-        console.log("left", leftPosition);
-        console.log("min", slider.min);
-        console.log("max", slider.max);
+        // console.log("value", label.value);
+        // console.log("left", leftPosition);
+        // console.log("min", slider.min);
+        // console.log("max", slider.max);
         option.innerHTML = `
         <div class="each_label">
               <div class="tick"></div>
@@ -87,8 +88,6 @@ export function labeledRange(SurveyJS) {
       });
       dl.classList.add("sliderLabels");
       el.appendChild(dl);
-
-
 
       slider.setAttribute("list", dl.id);
       slider.classList.add("slider");
