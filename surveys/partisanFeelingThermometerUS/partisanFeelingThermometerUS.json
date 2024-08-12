@@ -9,7 +9,7 @@
           "type": "html",
           "name": "Prompt",
           "hideNumber": true,
-          "html": "<h1>Using the sliders below, please rate your feelings toward each political group on a scale from 0 to 100.</h1> <h3> A rating of 0 means very cold or unfavorable, 100 means very warm or favorable, and 50 indicates neutral feelings.  </h3>"
+          "html": "<h1>Please rate your feelings toward Republicans and Democrats using the following ‘feeling thermometers’.</h1> <h2> <ul><li>0 represents very cold or unfavorable feelings</li> <li> 50 represents neutral feelings, neither warm nor cold </li> <li>100 represents very warm or favorable feelings</li> </ul></h2> <h3> Click on each bar to mark your response. Adjust by dragging the handle to any position on the bar that matches how you feel.</h3>"
         },
         {
           "type": "panel",
