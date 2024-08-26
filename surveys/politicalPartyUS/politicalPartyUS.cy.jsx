@@ -22,7 +22,9 @@ describe("PoliticaPartyUS", () => {
     cy.screenshot("politicalPartyUS/page1", { overwrite: true });
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
-    cy.get(`input[class="sv-text slider"`).click("center", { force: true });
+    cy.get(`[data-name="republicanImportance"] input[type=range]`)
+      .invoke("val", 50)
+      .click();
     cy.screenshot("politicalPartyUS/page2", { overwrite: true });
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
@@ -52,7 +54,9 @@ describe("PoliticaPartyUS", () => {
     cy.screenshot("politicalPartyUS/page1_other", { overwrite: true });
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
-    cy.get(`input[class="sv-text slider"`).click("center", { force: true });
+    cy.get(`[data-name="otherImportance"] input[type=range]`)
+      .invoke("val", 50)
+      .click();
     cy.screenshot("politicalPartyUS/page2_other", { overwrite: true });
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 

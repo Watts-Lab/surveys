@@ -3,20 +3,6 @@
   /* stop from overflowing sides and triggering horizontal scrollbar */
 }
 
-.slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent;
-  cursor: pointer;
-
-  padding-left: 2%;
-  padding-right: 2%;
-  border: 0;
-  /* remove bottom border line */
-  width: 100%;
-}
-
 .sliderLabels {
   display: flex;
   width: 100%;
@@ -33,7 +19,21 @@
   overflow-wrap: break-word;
 }
 
-.slider::-webkit-slider-runnable-track {
+input.sv-text[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+
+  padding-left: 2%;
+  padding-right: 2%;
+  border: 0;
+  /* remove bottom border line */
+  width: 100%;
+}
+
+input.sv-text[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 5px;
   background: #ddd;
@@ -41,7 +41,7 @@
   border-radius: 3px;
 }
 
-.slider::-moz-range-track {
+input.sv-text[type="range"]::-moz-range-track {
   width: 100%;
   height: 5px;
   background: #ddd;
@@ -49,7 +49,7 @@
   border-radius: 3px;
 }
 
-.slider::-webkit-slider-thumb {
+input.sv-text[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
   height: 20px;
@@ -60,7 +60,7 @@
   visibility: hidden;
 }
 
-.slider::-moz-range-thumb {
+input.sv-text[type="range"]::-moz-range-thumb {
   border: none;
   height: 20px;
   width: 16px;
@@ -69,29 +69,25 @@
   visibility: hidden;
 }
 
-.slider.sliderClicked::-webkit-slider-thumb {
+input.sv-text.sliderClicked[type="range"]::-webkit-slider-thumb {
   visibility: visible;
 }
 
-.slider.sliderClicked::-moz-range-thumb {
+input.sv-text.sliderClicked[type="range"]::-moz-range-thumb {
   visibility: visible;
 }
 
-.slider:focus {
+input.sv-text[type="range"]:focus {
   outline: none;
 }
 
-.slider:focus::-webkit-slider-runnable-track {
+input.sv-text[type="range"]:focus::-webkit-slider-runnable-track {
   background: #ccc;
 }
 
-.slider:focus::-moz-range-track {
+input.sv-text[type="range"]:focus::-moz-range-track {
   background: #ccc;
 }
-
-/* ----------------added styles to make required changes by Amir Rahman from upwork---------------- */
-
-/* to resolve the issue : https://github.com/Watts-Lab/surveys/issues/110 */
 
 .sliderLabel {
   width: 0px;
@@ -141,6 +137,6 @@ datalist.sliderLabels {
   width: 100%;
 }
 
-.active {
-  font-weight: bold;
-}
+/* .active { */
+/* font-weight: bold; */
+/* } */

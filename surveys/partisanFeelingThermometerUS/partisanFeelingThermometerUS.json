@@ -26,9 +26,15 @@
               "step": 1,
               "valueLabels": [
                 { "value": 0, "text": "0: Very cold or unfavorable" },
-                { "value": 25, "text": "" },
+                { "value": 10, "text": "" },
+                { "value": 20, "text": "" },
+                { "value": 30, "text": "" },
+                { "value": 40, "text": "" },
                 { "value": 50, "text": "50: Neutral" },
-                { "value": 75, "text": "" },
+                { "value": 60, "text": "" },
+                { "value": 70, "text": "" },
+                { "value": 80, "text": "" },
+                { "value": 90, "text": "" },
                 { "value": 100, "text": "100: Very warm or favorable" }
               ]
             },
@@ -43,9 +49,15 @@
               "step": 1,
               "valueLabels": [
                 { "value": 0, "text": "0: Very cold or unfavorable" },
-                { "value": 25, "text": "" },
+                { "value": 10, "text": "" },
+                { "value": 20, "text": "" },
+                { "value": 30, "text": "" },
+                { "value": 40, "text": "" },
                 { "value": 50, "text": "50: Neutral" },
-                { "value": 75, "text": "" },
+                { "value": 60, "text": "" },
+                { "value": 70, "text": "" },
+                { "value": 80, "text": "" },
+                { "value": 90, "text": "" },
                 { "value": 100, "text": "100: Very warm or favorable" }
               ]
             }
