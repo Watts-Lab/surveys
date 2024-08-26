@@ -90,23 +90,24 @@ export function labeledRange(SurveyJS) {
       el.appendChild(dl);
 
       slider.setAttribute("list", dl.id);
-      slider.classList.add("slider");
+      // slider.classList.add("slider");
 
       if (question.showProgressBar) slider.classList.add("progressBar");
 
-      slider.addEventListener("mousedown", () =>
-        slider.classList.add("sliderClicked")
-      );
+      slider.addEventListener("mousedown", () => {
+        // slider.classList.add("slider");
+        slider.classList.add("sliderClicked");
+      });
 
       // added additionally for highlighting label
-      let last = null;
-      slider.addEventListener("input", (e) => {
-        let val = e.target.value;
-        last?.classList.remove("active");
-        const activeEl = dl.querySelector(`[value='${val}']`);
-        activeEl?.classList.add("active");
-        last = activeEl;
-      });
+      // let last = null;
+      // slider.addEventListener("input", (e) => {
+      //   let val = e.target.value;
+      //   last?.classList.remove("active");
+      //   const activeEl = dl.querySelector(`[value='${val}']`);
+      //   activeEl?.classList.add("active");
+      //   last = activeEl;
+      // });
     },
   };
 
