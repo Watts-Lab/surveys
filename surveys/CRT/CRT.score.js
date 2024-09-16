@@ -27,5 +27,5 @@ export default function scoreFunc(responses) {
     }
   });
 
-  return { score: score, maxScore: 6, minScore: 0, responses: responses };
+  return { score: score, normScore: (score / 6).toFixed(3) };
 }
