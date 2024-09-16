@@ -1,11 +1,6 @@
 import React from "react";
 import { RmeTen } from "../../src/index";
 
-const surveyJsonPath = "surveys/rmeTen/rmeTen.json";
-
-// Initialize an empty answers object
-const answers = {};
-
 const dummy = {
   set(response) {},
 };
@@ -16,57 +11,106 @@ describe("RMETTen", () => {
     cy.mount(<RmeTen onComplete={dummy.set} />);
     cy.viewport("macbook-11");
 
-    cy.readFile(surveyJsonPath).then((surveyJson) => {
-      // Build the answers object by assuming each question's answer is the first choice
-      surveyJson.pages.forEach((page) => {
-        page.elements.forEach((element) => {
-          if (element.type === "radiogroup") {
-            answers[element.name] = element.choices[0].value;
-          }
-        });
-      });
+    // incorrect
+    cy.get('[data-name="rme_item_4"] input[value="amused"]').click({
+      force: true,
+    });
+    cy.screenshot(`rmeTen/screenshot_1`, {
+      overwrite: true,
+    });
+    cy.get('input[type="button"][value="Next"]').click({ force: true });
 
-      // Now iterate over pages to perform the survey
-      surveyJson.pages.forEach((page, pageIndex) => {
-        page.elements.forEach((element) => {
-          if (element.type === "image") {
-            // Verify the image is present
-            cy.get("img").should("have.attr", "src", element.imageLink);
-          } else if (element.type === "radiogroup") {
-            // Click the radio button corresponding to the question
-            const answerValue = answers[element.name];
-            cy.get(
-              `[data-name="${element.name}"] input[value="${answerValue}"]`
-            ).click({ force: true });
-          }
-        });
+    // correct
+    cy.get('[data-name="rme_item_6"] input[value="fantasizing"]').click({
+      force: true,
+    });
+    cy.screenshot(`rmeTen/screenshot_2`, {
+      overwrite: true,
+    });
+    cy.get('input[type="button"][value="Next"]').click({ force: true });
 
-        cy.screenshot(`rmeTen/screenshot_${pageIndex}`, {
-          overwrite: true,
-        });
+    // incorrect
+    cy.get('[data-name="rme_item_11"] input[value="terrified"]').click({
+      force: true,
+    });
+    cy.screenshot(`rmeTen/screenshot_3`, {
+      overwrite: true,
+    });
+    cy.get('input[type="button"][value="Next"]').click({ force: true });
 
-        // Click "Next" button if not on the last page
-        if (pageIndex < surveyJson.pages.length - 1) {
-          cy.get('input[type="button"][value="Next"]').click({ force: true });
-        }
-      });
+    // correct
+    cy.get('[data-name="rme_item_15"] input[value="contemplative"]').click({
+      force: true,
+    });
+    cy.screenshot(`rmeTen/screenshot_4`, {
+      overwrite: true,
+    });
+    cy.get('input[type="button"][value="Next"]').click({ force: true });
 
-      cy.screenshot("rmetTen/screenshot", {
-        overwrite: true,
-      });
+    // incorrect
+    cy.get('[data-name="rme_item_17"] input[value="affectionate"]').click({
+      force: true,
+    });
+    cy.screenshot(`rmeTen/screenshot_5`, {
+      overwrite: true,
+    });
+    cy.get('input[type="button"][value="Next"]').click({ force: true });
 
-      cy.get("form") // submit surveyJS form
-        .then(($form) => {
-          cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
-        });
+    // correct
+    cy.get('[data-name="rme_item_22"] input[value="preoccupied"]').click({
+      force: true,
+    });
+    cy.screenshot(`rmeTen/screenshot_6`, {
+      overwrite: true,
+    });
+    cy.get('input[type="button"][value="Next"]').click({ force: true });
 
-      cy.get(".sv-body").should("not.exist");
+    // correct
+    cy.get('[data-name="rme_item_24"] input[value="pensive"]').click({
+      force: true,
+    });
+    cy.screenshot(`rmeTen/screenshot_7`, {
+      overwrite: true,
+    });
+    cy.get('input[type="button"][value="Next"]').click({ force: true });
 
-      cy.get("@callback").should("have.been.called");
-      cy.get("@callback").then((spy) => {
-        const spyCall = spy.getCall(-1).args[0];
-        console.log(spyCall);
-      });
+    // incorrect
+    cy.get('[data-name="rme_item_27"] input[value="joking"]').click({
+      force: true,
+    });
+    cy.screenshot(`rmeTen/screenshot_8`, {
+      overwrite: true,
+    });
+    cy.get('input[type="button"][value="Next"]').click({ force: true });
+
+    // correct
+    cy.get('[data-name="rme_item_28"] input[value="interested"]').click({
+      force: true,
+    });
+    cy.screenshot(`rmeTen/screenshot_9`, {
+      overwrite: true,
+    });
+    cy.get('input[type="button"][value="Next"]').click({ force: true });
+
+    // correct
+    cy.get('[data-name="rme_item_29"] input[value="reflective"]').click({
+      force: true,
+    });
+    cy.screenshot(`rmeTen/screenshot_10`, {
+      overwrite: true,
+    });
+
+    // final button
+    cy.get('input[type="button"][value="Complete"]').click({ force: true });
+
+    cy.get(".sv-body").should("not.exist");
+
+    cy.get("@callback").should("have.been.called");
+    cy.get("@callback").then((spy) => {
+      const spyCall = spy.getCall(-1).args[0];
+      console.log(spyCall);
+      expect(spyCall["result"]["normScore"]).to.eq((0.6).toFixed(3));
+      expect(spyCall["responses"]["rme_item_24"]).to.eq("pensive");
     });
   });
 });
