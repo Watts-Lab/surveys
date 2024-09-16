@@ -1,14 +1,14 @@
 const answers = {
-  question1: "insisting",
-  question2: "fantasizing",
-  question3: "regretful",
-  question4: "contemplative",
-  question5: "doubtful",
-  question6: "preoccupied",
-  question7: "pensive",
-  question8: "cautious",
-  question9: "interested",
-  question10: "reflective",
+  rme_item_4: "insisting",
+  rme_item_6: "fantasizing",
+  rme_item_11: "regretful",
+  rme_item_15: "contemplative",
+  rme_item_17: "doubtful",
+  rme_item_22: "preoccupied",
+  rme_item_24: "pensive",
+  rme_item_27: "cautious",
+  rme_item_28: "interested",
+  rme_item_29: "reflective",
 };
 
 export default function scoreFunc(responses) {
@@ -23,5 +23,5 @@ export default function scoreFunc(responses) {
     }
   });
 
-  return { score: score, maxScore: 10, minScore: 0, responses: responses };
+  return { score: score, normScore: (score / 10).toFixed(3) };
 }
