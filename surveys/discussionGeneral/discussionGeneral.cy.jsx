@@ -11,31 +11,35 @@ describe("DiscussionGeneral", () => {
     cy.mount(<DiscussionGeneral onComplete={dummy.set} />);
     cy.viewport("macbook-11");
 
-    cy.get('[data-name="discussionEnjoy"] input[value="1"]').click({
+    cy.get('[data-name="discussionEnjoy"]').contains("Some").click({
       force: true,
     });
 
-    cy.get('[data-name="selfLearned"] input[value="2"]').click({
+    cy.get('[data-name="selfLearned"]').contains("Very little").click({
       force: true,
     });
 
-    cy.get('[data-name="discussionDepth"] input[value="3"]').click({
+    cy.get('[data-name="discussionDepth"]').contains("Not at all").click({
       force: true,
     });
 
-    cy.get('[data-name="discussionDisagreement"] input[value="4"]').click({
+    cy.get('[data-name="discussionDisagreement"]')
+      .contains("Some disagreement")
+      .click({
+        force: true,
+      });
+
+    cy.get('[data-name="discussionTension"]')
+      .contains("Moderately tense")
+      .click({
+        force: true,
+      });
+
+    cy.get('[data-name="selfSpeakUp"]').contains("Often").click({
       force: true,
     });
 
-    cy.get('[data-name="discussionTension"] input[value="5"]').click({
-      force: true,
-    });
-
-    cy.get('[data-name="selfSpeakUp"] input[value="4"]').click({
-      force: true,
-    });
-
-    cy.get('[data-name="selfVoice"] input[value="3"]').click({
+    cy.get('[data-name="selfVoice"]').contains("Neutral").click({
       force: true,
     });
 
@@ -47,11 +51,11 @@ describe("DiscussionGeneral", () => {
     // check mandatory is enforced
     cy.contains("Response required");
 
-    cy.get('[data-name="selfAnxious"] input[value="2"]').click({
+    cy.get('[data-name="selfAnxious"]').contains("A fair amount").click({
       force: true,
     });
 
-    cy.get('[data-name="selfInsight"] input[value="2"]').click({
+    cy.get('[data-name="selfInsight"]').contains("Some").click({
       force: true,
     });
 
@@ -68,12 +72,11 @@ describe("DiscussionGeneral", () => {
     cy.get("@callback").then((spy) => {
       const spyCall = spy.getCall(-1).args[0];
       console.log(spyCall);
-      expect(spyCall["result"]["normDiscussionEnjoy"]).to.eq((0).toFixed(3));
-      expect(spyCall["result"]["normSelfLearned"]).to.eq((0.25).toFixed(3));
-      expect(spyCall["result"]["normDiscussionDepth"]).to.eq((0.5).toFixed(3));
-      expect(spyCall["result"]["normDiscussionDisagreement"]).to.eq(
-        (0.75).toFixed(3)
-      );
+      expect(spyCall["result"]["discussionEnjoy"]).to.eq("0.5");
+      expect(spyCall["result"]["selfLearned"]).to.eq("0.25");
+      expect(spyCall["result"]["discussionDepth"]).to.eq("0.0");
+      expect(spyCall["result"]["discussionDisagreement"]).to.eq("0.5");
+      expect(spyCall["result"]["discussionOverall"]).to.eq("0.375");
     });
   });
 });

@@ -11,23 +11,23 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "1",
+              "value": "0.0",
               "text": "Not at all"
             },
             {
-              "value": "2",
+              "value": "0.25",
               "text": "Not very much"
             },
             {
-              "value": "3",
+              "value": "0.5",
               "text": "Some"
             },
             {
-              "value": "4",
+              "value": "0.75",
               "text": "A fair amount"
             },
             {
-              "value": "5",
+              "value": "1.0",
               "text": "A great deal"
             }
           ]
@@ -39,23 +39,23 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "6",
+              "value": "0.0",
               "text": "Nothing at all"
             },
             {
-              "value": "5",
+              "value": "0.25",
               "text": "Very little"
             },
             {
-              "value": "2",
+              "value": "0.5",
               "text": "Some"
             },
             {
-              "value": "4",
+              "value": "0.75",
               "text": "A fair amount"
             },
             {
-              "value": "3",
+              "value": "1.0",
               "text": "A great deal"
             }
           ]
@@ -67,23 +67,23 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "1",
+              "value": "0.0",
               "text": "Not at all"
             },
             {
-              "value": "3",
+              "value": "0.25",
               "text": "Only at the surface level"
             },
             {
-              "value": "4",
+              "value": "0.5",
               "text": "Moderately"
             },
             {
-              "value": "5",
+              "value": "0.75",
               "text": "Quite Thoroughly"
             },
             {
-              "value": "6",
+              "value": "1.0",
               "text": "Deeply and extensively"
             }
           ]
@@ -95,23 +95,23 @@
           "title": "How much did participants disagree on the discussion topic?",
           "choices": [
             {
-              "value": "1",
+              "value": "0.0",
               "text": "No disagreement at all"
             },
             {
-              "value": "2",
+              "value": "0.25",
               "text": "Not very much disagreement"
             },
             {
-              "value": "3",
+              "value": "0.5",
               "text": "Some disagreement"
             },
             {
-              "value": "4",
+              "value": "0.75",
               "text": "A fair amount of disagreement"
             },
             {
-              "value": "5",
+              "value": "1.0",
               "text": "A great deal of disagreement"
             }
           ]
@@ -123,23 +123,23 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "1",
+              "value": "1.0",
               "text": "Very tense and uncomfortable"
             },
             {
-              "value": "2",
+              "value": "0.75",
               "text": "Moderately tense"
             },
             {
-              "value": "3",
+              "value": "0.5",
               "text": "Somewhat relaxed, with multiple moments of tension"
             },
             {
-              "value": "4",
+              "value": "0.25",
               "text": "Mostly relaxed, with rare moments of tension"
             },
             {
-              "value": "5",
+              "value": "0.0",
               "text": "Completely relaxed and calm"
             }
           ]
@@ -151,23 +151,23 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "1",
+              "value": "0.0",
               "text": "Never"
             },
             {
-              "value": "2",
+              "value": "0.25",
               "text": "Rarely"
             },
             {
-              "value": "3",
+              "value": "0.5",
               "text": "Sometimes"
             },
             {
-              "value": "4",
+              "value": "0.75",
               "text": "Often"
             },
             {
-              "value": "5",
+              "value": "1.0",
               "text": "Always"
             }
           ]
@@ -179,23 +179,23 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "1",
+              "value": "0.0",
               "text": "Very uncomfortable"
             },
             {
-              "value": "2",
+              "value": "0.25",
               "text": "Somewhat uncomfortable"
             },
             {
-              "value": "5",
+              "value": "0.5",
               "text": "Neutral"
             },
             {
-              "value": "3",
+              "value": "0.75",
               "text": "Fairly comfortable"
             },
             {
-              "value": "4",
+              "value": "1.0",
               "text": "Very comfortable"
             }
           ]
@@ -207,23 +207,23 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "1",
+              "value": "0.0",
               "text": "Not at all"
             },
             {
-              "value": "2",
+              "value": "0.25",
               "text": "Not very much"
             },
             {
-              "value": "3",
+              "value": "0.5",
               "text": "Some"
             },
             {
-              "value": "4",
+              "value": "0.75",
               "text": "A fair amount"
             },
             {
-              "value": "5",
+              "value": "1.0",
               "text": "A great deal"
             }
           ]
@@ -235,23 +235,23 @@
           "title": "How much did this discussion help you understand your own thoughts more deeply?",
           "choices": [
             {
-              "value": "1",
+              "value": "0.0",
               "text": "Not at all"
             },
             {
-              "value": "2",
+              "value": "0.25",
               "text": "Not very much"
             },
             {
-              "value": "3",
+              "value": "0.5",
               "text": "Some"
             },
             {
-              "value": "4",
+              "value": "0.75",
               "text": "A fair amount"
             },
             {
-              "value": "5",
+              "value": "1.0",
               "text": "A great deal"
             }
           ]
