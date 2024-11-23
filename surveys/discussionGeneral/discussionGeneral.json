@@ -230,6 +230,34 @@
         },
         {
           "type": "radiogroup",
+          "name": "selfJudged",
+          "title": "During the discussion, did you feel that you or people like you were being judged?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "0.0",
+              "text": "Not at all"
+            },
+            {
+              "value": "0.25",
+              "text": "Not very much"
+            },
+            {
+              "value": "0.5",
+              "text": "Some"
+            },
+            {
+              "value": "0.75",
+              "text": "A fair amount"
+            },
+            {
+              "value": "1.0",
+              "text": "A great deal"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
           "name": "selfInsight",
           "isRequired": true,
           "title": "How much did this discussion help you understand your own thoughts more deeply?",

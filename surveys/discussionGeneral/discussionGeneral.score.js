@@ -1,3 +1,5 @@
+import { parse } from "survey-react";
+
 function sum(array) {
   return array.reduce((acc, val) => acc + val, 0);
 }
@@ -23,6 +25,7 @@ export default function scoreFunc(responses) {
     selfSpeakUp: responses["selfSpeakUp"],
     selfVoice: responses["selfVoice"],
     selfAnxious: responses["selfAnxious"],
+    selfJudged: responses["selfJudged"],
     selfInsight: responses["selfInsight"],
 
     discussionEnjoy: responses["discussionEnjoy"],
@@ -39,6 +42,7 @@ export default function scoreFunc(responses) {
       parseFloat(responses["selfSpeakUp"]),
       parseFloat(responses["selfVoice"]),
       1 - parseFloat(responses["selfAnxious"]),
+      1 - parseFloat(responses["selfJudged"]),
       parseFloat(responses["selfInsight"]),
     ]).toFixed(3),
   };
