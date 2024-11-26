@@ -39,6 +39,10 @@ describe("DiscussionGeneral", () => {
       force: true,
     });
 
+    cy.get('[data-name="selfJudged"]').contains("Some").click({
+      force: true,
+    });
+
     cy.get('[data-name="selfVoice"]').contains("Neutral").click({
       force: true,
     });
@@ -76,7 +80,21 @@ describe("DiscussionGeneral", () => {
       expect(spyCall["result"]["selfLearned"]).to.eq("0.25");
       expect(spyCall["result"]["discussionDepth"]).to.eq("0.0");
       expect(spyCall["result"]["discussionDisagreement"]).to.eq("0.5");
-      expect(spyCall["result"]["discussionOverall"]).to.eq("0.375");
+      expect(spyCall["result"]["discussionOverall"]).to.eq(
+        (
+          (0.5 + // discussionEnjoy
+            0.25 + // selfLearned
+            0 + // discussionDepth
+            // disagreement is omitted
+            (1 - 0.75) + // tension
+            0.75 + // selfSpeakUp
+            0.5 + // selfVoice
+            (1 - 0.75) + // selfAnxious
+            (1 - 0.5) + // selfJudged
+            0.5) / // selfInsight
+          9
+        ).toFixed(3)
+      );
     });
   });
 });
