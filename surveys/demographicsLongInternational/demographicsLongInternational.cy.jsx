@@ -1,5 +1,5 @@
 import React from "react";
-import { Demographics } from "../../src/index";
+import { DemographicsLongInternational } from "../../src/index";
 
 const dummy = {
   set(response) {},
@@ -8,8 +8,8 @@ const dummy = {
 describe("Demographics", () => {
   it("completes", () => {
     cy.spy(dummy, "set").as("callback");
-    cy.mount(<Demographics onComplete={dummy.set} />);
-    cy.viewport('macbook-11');
+    cy.mount(<DemographicsLongInternational onComplete={dummy.set} />);
+    cy.viewport("macbook-11");
 
     cy.get(`[data-name="birth_year"] input`).click().type("1985");
 
@@ -32,7 +32,7 @@ describe("Demographics", () => {
       force: true,
     });
 
-    cy.get(`[data-name="employment_status"] input[value="Retired"]`).click({
+    cy.get(`[data-name="employment_status"] input[value="employed"]`).click({
       force: true,
     });
 
