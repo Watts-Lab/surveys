@@ -9,17 +9,6 @@ function mean(array) {
 }
 
 export default function scoreFunc(responses) {
-  console.log([
-    parseFloat(responses["discussionEnjoy"]),
-    parseFloat(responses["discussionDepth"]),
-    // 1-responses["discussionDisagreement"].map(parseFloat), // There is no particular valence to this, positive or negative, so omit
-    1 - parseFloat(responses["discussionTension"]),
-    parseFloat(responses["selfLearned"]),
-    parseFloat(responses["selfSpeakUp"]),
-    parseFloat(responses["selfVoice"]),
-    1 - parseFloat(responses["selfAnxious"]),
-    parseFloat(responses["selfInsight"]),
-  ]);
   const result = {
     selfLearned: responses["selfLearned"],
     selfSpeakUp: responses["selfSpeakUp"],
@@ -35,10 +24,10 @@ export default function scoreFunc(responses) {
 
     discussionOverall: mean([
       parseFloat(responses["discussionEnjoy"]),
+      parseFloat(responses["selfLearned"]),
       parseFloat(responses["discussionDepth"]),
       // 1-responses["discussionDisagreement"].map(parseFloat), // There is no particular valence to this, positive or negative, so omit
       1 - parseFloat(responses["discussionTension"]),
-      parseFloat(responses["selfLearned"]),
       parseFloat(responses["selfSpeakUp"]),
       parseFloat(responses["selfVoice"]),
       1 - parseFloat(responses["selfAnxious"]),
