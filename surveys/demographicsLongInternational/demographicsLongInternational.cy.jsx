@@ -36,6 +36,14 @@ describe("Demographics", () => {
       force: true,
     });
 
+    cy.get(
+      `[data-name="employment_industry"] input[value="Agriculture, Forestry, Fishing, and Hunting"]`
+    ).click({
+      force: true,
+    });
+
+    cy.get(`[data-name="job_title"] input`).click().type("Survey Developer");
+
     cy.get(`[data-name="country_reside"] input`).click({ force: true });
     cy.contains("United States").click({ force: true });
 
@@ -112,17 +120,21 @@ describe("Demographics", () => {
       force: true,
     });
 
+    cy.get(`[data-name="zipcode_iran"] input`).click().type("82919123");
+
     cy.get(
       `[data-name="ethnicity_iran"] input[value="Middle Eastern or North African"]`
     )
       .next()
       .click({ force: true });
 
-    cy.get(`[data-name="income_iran"] input[value="Less than 135,600,000"]`).click({
+    cy.get(
+      `[data-name="income_iran"] input[value="Less than 135,600,000"]`
+    ).click({
       force: true,
     });
 
-    cy.screenshot("demographicsLongInternationalscreenshotIran", {
+    cy.screenshot("screenshotIran", {
       overwrite: true,
     });
 
