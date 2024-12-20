@@ -47,13 +47,21 @@ describe("Demographics", () => {
     cy.get(`[data-name="country_reside"] input`).click({ force: true });
     cy.contains("United States").click({ force: true });
 
-    cy.screenshot("screenshotGeneral", { overwrite: true });
+    cy.screenshot("./demographicsLongInternational/screenshotGeneral", { overwrite: true });
 
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
     cy.get(`[data-name="education_US"] input[value="2"]`).click({
       force: true,
     });
+
+    cy.get(`[data-name="latin_US"] input[value="Yes"]`)
+      .next()
+      .click({ force: true });
+
+    cy.get(`[data-name="zipcode_US"] input`).click().type(
+      "52066"
+    );
 
     cy.get(`[data-name="race_US"] input[value="White"]`)
       .next()
@@ -66,7 +74,7 @@ describe("Demographics", () => {
       force: true,
     });
 
-    cy.screenshot("screenshotUSA", { overwrite: true });
+    cy.screenshot("./demographicsLongInternational/screenshotUSA", { overwrite: true });
 
     cy.get(`input[type="button"][value="Complete"]`).click({ force: true });
 
@@ -134,7 +142,7 @@ describe("Demographics", () => {
       force: true,
     });
 
-    cy.screenshot("screenshotIran", {
+    cy.screenshot("./demographicsLongInternational/screenshotIran", {
       overwrite: true,
     });
 
