@@ -59,6 +59,11 @@ import demographicsSha from "../surveys/demographics/sha.json";
 import { default as demographicsScoreFunc } from "../surveys/demographics/demographics.score.js";
 export const Demographics = SurveyFactory("demographics", demographicsJson, demographicsScoreFunc, demographicsSha);
 
+import demographicsLongInternationalJson from "../surveys/demographicsLongInternational/demographicsLongInternational.json";
+import demographicsLongInternationalSha from "../surveys/demographicsLongInternational/sha.json";
+import { default as demographicsLongInternationalScoreFunc } from "../surveys/demographicsLongInternational/demographicsLongInternational.score.js";
+export const DemographicsLongInternational = SurveyFactory("demographicsLongInternational", demographicsLongInternationalJson, demographicsLongInternationalScoreFunc, demographicsLongInternationalSha);
+
 import demographicsShortUSJson from "../surveys/demographicsShortUS/demographicsShortUS.json";
 import demographicsShortUSSha from "../surveys/demographicsShortUS/sha.json";
 import { default as demographicsShortUSScoreFunc } from "../surveys/demographicsShortUS/demographicsShortUS.score.js";
