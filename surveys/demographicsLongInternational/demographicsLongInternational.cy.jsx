@@ -51,7 +51,7 @@ describe("Demographics", () => {
 
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
-    cy.get(`[data-name="education_US"] input[value="2"]`).click({
+    cy.get(`[data-name="education_US"] input[value="Doctorate"]`).click({
       force: true,
     });
 
@@ -124,9 +124,11 @@ describe("Demographics", () => {
 
     cy.get(`input[type="button"][value="Next"]`).click({ force: true });
 
-    cy.get(`[data-name="education_iran"] input[value="2"]`).click({
+    cy.get(`[data-name="education_iran"] input[value="Other (please specify)"]`).click({
       force: true,
     });
+
+    cy.get(`[data-name="other_education_iran"] input`).click().type("Survey Developer");
 
     cy.get(`[data-name="zipcode_iran"] input`).click().type("82919123");
 
