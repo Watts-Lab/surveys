@@ -26,25 +26,25 @@
     "dist"
   ],
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "survey-react": "^1.9.52"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "survey-react": "^1.12.17"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-react": "^7.26.3",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-dynamic-import-vars": "^1.4.4",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^14.1.0",
-    "cypress": "^13.6.3",
-    "cypress-localstorage-commands": "^2.2.1",
+    "cypress": "^13.17.0",
+    "cypress-localstorage-commands": "^2.2.7",
     "cypress-rollup-preprocessor": "^1.2.0",
     "glob": "^8.1.0",
-    "rollup": "^2.79.1",
+    "rollup": "^2.79.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
-    "vite": "^3.1.4"
+    "vite": "^6.0.7"
   }
 }
