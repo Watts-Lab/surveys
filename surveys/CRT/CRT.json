@@ -1,20 +1,21 @@
 {
+  "title": "Cognitive Reflection Test (CRT)",
+  "description": {
+    "default": "Please only write the numeric answer to the following questions",
+    "ar": "يرجى كتابة الإجابة الرقمية فقط على الأسئلة التالية",
+    "es": "Por favor, escriba solo la respuesta numérica a las siguientes preguntas",
+    "fr": "Veuillez n’écrire que la réponse numérique aux questions suivantes",
+    "hi": "कृपया निम्नलिखित प्रश्नों का केवल संख्यात्मक उत्तर लिखें",
+    "ja": "以下の質問に対する回答は数値のみでご記入ください",
+    "pt": "Por favor, escreva apenas a resposta numérica para as seguintes perguntas",
+    "ru": "Пожалуйста, пишите только числовой ответ на следующие вопросы",
+    "zh": "请只写下以下问题的数字答案",
+    "bn": "দয়া করে শুধুমাত্র নিম্নলিখিত প্রশ্নগুলির সাংখ্যিক উত্তর লিখুন"
+  },
   "logoPosition": "right",
   "pages": [
     {
       "name": "page1",
-      "description": {
-        "default": "Please only write the numeric answer to the following questions",
-        "ar": "يرجى كتابة الإجابة الرقمية فقط على الأسئلة التالية",
-        "es": "Por favor, escriba solo la respuesta numérica a las siguientes preguntas",
-        "fr": "Veuillez n’écrire que la réponse numérique aux questions suivantes",
-        "hi": "कृपया निम्नलिखित प्रश्नों का केवल संख्यात्मक उत्तर लिखें",
-        "ja": "以下の質問に対する回答は数値のみでご記入ください",
-        "pt": "Por favor, escreva apenas a resposta numérica para as seguintes perguntas",
-        "ru": "Пожалуйста, пишите только числовой ответ на следующие вопросы",
-        "zh": "请只写下以下问题的数字答案",
-        "bn": "দয়া করে শুধুমাত্র নিম্নলিখিত প্রশ্নগুলির সাংখ্যিক উত্তর লিখুন"
-      },
       "elements": [
         {
           "type": "text",
