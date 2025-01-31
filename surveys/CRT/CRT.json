@@ -33,7 +33,18 @@
             "bn": "একটি ড্রিল এবং একটি হাতুড়ির দাম মোট $330। হাতুড়ির চেয়ে ড্রিলের দাম $300 বেশি। হাতুড়ির দাম কত?"
           },
           "isRequired": true,
-          "requiredErrorText": "The entered value must be numeric value",
+          "requiredErrorText": {
+            "default": "The value you entered must be numeric.",
+            "ar": "يجب أن تكون القيمة المدخلة رقمية.",
+            "es": "El valor ingresado debe ser numérico.",
+            "fr": "La valeur saisie doit être numérique.",
+            "hi": "दर्ज किया गया मान अंकीय होना चाहिए।",
+            "ja": "入力した値は数値である必要があります。",
+            "pt": "O valor inserido deve ser numérico.",
+            "ru": "Введённое значение должно быть числовым.",
+            "zh": "输入的值必须是数字。",
+            "bn": "আপনি যে মানটি লিখেছেন তা অবশ্যই সংখ্যাসূচক হতে হবে।"
+          },
           "validators": [
             {
               "type": "numeric",
@@ -58,7 +69,18 @@
             "bn": "র ্যাচেল তার ক্লাসের দশম লম্বা এবং দশম খাটো মেয়ে। তার ক্লাসে কয়জন মেয়ে আছে?"
           },
           "isRequired": true,
-          "requiredErrorText": "The entered value must be numeric value",
+          "requiredErrorText": {
+            "default": "The value you entered must be numeric.",
+            "ar": "يجب أن تكون القيمة المدخلة رقمية.",
+            "es": "El valor ingresado debe ser numérico.",
+            "fr": "La valeur saisie doit être numérique.",
+            "hi": "दर्ज किया गया मान अंकीय होना चाहिए।",
+            "ja": "入力した値は数値である必要があります。",
+            "pt": "O valor inserido deve ser numérico.",
+            "ru": "Введённое значение должно быть числовым.",
+            "zh": "输入的值必须是数字。",
+            "bn": "আপনি যে মানটি লিখেছেন তা অবশ্যই সংখ্যাসূচক হতে হবে।"
+          },
           "validators": [
             {
               "type": "numeric",
@@ -83,7 +105,18 @@
             "bn": "20% ছাড়ের জন্য বিক্রি হলে, একটি টোস্টারের দাম 100 ডলার। বিক্রয় না হলে এটির দাম কী?"
           },
           "isRequired": true,
-          "requiredErrorText": "The entered value must be numeric value",
+          "requiredErrorText": {
+            "default": "The value you entered must be numeric.",
+            "ar": "يجب أن تكون القيمة المدخلة رقمية.",
+            "es": "El valor ingresado debe ser numérico.",
+            "fr": "La valeur saisie doit être numérique.",
+            "hi": "दर्ज किया गया मान अंकीय होना चाहिए।",
+            "ja": "入力した値は数値である必要があります。",
+            "pt": "O valor inserido deve ser numérico.",
+            "ru": "Введённое значение должно быть числовым.",
+            "zh": "输入的值必须是数字。",
+            "bn": "আপনি যে মানটি লিখেছেন তা অবশ্যই সংখ্যাসূচক হতে হবে।"
+          },
           "validators": [
             {
               "type": "numeric",
@@ -108,7 +141,18 @@
             "bn": "60 টি আপেলের একটি বালতিতে, লাল আপেল সবুজ আপেল থেকে 3 গুণ বেশি সাধারণ। সবুজ কয়টি?"
           },
           "isRequired": true,
-          "requiredErrorText": "The entered value must be numeric value",
+          "requiredErrorText": {
+            "default": "The value you entered must be numeric.",
+            "ar": "يجب أن تكون القيمة المدخلة رقمية.",
+            "es": "El valor ingresado debe ser numérico.",
+            "fr": "La valeur saisie doit être numérique.",
+            "hi": "दर्ज किया गया मान अंकीय होना चाहिए।",
+            "ja": "入力した値は数値である必要があります。",
+            "pt": "O valor inserido deve ser numérico.",
+            "ru": "Введённое значение должно быть числовым.",
+            "zh": "输入的值必须是数字。",
+            "bn": "আপনি যে মানটি লিখেছেন তা অবশ্যই সংখ্যাসূচক হতে হবে।"
+          },
           "validators": [
             {
               "type": "numeric",
@@ -133,7 +177,18 @@
             "bn": "ডিম থেকে বাচ্চা বের হওয়ার পর প্রতিদিন একটি বাচ্চার ওজন দ্বিগুণ হয়। 12 দিনের মধ্যে এটি এক পাউন্ড ওজনের। কোন দিনে পাখির ওজন আধা পাউন্ড হয়?"
           },
           "isRequired": true,
-          "requiredErrorText": "The entered value must be numeric value",
+          "requiredErrorText": {
+            "default": "The value you entered must be numeric.",
+            "ar": "يجب أن تكون القيمة المدخلة رقمية.",
+            "es": "El valor ingresado debe ser numérico.",
+            "fr": "La valeur saisie doit être numérique.",
+            "hi": "दर्ज किया गया मान अंकीय होना चाहिए।",
+            "ja": "入力した値は数値である必要があります。",
+            "pt": "O valor inserido deve ser numérico.",
+            "ru": "Введённое значение должно быть числовым.",
+            "zh": "输入的值必须是数字。",
+            "bn": "আপনি যে মানটি লিখেছেন তা অবশ্যই সংখ্যাসূচক হতে হবে।"
+          },
           "validators": [
             {
               "type": "numeric",
@@ -158,7 +213,18 @@
             "bn": "একটি কুকুর ও একটি বিড়ালের ওজন মোট ১০০ পাউন্ড। কুকুরটির ওজন ৮৬ পাউন্ড। কুকুর ও বিড়ালের মধ্যে ওজনের পার্থক্য কি?"
           },
           "isRequired": true,
-          "requiredErrorText": "The entered value must be numeric value",
+          "requiredErrorText": {
+            "default": "The value you entered must be numeric.",
+            "ar": "يجب أن تكون القيمة المدخلة رقمية.",
+            "es": "El valor ingresado debe ser numérico.",
+            "fr": "La valeur saisie doit être numérique.",
+            "hi": "दर्ज किया गया मान अंकीय होना चाहिए।",
+            "ja": "入力した値は数値である必要があります。",
+            "pt": "O valor inserido deve ser numérico.",
+            "ru": "Введённое значение должно быть числовым.",
+            "zh": "输入的值必须是数字。",
+            "bn": "আপনি যে মানটি লিখেছেন তা অবশ্যই সংখ্যাসূচক হতে হবে।"
+          },
           "validators": [
             {
               "type": "numeric",
