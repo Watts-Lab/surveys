@@ -36,6 +36,41 @@ const surveyJson = {
   ],
 };
 
+const surveyJsonWithRandomization = {
+  pages: [
+    {
+      name: "page1",
+      elements: [
+        {
+          type: "panel",
+          name: "randomPanel",
+          elements: [
+            {
+              type: "radiogroup",
+              name: "q1",
+              title: "Question 1",
+              choices: ["yes", "no"],
+            },
+            {
+              type: "radiogroup",
+              name: "q2",
+              title: "Question 2",
+              choices: ["yes", "no"],
+            },
+            {
+              type: "radiogroup",
+              name: "q3",
+              title: "Question 3",
+              choices: ["yes", "no"],
+            },
+          ],
+          questionsOrder: "random",
+        },
+      ],
+    },
+  ],
+};
+
 const sha = {
   survey: "00fa3f25c5ad64eec5f82cb1fa87124c36e02e7c",
   score: "ba0f44e4945160b5327df9edc7bd5f840443f951",
@@ -50,7 +85,14 @@ const dummy = {
 };
 
 const Survey = SurveyFactory("testSurvey", surveyJson, scoreFunc, sha);
+const SurveyWithRandomization = SurveyFactory(
+  "testSurveyRandom",
+  surveyJsonWithRandomization,
+  scoreFunc,
+  sha
+);
 const storageName = "testLocalStorageKey";
+const randomStorageName = "testRandomStorageKey";
 
 const stored = {
   currentPageNo: 0,
@@ -178,6 +220,110 @@ describe("SurveyFactory", () => {
       const spyCall = spy.getCall(-1).args[0];
       console.log("callback args", spyCall);
       expect(spyCall.secondsElapsed).to.be.closeTo(4, 1);
+    });
+  });
+
+  it("stores question order in localStorage", () => {
+    cy.mount(<Survey onComplete={dummy.set} storageName={storageName} />);
+    
+    cy.get('[data-name="color"] input[value="blue"]').click({
+      force: true,
+    });
+
+    cy.wait(500);
+
+    cy.getLocalStorage(storageName).then((result) => {
+      const parsed = JSON.parse(result);
+      console.log("parsed storage", parsed);
+      expect(parsed).to.have.property("questionOrder");
+      expect(parsed.questionOrder).to.be.an("array");
+      expect(parsed.questionOrder).to.include("color");
+      expect(parsed.questionOrder).to.include("openResponse");
+      expect(parsed.questionOrder).to.include("name");
+      expect(parsed.questionOrder.length).to.equal(3);
+      
+      // Check that surveyJson is stored with order preserved
+      expect(parsed).to.have.property("surveyJson");
+    });
+  });
+
+  it("includes question order in completion callback", () => {
+    cy.spy(dummy, "set").as("callback");
+    cy.mount(<Survey onComplete={dummy.set} storageName={storageName} />);
+
+    cy.get('[data-name="color"] input[value="blue"]').click({
+      force: true,
+    });
+
+    cy.get("form")
+      .then(($form) => {
+        cy.wrap($form.find('input[type="button"][value="Complete"]')).click();
+      });
+
+    cy.get("@callback").then((spy) => {
+      const spyCall = spy.getCall(-1).args[0];
+      console.log("callback with question order", spyCall);
+      expect(spyCall).to.have.property("questionOrder");
+      expect(spyCall.questionOrder).to.be.an("array");
+      expect(spyCall.questionOrder).to.include("color");
+      expect(spyCall.questionOrder).to.include("openResponse");
+      expect(spyCall.questionOrder).to.include("name");
+    });
+  });
+
+  it("maintains randomized question order across re-renders", () => {
+    // First render - capture the order
+    cy.mount(<SurveyWithRandomization onComplete={dummy.set} storageName={randomStorageName} />);
+    
+    let firstOrder;
+    cy.getLocalStorage(randomStorageName).then((result) => {
+      // Wait for initial save
+      cy.wait(100);
+    });
+    
+    cy.getLocalStorage(randomStorageName).then((result) => {
+      if (result) {
+        const parsed = JSON.parse(result);
+        firstOrder = parsed.questionOrder;
+        console.log("First render order:", firstOrder);
+      }
+    });
+
+    cy.get('[data-name="q1"] input[value="yes"]').click({
+      force: true,
+    });
+
+    cy.wait(500);
+
+    cy.getLocalStorage(randomStorageName).then((result) => {
+      const parsed = JSON.parse(result);
+      firstOrder = parsed.questionOrder;
+      console.log("Order after interaction:", firstOrder);
+      expect(firstOrder).to.be.an("array");
+      expect(firstOrder.length).to.equal(3);
+    });
+
+    // Unmount and remount to simulate re-render
+    cy.mount(<SurveyWithRandomization onComplete={dummy.set} storageName={randomStorageName} />);
+
+    cy.wait(500);
+
+    // Get the visual order from the DOM
+    const secondOrderFromDOM = [];
+    cy.get(".sv-question.sv-row__question").each(($el) => {
+      cy.wrap($el)
+        .invoke("attr", "data-name")
+        .then((name) => {
+          secondOrderFromDOM.push(name);
+        });
+    });
+
+    cy.wrap(secondOrderFromDOM).then((secondOrderFromDOM) => {
+      console.log("Second render order from DOM:", secondOrderFromDOM);
+      console.log("Expected order:", firstOrder);
+      
+      // The order should be the same as the first render
+      expect(JSON.stringify(secondOrderFromDOM)).to.equal(JSON.stringify(firstOrder));
     });
   });
 });

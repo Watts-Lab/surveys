@@ -98,8 +98,13 @@ record = {
     rawScore: 6,
     normScore: 0.6,
   },
+  questionOrder: ["Q1", "Q2"], // Visual order of questions (particularly useful for randomized surveys)
+  secondsElapsed: 10.5,
+  // ... other metadata
 };
 ```
+
+Note: The `questionOrder` field captures the visual order in which questions were displayed to the user. This is particularly important for surveys with randomized question order, as it allows researchers to account for order effects in their analysis. For surveys with randomized questions, the order is preserved across page re-renders to ensure a consistent user experience.
 
 ### Documentation
 
