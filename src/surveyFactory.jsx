@@ -12,6 +12,8 @@ import "./customQuestionTypes/labeledRange.css";
 // timeSpent doesn't track properly across rerenders, so track it manually
 
 // Helper function to extract question order from survey
+// Returns an array of question names in the order they appear visually in the survey
+// Excludes HTML elements (like prompts) which are not actual questions
 function getQuestionOrder(surveyModel) {
   const allQuestions = surveyModel.getAllQuestions();
   return allQuestions
@@ -20,6 +22,8 @@ function getQuestionOrder(surveyModel) {
 }
 
 // Helper function to set questionsOrder to 'initial' in all panels/pages to preserve order
+// When questionsOrder is 'random', SurveyJS randomizes the order on each render
+// By changing it to 'initial', we preserve the current order for subsequent renders
 function preserveQuestionOrder(surveyJson) {
   const jsonCopy = JSON.parse(JSON.stringify(surveyJson));
   
