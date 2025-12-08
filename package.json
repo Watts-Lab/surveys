@@ -1,6 +1,6 @@
 {
   "name": "@watts-lab/surveys",
-  "version": "1.19.2",
+  "version": "1.19.3",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -26,9 +26,11 @@
     "dist"
   ],
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "survey-react": "^1.12.17"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.26.3",
@@ -41,6 +43,8 @@
     "cypress-localstorage-commands": "^2.2.7",
     "cypress-rollup-preprocessor": "^1.2.0",
     "glob": "^8.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "rollup": "^2.79.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
