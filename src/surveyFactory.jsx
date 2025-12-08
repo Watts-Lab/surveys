@@ -1,6 +1,6 @@
 import "survey-react/modern.min.css";
 import * as SurveyJS from "survey-react";
-import React, { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import packageJson from "../package.json";
 import { labeledRange } from "./customQuestionTypes/labeledRange";
 
@@ -15,8 +15,11 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
   function BuiltSurvey({ onComplete, storageName, language }) {
     const timerStartedAt = useRef(Date.now());
 
-    const surveyModel = new SurveyJS.Model(surveyJson);
-    surveyModel.locale = language; // set the language for the survey
+    const surveyModel = useMemo(() => {
+      const model = new SurveyJS.Model(surveyJson);
+      model.locale = language; // set the language for the survey
+      return model;
+    }, [language, surveyJson]);
 
     const saveState = useCallback(
       (survey) => {
@@ -75,8 +78,13 @@ export default function SurveyFactory(surveyName, surveyJson, scoreFunc, sha) {
       surveyModel.onValueChanged.add(saveState);
       surveyModel.onCurrentPageChanged.add(saveState);
 
-      return () => saveState(surveyModel);
-    }, [saveState, scoreResponses, clearStorage]);
+      return () => {
+        saveState(surveyModel);
+        surveyModel.onComplete.remove(scoreResponses);
+        surveyModel.onValueChanged.remove(saveState);
+        surveyModel.onCurrentPageChanged.remove(saveState);
+      };
+    }, [saveState, scoreResponses, surveyModel]);
 
     var prevData = window.localStorage.getItem(storageName) || null;
     if (prevData) {
