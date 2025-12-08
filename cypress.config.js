@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
 const fs = require("fs");
+const path = require("path");
 
 module.exports = defineConfig({
   viewportWidth: 1280,
@@ -18,9 +19,19 @@ module.exports = defineConfig({
     ],
     supportFile: "./cypress/support/component.js",
     setupNodeEvents(on, config) {
+      const isCi = process.env.CI === "true" || !!process.env.GITHUB_ACTIONS;
+      config.screenshotOnRunFailure = !isCi;
+
       on("after:screenshot", (details) => {
-        const oldPath = details.path;
-        const newPath = oldPath.replace("cypress/screenshots", "surveys");
+        if (isCi) {
+          // Skip moving screenshots in CI; we don't persist them there.
+          return;
+        }
+
+        const screenshotsRoot = path.join(process.cwd(), "cypress", "screenshots");
+        const relativePath = path.relative(screenshotsRoot, details.path);
+        const newPath = path.join(process.cwd(), relativePath);
+        fs.mkdirSync(path.dirname(newPath), { recursive: true });
 
         return new Promise((resolve, reject) => {
           // fs.rename moves the file to the new path
@@ -35,6 +46,8 @@ module.exports = defineConfig({
           console.log(error);
         });
       });
+
+      return config;
     },
   },
   retries: {
