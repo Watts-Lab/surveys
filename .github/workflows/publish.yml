@@ -10,6 +10,8 @@ jobs:
     permissions:
       contents: read
       id-token: write # required for npm trusted publisher (OIDC)
+    env:
+      NODE_AUTH_TOKEN: "" # ensure we rely on OIDC, not a token
 
     steps:
       - uses: actions/checkout@v4
@@ -22,9 +24,6 @@ jobs:
         
       - run: npm ci
       - run: npm run build
-      
-      - name: Verify identity (OIDC)
-        run: npm whoami
 
       # OIDC auth + provenance; no token needed when using trusted publishers
       - run: npm publish --provenance --access public
