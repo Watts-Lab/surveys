@@ -4,26 +4,24 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write # required for npm trusted publisher (OIDC)
+  contents: read
+
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write # required for npm trusted publisher (OIDC)
-    env:
-      NODE_AUTH_TOKEN: "" # ensure we rely on OIDC, not a token
 
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20.x"
+          node-version: "20"
           registry-url: "https://registry.npmjs.org"
-      - name: Clean legacy npm auth config
-        run: npm config delete //registry.npmjs.org/:_authToken || true
-        
+      - name: Use latest npm (trusted publisher support)
+        run: npm install -g npm@latest
       - run: npm ci
       - run: npm run build
 
-      # OIDC auth + provenance; no token needed when using trusted publishers
-      - run: npm publish --provenance --access public
+      # OIDC auth: no token needed when using trusted publishers
+      - run: npm publish
