@@ -20,8 +20,12 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - name: Use latest npm (trusted publisher support)
         run: npm install -g npm@latest
+      - name: Clean npm auth config
+        run: |
+          npm config delete //registry.npmjs.org/:_authToken || true
+          npm config delete always-auth || true
       - run: npm ci
       - run: npm run build
 
       # OIDC auth: no token needed when using trusted publishers
-      - run: npm publish
+      - run: npm publish --provenance --access public
